@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: `Kenneth Skovhus`,
@@ -9,6 +10,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

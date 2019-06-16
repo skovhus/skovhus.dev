@@ -1,14 +1,21 @@
 {
   "name": "skovhus.github.io",
+  "private": true,
+  "description": "Personal website and blog by Kenneth Skovhus",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "lint": "eslint . --ext js,ts,tsx --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "verify": "yarn lint && yarn typecheck && yarn test"
   },
   "dependencies": {
+    "@babel/core": "7.4.5",
     "gatsby": "^2.9.4",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-feed": "^2.2.3",
@@ -17,6 +24,7 @@
     "gatsby-plugin-offline": "^2.1.3",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.1.5",
+    "gatsby-plugin-typescript": "^2.0.15",
     "gatsby-plugin-typography": "^2.2.13",
     "gatsby-remark-copy-linked-files": "^2.0.13",
     "gatsby-remark-external-links": "^0.0.4",
@@ -34,14 +42,20 @@
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
+    "typescript": "^3.5.2",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@types/react-helmet": "^5.0.8",
+    "@types/typography": "^0.16.2",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "prettier": "^1.18.2"
-  },
-  "private": true,
-  "description": "Personal website and blog by Kenneth Skovhus",
-  "version": "1.0.0",
-  "license": "MIT"
+  }
 }
