@@ -63,6 +63,7 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-template': 'error',
     'react-hooks/rules-of-hooks': 'error',
+
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',

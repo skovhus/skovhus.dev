@@ -9,7 +9,7 @@
     "develop": "gatsby develop",
     "start": "yarn run develop",
     "serve": "gatsby serve",
-    "lint": "eslint . --ext js,ts,tsx --fix",
+    "lint": "eslint . --ext js,ts,tsx --fix && prettier src/**/*.css --write",
     "typecheck": "tsc --noEmit",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "verify": "yarn lint && yarn typecheck && yarn test"

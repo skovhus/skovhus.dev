@@ -4,12 +4,11 @@ import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
 
-function Bio() {
+export default function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
         return (
           <div
             style={{
@@ -19,7 +18,7 @@ function Bio() {
           >
             <Image
               fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
+              alt={'Kenneth Skovhus'}
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
@@ -31,10 +30,10 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San Francisco
-              building useful things.
+              Kenneth Skovhus is a full-stack engineer and music recording enthusiast from
+              Copenhagen, Denmark.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>Follow me on Twitter</a>
+              <a href={`https://twitter.com/kenneth_skovhus`}>Follow me on Twitter</a>
             </p>
           </div>
         )
@@ -52,15 +51,5 @@ const bioQuery = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        author
-        social {
-          twitter
-        }
-      }
-    }
   }
 `
-
-export default Bio

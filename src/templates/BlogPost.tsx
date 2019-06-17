@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { rhythm, scale } from '../utils/typography'
 
+import './BlogPost.css'
+
 type Props = {
   data: any
   location: Location
@@ -14,11 +16,10 @@ type Props = {
 
 export default function BlogPostTemplate({ data, location, pageContext }: Props) {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -72,12 +73,6 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)

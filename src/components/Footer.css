@@ -1,0 +1,38 @@
+footer {
+  text-align: center;
+  background-color: rgb(43, 39, 47);
+  background: linear-gradient(110deg, #431c5d 0%, #2a2b8b 100%);
+  color: white;
+  font-size: 10px;
+  padding: 30px;
+  margin-top: 90px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  box-shadow: none; /* Overriding a tag from typography.js... */
+}
+
+.social-icons svg {
+  height: 30px;
+  fill: #eee;
+  padding-right: 15px;
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.5s;
+  transition-property: fill transform;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.social-icons svg:hover {
+  fill: #fff;
+}
+
+.social-icons svg:hover,
+.social-icons svg:focus,
+.social-icons svg:active {
+  transform: translateY(-4px);
+}
