@@ -6,6 +6,10 @@ baseTheme.overrideThemeStyles = () => {
     'a.gatsby-resp-image-link': {
       boxShadow: 'none',
     },
+    '.gatsby-resp-image-figcaption': {
+      textAlign: 'center',
+      fontSize: '0.8rem',
+    },
     ul: {
       marginLeft: '2rem !important',
     },
