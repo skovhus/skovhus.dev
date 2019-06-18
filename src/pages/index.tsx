@@ -17,6 +17,25 @@ const Heading = ({ children, id }: { children: React.ReactNode; id?: string }) =
   </h1>
 )
 
+const ExternalLink = ({
+  children,
+  underline = true,
+  linkTo,
+}: {
+  children: string
+  underline?: boolean
+  linkTo: string
+}) => (
+  <a
+    href={linkTo}
+    style={underline ? {} : { boxShadow: `none` }}
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+  >
+    {children}
+  </a>
+)
+
 const LinkEntity = ({
   description,
   linkTo,
@@ -27,25 +46,35 @@ const LinkEntity = ({
   description: string
   linkTo: string
   title: string
-}) => (
-  <div>
-    <h3
-      style={{
-        marginBottom: rhythm(1 / 4),
-      }}
-    >
-      <Link style={{ boxShadow: `none` }} to={linkTo}>
-        {title}
-      </Link>
-    </h3>
-    <small>{subTitle}</small>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: description,
-      }}
-    />
-  </div>
-)
+}) => {
+  const linkElement = linkTo.startsWith('http') ? (
+    <ExternalLink linkTo={linkTo} underline={false}>
+      {title}
+    </ExternalLink>
+  ) : (
+    <Link style={{ boxShadow: `none` }} to={linkTo}>
+      {title}
+    </Link>
+  )
+
+  return (
+    <div>
+      <h3
+        style={{
+          marginBottom: rhythm(1 / 4),
+        }}
+      >
+        {linkElement}
+      </h3>
+      <small>{subTitle}</small>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
+    </div>
+  )
+}
 
 type Props = {
   data: any
@@ -57,7 +86,7 @@ export default function Index({ data, location }: Props) {
 
   return (
     <Layout location={location}>
-      <SEO title="All posts" />
+      <SEO title="Welcome" />
       <Heading>
         Hi, I&apos;m Kenneth Skovhus. I&apos;ve been messing around with computers for as
         long as I can remember. MSc in Computer Science. Enjoys life in beautiful
@@ -82,7 +111,35 @@ export default function Index({ data, location }: Props) {
       ))}
 
       <Heading id="talks">I contribute to Open Source</Heading>
-      <Heading id="music">I record and play music</Heading>
+      <p>
+        I&apos;m a strong advocate for Open Source Software and giving back to the
+        community that I depend on to do my job and projects.
+      </p>
+      <p>Highlights:</p>
+      <ul>
+        <li>
+          <ExternalLink linkTo="https://github.com/skovhus/jest-codemods">
+            skovhus/jest-codemods
+          </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink linkTo="https://github.com/skovhus/css-modules-flow-types">
+            skovhus/css-modules-flow-types
+          </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink linkTo="https://hatch.sh/">hatch.sh</ExternalLink>
+        </li>
+        <li>
+          <ExternalLink linkTo="https://github.com/mads-hartmann/bash-language-server">
+            bash-language-server
+          </ExternalLink>
+          {` `}+ editors extensions for bash
+        </li>
+        <li>
+          <ExternalLink linkTo="https://github.com/facebook/jest">jest</ExternalLink>
+        </li>
+      </ul>
     </Layout>
   )
 }

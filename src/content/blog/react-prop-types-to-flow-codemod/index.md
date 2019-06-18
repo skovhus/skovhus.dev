@@ -47,9 +47,9 @@ So far so good. But transitioning an existing codebase to use Flow annotations i
 
 To automate the conversion of React PropTypes to Flow annotations, we are using another tool popularized by Facebook: [jscodeshift](https://github.com/facebook/jscodeshift) (JavaScript codemod toolkit).
 
-If the concept of automated refactoring with codemods is new to you, I’ll shamelessly self promote a meetup talk I recently did: ["A brief introduction of automated refactoring with codemods (Meetup Copenhagen.js December 2016)"](https://player.vimeo.com/video/269014248):
+If the concept of automated refactoring with codemods is new to you, I’ll promote a meetup talk I did: ["Introduction to automated refactoring with JS codemods (Copenhagen.js Meetup, December 2016)"](https://www.youtube.com/watch?v=eMI0UBav8Q4):
 
-[![A brief introduction of automated refactoring with codemods (Meetup Copenhagen.js December 2016)](https://i.vimeocdn.com/video/699874346.jpg)](https://player.vimeo.com/video/269014248)
+[![Introduction to automated refactoring with JS codemods (Copenhagen.js Meetup, December 2016)](https://img.youtube.com/vi/eMI0UBav8Q4/0.jpg)](https://www.youtube.com/watch?v=eMI0UBav8Q4)
 
 
 
