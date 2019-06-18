@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { rhythm } from '../utils/typography'
+import { TALKS } from '../content/talks'
 
 const Heading = ({ children, id }: { children: React.ReactNode; id?: string }) => (
   <h1
@@ -76,12 +77,10 @@ export default function Index({ data, location }: Props) {
         )
       })}
       <Heading id="talks">I give talks</Heading>
-      <LinkEntity
-        description="As frameworks come and go and best practices see constant change, it is increasingly challenging to make confident decisions about client-side code. We present our experiences in search for the right abstractions and architecture optimized for change. We also elaborate on how selecting the React ecosystem for our stack improved our workflow and product quality, as well as examine problems we faced."
-        linkTo="https://vimeo.com/168543655"
-        title="Rethinking front-end development at issuu.com"
-        subTitle="At the Frontend Conference (May 2016)"
-      />
+      {TALKS.map(talk => (
+        <LinkEntity {...talk} key={talk.title} />
+      ))}
+
       <Heading id="talks">I contribute to Open Source</Heading>
       <Heading id="music">I record and play music</Heading>
     </Layout>
