@@ -1,16 +1,6 @@
 header {
-  background-color: rgb(30, 100, 220);
-
-  /* FIXME: pick one */
-  background: linear-gradient(
-    110deg,
-    rgb(80, 45, 220) 0%,
-    rgb(30, 100, 220) 100%
-  );
-  background: linear-gradient(110deg, #1d1e22 0%, #393f4d 100%);
-  background: linear-gradient(110deg, #381c5d 0%, #4d409b 100%);
-  background: linear-gradient(110deg, #431c5d 0%, #2a2b8b 100%);
-
+  background-color: var(--primary-color);
+  background: var(--gradient-background);
   padding: 10px 0;
 }
 

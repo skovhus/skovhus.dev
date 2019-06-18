@@ -1,6 +1,8 @@
 import Typography from 'typography'
 import baseTheme from 'typography-theme-wordpress-2016'
 
+import './global-styles.css'
+
 baseTheme.overrideThemeStyles = () => {
   return {
     'a.gatsby-resp-image-link': {
@@ -15,6 +17,12 @@ baseTheme.overrideThemeStyles = () => {
     },
     blockquote: {
       fontSize: '1em',
+    },
+    a: {
+      color: 'var(--primary-color)',
+    },
+    'mark,ins': {
+      background: 'var(--primary-color)',
     },
   }
 }
