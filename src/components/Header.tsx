@@ -48,17 +48,6 @@ export default function Header({ pageWidthStyles }: Props) {
           <ProfileImage />
           <span>Kenneth Skovhus</span>
         </HeaderLink>
-        <div>
-          <HeaderLink to={'/#posts'}>POSTS</HeaderLink>
-          <HeaderLink
-            style={{
-              marginLeft: '20px',
-            }}
-            to={'/#talks'}
-          >
-            TALKS
-          </HeaderLink>
-        </div>
       </nav>
     </header>
   )
