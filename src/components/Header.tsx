@@ -1,8 +1,7 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
+import { Link } from 'gatsby'
 
-import { rhythm } from '../utils/typography'
+import ProfileImage from './ProfileImage'
 import './Header.css'
 
 const HeaderLink = ({
@@ -33,65 +32,34 @@ type Props = {
 
 export default function Header({ pageWidthStyles }: Props) {
   return (
-    <StaticQuery
-      query={headerQuery}
-      render={data => {
-        return (
-          <header>
-            <nav
-              style={{
-                ...pageWidthStyles,
-              }}
-            >
-              <HeaderLink
-                to={'/'}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <Image
-                  fixed={data.avatar.childImageSharp.fixed}
-                  alt={'Kenneth Skovhus'}
-                  style={{
-                    marginRight: rhythm(1 / 2),
-                    marginBottom: 0,
-                    minWidth: 60,
-                    borderRadius: '100%',
-                  }}
-                  imgStyle={{
-                    borderRadius: '50%',
-                  }}
-                />
-                <span>Kenneth Skovhus</span>
-              </HeaderLink>
-              <div>
-                <HeaderLink to={'/#posts'}>POSTS</HeaderLink>
-                <HeaderLink
-                  style={{
-                    marginLeft: '20px',
-                  }}
-                  to={'/#talks'}
-                >
-                  TALKS
-                </HeaderLink>
-              </div>
-            </nav>
-          </header>
-        )
-      }}
-    />
+    <header>
+      <nav
+        style={{
+          ...pageWidthStyles,
+        }}
+      >
+        <HeaderLink
+          to={'/'}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <ProfileImage />
+          <span>Kenneth Skovhus</span>
+        </HeaderLink>
+        <div>
+          <HeaderLink to={'/#posts'}>POSTS</HeaderLink>
+          <HeaderLink
+            style={{
+              marginLeft: '20px',
+            }}
+            to={'/#talks'}
+          >
+            TALKS
+          </HeaderLink>
+        </div>
+      </nav>
+    </header>
   )
 }
-
-const headerQuery = graphql`
-  query HeaderQuery {
-    avatar: file(absolutePath: { regex: "/skovhus.jpg/" }) {
-      childImageSharp {
-        fixed(width: 60, height: 60) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
