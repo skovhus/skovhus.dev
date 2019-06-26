@@ -17,7 +17,8 @@ type Props = {
 export default function BlogPostTemplate({ data, location, pageContext }: Props) {
   const post = data.markdownRemark
   const { previous, next } = pageContext
-  const featuredImageSrc = post.frontmatter.featuredImage.childImageSharp.fixed.src
+  const { siteUrl } = data.site.siteMetadata
+  const featuredImageSrc = `${siteUrl}${post.frontmatter.featuredImage.childImageSharp.fixed.src}`
 
   return (
     <Layout location={location}>
@@ -99,6 +100,12 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
