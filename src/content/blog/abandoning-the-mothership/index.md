@@ -2,6 +2,7 @@
 title: Abandoning the mothership
 description: It was time to pour into our front-end code the same poison we gave our back-end systems, splitting it all apart into maintainable chunks. Our vision was to make each feature team at issuu.com own, build and deploy its front-end code autonomously – and to make things that ought to be trivial actually trivial!
 date: "2016-09-27T15:05:00.294Z"
+featuredImage: "./deathstar.jpg"
 ---
 
 The time had come to pour into our front-end code the same poison we had given our back-end systems.

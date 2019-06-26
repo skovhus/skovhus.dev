@@ -3,7 +3,7 @@ import React from 'react'
 import { rhythm } from '../utils/typography'
 import ProfileImage from './ProfileImage'
 
-export default function Bio() {
+export default function BlogBio() {
   return (
     <div
       style={{

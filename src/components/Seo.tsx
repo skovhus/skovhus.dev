@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 type Props = {
   description?: string
   lang?: string
-  meta: any[]
+  meta: { name: string; content: string }[]
   title: string
 }
 
@@ -55,8 +55,12 @@ export default function SEO({ description, lang, meta, title }: Props) {
           content: `summary`,
         },
         {
+          name: `twitter:site`,
+          content: `@kenneth_skovhus`,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: '@kenneth_skovhus',
         },
         {
           name: `twitter:title`,

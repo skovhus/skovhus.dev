@@ -5,7 +5,7 @@ module.exports = {
     title: `Kenneth Skovhus`,
     author: `Kenneth Skovhus`,
     description: `Personal website and blog by Kenneth Skovhus.`,
-    siteUrl: `https://skovhus.github.io/`,
+    siteUrl: `https://skovhus.github.io`,
     social: {
       twitter: `kenneth_skovhus`,
     },

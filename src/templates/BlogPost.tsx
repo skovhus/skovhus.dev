@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
+import BlogBio from '../components/BlogBio'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { rhythm, scale } from '../utils/typography'
@@ -17,12 +17,23 @@ type Props = {
 export default function BlogPostTemplate({ data, location, pageContext }: Props) {
   const post = data.markdownRemark
   const { previous, next } = pageContext
+  const featuredImageSrc = post.frontmatter.featuredImage.childImageSharp.fixed.src
 
   return (
     <Layout location={location}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        meta={[
+          {
+            name: 'twitter:image',
+            content: featuredImageSrc,
+          },
+          {
+            name: 'og:image',
+            content: featuredImageSrc,
+          },
+        ]}
       />
       <h1>{post.frontmatter.title}</h1>
       <p
@@ -41,7 +52,7 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
           marginBottom: rhythm(1),
         }}
       />
-      <Bio />
+      <BlogBio />
 
       <ul
         style={{
@@ -81,6 +92,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            fixed(width: 500, height: 500) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }

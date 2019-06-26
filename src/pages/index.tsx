@@ -110,7 +110,7 @@ export default function Index({ data, location }: Props) {
         <LinkEntity {...talk} key={talk.title} />
       ))}
 
-      <Heading id="talks">I contribute to Open Source</Heading>
+      <Heading>I contribute to Open Source</Heading>
       <p>
         I&apos;m a strong advocate for Open Source Software and giving back to the
         community that I depend on to do my job and projects.
