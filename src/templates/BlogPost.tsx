@@ -25,16 +25,7 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        meta={[
-          {
-            name: 'twitter:image',
-            content: featuredImageSrc,
-          },
-          {
-            name: 'og:image',
-            content: featuredImageSrc,
-          },
-        ]}
+        image={featuredImageSrc}
       />
       <h1>{post.frontmatter.title}</h1>
       <p

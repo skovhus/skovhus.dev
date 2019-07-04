@@ -2,14 +2,17 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import defaultMetaImage from '../../static/skovhus.jpg'
+
 type Props = {
   description?: string
   lang?: string
   meta: { name: string; content: string }[]
   title: string
+  image?: string
 }
 
-export default function SEO({ description, lang, meta, title }: Props) {
+export default function SEO({ description, lang, meta, title, image }: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +21,7 @@ export default function SEO({ description, lang, meta, title }: Props) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -25,6 +29,13 @@ export default function SEO({ description, lang, meta, title }: Props) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
+  const { siteUrl } = site.siteMetadata
+  const metaImageSrc = image || `${siteUrl}${defaultMetaImage}`
+
+  if (!metaImageSrc.startsWith('https')) {
+    throw new Error(`Invalid metaImageSrc ${metaImageSrc}`)
+  }
 
   return (
     <Helmet
@@ -69,6 +80,14 @@ export default function SEO({ description, lang, meta, title }: Props) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: 'twitter:image',
+          content: metaImageSrc,
+        },
+        {
+          name: 'og:image',
+          content: metaImageSrc,
         },
       ].concat(meta)}
     />
