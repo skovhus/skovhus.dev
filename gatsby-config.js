@@ -1,14 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    // FIXME: remove this indirection:
-    title: `Kenneth Skovhus`,
-    author: `Kenneth Skovhus`,
-    description: `Personal website and blog by Kenneth Skovhus.`,
     siteUrl: `https://skovhus.github.io`,
-    social: {
-      twitter: `kenneth_skovhus`,
-    },
+    description: 'Personal website and blog by Kenneth Skovhus.',
+    title: 'Kenneth Skovhus',
   },
   plugins: [
     `gatsby-plugin-typescript`,

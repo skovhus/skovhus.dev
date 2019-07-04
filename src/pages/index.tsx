@@ -86,7 +86,7 @@ export default function Index({ data, location }: Props) {
 
   return (
     <Layout location={location}>
-      <SEO title="Welcome" />
+      <SEO />
       <Heading>
         Hi, I&apos;m Kenneth Skovhus. I&apos;ve been messing around with computers for as
         long as I can remember. MSc in Computer Science. Enjoys life in beautiful

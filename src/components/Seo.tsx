@@ -8,20 +8,19 @@ type Props = {
   description?: string
   lang?: string
   meta: { name: string; content: string }[]
-  title: string
   image?: string
+  pageTitle?: string
 }
 
-export default function SEO({ description, lang, meta, title, image }: Props) {
+export default function SEO({ description, lang, meta, image, pageTitle }: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
             siteUrl
+            description
+            title
           }
         }
       }
@@ -30,7 +29,7 @@ export default function SEO({ description, lang, meta, title, image }: Props) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  const { siteUrl } = site.siteMetadata
+  const { siteUrl, title } = site.siteMetadata
   const metaImageSrc = image || `${siteUrl}${defaultMetaImage}`
 
   if (!metaImageSrc.startsWith('https')) {
@@ -42,8 +41,7 @@ export default function SEO({ description, lang, meta, title, image }: Props) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={pageTitle ? `${pageTitle} | ${title}` : title}
       meta={[
         {
           name: `description`,
