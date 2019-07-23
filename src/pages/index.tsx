@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
@@ -26,14 +27,14 @@ const ExternalLink = ({
   underline?: boolean
   linkTo: string
 }) => (
-  <a
+  <OutboundLink
     href={linkTo}
     style={underline ? {} : { boxShadow: `none` }}
     target="_blank"
     rel="nofollow noopener noreferrer"
   >
     {children}
-  </a>
+  </OutboundLink>
 )
 
 const LinkEntity = ({
