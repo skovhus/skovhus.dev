@@ -88,15 +88,16 @@ export default function Index({ data, location }: Props) {
           />
         )
       })}
-      <Heading id="talks">I give talks</Heading>
+
+      <Heading id="talks">I enjoy giving talks</Heading>
       {TALKS.map(talk => (
         <LinkEntity {...talk} key={talk.title} />
       ))}
 
-      <Heading>I contribute to Open Source</Heading>
+      <Heading id="oss">I contribute to open source</Heading>
       <p>
-        I&apos;m a strong advocate for Open Source Software and giving back to the
-        community that I depend on to do my job and projects.
+        I&apos;m a strong advocate for giving back to the open source software community,
+        that I depend on to do my job and projects.
       </p>
       <p>Highlights:</p>
       <ul>
@@ -117,7 +118,7 @@ export default function Index({ data, location }: Props) {
           <ExternalLink linkTo="https://github.com/mads-hartmann/bash-language-server">
             bash-language-server
           </ExternalLink>
-          {` `}+ editors extensions for bash
+          {` `}+ bash extensions for code editors
         </li>
         <li>
           <ExternalLink linkTo="https://github.com/facebook/jest">jest</ExternalLink>
