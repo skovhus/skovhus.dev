@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import Discography from '../components/Discography'
 import ExternalLink from '../components/ExternalLink'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
@@ -122,6 +123,9 @@ export default function Index({ data, location }: Props) {
           <ExternalLink linkTo="https://github.com/facebook/jest">jest</ExternalLink>
         </li>
       </ul>
+
+      <Heading id="music">I play &amp; record music</Heading>
+      <Discography />
     </Layout>
   )
 }

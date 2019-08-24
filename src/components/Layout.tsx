@@ -10,7 +10,7 @@ type Props = {
   location: Location
 }
 
-export default function Layout({ location, children }: Props) {
+export default function Layout({ children }: Props) {
   const styleWidthContained = {
     marginLeft: `auto`,
     marginRight: `auto`,
