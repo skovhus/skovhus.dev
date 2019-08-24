@@ -75,4 +75,4 @@ Notice that there are cases where you want to keep your PropTypes (possible alon
 
 *Thanks to [Maciek Pekala](https://twitter.com/penzington) and [Mads Hartmann](https://twitter.com/Mads_Hartmann) for reviewing this post.*
 
-*This blog post were originally posted on [hackernoon](https://hackernoon.com/type-safe-css-modules-with-flow-dd95e761bbe5).*
+*This blog post were originally posted on [medium/netscape](https://medium.com/netscape/react-proptypes-to-flow-codemod-9757f5ec5381).*
