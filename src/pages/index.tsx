@@ -8,10 +8,19 @@ import SEO from '../components/Seo'
 import { rhythm } from '../utils/typography'
 import { TALKS } from '../content/talks'
 
-const Heading = ({ children, id }: { children: React.ReactNode; id?: string }) => (
+const Heading = ({
+  children,
+  id,
+  marginTop = '5rem',
+}: {
+  children: React.ReactNode
+  id?: string
+  marginTop?: string
+}) => (
   <h1
     style={{
       fontSize: '2rem',
+      marginTop,
     }}
     id={id}
   >
@@ -70,11 +79,24 @@ export default function Index({ data, location }: Props) {
   return (
     <Layout location={location}>
       <SEO />
-      <Heading>
-        Hi, I&apos;m Kenneth Skovhus. I&apos;ve been messing around with computers for as
-        long as I can remember. MSc in Computer Science. Enjoys life in beautiful
-        Copenhagen.
+
+      <Heading marginTop="3rem">
+        Hello, I&apos;m Kenneth. I&apos;m so happy you found your way here!
       </Heading>
+      <p>
+        I&apos;ve been messing around with computers and music for as long as I can
+        remember. I hold an MSc in Computer Science from the Technical University of
+        Denmark and enjoys life in beautiful Copenhagen.
+      </p>
+      <p>
+        I&apos;m passionate about building meaningful products together with talented
+        people. I love mentoring, sharing knowledge, and excel in working full-stack.
+      </p>
+      <p>
+        This is my portfolio where I gather random bits and pieces. I hope you find
+        something useful in my attempt to fight digital sharecropping.
+      </p>
+
       <Heading id="posts">I occasionally blog</Heading>
       {posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug
