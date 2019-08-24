@@ -11,7 +11,7 @@ export default function ProfileImage() {
         query ProfileImageQuery {
           avatar: file(absolutePath: { regex: "/skovhus.jpg/" }) {
             childImageSharp {
-              fixed(width: 60, height: 60) {
+              fixed(width: 70, height: 70) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -26,7 +26,7 @@ export default function ProfileImage() {
             style={{
               marginRight: rhythm(1 / 2),
               marginBottom: 0,
-              minWidth: 60,
+              minWidth: 70,
               borderRadius: '100%',
             }}
             imgStyle={{
