@@ -25,6 +25,7 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
       <SEO
         description={post.frontmatter.description || post.excerpt}
         image={featuredImageSrc}
+        location={location}
         pageTitle={post.frontmatter.title}
       />
       <h1>{post.frontmatter.title}</h1>

@@ -78,7 +78,7 @@ export default function Index({ data, location }: Props) {
 
   return (
     <Layout location={location}>
-      <SEO />
+      <SEO location={location} />
 
       <Heading marginTop="3rem">
         Hello, I&apos;m Kenneth. I&apos;m so happy you found your way here!

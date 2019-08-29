@@ -10,7 +10,7 @@ type Props = {
 export default function NotFoundPage({ location }: Props) {
   return (
     <Layout location={location}>
-      <SEO pageTitle="404" />
+      <SEO location={location} pageTitle="404" />
       <h1>Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>

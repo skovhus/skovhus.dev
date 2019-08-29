@@ -6,13 +6,21 @@ import defaultMetaImage from '../../static/skovhus.jpg'
 
 type Props = {
   description?: string
-  lang?: string
-  meta: { name: string; content: string }[]
   image?: string
+  lang?: string
+  location: Location
+  meta: { name: string; content: string }[]
   pageTitle?: string
 }
 
-export default function SEO({ description, lang, meta, image, pageTitle }: Props) {
+export default function SEO({
+  description,
+  image,
+  lang,
+  location,
+  meta,
+  pageTitle,
+}: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,6 +39,7 @@ export default function SEO({ description, lang, meta, image, pageTitle }: Props
 
   const { siteUrl, title } = site.siteMetadata
   const metaImageSrc = image || `${siteUrl}${defaultMetaImage}`
+  const url = `${siteUrl}${location.pathname || '/'}`
 
   if (!metaImageSrc.startsWith('https')) {
     throw new Error(`Invalid metaImageSrc ${metaImageSrc}`)
@@ -48,6 +57,14 @@ export default function SEO({ description, lang, meta, image, pageTitle }: Props
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: metaImageSrc,
+        },
+        {
+          property: 'og:url',
+          content: url,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -59,6 +76,11 @@ export default function SEO({ description, lang, meta, image, pageTitle }: Props
           property: `og:type`,
           content: `website`,
         },
+        {
+          property: 'og:image',
+          content: metaImageSrc,
+        },
+
         {
           name: `twitter:card`,
           content: `summary`,
@@ -81,10 +103,6 @@ export default function SEO({ description, lang, meta, image, pageTitle }: Props
         },
         {
           name: 'twitter:image',
-          content: metaImageSrc,
-        },
-        {
-          name: 'og:image',
           content: metaImageSrc,
         },
       ].concat(meta)}
