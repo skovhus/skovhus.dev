@@ -2,7 +2,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://skovhus.github.io`,
-    description: 'Portfolio and blog by full-stack engineer Kenneth Skovhus.',
+    description:
+      'Portfolio, blog, talks, discography, and a collection of random bits and pieces by full-stack engineer Kenneth Skovhus.',
     title: 'Kenneth Skovhus',
   },
   plugins: [
