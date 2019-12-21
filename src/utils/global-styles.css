@@ -6,3 +6,11 @@
     var(--primary-color) 100%
   );
 }
+
+html, body, #___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+}

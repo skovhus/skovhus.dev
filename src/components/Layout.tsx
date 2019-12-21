@@ -19,18 +19,19 @@ export default function Layout({ children }: Props) {
   }
 
   return (
-    <>
+    <div style={{ display: 'flex', flexFlow: 'column', height: '100%' }}>
       <Header pageWidthStyles={styleWidthContained} />
       <div
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
+          flexGrow: 1,
           ...styleWidthContained,
         }}
       >
         <main>{children}</main>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
