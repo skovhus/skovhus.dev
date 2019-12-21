@@ -9,6 +9,9 @@ The time had come to pour into our front-end code the same poison we had given o
 
 ![Abandoning the mothership](./deathstar.jpg)
 
+> COMMENT FROM DECEMBER 2019: This blog post was released when Star Wars: Episode VII – The Force Awakens came out... 🎬😄
+
+
 For many years, issuu’s engineering group was organized around component teams. Our late great Team Monster handled the front-end code and the rest of the teams provided APIs and back-end infrastructure.
 
 As we scaled the engineering organization, this classical split became counterproductive. A lot of cross team coordination was required for releases. Business logic and remappings were spread across multiple layers of the application. Dependencies and ownership of features were unclear. Finally, the Monsters had way too much on their plate!
