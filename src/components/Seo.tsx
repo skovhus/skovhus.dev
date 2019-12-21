@@ -7,20 +7,12 @@ import defaultMetaImage from '../../static/skovhus.jpg'
 type Props = {
   description?: string
   image?: string
-  lang?: string
   location: Location
   meta: { name: string; content: string }[]
   pageTitle?: string
 }
 
-export default function SEO({
-  description,
-  image,
-  lang,
-  location,
-  meta,
-  pageTitle,
-}: Props) {
+export default function SEO({ description, image, location, meta, pageTitle }: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -48,7 +40,7 @@ export default function SEO({
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: 'en',
       }}
       title={pageTitle ? `${pageTitle} | ${title}` : title}
       meta={[
