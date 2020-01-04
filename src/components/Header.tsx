@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import ProfileImage from './ProfileImage'
 import './Header.css'
+import { Menu } from './Menu'
 
 const HeaderLink = ({
   children,
@@ -36,6 +37,8 @@ export default function Header({ pageWidthStyles }: Props) {
       <nav
         style={{
           ...pageWidthStyles,
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
         <HeaderLink
@@ -43,11 +46,13 @@ export default function Header({ pageWidthStyles }: Props) {
           style={{
             display: 'flex',
             alignItems: 'center',
+            flexGrow: 1,
           }}
         >
           <ProfileImage />
           <span>Kenneth Skovhus</span>
         </HeaderLink>
+        <Menu />
       </nav>
     </header>
   )
