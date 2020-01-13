@@ -1,27 +1,27 @@
 ---
 title: Software Engineering Principles
-date: "2020-01-14T12:00:00.000Z"
-description: To make it easier to understand my modus operandi, I've compiled a list of high-level technical principles and beliefs that I operate by.
+date: "2020-01-13T20:00:00.000Z"
+description: A list of the high-level technical principles and beliefs that I operate by when building software. Lots of links and references.
 ---
 
-To make it easier to understand the way I build software, I've compiled a list of *high-level technical principles and beliefs that I operate by*.
+After reading the [principles of the React team](https://react.christmas/2019/24) I got inspired to write this post on the *high-level technical principles and beliefs that I operate by*.
 
-These principles are not meant to be exhaustive. And although I've learned these over the last 20 years, they are definitely subject to change while I gain new perspectives and (hopefully) get wiser.
+These 8 principles are not meant to be exhaustive, and although I have gathered these over the last 20 years, they are definitely subject to change while I gain new perspectives and (*hopefully*) get wiser. I have added a bunch of links and recommendations, that I hope you find inspiring. ☕️
 
-I got inspired to write this post after reading the [principles of the React team](https://react.christmas/2019/24).
+
 
 ## People first, technology second
 
 Technology's ultimate purpose is to advance humanity. If we do not put the human first in everything we do, then what is the point?
 
-We can easily get carried away solving problems and forgetting about the users – the “why”. I believe all technologists will benefit from understanding user-centered and human-centered design.
+Before I studied computer science, I worked as a technical illustrator and later as a freelance web designer. I was always fascinated by human-computer interaction. Reading *Designing Web Usability* (1999) by Jakob Nielsen was a real eye-opener. Later in life, working together with really skilled UX designers and product owners changed how I approach problems.
 
-Before I studied computer science, I worked as a technical illustrator and later as a freelance web designer. I was always fascinated by human-computer interaction. Reading *Designing Web Usability* (1999) by Jakob Nielsen was a real eye-opener. Later in life, working together with really skilled UX designers changed how I approach problems.
+We can easily get carried away solving problems and forgetting about the users. I believe all technologists will benefit from understanding user-centered and human-centered design.
 
 Recommended material:
 - [Offscreen](https://www.offscreenmag.com/) is my favorite print magazine on how we shape technology and how technology shapes us
 - Donald Norman's classic best-selling book *The Design of Everyday Things* studies fundamental principles of great and meaningful design.
-- Steve Jobs' [response](https://www.youtube.com/watch?v=dI93BvrBxQ0) from 1997, just returned to Apple, as a response to a tech-focused insult: *"You've got to start with the customer experience and work backward to the technology. You can’t start with the technology and try to figure out where you’re going to sell it."*
+- Steve Jobs, just returned to Apple in 1997, as a [response](https://www.youtube.com/watch?v=dI93BvrBxQ0) to a tech-focused insult: *"You've got to start with the customer experience and work backward to the technology. You can’t start with the technology and try to figure out where you’re going to sell it."*.
 
 
 
@@ -29,7 +29,7 @@ Recommended material:
 
 The greek philosopher Heraclitus knew it 2500 years ago: *"Everything changes and nothing stands still"*.
 
-Although a common metaphor, software is nothing like construction engineering and architecture. Code is organic, it evolves, and needs constant maintenance. I like the [analogy](https://www.artima.com/intv/garden.html) that software development resembles gardening. We are gardeners constantly dealing with things chaging.
+Although a common metaphor, software is nothing like construction engineering or architecture. Code is organic, it evolves, and needs constant maintenance. I love the [analogy](https://www.artima.com/intv/garden.html) that software development resembles gardening. We are gardeners constantly dealing with things changing. And most changes doesn't quite come up the way you expected.
 
 To optimize a codebase for change:
 - Keep things simple
@@ -74,6 +74,8 @@ Build quick prototypes, cut down on scope, and plan to throw code and designs aw
 Recommended material:
 - Sandi Metz [*The Wrong Abstraction*](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
 - Joe Spolsky [*The Law of Leaky Abstractions*](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/). "All non-trivial abstractions, to some degree, are leaky"
+- Dan Abramov [*Goodbye Clean Code*](https://overreacted.io/goodbye-clean-code/).
+
 
 
 ## Invest in safety nets
@@ -89,9 +91,11 @@ Safety nets checklist:
 - Process for incident [postmortems](https://landing.google.com/sre/sre-book/chapters/postmortem-culture/).
 
 
+
 ## Cross-functional teams
 
-Splitting teams based on competence, or where in the stack their code runs, is easy, but counter-productive. It introduces an overhead in terms of communication and requirements specifications. The most effective teams I've ever worked in, where all diverse and cross-functional (design, UX, frontend, backend, product, domain experts).
+Splitting teams based on competence, or where in the stack their code runs, is easy, but often counter-productive. It introduces an overhead in terms of communication and requirements specifications. The most effective teams I have worked in, where all diverse and cross-functional (design, UX, frontend, backend, product, domain experts).
+
 
 
 ## Give back to the OSS community
@@ -100,15 +104,16 @@ Most software companies rely heavily on Open Source Software (OSS). Just enumera
 
 In 2017 my [new year's resolution](https://speakerdeck.com/skovhus/making-open-source-my-new-years-resolution) was to give back to the OSS community. It has been a great ride so far. Heck, one might say that this blog post is a continuation of that.
 
-I'm not expecting anyone to spend their weekends and late evenings on open source. But why not convince your employer to contribute? Get time reserved for reporting bugs, triaging issues, doing pull requests, sharing knowledge in blog posts and talks, open-sourcing some useful homegrown system, or simply sponsor projects you depend upon.
+I do not expect anyone to spend their weekends and late evenings on open source. But why not convince your employer to contribute? Get time reserved for reporting bugs, triaging issues, doing pull requests, sharing knowledge in blog posts and talks, open-sourcing some useful homegrown system, or simply sponsor projects you depend upon.
 
 
----
 
-## What are your engineering principles?
+### What are your engineering principles?
 
 These are some of the high-level engineering principles I operate by when building software – I hope you found them useful.
 
 Do you, or your team have a set of principles? I would love to hear about them.
+
+---
 
 *Thanks to [Maciek Pekala](https://twitter.com/penzington) for reviewing this post.*
