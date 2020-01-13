@@ -19,7 +19,7 @@ export default function Layout({ children }: Props) {
   }
 
   return (
-    <div style={{ display: 'flex', flexFlow: 'column', height: '100%' }}>
+    <div>
       <Header pageWidthStyles={styleWidthContained} />
       <div
         style={{
