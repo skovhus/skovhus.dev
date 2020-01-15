@@ -29,7 +29,7 @@ Recommended material:
 
 The greek philosopher Heraclitus knew it 2500 years ago: *"Everything changes and nothing stands still"*.
 
-Although a common metaphor, software is nothing like construction engineering or architecture. Code is organic, it evolves, and needs constant maintenance. I love the [analogy](https://www.artima.com/intv/garden.html) that software development resembles gardening. We are gardeners constantly dealing with things changing. And most changes doesn't quite come up the way you expected.
+Although a common metaphor, software is nothing like construction engineering or architecture. Code is organic, it evolves, and needs constant maintenance. I love the [analogy](https://www.artima.com/intv/garden.html) that software development resembles gardening. We are gardeners constantly dealing with things changing. And most changes do not turn out the way you expected.
 
 To optimize a codebase for change:
 - Keep things simple
@@ -41,7 +41,7 @@ To optimize a codebase for change:
 
 
 
-## Don't jump to quickly into solution mode
+## Don't jump too quickly into solution mode
 
 Solving problems is fun – usually more fun than planning. But you might find yourself jumping into solution-mode before understanding the problem. Instead, incorporate asking questions:
 - What problem are we trying to solve?
