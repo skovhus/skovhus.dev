@@ -1,9 +1,7 @@
 :root {
-  --color-accent: hsl(240, 80%, 35%);
   --background-context-color: rgb(21, 32, 43);
   --background-context-image: var(--background-context-color)
     url("../../public/header-unsplash-ryan_hutton_.jpg") repeat;
-  --background-content: white;
 }
 
 html {
@@ -27,6 +25,26 @@ body {
   html {
     font-size: 90%;
   }
+}
+
+body.light-mode {
+  --background-code-block: #011627;
+  --background-content: white;
+  --background-hr: hsla(0, 0%, 0%, 0.2);
+  --color-accent: hsl(240, 80%, 35%);
+  --color-inline-code-background: #f6f6f8;
+  --color-inline-code-text: #1a1a1a;
+  --color-text-body: #222;
+}
+
+body.dark-mode {
+  --background-code-block: rgb(10, 25, 47);
+  --background-content: #181722;
+  --background-hr: hsla(0, 0%, 100%, 0.2);
+  --color-accent: rgb(160, 188, 248);
+  --color-inline-code-background: rgb(10, 25, 47); /* rgba(115,124,153,0.2) */
+  --color-inline-code-text: #e6e6e6;
+  --color-text-body: rgba(255, 255, 255, 0.88);
 }
 
 /**
@@ -88,8 +106,8 @@ pre[class*="language-"] ::selection {
 /* Inline code */
 :not(pre) > code {
   border-radius: 0.3em;
-  background: rgba(255, 229, 100, 0.2);
-  color: #1a1a1a;
+  background: var(--color-inline-code-background);
+  color: var(--color-inline-code-text);
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
 }
@@ -175,7 +193,7 @@ pre[data-line] {
   margin-left: -1.3125rem;
   margin-right: -1.3125rem;
   border-radius: 10px;
-  background: #011627;
+  background: var(--background-code-block);
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }

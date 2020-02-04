@@ -15,7 +15,9 @@ export default function Layout({ children, showHeaderIntro = false }: Props) {
       <Header showIntro={showHeaderIntro} />
       <div
         style={{
+          color: 'var(--color-text-body)',
           background: 'var(--background-content)',
+          transition: 'color 0.2s ease-out, background 0.2s ease-out',
         }}
       >
         <PageWidthContainer

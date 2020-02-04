@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import NextLink from 'next/link'
+import useDarkMode from 'use-dark-mode'
 
 import { BurgerIcon } from './BurgerIcon'
+import { LightBulb } from './LightBulb'
 
 const MenuContainer = styled.div`
   user-select: none;
@@ -35,6 +37,8 @@ const StyledLink = styled.a`
 export function Menu() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const darkMode = useDarkMode(false)
+
   useEffect(() => {
     document.body.style.overflowY = isOpen ? 'hidden' : ''
   }, [isOpen])
@@ -51,6 +55,13 @@ export function Menu() {
       {isOpen && (
         <MenuContainer>
           <MenuContent>
+            <LightBulb
+              onClick={() => {
+                darkMode.toggle()
+                setIsOpen(!isOpen)
+              }}
+              active={darkMode.value}
+            />
             <Link href="/#posts" label="Blog" />
             <Link href="/#talks" label="Talks" />
             <Link href="/#oss" label="Open source" />
