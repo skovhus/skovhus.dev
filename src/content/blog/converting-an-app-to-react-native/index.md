@@ -103,4 +103,4 @@ There is one more thing we feel is important when converting to React Native, an
 
 *Co-authored by [Kevin Pelgrims](http://www.kevinpelgrims.com/).*
 
-*This blog post were originally posted on [Leo Innovation Labs' medium](https://medium.com/leoilab/converting-an-app-to-react-native-how-to-get-started-924548ff6c62).*
+*This blog post was originally posted on [Leo Innovation Labs' medium](https://medium.com/leoilab/converting-an-app-to-react-native-how-to-get-started-924548ff6c62).*

@@ -94,7 +94,7 @@ Safety nets checklist:
 
 ## Cross-functional teams
 
-Splitting teams based on competence, or where in the stack their code runs, is easy, but often counter-productive. It introduces an overhead in terms of communication and requirements specifications. The most effective teams I have worked in, where all diverse and cross-functional (design, UX, frontend, backend, product, domain experts).
+Splitting teams based on competence, or where in the stack their code runs, is easy, but often counter-productive. It introduces an overhead in terms of communication and requirements specifications. The most effective teams I have worked in, were all diverse and cross-functional (design, UX, frontend, backend, product, domain experts).
 
 
 

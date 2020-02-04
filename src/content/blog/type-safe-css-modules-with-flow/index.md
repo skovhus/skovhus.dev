@@ -83,4 +83,4 @@ And then sit back and enjoy CSS Modules being type checked by Flow. 🍺
 
 Please let me know what you think… And give a little ⭐️ over at [GitHub](https://github.com/skovhus/css-modules-flow-types).
 
-*This blog post were originally posted on [hackernoon](https://hackernoon.com/type-safe-css-modules-with-flow-dd95e761bbe5).*
+*This blog post was originally posted on [hackernoon](https://hackernoon.com/type-safe-css-modules-with-flow-dd95e761bbe5).*
