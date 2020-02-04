@@ -1,40 +1,66 @@
 import React, { useState, useEffect } from 'react'
+import styled from '@emotion/styled'
 
 import { BurgerIcon } from './BurgerIcon'
 import { Link as GatsbyLink } from 'gatsby'
 
-import './Menu.css'
+const MenuContainer = styled.div`
+  user-select: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  background: var(--gradient-background);
+`
+
+const MenuContent = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+`
+
+const StyledGatsbyLink = styled(GatsbyLink)`
+  color: white;
+  padding: 20px;
+  box-shadow: none;
+`
 
 export function Menu() {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    // FIXME: test on mobile safari
     document.body.style.overflowY = isOpen ? 'hidden' : ''
   }, [isOpen])
 
   const Link = ({ to, label }: { to: string; label: string }) => (
-    <GatsbyLink
+    <StyledGatsbyLink
       aria-label={`View ${label.toLowerCase()} page`}
       to={to}
       onClick={() => setIsOpen(false)}
     >
       {label}
-    </GatsbyLink>
+    </StyledGatsbyLink>
   )
 
   return (
     <>
       <BurgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       {isOpen && (
-        <div className="MenuWrapper">
-          <div className="MenuContent">
+        <MenuContainer>
+          <MenuContent>
             <Link to="#posts" label="Blog" />
             <Link to="#talks" label="Talks" />
             <Link to="#oss" label="Open source" />
             <Link to="#music" label="Music" />
-          </div>
-        </div>
+          </MenuContent>
+        </MenuContainer>
       )}
     </>
   )

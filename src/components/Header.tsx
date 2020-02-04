@@ -1,9 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from '@emotion/styled'
 
 import ProfileImage from './ProfileImage'
-import './Header.css'
 import { Menu } from './Menu'
+
+const StyledHeader = styled.header`
+  background-color: var(--primary-color);
+  background: var(--gradient-background);
+  padding: 10px 0;
+`
+
+const StyledNav = styled.nav`
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  color: white;
+`
 
 const HeaderLink = ({
   children,
@@ -33,8 +45,8 @@ type Props = {
 
 export default function Header({ pageWidthStyles }: Props) {
   return (
-    <header>
-      <nav
+    <StyledHeader>
+      <StyledNav
         style={{
           ...pageWidthStyles,
           display: 'flex',
@@ -53,7 +65,7 @@ export default function Header({ pageWidthStyles }: Props) {
           <span>Kenneth Skovhus</span>
         </HeaderLink>
         <Menu />
-      </nav>
-    </header>
+      </StyledNav>
+    </StyledHeader>
   )
 }

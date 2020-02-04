@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
 import Discography from '../components/Discography'
 import ExternalLink from '../components/ExternalLink'
@@ -8,25 +9,16 @@ import SEO from '../components/Seo'
 import { rhythm } from '../utils/typography'
 import { TALKS } from '../content/talks'
 
-const Heading = ({
-  children,
-  id,
-  marginTop = '5rem',
-}: {
+type HeadingProps = {
   children: React.ReactNode
   id?: string
-  marginTop?: string
-}) => (
-  <h1
-    style={{
-      fontSize: '2rem',
-      marginTop,
-    }}
-    id={id}
-  >
-    {children}
-  </h1>
-)
+  dense?: boolean
+}
+
+const Heading = styled.h1<HeadingProps>`
+  font-size: 2rem;
+  margin-top: ${props => (props.dense ? '3rem' : '5rem')};
+`
 
 const LinkEntity = ({
   description,
@@ -98,7 +90,7 @@ export default function Index({ data, location }: Props) {
     <Layout location={location}>
       <SEO location={location} />
 
-      <Heading marginTop="3rem">
+      <Heading dense>
         Hello, I&apos;m Kenneth. I&apos;m so happy you found your way here!
       </Heading>
       <p>
