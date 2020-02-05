@@ -2,6 +2,7 @@
 title: React PropTypes to Flow codemod
 description: I’m presenting how to automatically convert your existing codebase using React PropTypes to use more powerful Flow annotations.
 date: "2017-04-11T15:00:00.000Z"
+devToLink: https://dev.to/kenneth_skovhus/react-proptypes-to-flow-codemod-4gh8
 featuredImage: "./flow-unsplash.jpg"
 ---
 

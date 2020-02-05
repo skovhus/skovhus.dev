@@ -39,8 +39,9 @@ type Props = {
       html: string
       timeToRead: string // FIXME: use
       frontmatter: {
-        description: string
         date: string
+        description?: string
+        devToLink?: string
         title: string
         featuredImage?: {
           childImageSharp: {
@@ -65,30 +66,40 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
   const post = data.markdownRemark
   const { previous, next, slug } = pageContext
   const { siteUrl } = data.site.siteMetadata
-  const featuredImageSrc = post.frontmatter.featuredImage
-    ? `${siteUrl}${post.frontmatter.featuredImage.childImageSharp.fixed.src}`
+  const { date, description, devToLink, featuredImage, title } = post.frontmatter
+
+  const featuredImageSrc = featuredImage
+    ? `${siteUrl}${featuredImage.childImageSharp.fixed.src}`
     : undefined
 
-  const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
+  const twitterDiscussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://skovhus.github.io${slug}`
   )}`
 
   return (
     <Layout location={location}>
       <SEO
-        description={post.frontmatter.description || post.excerpt}
+        description={description || post.excerpt}
         image={featuredImageSrc}
         location={location}
-        pageTitle={post.frontmatter.title}
+        pageTitle={title}
       />
 
       <article>
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{title}</h1>
         <Subtitle>
-          {post.frontmatter.date} • {post.timeToRead} minute read
+          {date} • {post.timeToRead} minute read
         </Subtitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <ExternalLink linkTo={discussUrl}>Discuss this post on Twitter.</ExternalLink>
+        Discuss this post{' '}
+        <ExternalLink linkTo={twitterDiscussUrl}>on Twitter</ExternalLink>
+        {devToLink && (
+          <>
+            {' or '}
+            <ExternalLink linkTo={devToLink}>on DEV Community</ExternalLink>
+          </>
+        )}
+        .
         <HorizontalLine />
       </article>
 
@@ -125,6 +136,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        devToLink
         featuredImage {
           childImageSharp {
             fixed(width: 500, height: 500) {
