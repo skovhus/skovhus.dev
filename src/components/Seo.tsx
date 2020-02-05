@@ -29,7 +29,7 @@ export default function SEO({ description, image, location, meta, pageTitle }: P
 
   const metaDescription = description || site.siteMetadata.description
 
-  const { siteUrl, title } = site.siteMetadata
+  const { siteUrl, title: siteTitle } = site.siteMetadata
   const metaImageSrc = image || `${siteUrl}${defaultMetaImage}`
   const url = `${siteUrl}${location.pathname || '/'}`
 
@@ -37,12 +37,14 @@ export default function SEO({ description, image, location, meta, pageTitle }: P
     throw new Error(`Invalid metaImageSrc ${metaImageSrc}`)
   }
 
+  const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
+
   return (
     <Helmet
       htmlAttributes={{
         lang: 'en',
       }}
-      title={pageTitle ? `${pageTitle} | ${title}` : title}
+      title={title}
       meta={[
         {
           name: `description`,
