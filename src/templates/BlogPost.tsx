@@ -10,6 +10,10 @@ import { rhythm, scale } from '../utils/typography'
 
 import './BlogPost.css'
 
+export const Title = styled.h1`
+  margin-top: 3rem;
+`
+
 const Subtitle = styled.p`
   font-size: ${scale(-1 / 5).fontSize};
   line-height: ${scale(-1 / 5).lineHeight};
@@ -86,7 +90,7 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
       />
 
       <article>
-        <h1>{title}</h1>
+        <Title>{title}</Title>
         <Subtitle>
           {date} • {post.timeToRead} minute read
         </Subtitle>
