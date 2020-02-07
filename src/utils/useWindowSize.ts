@@ -1,18 +1,21 @@
 const { useState, useEffect } = require('react')
 
 type WindowSize = {
-  innerHeight: number
-  innerWidth: number
-  outerHeight: number
-  outerWidth: number
+  height: number
+  width: number
 }
 
 function getSize(): WindowSize {
+  if (typeof window !== 'object') {
+    return {
+      height: 1000,
+      width: 800,
+    }
+  }
+
   return {
-    innerHeight: window.innerHeight,
-    innerWidth: window.innerWidth,
-    outerHeight: window.outerHeight,
-    outerWidth: window.outerWidth,
+    height: window.innerHeight,
+    width: window.innerWidth,
   }
 }
 

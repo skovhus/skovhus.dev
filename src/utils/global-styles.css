@@ -1,7 +1,8 @@
 :root {
   --color-accent: hsl(240, 80%, 35%);
   --background-context-color: rgb(21, 32, 43);
-  --background-context-image: var(--background-context-color) url('../../static/header-unsplash-ryan_hutton_.jpg') repeat;
+  --background-context-image: var(--background-context-color)
+    url("../../static/header-unsplash-ryan_hutton_.jpg") repeat;
   --background-content: white;
 }
 

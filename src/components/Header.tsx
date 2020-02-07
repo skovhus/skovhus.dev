@@ -63,7 +63,7 @@ type Props = {
 
 export default function Header({ showIntro, pageWidthStyles }: Props) {
   const windowSize = useWindowSize()
-  const hasRoomForIntro = windowSize.innerWidth >= 630
+  const hasRoomForIntro = windowSize.width >= 630
 
   return (
     <StyledHeader>
