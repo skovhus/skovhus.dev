@@ -9,7 +9,7 @@
     "develop": "gatsby develop",
     "start": "yarn run develop",
     "serve": "gatsby serve",
-    "deploy": "yarn verify && yarn build && gh-pages --dist public --branch master --message 'Deploy to GitHub pages'",
+    "deploy": "yarn verify && rm -rf .cache public && yarn build && gh-pages --dist public --branch master --message 'Deploy to GitHub pages'",
     "lint": "eslint . --ext js,ts,tsx --fix && prettier src/**/*.css --write",
     "typecheck": "tsc --noEmit",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
