@@ -24,17 +24,18 @@ baseTheme.overrideThemeStyles = () => {
     'mark,ins': {
       background: 'var(--color-accent)',
     },
+    'h1,h2,h3,h4': {
+      fontWeight: 300,
+    },
+    h2: {
+      fontSize: '1.6rem',
+    },
   }
 }
 
 delete baseTheme.googleFonts
 
 const typography = new Typography(baseTheme)
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles()
-}
 
 export default typography
 export const { rhythm } = typography
