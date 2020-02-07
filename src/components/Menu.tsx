@@ -14,8 +14,7 @@ const MenuContainer = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--primary-color);
-  background: var(--gradient-background);
+  background: var(--background-context-color);
 `
 
 const MenuContent = styled.div`

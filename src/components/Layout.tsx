@@ -6,11 +6,12 @@ import Footer from './Footer'
 import Header from './Header'
 
 type Props = {
-  children: any
+  children: React.ReactNode
+  showHeaderIntro?: boolean
   location: Location
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children, showHeaderIntro = false }: Props) {
   const styleWidthContained = {
     marginLeft: `auto`,
     marginRight: `auto`,
@@ -19,19 +20,29 @@ export default function Layout({ children }: Props) {
   }
 
   return (
-    <div>
-      <Header pageWidthStyles={styleWidthContained} />
+    <>
+      <Header pageWidthStyles={styleWidthContained} showIntro={showHeaderIntro} />
       <div
         style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          flexGrow: 1,
-          ...styleWidthContained,
+          background: 'var(--background-content)',
         }}
       >
-        <main>{children}</main>
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            flexGrow: 1,
+
+            ...styleWidthContained,
+            paddingTop: '1px', // There is probably a better way to break out of the box model
+            paddingBottom: '60px',
+          }}
+        >
+          <main>{children}</main>
+        </div>
       </div>
+
       <Footer />
-    </div>
+    </>
   )
 }

@@ -19,10 +19,10 @@ baseTheme.overrideThemeStyles = () => {
       fontSize: '1em',
     },
     a: {
-      color: 'var(--primary-color)',
+      color: 'var(--color-accent)',
     },
     'mark,ins': {
-      background: 'var(--primary-color)',
+      background: 'var(--color-accent)',
     },
   }
 }

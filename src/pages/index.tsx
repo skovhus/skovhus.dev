@@ -9,15 +9,17 @@ import SEO from '../components/Seo'
 import { rhythm } from '../utils/typography'
 import { TALKS } from '../content/talks'
 
-type HeadingProps = {
-  children: React.ReactNode
-  id?: string
-  dense?: boolean
-}
-
-const Heading = styled.h1<HeadingProps>`
+const Heading = styled.h1`
   font-size: 2rem;
-  margin-top: ${props => (props.dense ? '3rem' : '5rem')};
+  margin-top: 5rem;
+`
+
+const NegativeHeadingSpacingHack = styled.div`
+  margin-top: -1rem;
+`
+
+const HeadingSpacingHack = styled.div`
+  margin-top: 3rem;
 `
 
 const LinkEntity = ({
@@ -46,6 +48,7 @@ const LinkEntity = ({
       <h3
         style={{
           marginBottom: rhythm(1 / 4),
+          lineHeight: 1.4,
         }}
       >
         {linkElement}
@@ -87,27 +90,22 @@ export default function Index({ data, location }: Props) {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location}>
+    <Layout location={location} showHeaderIntro>
       <SEO location={location} />
-
-      <Heading dense>
-        Hello, I&apos;m Kenneth. I&apos;m so happy you found your way here!
-      </Heading>
-      <p>
-        I&apos;ve been messing around with computers and music for as long as I can
-        remember. I hold an MSc in Computer Science from the Technical University of
-        Denmark and enjoys life in beautiful Copenhagen.
-      </p>
-      <p>
-        I&apos;m passionate about building meaningful products together with talented
-        people. I love mentoring, sharing knowledge, and excel in working full-stack.
+      <p style={{ marginTop: '2rem' }}>
+        I have been messing around with computers and music for as long as I remember.
+        Building meaningful products together with talented people is my passion. I love
+        mentoring, sharing knowledge, and excel in working full-stack with web
+        technologies. MSc in Computer Science from the Technical University of Denmark.
       </p>
       <p>
         This is my portfolio where I gather random bits and pieces. I hope you find
         something useful in my attempt to fight digital sharecropping.
       </p>
 
+      <NegativeHeadingSpacingHack />
       <Heading id="posts">I occasionally blog</Heading>
+      <NegativeHeadingSpacingHack />
       {posts.map(({ node }) => {
         const { title } = node.frontmatter
         return (
@@ -122,6 +120,7 @@ export default function Index({ data, location }: Props) {
       })}
 
       <Heading id="talks">I enjoy giving talks</Heading>
+      <NegativeHeadingSpacingHack />
       {TALKS.map(talk => (
         <LinkEntity {...talk} key={talk.title} />
       ))}
@@ -158,6 +157,7 @@ export default function Index({ data, location }: Props) {
       </ul>
 
       <Heading id="music">I play &amp; record music</Heading>
+      <HeadingSpacingHack />
       <Discography />
     </Layout>
   )

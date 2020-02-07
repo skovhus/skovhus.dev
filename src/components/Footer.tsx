@@ -5,12 +5,10 @@ import ExternalLink from './ExternalLink'
 
 const StyledFooter = styled.footer`
   text-align: center;
-  background-color: var(--primary-color);
-  background: var(--gradient-background);
   color: white;
   font-size: 10px;
   padding: 30px;
-  margin-top: 90px;
+  background: var(--background-context-image) center center;
 `
 
 const SvgIcon = styled.svg`
