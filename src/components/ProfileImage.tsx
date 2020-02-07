@@ -5,7 +5,7 @@ import GatsbyImage from 'gatsby-image'
 import { rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
 
-export const PROFILE_IMAGE_WIDTH = 80
+export const PROFILE_IMAGE_WIDTH = 70
 
 const Image = styled(GatsbyImage)`
   margin-right: ${rhythm(1 / 2)};
@@ -21,7 +21,7 @@ export default function ProfileImage() {
         query ProfileImageQuery {
           avatar: file(absolutePath: { regex: "/skovhus.jpg/" }) {
             childImageSharp {
-              fixed(width: 80, height: 80) {
+              fixed(width: 70, height: 70) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -31,8 +31,8 @@ export default function ProfileImage() {
       render={data => {
         return (
           <Image
-            fixed={data.avatar.childImageSharp.fixed}
             alt={'Kenneth Skovhus'}
+            fixed={data.avatar.childImageSharp.fixed}
             imgStyle={{
               borderRadius: '50%',
             }}

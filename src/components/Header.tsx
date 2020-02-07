@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
-import ProfileImage, { PROFILE_IMAGE_WIDTH } from './ProfileImage'
+import ProfileImage from './ProfileImage'
 import { Menu } from './Menu'
 import { useWindowSize } from '../utils/useWindowSize'
 
@@ -13,6 +13,13 @@ const StyledHeader = styled.header`
 
 const Title = styled.h1`
   font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0;
+  color: white;
+`
+
+const MobileTitle = styled.h1`
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
   color: white;
@@ -31,7 +38,7 @@ const BackArrow = styled.div`
   display: inline-block;
   padding: 6px;
   transform: rotate(135deg);
-  margin-left: ${PROFILE_IMAGE_WIDTH / 2}px;
+  margin-left: 10px;
 `
 
 const HeaderLink = ({
@@ -63,7 +70,23 @@ type Props = {
 
 export default function Header({ showIntro, pageWidthStyles }: Props) {
   const windowSize = useWindowSize()
-  const hasRoomForIntro = windowSize.width >= 630
+
+  const intro =
+    windowSize.width >= 600 ? (
+      <>
+        <ProfileImage />
+        <Title>
+          Kenneth Skovhus. 👋
+          <br />
+          Software developer based in Copenhagen.
+        </Title>
+      </>
+    ) : (
+      <>
+        <ProfileImage />
+        <MobileTitle>Kenneth Skovhus 👋</MobileTitle>
+      </>
+    )
 
   return (
     <StyledHeader>
@@ -76,24 +99,7 @@ export default function Header({ showIntro, pageWidthStyles }: Props) {
               alignItems: 'center',
             }}
           >
-            {showIntro ? (
-              <>
-                <ProfileImage />
-                {hasRoomForIntro && (
-                  <Title>
-                    Kenneth Skovhus. 👋
-                    <>
-                      <br />
-                      Software developer based in Copenhagen.
-                    </>
-                  </Title>
-                )}
-              </>
-            ) : (
-              <>
-                <BackArrow />
-              </>
-            )}
+            {showIntro ? intro : <BackArrow />}
           </HeaderLink>
           <div style={{ flexGrow: 1 }} />
           <Menu />
