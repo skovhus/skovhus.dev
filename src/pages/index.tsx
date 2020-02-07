@@ -32,7 +32,7 @@ const LinkEntity = ({
   title: string
 }) => {
   const linkElement = linkTo.startsWith('http') ? (
-    <ExternalLink linkTo={linkTo} underline={false}>
+    <ExternalLink linkTo={linkTo} noUnderline>
       {title}
     </ExternalLink>
   ) : (

@@ -3,16 +3,16 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const ExternalLink = ({
   children,
-  underline = true,
+  noUnderline = false,
   linkTo,
 }: {
   children: JSX.Element | string
-  underline?: boolean
+  noUnderline?: boolean
   linkTo: string
 }) => (
   <OutboundLink
     href={linkTo}
-    style={underline ? {} : { boxShadow: `none` }}
+    style={noUnderline ? { boxShadow: `none` } : {}}
     target="_blank"
     rel="nofollow noopener noreferrer"
   >
