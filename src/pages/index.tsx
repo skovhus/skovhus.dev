@@ -69,7 +69,6 @@ type Props = {
     allMarkdownRemark: {
       edges: {
         node: {
-          excerpt: string
           fields: {
             slug: string
           }
@@ -110,7 +109,7 @@ export default function Index({ data, location }: Props) {
         const { title } = node.frontmatter
         return (
           <LinkEntity
-            description={node.frontmatter.description || node.excerpt}
+            description={node.frontmatter.description}
             key={node.fields.slug}
             linkTo={node.fields.slug}
             subTitle={`${node.frontmatter.date} • ${node.timeToRead} minute read`}
@@ -168,7 +167,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }

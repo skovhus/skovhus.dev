@@ -39,12 +39,11 @@ const HorizontalLine = styled.hr`
 type Props = {
   data: {
     markdownRemark: {
-      excerpt: string
       html: string
       timeToRead: string // FIXME: use
       frontmatter: {
         date: string
-        description?: string
+        description: string
         devToLink?: string
         title: string
         featuredImage?: {
@@ -80,10 +79,14 @@ export default function BlogPostTemplate({ data, location, pageContext }: Props)
     `https://skovhus.github.io${slug}`
   )}`
 
+  if (!description) {
+    throw new Error('Expected blog description')
+  }
+
   return (
     <Layout location={location}>
       <SEO
-        description={description || post.excerpt}
+        description={description}
         image={featuredImageSrc}
         location={location}
         pageTitle={title}
@@ -133,7 +136,6 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 200)
       html
       timeToRead
       frontmatter {
