@@ -1,6 +1,6 @@
 ---
 title: Abandoning the mothership
-description: It was time to pour into our front-end code the same poison we gave our back-end systems, splitting it all apart into maintainable chunks. Our vision was to make each feature team at issuu.com own, build and deploy its front-end code autonomously – and to make things that ought to be trivial actually trivial!
+description: It was time to pour into our front-end code the same poison we gave our back-end systems, splitting it all apart into maintainable chunks. Our vision was to make each feature team at issuu.com own, build and deploy its front-end code autonomously—and to make things that ought to be trivial actually trivial!
 date: "2015-12-16T12:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/abandoning-the-mothership-4g35
 featuredImage: "./deathstar.jpg"
@@ -10,7 +10,7 @@ The time had come to pour into our front-end code the same poison we had given o
 
 ![Abandoning the mothership](./deathstar.jpg)
 
-> COMMENT FROM DECEMBER 2019: This blog post was released when Star Wars: Episode VII – The Force Awakens came out... 🎬😄
+> COMMENT FROM DECEMBER 2019: This blog post was released when Star Wars: Episode VII  The Force Awakens came out... 🎬😄
 
 
 For many years, issuu’s engineering group was organized around component teams. Our late great Team Monster handled the front-end code and the rest of the teams provided APIs and back-end infrastructure.
@@ -27,7 +27,7 @@ Until recently, though, the front-end code running issuu.com was still one big, 
 
 Besides, we had a major technology lockdown due to a very customized build system. This alone was around 3.000 lines of code, including a home-built Browserify and a lot of magical grunt tasks. As nobody dared to touch that part of the system, we were locked to our own require system, ES5, and Ruby SASS. Also, the size of the codebase made builds painfully slow.
 
-It was time to pour into our front-end code the same poison we gave our back-end systems, splitting it all apart into maintainable chunks. Our vision was to make each feature team own, build and deploy its front-end code autonomously – and to make things that ought to be trivial actually trivial!
+It was time to pour into our front-end code the same poison we gave our back-end systems, splitting it all apart into maintainable chunks. Our vision was to make each feature team own, build and deploy its front-end code autonomously—and to make things that ought to be trivial actually trivial!
 
 ## To the lifeboats!
 

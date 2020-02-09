@@ -45,7 +45,7 @@ To optimize a codebase for change:
 
 ## Don't jump too quickly into solution mode
 
-Solving problems is fun – usually more fun than planning. But you might find yourself jumping into solution-mode before understanding the problem. Instead, incorporate asking questions:
+Solving problems is fun—usually more fun than planning. But you might find yourself jumping into solution-mode before understanding the problem. Instead, incorporate asking questions:
 - What problem are we trying to solve?
 - What ideas do we have to solve it?
 - What are the positive and negative implications?
@@ -112,7 +112,7 @@ I do not expect anyone to spend their weekends and late evenings on open source.
 
 ### What are your engineering principles?
 
-These are some of the high-level engineering principles I operate by when building software – I hope you found them useful.
+These are some of the high-level engineering principles I operate by when building software, I hope you found them useful.
 
 Do you, or your team have a set of principles? I would love to hear about them.
 
