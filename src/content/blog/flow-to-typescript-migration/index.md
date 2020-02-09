@@ -9,21 +9,22 @@ Over the last couple of years, I have been migrating several codebases from [Flo
 
 _TL;DR I recommend migrating using the [flow-to-ts](https://github.com/Khan/flow-to-ts) codemod by Khan Academy._
 
+
 ## Motivation
 
-I started using Flow around 2014. It supports many of the same features as TypeScript, but focuses on being a static type checker where TypeScript is also a compiler. I originally picked it over TypeScript due to the momentum in the React community and the easy gradual migration path for existing code.
+I started using Flow shortly after it was open sourced by Facebook in [2014](https://engineering.fb.com/web/flow-a-new-static-type-checker-for-javascript/). It supports many of the same features as TypeScript (open sourced by Microsoft 2012) but focuses on being a static type checker where TypeScript is also a compiler. I originally picked it over TypeScript due to the momentum in the React community and the easy gradual migration path for existing code.
 
-But as the TypeScript community and tooling have been rapidly improving, I decided to abandon the Flow ship. This also seems to be a trend in the open source community (example: [Jest](https://github.com/facebook/jest/issues/7807) and [Yarn](https://dev.to/arcanis/introducing-yarn-2-4eh1)).
+But as the TypeScript community and tooling have been rapidly improving, I decided to abandon the Flow ship. This also seems to be a trend in the open source community (example: [Jest](https://github.com/facebook/jest/issues/7807), [Yarn](https://dev.to/arcanis/introducing-yarn-2-4eh1), and [Expo](https://github.com/expo/expo/issues/2164)).
 
 My primary motivation for moving to TypeScript:
 
 - TypeScript seems more **well-maintained** and more people working on it: In January 2020 TypeScript had 29 contributors, Flow had 14 contributors, and there were 156 pull requests merged compared to no Flow pull requests merged
-- easier to onboard new people to a TypeScript codebase as it is **more familiar and the online material is vast**
-- in most **editors** (notably Visual Studio Code) TypeScript shines: auto import, refactoring, quick error reporting out of the box
+- in my experience, it is easier to onboard new people to a TypeScript codebase as it is **more widely used and the online material is vast**
+- in most **editors** (notably Microsoft' Visual Studio Code) TypeScript shines: auto import, refactoring, quick error reporting out of the box
 - more **third-party types** are available (estimated to roughly 8X)
 - more **libraries are written in TypeScript** (naturally improving the quality of the interface types compared to reserve engineering the types)
-- too often I've discovered **Flow silently bailing** out type checking. I have not experienced this with TypeScript
-- while trying out TypeScript on Flow codebases I found **several type-related bugs** that TypeScript uncovered (related to the above point of silently bailing out)
+- too often I've discovered **Flow silently bailing** out type checking, I have not experienced this with TypeScript
+- although Flow should be more [*sound* by design](https://github.com/facebook/flow/issues/7365#issuecomment-454956694), I uncovered **type-related bugs** after migrating a codebase from Flow (maybe related to Flow silently bailing out type checking)
 - **installing types using npm** / [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) makes a lot of sense compared to [flow-typed](https://github.com/flow-typed/flow-typed) where type definitions are checked into your repository (and you forget to update them)
 - the feature sets and syntax are very comparable, so **migration is easy** (see this great [comparison](https://github.com/niieani/typescript-vs-flowtype))
 - I have experienced **Flow running out of memory** when type checking a React Native projects. It was a real defeat that I needed to disable type-checking on CI as we ran out of memory. 🤦🏼‍♂️
@@ -31,13 +32,11 @@ My primary motivation for moving to TypeScript:
 
 ## Approach
 
-I tried out a bunch of different tools (codemods), that automates the refactoring from Flow to TypeScript. If the concept of automated refactoring with codemods is new to you, you might find [this talk](https://www.youtube.com/watch?v=eMI0UBav8Q4) interesting.
+I tried out a bunch of different tools (codemods), that automates the refactoring from Flow to TypeScript. If the concept of automated refactoring with codemods is new to you, you might find [a talk I gave on the topic](https://www.youtube.com/watch?v=eMI0UBav8Q4) interesting.
 
 The best migration tool I have found is Khan Academy's [flow-to-ts](https://github.com/Khan/flow-to-ts). From their README:
 
 > The goal of this project is to provide a tool that can translate 95% of Flow to TypeScript while maintaining a high percentage of the existing type information.
-
-Before we try it out, there are a few steps as mentioned below.
 
 **⚠️ A word on code reviews**: You will end up changing most files in your project, so it will be difficult to review. To make this process as easy as possible, I recommend that you make a separate commit for each of the following steps.
 
@@ -69,7 +68,12 @@ npm remove flow-bin
 
 4) Setup a tsconfig.json file for configuring TypeScript. There are many ways to do this, but running `npx tsc --init` is a good start. [Read more](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) about the configuration file.
 
-5) Update your linter to support TypeScript. I would recommend using [TypeScript ESlint](https://github.com/typescript-eslint/typescript-eslint).
+5) Update your linter to support TypeScript. I would recommend using [TypeScript ESlint](https://github.com/typescript-eslint/typescript-eslint)
+
+6) Update your build setup to support TypeScript. Here are a few pointers for some popular setups:
+    - [Create React App](https://create-react-app.dev/docs/adding-typescript/)
+    - [Babel setup](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
+    - [Webpack](https://webpack.js.org/guides/typescript/)
 
 
 ### Step 2: Migrate all the things!
@@ -109,8 +113,12 @@ If you find yourself doing a lot of repetitive fixes, please share these in an i
 
 It all depends on the quality of your Flow types, the libraries you use, and the size of your codebase.
 
-With the flow-to-ts codemod, you can quickly try out TypeScript on an existing codebase and access how much work the manual part of the migration would take.
+With the flow-to-ts codemod, you can quickly try out TypeScript on an existing codebase and assess how much work the manual part of the migration would take.
 
 I converted a 30K lines React Native app in a few days. While doing this, I also spend time fixing a few potential bugs that TypeScript uncovered. 🎁
 
 So long Flow! 👋 And thanks for all the checking + healthy competition in the static type space.
+
+---
+
+*Thanks to [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post.*
