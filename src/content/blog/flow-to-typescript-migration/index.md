@@ -2,6 +2,7 @@
 title: Migrating from Flow to TypeScript using flow-to-ts
 date: "2020-02-09T12:00:00.000Z"
 description: Over the last couple of years, I have been migrating several codebases from Flow to TypeScript with minimal effort. In this post, I will describe my motivation and the approach I would recommend.
+devToLink: https://dev.to/kenneth_skovhus/migrating-from-flow-to-typescript-using-flow-to-ts-532p
 featuredImage: "./flow-to-typescript-migration.jpg"
 ---
 
