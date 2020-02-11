@@ -14,11 +14,16 @@ const Container = styled.div`
 `
 
 const Link = styled.a`
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   color: inherit;
   display: flex;
   flex-direction: column;
+
+  box-shadow: 0.8px 0.9px 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.3);
+  }
 `
 
 const Image = styled.img`
