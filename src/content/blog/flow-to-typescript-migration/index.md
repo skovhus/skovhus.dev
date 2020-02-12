@@ -23,7 +23,7 @@ My primary motivation for moving to TypeScript:
 - in my experience, it is easier to onboard new people to a TypeScript codebase as it is **more widely used and the online material is vast**
 - in most **editors** (notably Microsoft' Visual Studio Code) TypeScript shines: auto import, refactoring, quick error reporting out of the box
 - more **third-party types** are available (estimated to roughly 8X)
-- more **libraries are written in TypeScript** (naturally improving the quality of the interface types compared to reserve engineering the types)
+- more **libraries are written in TypeScript** (naturally improving the quality of the interface types compared to reverse engineering the types)
 - too often I've discovered **Flow silently bailing** out type checking, I have not experienced this with TypeScript
 - although Flow should be more [*sound* by design](https://github.com/facebook/flow/issues/7365#issuecomment-454956694), I uncovered **type-related bugs** after migrating a codebase from Flow (maybe related to Flow silently bailing out type checking)
 - **installing types using npm** / [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) makes a lot of sense compared to [flow-typed](https://github.com/flow-typed/flow-typed) where type definitions are checked into your repository (and you forget to update them)
