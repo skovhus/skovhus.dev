@@ -15,7 +15,7 @@ type Props = {
 export default function SEO({ description, image, location, meta, pageTitle }: Props) {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      query Seo {
         site {
           siteMetadata {
             siteUrl
@@ -26,6 +26,10 @@ export default function SEO({ description, image, location, meta, pageTitle }: P
       }
     `
   )
+
+  if (!site || !site.siteMetadata) {
+    throw new Error('site or siteMetadata not found')
+  }
 
   const metaDescription = description || site.siteMetadata.description
 

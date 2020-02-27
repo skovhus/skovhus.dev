@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import GatsbyImage from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
@@ -15,29 +15,24 @@ const Image = styled(GatsbyImage)`
 `
 
 export default function ProfileImage() {
-  return (
-    <StaticQuery
-      query={graphql`
-        query ProfileImageQuery {
-          avatar: file(absolutePath: { regex: "/skovhus.jpg/" }) {
-            childImageSharp {
-              fixed(width: 70, height: 70) {
-                ...GatsbyImageSharpFixed
-              }
-            }
+  const { avatar } = useStaticQuery(graphql`
+    query ProfileImage {
+      avatar: file(absolutePath: { regex: "/skovhus.jpg/" }) {
+        childImageSharp {
+          fixed(width: 70, height: 70) {
+            ...GatsbyImageSharpFixed
           }
         }
-      `}
-      render={data => {
-        return (
-          <Image
-            alt={'Kenneth Skovhus'}
-            fixed={data.avatar.childImageSharp.fixed}
-            imgStyle={{
-              borderRadius: '50%',
-            }}
-          />
-        )
+      }
+    }
+  `)
+
+  return (
+    <Image
+      alt={'Kenneth Skovhus'}
+      fixed={avatar.childImageSharp.fixed}
+      imgStyle={{
+        borderRadius: '50%',
       }}
     />
   )
