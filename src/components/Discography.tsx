@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import GatsbyImage from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
-import { DISCOGRAPHY } from '../content/discography/index'
+import { useDiscographyData } from '../content/discography/index'
 
 const SPACING = rhythm(2 / 4)
 
@@ -26,7 +27,7 @@ const Link = styled.a`
   }
 `
 
-const Image = styled.img`
+const Image = styled(GatsbyImage)`
   max-width: 100%;
   margin-bottom: 0;
   border-bottom: 1px solid #eee;
@@ -48,11 +49,13 @@ const Title = styled.div`
 `
 
 export default function Discography() {
+  const discography = useDiscographyData()
+
   return (
     <Container>
-      {DISCOGRAPHY.map(({ image, linkTo, subTitle, title }, idx) => (
+      {discography.map(({ image, linkTo, subTitle, title }, idx) => (
         <Link href={linkTo} target="_blank" rel="nofollow noopener noreferrer" key={idx}>
-          <Image src={image} alt={title} />
+          <Image fluid={image} alt={title} />
           <InfoContainer>
             <Title>{title}</Title>
             <div>{subTitle}</div>
