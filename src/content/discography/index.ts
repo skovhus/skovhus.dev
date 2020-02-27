@@ -94,19 +94,5 @@ export const useDiscographyData = (): DiscographyElement[] => {
       subTitle: 'Bass, engineering',
       image: getImage('cleo-malone-fear'),
     },
-    /*
-    {
-      linkTo: 'https://soundcloud.com/cleomalone/sets/demo-ii-2007',
-      title: 'Cleo Malone: "Demo II" (2007)',
-      subTitle: 'Bass, engineering, mix, production',
-      image: getImage('cleo-malone-demo-ii'),
-    },
-    {
-      linkTo: 'https://soundcloud.com/cleomalone/sets/demo-i-2006',
-      title: 'Cleo Malone: "Demo I" (2006)',
-      subTitle: 'Bass, engineering, mix, production',
-      image: getImage('cleo-malone-demo-i'),
-    },
-    */
   ]
 }
