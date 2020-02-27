@@ -46,7 +46,7 @@ type Props = {
 export default function BlogPostTemplate({ data, location, pageContext }: Props) {
   const post = data.markdownRemark
 
-  if (!post || !data.site || !data.site.siteMetadata || !post.frontmatter) {
+  if (!post || !data.site || !data.site.siteMetadata || !post.frontmatter || !post.html) {
     throw new Error('post or site or frontmatter is missing')
   }
 
