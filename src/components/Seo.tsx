@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import defaultMetaImage from '../../static/skovhus.jpg'
+import { SeoQuery } from '../__generated__/gatsby-types'
 
 type Props = {
   description?: string
@@ -13,7 +14,7 @@ type Props = {
 }
 
 export default function SEO({ description, image, location, meta, pageTitle }: Props) {
-  const { site } = useStaticQuery(
+  const { site } = useStaticQuery<SeoQuery>(
     graphql`
       query Seo {
         site {

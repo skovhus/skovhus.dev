@@ -1,5 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
+import { DiscographyImageQuery } from '../../__generated__/gatsby-types'
 
 type Image = FluidObject
 
@@ -13,11 +14,7 @@ type DiscographyElement = {
 export const useDiscographyData = (): DiscographyElement[] => {
   const {
     allFile: { edges },
-  } = useStaticQuery<{
-    allFile: {
-      edges: { node: { name: string; childImageSharp: { fluid: Image } } }[]
-    }
-  }>(
+  } = useStaticQuery<DiscographyImageQuery>(
     graphql`
       query DiscographyImage {
         allFile(filter: { sourceInstanceName: { eq: "discography" } }) {
@@ -41,8 +38,12 @@ export const useDiscographyData = (): DiscographyElement[] => {
   const nameToImage: ImageMap = edges
     .map(edge => edge.node)
     .filter(node => node.childImageSharp)
-    .reduce((acc: ImageMap, current) => {
-      acc[current.name] = current.childImageSharp.fluid
+    .reduce((acc: ImageMap, { childImageSharp, name }) => {
+      if (!childImageSharp || !name || !childImageSharp.fluid) {
+        throw new Error(`childImageSharp or name was missing`)
+      }
+
+      acc[name] = childImageSharp.fluid
       return acc
     }, {})
 

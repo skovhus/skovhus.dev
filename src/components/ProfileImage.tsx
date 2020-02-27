@@ -4,6 +4,7 @@ import GatsbyImage from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
+import { ProfileImageQuery } from '../__generated__/gatsby-types'
 
 export const PROFILE_IMAGE_WIDTH = 70
 
@@ -15,7 +16,7 @@ const Image = styled(GatsbyImage)`
 `
 
 export default function ProfileImage() {
-  const { avatar } = useStaticQuery(graphql`
+  const { avatar } = useStaticQuery<ProfileImageQuery>(graphql`
     query ProfileImage {
       avatar: file(absolutePath: { regex: "/skovhus.jpg/" }) {
         childImageSharp {
@@ -26,6 +27,10 @@ export default function ProfileImage() {
       }
     }
   `)
+
+  if (!avatar?.childImageSharp) {
+    throw new Error('Profile image not found')
+  }
 
   return (
     <Image

@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { rhythm } from '../utils/typography'
 import { TALKS } from '../content/talks'
+import { IndexQuery } from '../__generated__/gatsby-types'
 
 const Heading = styled.h1`
   font-size: 2rem;
@@ -68,7 +69,7 @@ type Props = {
 }
 
 export default function Index({ location }: Props) {
-  const data = useStaticQuery(
+  const data = useStaticQuery<IndexQuery>(
     graphql`
       query Index {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
