@@ -1,11 +1,12 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage, createRedirect } = actions
 
-  const blogPost = path.resolve(`./src/templates/BlogPost.tsx`)
-  return graphql(
+  const blogPostTemplate = path.resolve(`./src/templates/BlogPost.tsx`)
+
+  const markdownFilesResult = await graphql(
     `
       {
         allMarkdownRemark(
@@ -25,30 +26,43 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
+  )
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+  if (markdownFilesResult.errors) {
+    reporter.panicOnBuild(`Error while running markdown GraphQL query.`)
+    return
+  }
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+  const markdownFileEdges = markdownFilesResult.data.allMarkdownRemark.edges
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
+  const isBlogPost = edge => edge.node.fields.slug.startsWith('/blog')
+
+  // Create blog posts pages.
+  const posts = markdownFileEdges.filter(edge => isBlogPost(edge))
+
+  posts.forEach((post, index) => {
+    const { slug } = post.node.fields
+
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
+    createPage({
+      path: slug,
+      component: blogPostTemplate,
+      context: {
+        slug,
+        previous,
+        next,
+      },
     })
 
-    return null
+    // Before all blog posts were prefixed /blog
+    createRedirect({
+      fromPath: slug.replace('/blog', ''),
+      isPermanent: true,
+      redirectInBrowser: true,
+      toPath: slug,
+    })
   })
 }
 

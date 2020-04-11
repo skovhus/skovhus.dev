@@ -72,7 +72,10 @@ export default function Index({ location }: Props) {
   const data = useStaticQuery<IndexQuery>(
     graphql`
       query Index {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(
+          filter: { fields: { slug: { regex: "/blog/" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
           edges {
             node {
               fields {
