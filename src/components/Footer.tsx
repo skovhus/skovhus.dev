@@ -9,6 +9,11 @@ const StyledFooter = styled.footer`
   font-size: 10px;
   padding: 30px;
   background: var(--background-context-image) center center;
+
+  @media print {
+    display: none;
+  }
+}
 `
 
 const SvgIcon = styled.svg`
