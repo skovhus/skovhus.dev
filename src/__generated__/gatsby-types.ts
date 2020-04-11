@@ -1985,6 +1985,8 @@ export type Query_siteArgs = {
   children: Maybe<NodeFilterListInput>,
   internal: Maybe<InternalFilterInput>,
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>,
+  port: Maybe<IntQueryOperatorInput>,
+  host: Maybe<StringQueryOperatorInput>,
   polyfill: Maybe<BooleanQueryOperatorInput>,
   pathPrefix: Maybe<StringQueryOperatorInput>,
   buildTime: Maybe<DateQueryOperatorInput>
@@ -2029,6 +2031,8 @@ export type Site = Node & {
   readonly children: ReadonlyArray<Node>,
   readonly internal: Internal,
   readonly siteMetadata: Maybe<SiteSiteMetadata>,
+  readonly port: Maybe<Scalars['Int']>,
+  readonly host: Maybe<Scalars['String']>,
   readonly polyfill: Maybe<Scalars['Boolean']>,
   readonly pathPrefix: Maybe<Scalars['String']>,
   readonly buildTime: Maybe<Scalars['Date']>,
@@ -2159,6 +2163,8 @@ export enum SiteFieldsEnum {
   siteMetadata___siteUrl = 'siteMetadata.siteUrl',
   siteMetadata___description = 'siteMetadata.description',
   siteMetadata___title = 'siteMetadata.title',
+  port = 'port',
+  host = 'host',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   buildTime = 'buildTime'
@@ -2170,6 +2176,8 @@ export type SiteFilterInput = {
   readonly children: Maybe<NodeFilterListInput>,
   readonly internal: Maybe<InternalFilterInput>,
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>,
+  readonly port: Maybe<IntQueryOperatorInput>,
+  readonly host: Maybe<StringQueryOperatorInput>,
   readonly polyfill: Maybe<BooleanQueryOperatorInput>,
   readonly pathPrefix: Maybe<StringQueryOperatorInput>,
   readonly buildTime: Maybe<DateQueryOperatorInput>,
@@ -2918,23 +2926,15 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>,
 };
 
-export type SeoQueryVariables = {};
-
-
-export type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl' | 'description' | 'title'>> }> };
-
 export type ProfileImageQueryVariables = {};
 
 
 export type ProfileImageQuery = { readonly avatar: Maybe<{ readonly childImageSharp: Maybe<{ readonly fixed: Maybe<GatsbyImageSharpFixedFragment> }> }> };
 
-export type IndexQueryVariables = {};
+export type SeoQueryVariables = {};
 
 
-export type IndexQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
-      ) }> } };
+export type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl' | 'description' | 'title'>> }> };
 
 export type DiscographyImageQueryVariables = {};
 
@@ -2943,6 +2943,8 @@ export type DiscographyImageQuery = { readonly allFile: { readonly edges: Readon
         Pick<File, 'name'>
         & { readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }
       ) }> } };
+
+export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 export type BlogPostBySlugQueryVariables = {
   slug: Scalars['String']
@@ -2957,7 +2959,13 @@ export type BlogPostBySlugQuery = { readonly markdownRemark: Maybe<(
     )> }
   )>, readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl'>> }> };
 
-export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
+export type IndexQueryVariables = {};
+
+
+export type IndexQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<MarkdownRemark, 'timeToRead'>
+        & { readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
+      ) }> } };
 
 export type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -3004,3 +3012,26 @@ export type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSi
 export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type MarkdownPageBySlugQueryVariables = {
+  slug: Scalars['String']
+};
+
+
+export type MarkdownPageBySlugQuery = { readonly markdownRemark: Maybe<(
+    Pick<MarkdownRemark, 'id' | 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+  )>, readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl'>> }> };
+
+export type PagesQueryQueryVariables = {};
+
+
+export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+export type BlogIndexQueryVariables = {};
+
+
+export type BlogIndexQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<MarkdownRemark, 'timeToRead'>
+        & { readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
+      ) }> } };
