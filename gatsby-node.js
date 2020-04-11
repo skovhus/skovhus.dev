@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions
 
   const blogPostTemplate = path.resolve(`./src/templates/BlogPost.tsx`)
+  const markdownPageTemplate = path.resolve(`./src/templates/MarkdownPage.tsx`)
 
   const markdownFilesResult = await graphql(
     `
@@ -62,6 +63,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       isPermanent: true,
       redirectInBrowser: true,
       toPath: slug,
+    })
+  })
+
+  // Create markdown pages
+  const markdownPages = markdownFileEdges.filter(edge => !isBlogPost(edge))
+
+  markdownPages.forEach(page => {
+    const { slug } = page.node.fields
+    createPage({
+      path: slug,
+      component: markdownPageTemplate,
+      context: {
+        slug,
+      },
     })
   })
 }
