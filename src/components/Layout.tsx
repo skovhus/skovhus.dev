@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { rhythm } from '../utils/typography'
-
 import Footer from './Footer'
 import Header from './Header'
+import { PageWidthContainer } from './PageContainer'
 
 type Props = {
   children: React.ReactNode
@@ -12,34 +11,23 @@ type Props = {
 }
 
 export default function Layout({ children, showHeaderIntro = false }: Props) {
-  const styleWidthContained = {
-    marginLeft: `auto`,
-    marginRight: `auto`,
-    maxWidth: rhythm(24),
-    padding: `0 ${rhythm(3 / 4)}`,
-  }
-
   return (
     <>
-      <Header pageWidthStyles={styleWidthContained} showIntro={showHeaderIntro} />
+      <Header showIntro={showHeaderIntro} />
       <div
         style={{
           background: 'var(--background-content)',
         }}
       >
-        <div
+        <PageWidthContainer
           style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
             flexGrow: 1,
-
-            ...styleWidthContained,
             paddingTop: '1px', // There is probably a better way to break out of the box model
             paddingBottom: '60px',
           }}
         >
           <main>{children}</main>
-        </div>
+        </PageWidthContainer>
       </div>
 
       <Footer />

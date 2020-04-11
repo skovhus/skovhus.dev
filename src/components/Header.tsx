@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import ProfileImage from './ProfileImage'
 import { Menu } from './Menu'
 import { useWindowSize } from '../utils/useWindowSize'
+import { PageWidthContainer } from './PageContainer'
 
 const StyledHeader = styled.header`
   background: var(--background-context-image);
@@ -64,11 +65,10 @@ const HeaderLink = ({
 )
 
 type Props = {
-  pageWidthStyles: React.CSSProperties
   showIntro: boolean
 }
 
-export default function Header({ showIntro, pageWidthStyles }: Props) {
+export default function Header({ showIntro }: Props) {
   const windowSize = useWindowSize()
 
   const intro =
@@ -90,7 +90,7 @@ export default function Header({ showIntro, pageWidthStyles }: Props) {
 
   return (
     <StyledHeader>
-      <div style={{ ...pageWidthStyles }}>
+      <PageWidthContainer>
         <StyledNav>
           <HeaderLink
             to={'/'}
@@ -104,7 +104,7 @@ export default function Header({ showIntro, pageWidthStyles }: Props) {
           <div style={{ flexGrow: 1 }} />
           <Menu />
         </StyledNav>
-      </div>
+      </PageWidthContainer>
     </StyledHeader>
   )
 }
