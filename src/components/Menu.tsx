@@ -58,6 +58,7 @@ export function Menu() {
             <Link to="#talks" label="Talks" />
             <Link to="#oss" label="Open source" />
             <Link to="#music" label="Music" />
+            <Link to="/cv" label="CV" />
           </MenuContent>
         </MenuContainer>
       )}
