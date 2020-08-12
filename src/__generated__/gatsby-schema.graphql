@@ -2216,7 +2216,17 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name
   pluginCreator___pluginOptions___maxWidth
   pluginCreator___pluginOptions___showCaptions
+  pluginCreator___pluginOptions___pathPrefix
   pluginCreator___pluginOptions___wrapperStyle
+  pluginCreator___pluginOptions___backgroundColor
+  pluginCreator___pluginOptions___linkImagesToOriginal
+  pluginCreator___pluginOptions___markdownCaptions
+  pluginCreator___pluginOptions___withWebp
+  pluginCreator___pluginOptions___tracedSVG
+  pluginCreator___pluginOptions___loading
+  pluginCreator___pluginOptions___disableBgImageOnAlpha
+  pluginCreator___pluginOptions___disableBgImage
+  pluginCreator___pluginOptions___ignoreFileExtensions
   pluginCreator___pluginOptions___target
   pluginCreator___pluginOptions___trackingId
   pluginCreator___pluginOptions___short_name
@@ -2412,7 +2422,17 @@ enum SitePluginFieldsEnum {
   pluginOptions___plugins___version
   pluginOptions___plugins___pluginOptions___maxWidth
   pluginOptions___plugins___pluginOptions___showCaptions
+  pluginOptions___plugins___pluginOptions___pathPrefix
   pluginOptions___plugins___pluginOptions___wrapperStyle
+  pluginOptions___plugins___pluginOptions___backgroundColor
+  pluginOptions___plugins___pluginOptions___linkImagesToOriginal
+  pluginOptions___plugins___pluginOptions___markdownCaptions
+  pluginOptions___plugins___pluginOptions___withWebp
+  pluginOptions___plugins___pluginOptions___tracedSVG
+  pluginOptions___plugins___pluginOptions___loading
+  pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha
+  pluginOptions___plugins___pluginOptions___disableBgImage
+  pluginOptions___plugins___pluginOptions___ignoreFileExtensions
   pluginOptions___plugins___pluginOptions___target
   pluginOptions___plugins___browserAPIs
   pluginOptions___plugins___pluginFilepath
@@ -2420,7 +2440,17 @@ enum SitePluginFieldsEnum {
   pluginOptions___name
   pluginOptions___maxWidth
   pluginOptions___showCaptions
+  pluginOptions___pathPrefix
   pluginOptions___wrapperStyle
+  pluginOptions___backgroundColor
+  pluginOptions___linkImagesToOriginal
+  pluginOptions___markdownCaptions
+  pluginOptions___withWebp
+  pluginOptions___tracedSVG
+  pluginOptions___loading
+  pluginOptions___disableBgImageOnAlpha
+  pluginOptions___disableBgImage
+  pluginOptions___ignoreFileExtensions
   pluginOptions___target
   pluginOptions___trackingId
   pluginOptions___short_name
@@ -2552,7 +2582,17 @@ type SitePluginPluginOptions {
   name: String
   maxWidth: Int
   showCaptions: Boolean
+  pathPrefix: String
   wrapperStyle: String
+  backgroundColor: String
+  linkImagesToOriginal: Boolean
+  markdownCaptions: Boolean
+  withWebp: Boolean
+  tracedSVG: Boolean
+  loading: String
+  disableBgImageOnAlpha: Boolean
+  disableBgImage: Boolean
+  ignoreFileExtensions: [String]
   target: String
   trackingId: String
   short_name: String
@@ -2591,7 +2631,17 @@ input SitePluginPluginOptionsFilterInput {
   name: StringQueryOperatorInput
   maxWidth: IntQueryOperatorInput
   showCaptions: BooleanQueryOperatorInput
+  pathPrefix: StringQueryOperatorInput
   wrapperStyle: StringQueryOperatorInput
+  backgroundColor: StringQueryOperatorInput
+  linkImagesToOriginal: BooleanQueryOperatorInput
+  markdownCaptions: BooleanQueryOperatorInput
+  withWebp: BooleanQueryOperatorInput
+  tracedSVG: BooleanQueryOperatorInput
+  loading: StringQueryOperatorInput
+  disableBgImageOnAlpha: BooleanQueryOperatorInput
+  disableBgImage: BooleanQueryOperatorInput
+  ignoreFileExtensions: StringQueryOperatorInput
   target: StringQueryOperatorInput
   trackingId: StringQueryOperatorInput
   short_name: StringQueryOperatorInput
@@ -2633,14 +2683,34 @@ input SitePluginPluginOptionsPluginsFilterListInput {
 type SitePluginPluginOptionsPluginsPluginOptions {
   maxWidth: Int
   showCaptions: Boolean
+  pathPrefix: String
   wrapperStyle: String
+  backgroundColor: String
+  linkImagesToOriginal: Boolean
+  markdownCaptions: Boolean
+  withWebp: Boolean
+  tracedSVG: Boolean
+  loading: String
+  disableBgImageOnAlpha: Boolean
+  disableBgImage: Boolean
+  ignoreFileExtensions: [String]
   target: String
 }
 
 input SitePluginPluginOptionsPluginsPluginOptionsFilterInput {
   maxWidth: IntQueryOperatorInput
   showCaptions: BooleanQueryOperatorInput
+  pathPrefix: StringQueryOperatorInput
   wrapperStyle: StringQueryOperatorInput
+  backgroundColor: StringQueryOperatorInput
+  linkImagesToOriginal: BooleanQueryOperatorInput
+  markdownCaptions: BooleanQueryOperatorInput
+  withWebp: BooleanQueryOperatorInput
+  tracedSVG: BooleanQueryOperatorInput
+  loading: StringQueryOperatorInput
+  disableBgImageOnAlpha: BooleanQueryOperatorInput
+  disableBgImage: BooleanQueryOperatorInput
+  ignoreFileExtensions: StringQueryOperatorInput
   target: StringQueryOperatorInput
 }
 

@@ -2450,7 +2450,17 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___maxWidth = 'pluginCreator.pluginOptions.maxWidth',
   pluginCreator___pluginOptions___showCaptions = 'pluginCreator.pluginOptions.showCaptions',
+  pluginCreator___pluginOptions___pathPrefix = 'pluginCreator.pluginOptions.pathPrefix',
   pluginCreator___pluginOptions___wrapperStyle = 'pluginCreator.pluginOptions.wrapperStyle',
+  pluginCreator___pluginOptions___backgroundColor = 'pluginCreator.pluginOptions.backgroundColor',
+  pluginCreator___pluginOptions___linkImagesToOriginal = 'pluginCreator.pluginOptions.linkImagesToOriginal',
+  pluginCreator___pluginOptions___markdownCaptions = 'pluginCreator.pluginOptions.markdownCaptions',
+  pluginCreator___pluginOptions___withWebp = 'pluginCreator.pluginOptions.withWebp',
+  pluginCreator___pluginOptions___tracedSVG = 'pluginCreator.pluginOptions.tracedSVG',
+  pluginCreator___pluginOptions___loading = 'pluginCreator.pluginOptions.loading',
+  pluginCreator___pluginOptions___disableBgImageOnAlpha = 'pluginCreator.pluginOptions.disableBgImageOnAlpha',
+  pluginCreator___pluginOptions___disableBgImage = 'pluginCreator.pluginOptions.disableBgImage',
+  pluginCreator___pluginOptions___ignoreFileExtensions = 'pluginCreator.pluginOptions.ignoreFileExtensions',
   pluginCreator___pluginOptions___target = 'pluginCreator.pluginOptions.target',
   pluginCreator___pluginOptions___trackingId = 'pluginCreator.pluginOptions.trackingId',
   pluginCreator___pluginOptions___short_name = 'pluginCreator.pluginOptions.short_name',
@@ -2658,7 +2668,17 @@ export enum SitePluginFieldsEnum {
   pluginOptions___plugins___version = 'pluginOptions.plugins.version',
   pluginOptions___plugins___pluginOptions___maxWidth = 'pluginOptions.plugins.pluginOptions.maxWidth',
   pluginOptions___plugins___pluginOptions___showCaptions = 'pluginOptions.plugins.pluginOptions.showCaptions',
+  pluginOptions___plugins___pluginOptions___pathPrefix = 'pluginOptions.plugins.pluginOptions.pathPrefix',
   pluginOptions___plugins___pluginOptions___wrapperStyle = 'pluginOptions.plugins.pluginOptions.wrapperStyle',
+  pluginOptions___plugins___pluginOptions___backgroundColor = 'pluginOptions.plugins.pluginOptions.backgroundColor',
+  pluginOptions___plugins___pluginOptions___linkImagesToOriginal = 'pluginOptions.plugins.pluginOptions.linkImagesToOriginal',
+  pluginOptions___plugins___pluginOptions___markdownCaptions = 'pluginOptions.plugins.pluginOptions.markdownCaptions',
+  pluginOptions___plugins___pluginOptions___withWebp = 'pluginOptions.plugins.pluginOptions.withWebp',
+  pluginOptions___plugins___pluginOptions___tracedSVG = 'pluginOptions.plugins.pluginOptions.tracedSVG',
+  pluginOptions___plugins___pluginOptions___loading = 'pluginOptions.plugins.pluginOptions.loading',
+  pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha = 'pluginOptions.plugins.pluginOptions.disableBgImageOnAlpha',
+  pluginOptions___plugins___pluginOptions___disableBgImage = 'pluginOptions.plugins.pluginOptions.disableBgImage',
+  pluginOptions___plugins___pluginOptions___ignoreFileExtensions = 'pluginOptions.plugins.pluginOptions.ignoreFileExtensions',
   pluginOptions___plugins___pluginOptions___target = 'pluginOptions.plugins.pluginOptions.target',
   pluginOptions___plugins___browserAPIs = 'pluginOptions.plugins.browserAPIs',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions.plugins.pluginFilepath',
@@ -2666,7 +2686,17 @@ export enum SitePluginFieldsEnum {
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___maxWidth = 'pluginOptions.maxWidth',
   pluginOptions___showCaptions = 'pluginOptions.showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions.pathPrefix',
   pluginOptions___wrapperStyle = 'pluginOptions.wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions.backgroundColor',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions.linkImagesToOriginal',
+  pluginOptions___markdownCaptions = 'pluginOptions.markdownCaptions',
+  pluginOptions___withWebp = 'pluginOptions.withWebp',
+  pluginOptions___tracedSVG = 'pluginOptions.tracedSVG',
+  pluginOptions___loading = 'pluginOptions.loading',
+  pluginOptions___disableBgImageOnAlpha = 'pluginOptions.disableBgImageOnAlpha',
+  pluginOptions___disableBgImage = 'pluginOptions.disableBgImage',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions.ignoreFileExtensions',
   pluginOptions___target = 'pluginOptions.target',
   pluginOptions___trackingId = 'pluginOptions.trackingId',
   pluginOptions___short_name = 'pluginOptions.short_name',
@@ -2798,7 +2828,17 @@ export type SitePluginPluginOptions = {
   readonly name: Maybe<Scalars['String']>,
   readonly maxWidth: Maybe<Scalars['Int']>,
   readonly showCaptions: Maybe<Scalars['Boolean']>,
+  readonly pathPrefix: Maybe<Scalars['String']>,
   readonly wrapperStyle: Maybe<Scalars['String']>,
+  readonly backgroundColor: Maybe<Scalars['String']>,
+  readonly linkImagesToOriginal: Maybe<Scalars['Boolean']>,
+  readonly markdownCaptions: Maybe<Scalars['Boolean']>,
+  readonly withWebp: Maybe<Scalars['Boolean']>,
+  readonly tracedSVG: Maybe<Scalars['Boolean']>,
+  readonly loading: Maybe<Scalars['String']>,
+  readonly disableBgImageOnAlpha: Maybe<Scalars['Boolean']>,
+  readonly disableBgImage: Maybe<Scalars['Boolean']>,
+  readonly ignoreFileExtensions: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>,
   readonly target: Maybe<Scalars['String']>,
   readonly trackingId: Maybe<Scalars['String']>,
   readonly short_name: Maybe<Scalars['String']>,
@@ -2837,7 +2877,17 @@ export type SitePluginPluginOptionsFilterInput = {
   readonly name: Maybe<StringQueryOperatorInput>,
   readonly maxWidth: Maybe<IntQueryOperatorInput>,
   readonly showCaptions: Maybe<BooleanQueryOperatorInput>,
+  readonly pathPrefix: Maybe<StringQueryOperatorInput>,
   readonly wrapperStyle: Maybe<StringQueryOperatorInput>,
+  readonly backgroundColor: Maybe<StringQueryOperatorInput>,
+  readonly linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>,
+  readonly markdownCaptions: Maybe<BooleanQueryOperatorInput>,
+  readonly withWebp: Maybe<BooleanQueryOperatorInput>,
+  readonly tracedSVG: Maybe<BooleanQueryOperatorInput>,
+  readonly loading: Maybe<StringQueryOperatorInput>,
+  readonly disableBgImageOnAlpha: Maybe<BooleanQueryOperatorInput>,
+  readonly disableBgImage: Maybe<BooleanQueryOperatorInput>,
+  readonly ignoreFileExtensions: Maybe<StringQueryOperatorInput>,
   readonly target: Maybe<StringQueryOperatorInput>,
   readonly trackingId: Maybe<StringQueryOperatorInput>,
   readonly short_name: Maybe<StringQueryOperatorInput>,
@@ -2879,14 +2929,34 @@ export type SitePluginPluginOptionsPluginsFilterListInput = {
 export type SitePluginPluginOptionsPluginsPluginOptions = {
   readonly maxWidth: Maybe<Scalars['Int']>,
   readonly showCaptions: Maybe<Scalars['Boolean']>,
+  readonly pathPrefix: Maybe<Scalars['String']>,
   readonly wrapperStyle: Maybe<Scalars['String']>,
+  readonly backgroundColor: Maybe<Scalars['String']>,
+  readonly linkImagesToOriginal: Maybe<Scalars['Boolean']>,
+  readonly markdownCaptions: Maybe<Scalars['Boolean']>,
+  readonly withWebp: Maybe<Scalars['Boolean']>,
+  readonly tracedSVG: Maybe<Scalars['Boolean']>,
+  readonly loading: Maybe<Scalars['String']>,
+  readonly disableBgImageOnAlpha: Maybe<Scalars['Boolean']>,
+  readonly disableBgImage: Maybe<Scalars['Boolean']>,
+  readonly ignoreFileExtensions: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>,
   readonly target: Maybe<Scalars['String']>,
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   readonly maxWidth: Maybe<IntQueryOperatorInput>,
   readonly showCaptions: Maybe<BooleanQueryOperatorInput>,
+  readonly pathPrefix: Maybe<StringQueryOperatorInput>,
   readonly wrapperStyle: Maybe<StringQueryOperatorInput>,
+  readonly backgroundColor: Maybe<StringQueryOperatorInput>,
+  readonly linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>,
+  readonly markdownCaptions: Maybe<BooleanQueryOperatorInput>,
+  readonly withWebp: Maybe<BooleanQueryOperatorInput>,
+  readonly tracedSVG: Maybe<BooleanQueryOperatorInput>,
+  readonly loading: Maybe<StringQueryOperatorInput>,
+  readonly disableBgImageOnAlpha: Maybe<BooleanQueryOperatorInput>,
+  readonly disableBgImage: Maybe<BooleanQueryOperatorInput>,
+  readonly ignoreFileExtensions: Maybe<StringQueryOperatorInput>,
   readonly target: Maybe<StringQueryOperatorInput>,
 };
 
@@ -2926,6 +2996,14 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>,
 };
 
+export type DiscographyImageQueryVariables = {};
+
+
+export type DiscographyImageQuery = { readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<File, 'name'>
+        & { readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }
+      ) }> } };
+
 export type ProfileImageQueryVariables = {};
 
 
@@ -2936,12 +3014,12 @@ export type SeoQueryVariables = {};
 
 export type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl' | 'description' | 'title'>> }> };
 
-export type DiscographyImageQueryVariables = {};
+export type IndexQueryVariables = {};
 
 
-export type DiscographyImageQuery = { readonly allFile: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<File, 'name'>
-        & { readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }
+export type IndexQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
+        Pick<MarkdownRemark, 'timeToRead'>
+        & { readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
       ) }> } };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -2959,13 +3037,15 @@ export type BlogPostBySlugQuery = { readonly markdownRemark: Maybe<(
     )> }
   )>, readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl'>> }> };
 
-export type IndexQueryVariables = {};
+export type MarkdownPageBySlugQueryVariables = {
+  slug: Scalars['String']
+};
 
 
-export type IndexQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
-      ) }> } };
+export type MarkdownPageBySlugQuery = { readonly markdownRemark: Maybe<(
+    Pick<MarkdownRemark, 'id' | 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+  )>, readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl'>> }> };
 
 export type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -3013,25 +3093,7 @@ export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspe
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-export type MarkdownPageBySlugQueryVariables = {
-  slug: Scalars['String']
-};
-
-
-export type MarkdownPageBySlugQuery = { readonly markdownRemark: Maybe<(
-    Pick<MarkdownRemark, 'id' | 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
-  )>, readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'siteUrl'>> }> };
-
 export type PagesQueryQueryVariables = {};
 
 
 export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-export type BlogIndexQueryVariables = {};
-
-
-export type BlogIndexQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: (
-        Pick<MarkdownRemark, 'timeToRead'>
-        & { readonly fields: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
-      ) }> } };
