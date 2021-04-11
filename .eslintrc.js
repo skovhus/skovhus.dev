@@ -22,11 +22,6 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  globals: {
-    __PATH_PREFIX__: true,
-    __BASE_PATH__: true,
-    __ASSET_PREFIX__: true,
-  },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
     'prettier/prettier': [
@@ -63,6 +58,8 @@ module.exports = {
     'prefer-const': 'error',
     'prefer-template': 'error',
     'react-hooks/rules-of-hooks': 'error',
+
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

@@ -3,12 +3,12 @@ title: React PropTypes to Flow codemod
 description: I’m presenting how to automatically convert your existing codebase using React PropTypes to use more powerful Flow annotations.
 date: "2017-04-11T15:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/react-proptypes-to-flow-codemod-4gh8
-featuredImage: "./flow-unsplash.jpg"
+featuredImage: "/blog/flow-unsplash.jpg"
 ---
 
 _I’m presenting how to automatically convert your existing codebase using React PropTypes to use more powerful Flow annotations. If you already seen why this is valuable, you can skip down to the next section._ 👇🏻
 
-![Eye candy, because you deserve it (unsplash.com/@thekorus)](./flow-unsplash.jpg)
+![Eye candy, because you deserve it (unsplash.com/@thekorus)](/blog/flow-unsplash.jpg)
 
 If React were Facebook’s gateway drug to declarative and composable UI, React PropTypes introduced a lot of people to type checking.
 
@@ -52,8 +52,6 @@ If the concept of automated refactoring with codemods is new to you, I’ll prom
 
 [![Introduction to automated refactoring with JS codemods (Copenhagen.js Meetup, December 2016)](https://img.youtube.com/vi/eMI0UBav8Q4/0.jpg)](https://www.youtube.com/watch?v=eMI0UBav8Q4)
 
-
-
 Enough talk. Time to get rid of the PropTypes! Turns out [Billy Vong](https://github.com/billyvg) already did a lot of the hard work for us with [codemod-proptypes-to-flow](https://github.com/billyvg/codemod-proptypes-to-flow).
 
 So to automatically convert all components in a folder my-components:
@@ -67,6 +65,7 @@ I’ve successfully used this codemod for multiple projects, and it eased the tr
 ---
 
 Notice that there are cases where you want to keep your PropTypes (possible alongside Flow annotations):
+
 - PropTypes in library code can help consumers and document an interface
 - If you have no automated tests validating your flow definitions of any external resources (like an API), PropTypes can be really helpful. For this I would recommend using [babel-plugin-flow-react-proptypes](https://github.com/brigand/babel-plugin-flow-react-proptypes) to add PropTypes at build time
 - PropTypes are still great for learning material on React (no need to burden new people with Flow/TypeScript)
@@ -74,6 +73,6 @@ Notice that there are cases where you want to keep your PropTypes (possible alon
 
 ---
 
-*Thanks to [Maciek Pekala](https://twitter.com/penzington) and [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post.*
+_Thanks to [Maciek Pekala](https://twitter.com/penzington) and [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post._
 
-*This blog post was originally posted on [medium/netscape](https://medium.com/netscape/react-proptypes-to-flow-codemod-9757f5ec5381).*
+_This blog post was originally posted on [medium/netscape](https://medium.com/netscape/react-proptypes-to-flow-codemod-9757f5ec5381)._

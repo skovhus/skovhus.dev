@@ -1,46 +1,24 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
-
-import defaultMetaImage from '../../static/skovhus.jpg'
-import { SeoQuery } from '../__generated__/gatsby-types'
+import Helmet from 'react-helmet' // FIXME: migrate to next/head (https://github.com/leerob/gatsby-to-nextjs/pull/1/files)
+import { useRouter } from 'next/router'
+import { siteMetadata } from '../config'
 
 type Props = {
   description?: string
   image?: string
-  location: Location
   meta: { name: string; content: string }[]
   pageTitle?: string
 }
 
-export default function SEO({ description, image, location, meta, pageTitle }: Props) {
-  const { site } = useStaticQuery<SeoQuery>(
-    graphql`
-      query Seo {
-        site {
-          siteMetadata {
-            siteUrl
-            description
-            title
-          }
-        }
-      }
-    `
-  )
+export default function SEO({ description, image, meta, pageTitle }: Props) {
+  const router = useRouter()
+  const metaDescription = description || siteMetadata.description
 
-  if (!site || !site.siteMetadata) {
-    throw new Error('site or siteMetadata not found')
-  }
+  const { siteUrl, title: siteTitle } = siteMetadata
+  const metaImageSrc = `${siteUrl}${image || '/skovhus.jpg'}`
+  const url = `${siteUrl}${router.pathname || '/'}`
 
-  const metaDescription = description || site.siteMetadata.description
-
-  const { siteUrl, title: siteTitle } = site.siteMetadata
-  const metaImageSrc = image || `${siteUrl}${defaultMetaImage}`
-  const url = `${siteUrl}${location.pathname || '/'}`
-
-  if (!metaImageSrc.startsWith('https')) {
-    throw new Error(`Invalid metaImageSrc ${metaImageSrc}`)
-  }
+  // FIMXE: test metaImageSrc
 
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
 
