@@ -2,6 +2,7 @@
 title: My mental model for fixing software bugs
 description: I tried to generalize my mental model for fixing bugs. It boils down to a 4 step process with a strong focus on improving safety nets.
 date: "2021-04-30T10:00:00.000Z"
+devToLink: https://dev.to/kenneth_skovhus/my-mental-model-for-fixing-software-bugs-367p
 featuredImage: "./bug.jpeg"
 ---
 
