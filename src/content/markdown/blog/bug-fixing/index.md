@@ -35,7 +35,7 @@ Some questions to consider:
 - if the issue revealed itself after a release, should we just roll back or revert?
 - is there anything else we can do right now to restore the service(s)?
 - do we need to inform anyone about the issue (e.g. product owner, customers or your co-workers)?
-- when should the issue be fixed? We should always be mindful to avoid (context switching)[https://blog.doist.com/context-switching/].
+- when should the issue be fixed? We should always be mindful to avoid [context switching](https://blog.doist.com/context-switching/).
 
 ### Step 2: Improve safety nets 🚨
 
