@@ -9,6 +9,7 @@ import SEO from '../components/Seo'
 import { TALKS } from '../content/talks'
 import { rhythm } from '../libs/typography'
 import { getAllPosts, Post } from '../libs/blog'
+import { generateRssFeed } from '../libs/rss'
 
 const Heading = styled.h1`
   font-size: 2rem;
@@ -66,6 +67,8 @@ const LinkEntity = ({
 
 export async function getStaticProps() {
   const posts = getAllPosts()
+
+  generateRssFeed({posts});
 
   return {
     props: {
