@@ -57,8 +57,8 @@ export async function getStaticProps({ params: { slug } }: { params: { slug: str
         content,
       },
       links: {
-        previous: posts[postIndex - 1] || null,
-        next: posts[postIndex + 1] || null,
+        previous: posts[postIndex + 1] || null,
+        next: posts[postIndex - 1] || null,
       },
     },
   }
