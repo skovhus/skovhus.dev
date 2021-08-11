@@ -180,6 +180,15 @@ pre[data-line] {
   overflow: auto;
 }
 
+.figure-caption {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.figure-image {
+  margin-bottom: 0;
+}
+
 @media (max-width: 672px) {
   .remark-highlight {
     border-radius: 0;

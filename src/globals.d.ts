@@ -18,3 +18,5 @@ declare module '*.png' {
 declare module 'remark-prism'
 
 declare module '@silvenon/remark-smartypants'
+
+declare module 'gridsome-remark-figure-caption'
