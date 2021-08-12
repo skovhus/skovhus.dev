@@ -3,10 +3,10 @@ title: Type safe CSS Modules with Flow
 description: CSS Modules + Flow = type safety and editor autocompletion. Introducing a few open source projects to help you with type safety and editor autocompletion.
 date: "2017-06-21T15:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/type-safe-css-modules-with-flow-3ojp
-featuredImage: "./css-modules-flow.png"
+featuredImage: "/blog/css-modules-flow.png"
 ---
 
-![CSS Modules + Flow = type safety and editor autocompletion](./css-modules-flow.png)
+![CSS Modules + Flow = type safety and editor autocompletion](/blog/css-modules-flow.png)
 
 I’ve been dreaming about type safety and editor autocompletion when using [CSS Modules](https://github.com/css-modules/css-modules). There are a few TypeScript tools for this (see [this](https://medium.com/@sapegin/css-modules-with-typescript-and-webpack-6b221ebe5f10) and [this](https://github.com/Quramy/typed-css-modules)), but I didn’t find any solid tools for [Flow](https://flow.org/).
 
@@ -18,10 +18,9 @@ It is quite easy to misspell a class name or forget to update consumers after re
 
 ```javascript
 /* @flow */
-import styles from './Button.css';
+import styles from "./Button.css";
 const Button = () => <button className={styles.foo} />;
 ```
-
 
 ## Solutions
 
@@ -84,4 +83,4 @@ And then sit back and enjoy CSS Modules being type checked by Flow. 🍺
 
 Please let me know what you think… And give a little ⭐️ over at [GitHub](https://github.com/skovhus/css-modules-flow-types).
 
-*This blog post was originally posted on [hackernoon](https://hackernoon.com/type-safe-css-modules-with-flow-dd95e761bbe5).*
+_This blog post was originally posted on [hackernoon](https://hackernoon.com/type-safe-css-modules-with-flow-dd95e761bbe5)._

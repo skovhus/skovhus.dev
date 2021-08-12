@@ -3,13 +3,12 @@ title: Migrating from Flow to TypeScript using flow-to-ts
 date: "2020-02-09T12:00:00.000Z"
 description: Over the last couple of years, I have been migrating several codebases from Flow to TypeScript with minimal effort. In this post, I will describe my motivation and the approach I would recommend.
 devToLink: https://dev.to/kenneth_skovhus/migrating-from-flow-to-typescript-using-flow-to-ts-532p
-featuredImage: "./flow-to-typescript-migration.jpg"
+featuredImage: "/blog/flow-to-typescript-migration.jpg"
 ---
 
 Over the last couple of years, I have been migrating several codebases from [Flow](https://flow.org/en/) to [TypeScript](https://www.typescriptlang.org/) with minimal effort. In this post, I will describe my motivation and the approach I would recommend.
 
 _TL;DR I recommend migrating using the [flow-to-ts](https://github.com/Khan/flow-to-ts) codemod by Khan Academy._
-
 
 ## Motivation
 
@@ -25,11 +24,10 @@ My primary motivation for moving to TypeScript:
 - more **third-party types** are available (estimated to roughly 8X)
 - more **libraries are written in TypeScript** (naturally improving the quality of the interface types compared to reverse engineering the types)
 - too often I've discovered **Flow silently bailing** out type checking, I have not experienced this with TypeScript
-- although Flow should be more [*sound* by design](https://github.com/facebook/flow/issues/7365#issuecomment-454956694), I uncovered **type-related bugs** after migrating a codebase from Flow (maybe related to Flow silently bailing out type checking)
+- although Flow should be more [_sound_ by design](https://github.com/facebook/flow/issues/7365#issuecomment-454956694), I uncovered **type-related bugs** after migrating a codebase from Flow (maybe related to Flow silently bailing out type checking)
 - **installing types using npm** / [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) makes a lot of sense compared to [flow-typed](https://github.com/flow-typed/flow-typed) where type definitions are checked into your repository (and you forget to update them)
 - the feature sets and syntax are very comparable, so **migration is easy** (see this great [comparison](https://github.com/niieani/typescript-vs-flowtype))
 - I have experienced **Flow running out of memory** when type checking a React Native projects. It was a real defeat that I needed to disable type-checking on CI as we ran out of memory. 🤦🏼‍♂️
-
 
 ## Approach
 
@@ -41,25 +39,25 @@ The best migration tool I have found is Khan Academy's [flow-to-ts](https://gith
 
 **⚠️ A word on code reviews**: You will end up changing most files in your project, so it will be difficult to review. To make this process as easy as possible, I recommend that you make a separate commit for each of the following steps.
 
-
 ### Step 1: Prepare your codebase
 
-Before running flow-to-ts I recommend preparing your codebase for type-checking using  TypeScript.
+Before running flow-to-ts I recommend preparing your codebase for type-checking using TypeScript.
 
-1) Remove any checked-in types (typically in a flow-typed folder) and config:
+1. Remove any checked-in types (typically in a flow-typed folder) and config:
 
 ```bash
 rm -rf flow-typed .flowconfig
 ```
 
-2) Install the TypeScript package:
+2. Install the TypeScript package:
+
 ```bash
 yarn add --dev typescript
 # or
 npm install --save-dev typescript
 ```
 
-3) Remove the Flow package:
+3. Remove the Flow package:
 
 ```bash
 yarn remove flow-bin
@@ -67,30 +65,29 @@ yarn remove flow-bin
 npm remove flow-bin
 ```
 
-4) Setup a tsconfig.json file for configuring TypeScript. There are many ways to do this, but running `npx tsc --init` is a good start. [Read more](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) about the configuration file.
+4. Setup a tsconfig.json file for configuring TypeScript. There are many ways to do this, but running `npx tsc --init` is a good start. [Read more](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) about the configuration file.
 
-5) Update your linter to support TypeScript. I would recommend using [TypeScript ESlint](https://github.com/typescript-eslint/typescript-eslint)
+5. Update your linter to support TypeScript. I would recommend using [TypeScript ESlint](https://github.com/typescript-eslint/typescript-eslint)
 
-6) Update your build setup to support TypeScript. Here are a few pointers for some popular setups:
-    - [Create React App](https://create-react-app.dev/docs/adding-typescript/)
-    - [Babel setup](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
-    - [Webpack](https://webpack.js.org/guides/typescript/)
-
+6. Update your build setup to support TypeScript. Here are a few pointers for some popular setups:
+   - [Create React App](https://create-react-app.dev/docs/adding-typescript/)
+   - [Babel setup](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
+   - [Webpack](https://webpack.js.org/guides/typescript/)
 
 ### Step 2: Migrate all the things!
 
-1) Run the flow-to-ts code transformation:
+1. Run the flow-to-ts code transformation:
 
 ```bash
 # Replace src with your source folder or a glob
 npx @khanacademy/flow-to-ts --write --delete-source src
 ```
 
-2) [Optional] If you use a code formatter (like [Prettier](https://prettier.io/)) then format your new codebase
+2. [Optional] If you use a code formatter (like [Prettier](https://prettier.io/)) then format your new codebase
 
-3) Commit the changes (e.g. "Migrate to TypeScript using flow-to-ts codemod")
+3. Commit the changes (e.g. "Migrate to TypeScript using flow-to-ts codemod")
 
-4) This is the most **time-consuming** part: try compiling the project with TypeScript and fix each problem you encounter:
+4. This is the most **time-consuming** part: try compiling the project with TypeScript and fix each problem you encounter:
 
 ```bash
 npx tsc --noEmit -p .
@@ -100,15 +97,13 @@ Start from the top and move your way through... It will take some time. You prob
 
 If you find yourself doing a lot of repetitive fixes, please share these in an issue over at the [flow-to-ts repository](https://github.com/Khan/flow-to-ts) and help improve the codemod.
 
-5) Finally, when everything compiles again, check that you can lint and build your project
+5. Finally, when everything compiles again, check that you can lint and build your project
 
-6) 🥂
+6. 🥂
 
-7) [Optional] You can now remove any [Flow suppression comments](https://flow.org/en/docs/config/options/#toc-suppress-comment-regex) (e.g. `$FlowFixMe`)
+7. [Optional] You can now remove any [Flow suppression comments](https://flow.org/en/docs/config/options/#toc-suppress-comment-regex) (e.g. `$FlowFixMe`)
 
-8) [Optional] Some Flow utility types are replaced by the [utility-types](https://github.com/piotrwitek/utility-types) package. You can get rid of some of them if you like (e.g. `$Keys<T>` can be replaced by `keyof T`).
-
-
+8. [Optional] Some Flow utility types are replaced by the [utility-types](https://github.com/piotrwitek/utility-types) package. You can get rid of some of them if you like (e.g. `$Keys<T>` can be replaced by `keyof T`).
 
 ## How much effort does it take?
 
@@ -122,4 +117,4 @@ So long Flow! 👋 And thanks for all the checking + healthy competition in the 
 
 ---
 
-*Thanks to [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post.*
+_Thanks to [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post._
