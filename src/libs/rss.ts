@@ -21,11 +21,9 @@ export const generateRssFeed = async ({posts}: {posts: Post[]}) => {
     copyright: `All rights reserved ${date.getFullYear()}, ${author.name}`,
     updated: date,
     feedLinks: {
-      rss2: `${siteUrl}/rss/feed.xml`,
-      json: `${siteUrl}/rss/feed.json`,
-      atom: `${siteUrl}/rss/atom.xml`,
+      rss2: `${siteUrl}/rss.xml`,
     },
-    //author,
+    author,
   });
 
   posts.forEach((post: Post) => {
@@ -41,8 +39,5 @@ export const generateRssFeed = async ({posts}: {posts: Post[]}) => {
     });
   });
 
-  fs.mkdirSync("./public/rss", { recursive: true });
-  fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
-  fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
-  fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  fs.writeFileSync("./public/rss.xml", feed.rss2());
 };
