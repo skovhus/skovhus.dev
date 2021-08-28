@@ -9,11 +9,11 @@ export async function markdownToHtml(markdownString: string) {
   const result = await remark()
     .use(prism)
     .use(smartypants)
-    .use(remarkExternalLinks, {target: '_blank', rel: ['nofollow']})
+    .use(remarkExternalLinks, { target: '_blank', rel: ['nofollow'] })
     .use(figureCaption, {
-      figureClassName: "figure-block",
-      imageClassName: "figure-image",
-      captionClassName: "figure-caption",
+      figureClassName: 'figure-block',
+      imageClassName: 'figure-image',
+      captionClassName: 'figure-caption',
     })
     .use(html)
     .process(markdownString)

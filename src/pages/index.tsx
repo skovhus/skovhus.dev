@@ -68,7 +68,7 @@ const LinkEntity = ({
 export async function getStaticProps() {
   const posts = getAllPosts()
 
-  generateRssFeed({posts});
+  generateRssFeed({ posts })
 
   return {
     props: {

@@ -1,15 +1,15 @@
-import fs from "fs";
-import { Feed } from "feed";
-import { getAllPosts, Post } from "./blog";
-import { siteUrl, siteMetadata } from "../config";
+import fs from 'fs'
+import { Feed } from 'feed'
+import { Post } from './blog'
+import { siteUrl, siteMetadata } from '../config'
 
-export const generateRssFeed = async ({posts}: {posts: Post[]}) => {
-  const date = new Date();
+export const generateRssFeed = async ({ posts }: { posts: Post[] }) => {
+  const date = new Date()
   const author = {
-    name: "Kenneth Skovhus",
-    email: "kenneth.skovhus@gmail.com",
-    link: "https://twitter.com/kenneth_skovhus",
-  };
+    name: 'Kenneth Skovhus',
+    email: 'kenneth.skovhus@gmail.com',
+    link: 'https://twitter.com/kenneth_skovhus',
+  }
 
   const feed = new Feed({
     title: siteMetadata.title,
@@ -24,10 +24,10 @@ export const generateRssFeed = async ({posts}: {posts: Post[]}) => {
       rss2: `${siteUrl}/rss.xml`,
     },
     author,
-  });
+  })
 
   posts.forEach((post: Post) => {
-    const url = `${siteUrl}/blog/${post.slug}`;
+    const url = `${siteUrl}/blog/${post.slug}`
 
     feed.addItem({
       title: post.frontmatter.title,
@@ -36,8 +36,8 @@ export const generateRssFeed = async ({posts}: {posts: Post[]}) => {
       description: post.frontmatter.description,
       content: post.content,
       date: new Date(post.frontmatter.isoDate),
-    });
-  });
+    })
+  })
 
-  fs.writeFileSync("./public/rss.xml", feed.rss2());
-};
+  fs.writeFileSync('./public/rss.xml', feed.rss2())
+}
