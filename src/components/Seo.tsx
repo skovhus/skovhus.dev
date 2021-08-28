@@ -38,6 +38,8 @@ export default function SEO({ description, image, pageTitle }: Props) {
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={metaDescription} />
       <meta property="twitter:image" content={metaImageSrc} />
+
+      <link rel="alternate" type="application/rss+xml" href="/rss.xml"/>
     </Head>
   )
 }
