@@ -20,15 +20,17 @@ const BaseBar = styled.div<BarProps>`
 `
 
 const Bar1 = styled(BaseBar)`
-  transform: ${props => (props.isOpen ? `rotate(-45deg) translate(-4px, 4px)` : 'none')};
+  transform: ${(props) =>
+    props.isOpen ? `rotate(-45deg) translate(-4px, 4px)` : 'none'};
 `
 
 const Bar2 = styled(BaseBar)`
-  opacity: ${props => (props.isOpen ? 0 : 1)};
+  opacity: ${(props) => (props.isOpen ? 0 : 1)};
 `
 
 const Bar3 = styled(BaseBar)`
-  transform: ${props => (props.isOpen ? `rotate(45deg) translate(-6px, -6px)` : 'none')};
+  transform: ${(props) =>
+    props.isOpen ? `rotate(45deg) translate(-6px, -6px)` : 'none'};
 `
 
 type Props = {

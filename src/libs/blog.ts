@@ -50,7 +50,7 @@ export function getPostBySlug(slug: string): Post {
 export function getAllPosts() {
   const slugs = fs.readdirSync(postsDirectory)
   const posts = slugs
-    .map(slug => getPostBySlug(slug))
+    .map((slug) => getPostBySlug(slug))
     .sort((post1, post2) =>
       post1.frontmatter.isoDate > post2.frontmatter.isoDate ? -1 : 1
     )
