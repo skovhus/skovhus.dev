@@ -84,14 +84,27 @@ export default function Index({ posts }: Props) {
     <Layout showHeaderIntro>
       <SEO />
       <p style={{ marginTop: '2rem' }}>
-        I have been messing around with computers and music for as long as I remember.
-        Building meaningful products together with talented people is my passion. I love
-        mentoring, sharing knowledge, and excel in working full-stack with web
-        technologies. MSc in Computer Science from the Technical University of Denmark.
+        I&apos;m a software engineer based in Copenhagen, Denmark. MSc in Computer Science
+        and Engineering from the Technical University of Denmark (2012). Head of
+        Engineering at <ExternalLink href="https://www.tmrow.com/">Tomorrow</ExternalLink>{' '}
+        working on data driven climate action. 🌍
+      </p>
+      <p>
+        I love mentoring, sharing knowledge, doing a bit of everything, and excel at
+        working full-stack with web technologies.
       </p>
       <p>
         This is my portfolio where I gather random bits and pieces. I hope you find
-        something useful in my attempt to fight digital sharecropping.
+        something useful in my attempt to fight digital sharecropping. Feel free to
+        connect with me on{' '}
+        <ExternalLink href="https://twitter.com/kenneth_skovhus" noUnderline>
+          Twitter
+        </ExternalLink>{' '}
+        or{' '}
+        <ExternalLink href="https://www.linkedin.com/in/skovhus" noUnderline>
+          LinkedIn
+        </ExternalLink>
+        .
       </p>
 
       <NegativeHeadingSpacingHack />
