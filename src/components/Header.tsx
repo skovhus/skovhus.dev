@@ -18,12 +18,6 @@ const Title = styled.h1`
   color: white;
 `
 
-const DesktopSubTitle = styled.span`
-  @media (max-width: 599px) {
-    display: none;
-  }
-`
-
 const StyledNav = styled.nav`
   color: white;
   display: flex;
@@ -71,13 +65,7 @@ export default function Header({ showIntro }: Props) {
   const intro = (
     <>
       <ProfileImage />
-      <Title>
-        Kenneth Skovhus 👋
-        <DesktopSubTitle>
-          <br />
-          Software developer based in Copenhagen.
-        </DesktopSubTitle>
-      </Title>
+      <Title>Kenneth Skovhus 👋</Title>
     </>
   )
 
