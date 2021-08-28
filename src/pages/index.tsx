@@ -97,7 +97,7 @@ export default function Index({ posts }: Props) {
       <NegativeHeadingSpacingHack />
       <Heading id="posts">I occasionally blog</Heading>
       <NegativeHeadingSpacingHack />
-      {posts.map(post => {
+      {posts.map((post) => {
         const { frontmatter, slug, timeToRead } = post
         const { date, description, title } = frontmatter
 
@@ -114,7 +114,7 @@ export default function Index({ posts }: Props) {
 
       <Heading id="talks">I enjoy giving talks</Heading>
       <NegativeHeadingSpacingHack />
-      {TALKS.map(talk => (
+      {TALKS.map((talk) => (
         <LinkEntity {...talk} key={talk.title} />
       ))}
 

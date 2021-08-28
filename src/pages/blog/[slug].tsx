@@ -38,14 +38,14 @@ const HorizontalLine = styled.hr`
 `
 
 export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
-  const posts = getAllPosts().map(post => {
+  const posts = getAllPosts().map((post) => {
     return {
       href: `/blog/${post.slug}`,
       title: post.frontmatter.title,
       slug: post.slug,
     }
   })
-  const postIndex = posts.findIndex(post => post.slug == slug)
+  const postIndex = posts.findIndex((post) => post.slug == slug)
 
   const post = getPostBySlug(slug)
   const content = await markdownToHtml(post.content)
@@ -68,7 +68,7 @@ export async function getStaticPaths() {
   const posts = getAllPosts()
 
   return {
-    paths: posts.map(post => {
+    paths: posts.map((post) => {
       return {
         params: {
           slug: post.slug,
