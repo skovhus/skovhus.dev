@@ -3,15 +3,14 @@ title: Abandoning the mothership
 description: It was time to pour into our front-end code the same poison we gave our back-end systems, splitting it all apart into maintainable chunks. Our vision was to make each feature team at issuu.com own, build and deploy its front-end code autonomously—and to make things that ought to be trivial actually trivial!
 date: "2015-12-16T12:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/abandoning-the-mothership-4g35
-featuredImage: "./deathstar.jpg"
+featuredImage: "/blog/deathstar.jpg"
 ---
 
 The time had come to pour into our front-end code the same poison we had given our back-end systems.
 
-![Abandoning the mothership](./deathstar.jpg)
+![Abandoning the mothership](/blog/deathstar.jpg)
 
-> COMMENT FROM DECEMBER 2019: This blog post was released when Star Wars: Episode VII  The Force Awakens came out... 🎬😄
-
+> COMMENT FROM DECEMBER 2019: This blog post was released when Star Wars: Episode VII The Force Awakens came out... 🎬😄
 
 For many years, issuu’s engineering group was organized around component teams. Our late great Team Monster handled the front-end code and the rest of the teams provided APIs and back-end infrastructure.
 
@@ -38,11 +37,12 @@ We started by dividing the front-end codebase into four chunks:
 - widgets;
 - and UI components.
 
-![Partitioning our frontend-end code base](./infrastructure.png)
+![Partitioning our frontend-end code base](/blog/infrastructure.png)
 
 The **shared serving infrastructure** is a thin horizontal node.js application responsible for routing and serving **pages**. It holds the configuration for which version of a page to be served.
 
 A feature team delivers products consisting of the following:
+
 - **pages** (node.js handlers, templates and assets like compiled JavaScript/CSS);
 - and some **widgets** (shared functionality used on multiple pages, like a message hub, streams or drag-and-drop functionality to initiate a publication upload).
 
@@ -97,4 +97,4 @@ Still, redundancy sucks, right? I’m going to end with a quote from the excelle
 
 ---
 
-*This blog post was originally posted at [issuu’s engineering blog](https://engineering.issuu.com/2015/12/16/abandoning-mothership) and on [medium](https://medium.com/@skovhus/abandoning-the-mothership-2d15b7e9313e). This is the second part of our series “Toward a maintainable front-end”, the first part is [here](https://engineering.issuu.com/2015/09/15/mess-management.html).*
+_This blog post was originally posted at [issuu’s engineering blog](https://engineering.issuu.com/2015/12/16/abandoning-mothership) and on [medium](https://medium.com/@skovhus/abandoning-the-mothership-2d15b7e9313e). This is the second part of our series “Toward a maintainable front-end”, the first part is [here](https://engineering.issuu.com/2015/09/15/mess-management.html)._
