@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 # rss files
-public/rss
+public/rss.xml
