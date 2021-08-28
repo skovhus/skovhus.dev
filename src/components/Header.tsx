@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 
 import ProfileImage from './ProfileImage'
 import { Menu } from './Menu'
-import { useWindowSize } from '../libs/useWindowSize'
 import { PageWidthContainer } from './PageContainer'
 
 const StyledHeader = styled.header`
@@ -19,11 +18,10 @@ const Title = styled.h1`
   color: white;
 `
 
-const MobileTitle = styled.h1`
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  color: white;
+const DesktopSubTitle = styled.span`
+  @media (max-width: 599px) {
+    display: none;
+  }
 `
 
 const StyledNav = styled.nav`
@@ -70,24 +68,18 @@ type Props = {
 }
 
 export default function Header({ showIntro }: Props) {
-  const windowSize = useWindowSize()
-
-  const intro =
-    windowSize.width >= 600 ? (
-      <>
-        <ProfileImage />
-        <Title>
-          Kenneth Skovhus. 👋
+  const intro = (
+    <>
+      <ProfileImage />
+      <Title>
+        Kenneth Skovhus 👋
+        <DesktopSubTitle>
           <br />
           Software developer based in Copenhagen.
-        </Title>
-      </>
-    ) : (
-      <>
-        <ProfileImage />
-        <MobileTitle>Kenneth Skovhus 👋</MobileTitle>
-      </>
-    )
+        </DesktopSubTitle>
+      </Title>
+    </>
+  )
 
   return (
     <StyledHeader>
