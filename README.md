@@ -1,4 +1,3 @@
-## skovhus.github.io
+## skovhus.dev
 
-My personal website and blog powered by [Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog).
-
+My personal website and blog.
