@@ -1,16 +1,31 @@
 # Curriculum vitae
 
-Building meaningful software together with talented people is my passion.
+My passion is building meaningful software together with talented people.
 
-I offer around 20 years of experience, 5 years as a tech lead, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.
+I offer around 20 years of experience, 7 years as a tech lead, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.
 
-I love mentoring, sharing knowledge, and excel in working full-stack with web technologies. I am very fond of React, TypeScript, GraphQL, codemods, testing, and automation. Read more about my [engineering principles](/blog/software-engineering-principles/).
+I love mentoring, sharing knowledge, and excel in working full-stack with web technologies. I am very fond of TypeScript, Python, GraphQL, React, codemods, testing, and automation. Read more about my [engineering principles](/blog/software-engineering-principles/).
 
 ---
 
 ## Work experience
 
-### Lead full-stack engineer | LEO Innovation Lab (2017-present)
+### Head of Engineering | Tomorrow/electricityMap (2020-present)
+
+In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [Tomorrow](https://tmrow.com/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
+
+My mission:
+
+- Work directly with the founder and product manager to develop new features across our product portfolio
+- Steward a high-quality codebase and promote best practices in development within the company
+- Contribute in every aspect of the product development process, from thinking through UX and UI to hearing from customers and solving their problems
+- Inspire others, and to challenge product features, to make sure we build a product that is used and has the impact we want
+- To be a trusted advisor on all things technical, and build a world-class software engineering team
+- Do anything else you think is necessary to effectively decarbonize our society
+
+Technologies: Python, Dataflow, Google Cloud Services, PostgreSQL, JavaScript, TypeScript, React, GraphQL, node.js, hasura.io
+
+### Lead full-stack engineer | LEO Innovation Lab (2017-2020)
 
 As an independent innovation unit, established by LEO Pharma, [LEO Innovation Lab](https://leoinnovationlab.com/) develops apps, digital platforms, and other initiatives to support people with chronic skin conditions.
 
