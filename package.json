@@ -22,7 +22,7 @@
     "gray-matter": "^4.0.2",
     "next": "^11.1.0",
     "next-typography": "^1.0.1",
-    "prismjs": "^1.24.0",
+    "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-typography": "^0.16.19",
