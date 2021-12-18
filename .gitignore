@@ -70,3 +70,5 @@ yarn-error.log
 
 # rss files
 public/rss.xml
+
+tsconfig.tsbuildinfo
