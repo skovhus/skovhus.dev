@@ -88,7 +88,7 @@ type Props = {
 }
 
 export default function BlogPostTemplate({
-  post: { slug, frontmatter, content },
+  post: { slug, frontmatter, content, timeToRead },
   links: { previous, next },
 }: Props) {
   const { date, description, devToLink, featuredImage, title } = frontmatter
@@ -104,7 +104,7 @@ export default function BlogPostTemplate({
       <article>
         <Title>{title}</Title>
         <Subtitle>
-          {date} • {0} minute read
+          {date} • {timeToRead} minute read
         </Subtitle>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         Discuss this post <ExternalLink href={twitterDiscussUrl}>on Twitter</ExternalLink>
