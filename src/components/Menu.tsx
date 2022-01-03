@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled from '@emotion/styled'
+import { styled } from '@linaria/react'
 import NextLink from 'next/link'
 
 import { BurgerIcon } from './BurgerIcon'

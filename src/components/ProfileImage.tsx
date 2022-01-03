@@ -1,6 +1,6 @@
 import React from 'react'
 import NextImage from 'next/image'
-import styled from '@emotion/styled'
+import { styled } from '@linaria/react'
 
 import { rhythm } from '../libs/typography'
 

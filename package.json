@@ -14,8 +14,8 @@
     "verify": "yarn lint && yarn typecheck"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
-    "@emotion/styled": "^10.0.27",
+    "@linaria/core": "^3.0.0-beta.15",
+    "@linaria/react": "^3.0.0-beta.15",
     "@silvenon/remark-smartypants": "^1.0.0",
     "date-fns": "^2.19.0",
     "feed": "^4.2.2",
@@ -33,6 +33,10 @@
     "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@linaria/babel-preset": "^3.0.0-beta.15",
+    "@linaria/shaker": "^3.0.0-beta.15",
+    "@linaria/webpack-loader": "^3.0.0-beta.16",
     "@next/bundle-analyzer": "^12.0.7",
     "@next/eslint-plugin-next": "^12.0.7",
     "@types/gtag.js": "^0.0.4",

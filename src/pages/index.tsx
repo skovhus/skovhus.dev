@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import styled from '@emotion/styled'
+import { styled } from '@linaria/react'
 
 import Discography from '../components/Discography'
 import ExternalLink from '../components/ExternalLink'

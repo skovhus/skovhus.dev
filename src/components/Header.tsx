@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import styled from '@emotion/styled'
+import { styled } from '@linaria/react'
 
 import ProfileImage from './ProfileImage'
 import { Menu } from './Menu'
