@@ -1,3 +1,6 @@
+import 'typeface-montserrat'
+import 'typeface-merriweather'
+
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
