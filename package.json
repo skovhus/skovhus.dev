@@ -18,10 +18,8 @@
     "@silvenon/remark-smartypants": "^1.0.0",
     "date-fns": "^2.19.0",
     "feed": "^4.2.2",
-    "graphql": "14.5.8",
     "gray-matter": "^4.0.2",
     "next": "12",
-    "next-typography": "^1.0.1",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,13 +27,10 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.2",
     "remark-prism": "^1.3.5",
-    "sharp": "^0.29.3",
-    "typeface-merriweather": "^0.0.72",
-    "typeface-montserrat": "^0.0.75",
-    "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^12.0.7",
     "@next/eslint-plugin-next": "^12.0.7",
     "@types/gtag.js": "^0.0.4",
     "@types/react": "^17.0.19",
