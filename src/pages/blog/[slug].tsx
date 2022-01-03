@@ -8,7 +8,7 @@ import BlogBio from '../../components/BlogBio'
 import ExternalLink from '../../components/ExternalLink'
 import Layout from '../../components/Layout'
 import SEO from '../../components/Seo'
-import { rhythm, scale } from '../../libs/typography'
+import { rhythm } from '../../libs/typography'
 import { markdownToHtml } from '../../libs/markdown'
 import { siteUrl } from '../../config'
 
@@ -17,8 +17,8 @@ export const Title = styled.h1`
 `
 
 const Subtitle = styled.p`
-  font-size: ${scale(-1 / 5).fontSize};
-  line-height: ${scale(-1 / 5).lineHeight};
+  font-size: 0.83255rem;
+  line-height: 1.75rem;
   display: block;
   margin-bottom: ${rhythm(1)};
   margin-top: ${rhythm(-1)};
