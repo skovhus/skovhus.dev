@@ -1,11 +1,6 @@
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import NextTypography from 'next-typography'
 
-import typography from '../libs/typography'
 import '../libs/global-styles.css'
 import * as gtag from '../libs/google-tag'
 
@@ -21,12 +16,7 @@ function MyApp({ Component, pageProps }: any) {
     }
   }, [router.events])
 
-  return (
-    <>
-      <NextTypography typography={typography} />
-      <Component {...pageProps} />
-    </>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp
