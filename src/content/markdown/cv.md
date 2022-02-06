@@ -2,7 +2,7 @@
 
 My passion is building meaningful software together with talented people.
 
-I offer around 20 years of experience, 7 years as a tech lead, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.
+I offer around 20 years of industry experience, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.
 
 I love mentoring, sharing knowledge, and excel in working full-stack with web technologies. I am very fond of TypeScript, Python, GraphQL, React, codemods, testing, and automation. Read more about my [engineering principles](/blog/software-engineering-principles/).
 
@@ -10,9 +10,15 @@ I love mentoring, sharing knowledge, and excel in working full-stack with web te
 
 ## Work experience
 
-### Head of Engineering | Tomorrow/electricityMap (2020-present)
+### Staff Engineer | Pleo (2021-present)
 
-In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [Tomorrow](https://tmrow.com/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
+[Pleo](https://pleo.io) is the spending solution for forward-thinking teams everywhere. The smart company cards empower thousands of businesses across Europe.
+
+My initial focus is pushing the Pleo frontend platform forward as part of the Engineering Productivity domain.
+
+### Head of Engineering | Tomorrow/electricityMap (2020-2021)
+
+In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [electricityMap](https://electricitymap.org/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
 
 My mission:
 
