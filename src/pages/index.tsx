@@ -85,8 +85,7 @@ export default function Index({ posts }: Props) {
       <SEO />
       <p style={{ marginTop: '2rem' }}>
         I&apos;m a software engineer based in Copenhagen, Denmark. MSc in Computer Science
-        and Engineering from the Technical University of Denmark (2012). Staff Engineer at{' '}
-        <ExternalLink href="https://pleo.io/">Pleo</ExternalLink>.
+        and Engineering from the Technical University of Denmark (2012).
       </p>
       <p>
         I love mentoring, sharing knowledge, doing a bit of everything, and excel at
