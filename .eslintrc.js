@@ -15,15 +15,6 @@ module.exports = {
   },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        printWidth: 90,
-        semi: false,
-      },
-    ],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
