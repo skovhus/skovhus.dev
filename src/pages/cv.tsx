@@ -1,6 +1,6 @@
 // NOTE: this could be as generic as the blogs if more markdown pages should be added
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import matter from 'gray-matter'
 import fs from 'fs'
 import { join } from 'path'
@@ -24,6 +24,18 @@ export async function getStaticProps() {
 }
 
 export default function CvPage({ content }: { content: string }) {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      fetch('api/test')
+        .then((res) => res.json())
+        .then((data) => {
+          console.warn('Data returned', data)
+        })
+    }, 1000)
+
+    return () => clearInterval(intervalId)
+  }, [])
+
   return (
     <Layout showHeaderIntro>
       <SEO pageTitle={'CV'} />
