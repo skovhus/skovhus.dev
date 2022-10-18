@@ -594,6 +594,7 @@ pre {
   margin-bottom: 1.75rem;
   font-size: 0.85rem;
   line-height: 1.75rem;
+  overflow: auto;
 }
 table {
   margin-left: 0;
