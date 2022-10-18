@@ -15,7 +15,7 @@ export default function SEO({ description, image, pageTitle }: Props) {
 
   const { siteUrl, title: siteTitle } = siteMetadata
   const metaImageSrc = `${siteUrl}${image || '/skovhus.jpg'}`
-  const url = `${siteUrl}${router.pathname || '/'}`
+  const url = `${siteUrl}${router.asPath || '/'}`
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
 
   return (
