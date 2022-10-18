@@ -2,16 +2,24 @@ import 'typeface-montserrat'
 import 'typeface-merriweather'
 
 import React, { useEffect } from 'react'
+import Script from 'next/script'
 import { useRouter } from 'next/router'
 
 import '../libs/global-styles.css'
-import * as gtag from '../libs/google-tag'
+
+declare global {
+  interface Window {
+    goatcounter: any
+  }
+}
 
 function MyApp({ Component, pageProps }: any) {
   const router = useRouter()
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      gtag.pageview(url)
+    const handleRouteChange = (path: string) => {
+      window?.goatcounter?.count?.({
+        path,
+      })
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
@@ -19,7 +27,17 @@ function MyApp({ Component, pageProps }: any) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <Script
+        async
+        data-goatcounter="https://skovhus-dev.goatcounter.com/count"
+        src="//gc.zgo.at/count.js"
+        strategy="afterInteractive"
+      />
+    </>
+  )
 }
 
 export default MyApp
