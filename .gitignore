@@ -71,4 +71,7 @@ yarn-error.log
 # rss files
 public/rss.xml
 
+# sitemaps
+public/sitemap*
+
 tsconfig.tsbuildinfo
