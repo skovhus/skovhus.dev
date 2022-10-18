@@ -27,8 +27,9 @@ export default function ProfileImage() {
       <RoundedImage
         src="/skovhus.jpg"
         alt={'Kenneth Skovhus'}
-        layout="fill"
-        objectFit="cover"
+        layout="fixed"
+        width={PROFILE_IMAGE_WIDTH}
+        height={PROFILE_IMAGE_WIDTH}
       />
     </ImageContainer>
   )
