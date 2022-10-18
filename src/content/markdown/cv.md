@@ -47,7 +47,7 @@ Technologies: React, React Native, JavaScript, TypeScript, GraphQL, node.js, and
 
 [issuu.com](https://issuu.com) is a digital publishing platform. It is an archive, library and newsstand all gathered in one reading experience with 50+ million publications and 100 million monthly unique visitors.
 
-During my four years, I worked on everything from publisher tools, upload flow, PDF conversion pipeline, email services, payment service, our first Docker setup, introducing automated tests, front-end architecture (see this [blog post](https://skovhus.github.io/abandoning-the-mothership/) or this [conference talk](https://vimeo.com/168543655)), build systems, to several iterations of our design system.
+During my four years, I worked on everything from publisher tools, upload flow, PDF conversion pipeline, email services, payment service, our first Docker setup, introducing automated tests, front-end architecture (see this [blog post](/blog/abandoning-the-mothership) or this [conference talk](https://vimeo.com/168543655)), build systems, to several iterations of our design system.
 
 From 2015 I had the pleasure to lead an awesome cross-functional delivery team. As a team lead, I love to enable people to grow, preach continuous delivery, find the right solution to validate a hypothesis, and I strive to shorten the build-measure-learn cycle.
 
