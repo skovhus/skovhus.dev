@@ -43,17 +43,16 @@ const HeaderLink = ({
   href: string
   style?: React.CSSProperties
 }) => (
-  <Link href={href}>
-    <a
-      style={{
-        boxShadow: 'none',
-        textDecoration: 'none',
-        color: 'inherit',
-        ...style,
-      }}
-    >
-      {children}
-    </a>
+  <Link
+    href={href}
+    style={{
+      boxShadow: 'none',
+      textDecoration: 'none',
+      color: 'inherit',
+      ...style,
+    }}
+  >
+    {children}
   </Link>
 )
 
