@@ -7,6 +7,8 @@ import remarkExternalLinks from 'remark-external-links'
 
 export async function markdownToHtml(markdownString: string) {
   const result = await remark()
+    // https://github.com/sergioramos/remark-prism/issues/265
+    .use(html, { sanitize: false })
     .use(prism)
     .use(smartypants)
     .use(remarkExternalLinks, { target: '_blank', rel: ['nofollow'] })
@@ -15,7 +17,6 @@ export async function markdownToHtml(markdownString: string) {
       imageClassName: 'figure-image',
       captionClassName: 'figure-caption',
     })
-    .use(html)
     .process(markdownString)
 
   return result.toString()
