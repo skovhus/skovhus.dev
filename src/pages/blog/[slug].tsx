@@ -123,15 +123,15 @@ export default function BlogPostTemplate({
       <BlogNavigation>
         <li>
           {previous && (
-            <Link href={previous.href}>
-              <a rel="prev">← {previous.title}</a>
+            <Link href={previous.href} rel="prev">
+              ← {previous.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link href={next.href}>
-              <a rel="next">{next.title} →</a>
+            <Link href={next.href} rel="next">
+              {next.title} →
             </Link>
           )}
         </li>

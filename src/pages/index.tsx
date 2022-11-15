@@ -40,8 +40,8 @@ const LinkEntity = ({
       {title}
     </ExternalLink>
   ) : (
-    <Link href={linkTo}>
-      <a style={{ boxShadow: `none` }}>{title}</a>
+    <Link href={linkTo} style={{ boxShadow: `none` }}>
+      {title}
     </Link>
   )
 

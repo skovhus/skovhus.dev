@@ -25,7 +25,7 @@ const MenuContent = styled.div`
   justify-content: space-evenly;
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(NextLink)`
   color: white;
   padding: 20px;
   box-shadow: none;
@@ -40,9 +40,13 @@ export function Menu() {
   }, [isOpen])
 
   const Link = ({ href, label }: { href: string; label: string }) => (
-    <NextLink aria-label={`View ${label.toLowerCase()} page`} href={href}>
-      <StyledLink onClick={() => setIsOpen(false)}>{label}</StyledLink>
-    </NextLink>
+    <StyledLink
+      aria-label={`View ${label.toLowerCase()} page`}
+      href={href}
+      onClick={() => setIsOpen(false)}
+    >
+      {label}
+    </StyledLink>
   )
 
   return (
