@@ -18,11 +18,11 @@ const Link = styled.a`
   display: flex;
   flex-direction: column;
 
-  box-shadow: 0.8px 0.9px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.8px 0.9px 3px var(--color-shadow);
   transition: box-shadow 0.5s ease-in-out;
 
   &:hover {
-    box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 8px 20px var(--color-shadow);
   }
 `
 
@@ -33,7 +33,6 @@ const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   font-size: 70%;
-  border-top: 1px solid #eee;
 `
 
 const Title = styled.div`

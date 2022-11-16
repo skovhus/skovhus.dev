@@ -1,9 +1,15 @@
 :root {
-  --color-accent: hsl(240, 80%, 35%);
-  --background-context-color: rgb(21, 32, 43);
+  --background-code-block: #011627;
+  --background-content: white;
+  --background-context-color: rgb(20, 21, 32);
   --background-context-image: var(--background-context-color)
     url("../../public/header-unsplash-ryan_hutton_.jpg") repeat;
-  --background-content: white;
+  --background-hr: hsla(0, 0%, 0%, 0.2);
+  --color-accent: hsl(240, 80%, 35%);
+  --color-inline-code-background: #f6f6f8;
+  --color-inline-code-text: #1a1a1a;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-text-body: hsla(0, 0%, 0%, 0.9);
 }
 
 html {
@@ -28,7 +34,7 @@ body {
 }
 
 /**
- * Copy paste from Remy Bach, Sarah Drasner and overreacted.io
+ * Based on Remy Bach, Sarah Drasner and overreacted.io
  */
 code[class*="language-"],
 pre[class*="language-"] {
@@ -86,8 +92,8 @@ pre[class*="language-"] ::selection {
 /* Inline code */
 :not(pre) > code {
   border-radius: 0.3em;
-  background: rgba(255, 229, 100, 0.2);
-  color: #1a1a1a;
+  background: var(--color-inline-code-background);
+  color: var(--color-inline-code-text);
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
 }
@@ -173,7 +179,7 @@ pre[data-line] {
   margin-left: -1.3125rem;
   margin-right: -1.3125rem;
   border-radius: 10px;
-  background: #011627;
+  background: var(--background-code-block);
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }
@@ -206,7 +212,7 @@ html {
 
 body {
   margin: 0;
-  color: hsla(0, 0%, 0%, 0.9);
+  color: var(--color-text-body);
   font-family: "Merriweather", "Georgia", serif;
   font-weight: 400;
   word-wrap: break-word;
@@ -301,9 +307,6 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-figure {
-  margin: 1em 40px;
 }
 hr {
   box-sizing: content-box;
@@ -422,7 +425,7 @@ h1 {
   font-family: Montserrat, sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   line-height: 1.1;
 }
 h2 {
@@ -631,9 +634,9 @@ blockquote {
   margin-bottom: 1.75rem;
   font-size: 1em;
   line-height: 1.75rem;
-  color: hsla(0, 0%, 0%, 0.59);
   font-style: italic;
-  border-left: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
+  opacity: 0.8;
+  border-left: 0.32813rem solid var(--color-text-body);
 }
 form {
   margin-left: 0;
@@ -674,7 +677,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.75rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: var(--background-hr);
   border: none;
   height: 1px;
 }
@@ -786,7 +789,7 @@ blockquote > :last-child {
 blockquote cite {
   font-size: 1rem;
   line-height: 1.75rem;
-  color: hsla(0, 0%, 0%, 0.9);
+  color: var(--color-text-body);
   font-weight: 400;
 }
 blockquote cite:before {
@@ -825,6 +828,10 @@ a:hover,
 a:active {
   box-shadow: none;
 }
+figure a {
+  box-shadow: none;
+}
+
 mark,
 ins {
   background: var(--color-accent);
