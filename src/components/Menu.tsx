@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import NextLink from 'next/link'
+import { useTheme } from 'next-themes'
 
 import { BurgerIcon } from './BurgerIcon'
 
@@ -32,8 +33,16 @@ const StyledLink = styled(NextLink)`
   cursor: pointer;
 `
 
+const LinkButton = styled.div`
+  color: white;
+  padding: 20px;
+  box-shadow: none;
+  cursor: pointer;
+`
+
 export function Menu() {
   const [isOpen, setIsOpen] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
     document.body.style.overflowY = isOpen ? 'hidden' : ''
@@ -49,6 +58,17 @@ export function Menu() {
     </StyledLink>
   )
 
+  const DarkModeToggle = () => (
+    <LinkButton
+      onClick={() => {
+        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+        setIsOpen(false)
+      }}
+    >
+      {resolvedTheme === 'dark' ? 'Switch to light mode 🔆' : 'Switch to dark mode 🌖'}
+    </LinkButton>
+  )
+
   return (
     <>
       <BurgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
@@ -60,6 +80,7 @@ export function Menu() {
             <Link href="/#oss" label="Open source" />
             <Link href="/#music" label="Music" />
             <Link href="/cv" label="CV" />
+            <DarkModeToggle />
           </MenuContent>
         </MenuContainer>
       )}
