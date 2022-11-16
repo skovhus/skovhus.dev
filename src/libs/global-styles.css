@@ -3,7 +3,7 @@
   --background-content: white;
   --background-context-color: rgb(20, 21, 32);
   --background-context-image: var(--background-context-color)
-    url("../../public/header-unsplash-ryan_hutton_.jpg") repeat;
+    url('../../public/header-unsplash-ryan_hutton_.jpg') repeat;
   --background-hr: hsla(0, 0%, 0%, 0.2);
   --color-accent: hsl(240, 80%, 35%);
   --color-inline-code-background: #f6f6f8;
@@ -36,8 +36,8 @@ body {
 /**
  * Based on Remy Bach, Sarah Drasner and overreacted.io
  */
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: white;
   background: none;
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
@@ -61,30 +61,30 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
   overflow: auto;
   padding: 1.3125rem;
 }
 
-pre[class*="language-"]::-moz-selection {
+pre[class*='language-']::-moz-selection {
   /* Firefox */
   background: hsl(207, 4%, 16%);
 }
 
-pre[class*="language-"]::selection {
+pre[class*='language-']::selection {
   /* Safari */
   background: hsl(207, 4%, 16%);
 }
 
 /* Text Selection colour */
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection {
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection {
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
 }
@@ -134,7 +134,7 @@ pre[class*="language-"] ::selection {
 .token.selector,
 .token.doctype {
   color: rgb(199, 146, 234);
-  font-style: "italic";
+  font-style: 'italic';
 }
 
 .token.class-name {
@@ -205,7 +205,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
-  font: 100%/1.75 "Merriweather", "Georgia", serif;
+  font: 100%/1.75 'Merriweather', 'Georgia', serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -213,14 +213,14 @@ html {
 body {
   margin: 0;
   color: var(--color-text-body);
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 article,
@@ -332,22 +332,22 @@ button,
 select {
   text-transform: none;
 }
-[type="reset"],
-[type="submit"],
+[type='reset'],
+[type='submit'],
 button,
-html [type="button"] {
+html [type='button'] {
   -webkit-appearance: button;
 }
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
 button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring,
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
@@ -367,21 +367,21 @@ legend {
 textarea {
   overflow: auto;
 }
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 ::-webkit-input-placeholder {
@@ -438,7 +438,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.6rem;
@@ -454,7 +454,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.4427rem;
@@ -470,7 +470,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -488,7 +488,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 0.83255rem;
@@ -504,7 +504,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: "Merriweather", "Georgia", serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 0.75966rem;
@@ -766,10 +766,10 @@ td,
 th {
   text-align: left;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
   padding-left: 1.16667rem;
   padding-right: 1.16667rem;
   padding-top: 0.875rem;
@@ -793,7 +793,7 @@ blockquote cite {
   font-weight: 400;
 }
 blockquote cite:before {
-  content: "— ";
+  content: '— ';
 }
 ul,
 ol {
