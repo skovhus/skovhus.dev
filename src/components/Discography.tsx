@@ -44,9 +44,9 @@ const Title = styled.div`
 const DISCOGRAPHY_DATA = [
   {
     linkTo: 'https://open.spotify.com/album/5m2T9VPMmzXIR3zXSkiVDz',
-    title: 'Freddy and the Phantoms: "First Blood Universe" (2019)',
+    title: 'Freddy and the Phantoms: "A Universe From Nothing" (2020)',
     subTitle: 'Engineering, co-production',
-    image: '/discography/freddy-first-blood-universe.jpeg',
+    image: '/discography/freddy-a-universe-from-nothing.jpeg',
   },
   {
     linkTo: 'https://open.spotify.com/album/4ggXw0iv9LuhuQVYfxII9H',
