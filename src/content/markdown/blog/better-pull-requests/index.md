@@ -71,4 +71,4 @@ If you need to update the branch then avoid trashing the commit history with `Me
 
 ## Summary
 
-In summary, creating better pull requests involves focusing on a single concern, keeping feature branches short-lived, utilizing proper tooling, providing context in your PR, and documenting your code effectively. By following these guidelines, you'll improve your collaboration with your team and elevate the overall quality of your projects."
+In summary, creating better pull requests involves focusing on a single concern, keeping feature branches short-lived, utilizing proper tooling, providing context in your PR, and documenting your code effectively. By following these guidelines, you'll improve your collaboration with your team and elevate the overall quality of your projects.
