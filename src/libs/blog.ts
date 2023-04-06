@@ -10,6 +10,7 @@ export type Post = {
   slug: string
   frontmatter: {
     date: string
+    draft?: boolean
     isoDate: string
     description: string
     devToLink?: string

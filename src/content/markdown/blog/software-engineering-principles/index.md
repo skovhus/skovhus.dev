@@ -1,15 +1,14 @@
 ---
-title: Software Engineering Principles
-description: A list of the high-level technical principles and beliefs that I operate by when building software. Lots of links and references.
+title: "Software Engineering Principles"
+description: A list of the high-level principles and beliefs that I operate by when building software. Lots of links and references.
 date: "2020-01-13T20:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/software-engineering-principles-7da
 featuredImage: "/blog/unsplash-ryan_hutton_.jpg"
 ---
 
-After reading the [principles of the React team](https://react.christmas/2019/24) I got inspired to write this post on the *high-level technical principles and beliefs that I operate by*.
+After reading the [principles of the React team](https://react.christmas/2019/24) I got inspired to write this post on the *high-level principles and beliefs that I operate by*.
 
-These 8 principles are not meant to be exhaustive, and although I have gathered these over the last 20 years, they are definitely subject to change while I gain new perspectives and (*hopefully*) get wiser. I have added a bunch of links and recommendations, that I hope you find inspiring. ☕️
-
+These 8 principles, gathered over 20 years, are not exhaustive and may change as I (*hopefully*) gain new perspectives and wisdom. I have added a bunch of links and recommendations, that I hope you find inspiring. ☕️
 
 
 ## People first, technology second
@@ -18,7 +17,7 @@ Technology's ultimate purpose is to advance humanity. If we do not put the human
 
 Before I studied computer science, I worked as a technical illustrator and later as a freelance web designer. I was always fascinated by human-computer interaction. Reading *Designing Web Usability* (1999) by Jakob Nielsen was a real eye-opener. Later in life, working together with really skilled UX designers and product owners changed how I approach problems.
 
-We can easily get carried away solving problems and forgetting about the users. I believe all technologists will benefit from understanding user-centered and human-centered design.
+We can easily forget about users while getting carried away solving problems. I believe all technologists will benefit from understanding user-centered and human-centered design.
 
 Recommended material:
 - [Offscreen](https://www.offscreenmag.com/) is my favorite print magazine on how we shape technology and how technology shapes us
@@ -31,7 +30,7 @@ Recommended material:
 
 The greek philosopher Heraclitus knew it 2500 years ago: *"Everything changes and nothing stands still"*.
 
-Although a common metaphor, software is nothing like construction engineering or architecture. Code is organic, it evolves, and needs constant maintenance. I love the [analogy](https://www.artima.com/intv/garden.html) that software development resembles gardening. We are gardeners constantly dealing with things changing. And most changes do not turn out the way you expected.
+Software differs greatly from construction engineering or architecture, despite the common metaphor. Code is organic, it evolves, and needs constant maintenance. I love the [analogy](https://www.artima.com/intv/garden.html) that software development resembles gardening. We are gardeners constantly dealing with things changing. And most changes do not turn out the way you expected.
 
 To optimize a codebase for change:
 - Keep things simple
@@ -43,9 +42,11 @@ To optimize a codebase for change:
 
 
 
-## Don't jump too quickly into solution mode
+## Start with why before jumping into solution mode
 
-Solving problems is fun—usually more fun than planning. But you might find yourself jumping into solution-mode before understanding the problem. Instead, incorporate asking questions:
+I find it so rewarding to solve the right problem in a lean and simple way, and to avoid wasting time on the wrong path.
+
+Solving problems is fun—usually more fun than planning. But you might find yourself jumping into solution-mode before understanding the problem. This can also happen when leadership above you commands you or your team to do a certain task without a clear why. Instead, incorporate asking questions:
 - What problem are we trying to solve?
 - What ideas do we have to solve it?
 - What are the positive and negative implications?
@@ -53,13 +54,13 @@ Solving problems is fun—usually more fun than planning. But you might find you
 - What are our core assumptions?
 - What are the technical details of the technologies used?
 
-Be curious and come up with more open questions! I find it so rewarding to solve the right problem in a lean and simple way, and to avoid wasting time on the wrong path.
+Be curious and come up with more open questions!
 
 
 
 ## Build-Measure-Learn
 
-Requirements and your perspective will change as soon as you ship your solution (or simply show it to users). So avoid gold-plating your design or code, and get your solution in front of real users as fast as possible. Rather fail fast than waste time.
+Requirements and your perspective will change as soon as you ship your solution (or simply show it to users). So avoid gold-plating your design or code, and get your solution in front of real users as fast as possible. It's better to fail fast than to waste time.
 
 > In most projects, the first system built is barely usable... Hence plan to throw one away; you will, anyhow.
 >

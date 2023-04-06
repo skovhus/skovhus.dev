@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "eslint src --ext js,ts,tsx --fix && prettier src/**/*.css --write",
     "typecheck": "tsc --noEmit",
-    "verify": "yarn lint && yarn typecheck"
+    "verify": "pnpm lint && pnpm typecheck"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
