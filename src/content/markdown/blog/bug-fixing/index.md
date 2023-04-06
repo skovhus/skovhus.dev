@@ -1,6 +1,6 @@
 ---
-title: My mental model for fixing software bugs
-description: I tried to generalize my mental model for fixing bugs. It boils down to a 4 step process with a strong focus on improving safety nets.
+title: "Beyond Bug-Squashing: Start Improving Your System"
+description: My mental model for fixing bugs boils down to a 4 step process with a strong focus on improving safety nets.
 date: "2021-04-30T10:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/my-mental-model-for-fixing-software-bugs-367p
 featuredImage: "/blog/bug.jpeg"
@@ -10,7 +10,7 @@ featuredImage: "/blog/bug.jpeg"
 >
 > – Edsger Dijkstra
 
-I really enjoy fixing software bugs! The detective work, building up a hypothesis about the underlying root cause, digging through paper trails and turning stones to find the culprit. But what I enjoy the most is the **opportunity to improve the system**. Unfortunately, this last step is sometimes skipped by quickly squashing a bug and then carrying on with other activities.
+I really enjoy fixing software bugs! The detective work, building up a hypothesis about the underlying root cause, digging through paper trails and turning stones to find the culprit. But what I enjoy the most is the **opportunity to improve the system**. Unfortunately, developers sometimes skip this last step by quickly squashing a bug and then carrying on with other activities.
 
 While a quick fix seems efficient you miss important learnings and a perfect opportunity to:
 
@@ -28,7 +28,7 @@ I tried to generalize my mental model for fixing bugs. It boils down to a 4 step
 
 ### Step 1: Determine the severity 🐛
 
-When a bug (or incident) is discovered the first step is to determine the severity. If you are working on fixing an issue that is already triaged or prioritized, you can skip this step and go straight to step 2.
+When you discover a bug (or incident), the first step is to determine the severity. If you are working on fixing an issue that is already triaged or prioritized, you can skip this step and go straight to step 2.
 
 Some questions to consider:
 
@@ -41,7 +41,7 @@ Some questions to consider:
 
 How can we enable our system to catch or highlight the issue – now _and_ in the future?
 
-The answer to this question might include adding one or more of the following safety nets:
+You might answer this question by adding one or more of the following safety nets:
 
 - improve the linting setup
 - introduce or refine a static type
@@ -52,23 +52,23 @@ The answer to this question might include adding one or more of the following sa
 
 **Word of caution:** establish these safety nets by working _within the system_ and avoid extensive refactoring that might introduce new regressions.
 
-At the end of this step, we hopefully have a red lamp.
+At the end of this step, you should have a red lamp.
 
-If you feel you don't have time to improve your safety nets before fixing the issue then take a step back. How can you get more time to fix this properly? If the production system is in a really bad state could you revert to a previous version? Could you disable the broken feature by flipping a feature flag? Buy yourself some time to improve the system (hopefully it will pay off).
+If you feel you don't have time to improve your safety nets before fixing the issue then take a step back. How can you get more time to fix this properly? If the production system is in a really bad state, can you revert to a previous version? Could you disable the broken feature by flipping a feature flag? Buy yourself some time to improve the system (hopefully it will pay off).
 
 ### Step 3: The fix ✅
 
 Now is the time to fix the code, infrastructure configuration, or what caused the bug or regression. Turning the lamp green is often the easy part.
 
-### Step 4: Post-mortem analysis
+### Step 4: Debrief 🤔
 
-You should consider if the severity of the bug merits a post-mortem.
+You should consider if the severity of the bug merits an incident debrief (traditionally called post-mortem).
 
-A post-mortem is a blame-free analysis and discussion soon after an incident or event has taken place to learn from the experience. It ensures that an incident is documented, that all contributing root cause(s) are well understood, and, especially, that we learn from the incident and that preventive actions are put in place to reduce the likelihood and/or impact of recurrence.
+A debrief is a blame-free analysis and discussion soon after an incident or event has taken place to learn from the experience. It ensures that an incident is documented, that all contributing root cause(s) are well understood, and, especially, that we learn from the incident and that preventive actions are put in place to reduce the likelihood and/or impact of recurrence.
 
-I recommend that you trigger a post-mortem in case of data loss of any kind, user-visible downtime or degradation, manual developer intervention (e.g. release rollback) or when we lost a substantial amount of time firefighting.
+I recommend that you trigger a debrief in case of data loss of any kind, user-visible downtime or degradation, manual developer intervention (e.g. release rollback) or when we lost a substantial amount of time firefighting.
 
-This [guide](https://www.atlassian.com/incident-management/postmortem) seems like a great resource if you want to learn more about incident management using post-mortem.
+This [guide by Atlassian](https://www.atlassian.com/incident-management/postmortem) or [this one by incident.io](https://incident.io/guide/learn-and-improve/post-mortems-and-debriefs/) seems like a great resources if you want to learn more about incident management and debriefs.
 
 Happy debugging!
 
