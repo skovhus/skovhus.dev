@@ -108,20 +108,22 @@ export default function Index({ posts }: Props) {
       <NegativeHeadingSpacingHack />
       <Heading id="posts">I occasionally blog</Heading>
       <NegativeHeadingSpacingHack />
-      {posts.map((post) => {
-        const { frontmatter, slug, timeToRead } = post
-        const { date, description, title } = frontmatter
+      {posts
+        .filter((post) => !post.frontmatter.draft)
+        .map((post) => {
+          const { frontmatter, slug, timeToRead } = post
+          const { date, description, title } = frontmatter
 
-        return (
-          <LinkEntity
-            description={description}
-            key={slug}
-            linkTo={`/blog/${slug}`}
-            subTitle={`${date} • ${timeToRead} minute read`}
-            title={title}
-          />
-        )
-      })}
+          return (
+            <LinkEntity
+              description={description}
+              key={slug}
+              linkTo={`/blog/${slug}`}
+              subTitle={`${date} • ${timeToRead} minute read`}
+              title={title}
+            />
+          )
+        })}
 
       <Heading id="talks">I enjoy giving talks</Heading>
       <NegativeHeadingSpacingHack />
