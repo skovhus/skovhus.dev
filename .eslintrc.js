@@ -1,13 +1,6 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@next/next/recommended',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'prettier'],
+  extends: ['next/core-web-vitals', 'prettier'],
   settings: {
     react: {
       version: 'detect',
@@ -48,11 +41,8 @@ module.exports = {
     ],
     'prefer-const': 'error',
     'prefer-template': 'error',
-    'react-hooks/rules-of-hooks': 'error',
 
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-    'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
