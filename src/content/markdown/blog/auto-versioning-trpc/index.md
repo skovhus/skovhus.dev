@@ -1,8 +1,7 @@
 ---
 title: "Addressing Client/Server Compatibility in tRPC"
 description: Strategies for seamless client/server compatibility in tRPC, empowering developers to overcome version skew and deliver exceptional user experiences.
-date: "2023-03-20T20:00:00.000Z"
-draft: true
+date: "2023-07-12T20:00:00.000Z"
 ---
 
 The modern world of web application development brings frontend and backend environments closer together with libraries and frameworks like [tRPC](https://trpc.io/), [Remix](https://remix.run/), [Next.js](https://vercel.com/solutions/nextjs). However, achieving seamless client/server compatibility can be elusive, as stale web or mobile applications will eventually make calls to a newer version of the server, leading to potential compatibility issues. This is also known as [version skew](https://www.industrialempathy.com/posts/version-skew/).
@@ -44,7 +43,7 @@ This can be mitigated by building a custom validation script that would compare 
 - the latest server code compatible with the older version (e.g. input and output DTOs are a superset of previous versions, existing procedures are not removed)
 - inform the developer if some deprecated code should be remove
 
-Even though this approach is viable, it still introduces some friction for the developer and requires custom build time tooling. I would like to explore this option in more detail, but for now, let's look at another solution.
+Even though this approach is viable, it introduces some friction for the developer and requires custom tooling. 
 
 ## Solution: Auto-Versioning
 
@@ -64,6 +63,6 @@ Want to see some code? [Here is an early prototype](https://github.com/skovhus/a
 
 ## A Word of Caution for Mobile Applications
 
-The design choice of making the server code immutable and auto-versioned has some tradeoffs. What if server business logic really needs to be updated? What if the database schema or the underlying API services changes? The turnaround time for these changes depends on the time it takes for clients to upgrade. For web applications, it's usually a matter of days, but for mobile applications, it can be months or worse (even when using CodePush for most changes).
+The design choice of making the server code immutable and auto-versioned has some tradeoffs. What if server business logic really needs to be updated? What if the database schema or the underlying API services changes? The turnaround time for these changes depends on the time it takes for clients to upgrade. For web applications, it's usually a matter of days, but for mobile applications, it can be months or worse (even when using CodePush).
 
-For mobile applications using tRPC I would not adopt the immutable auto-versioned setup. Instead I suggest exploring the custom build time tooling described above which would enable a more graceful migration path for mobile applications while allowing updating the underlying server code.
+I would still recommend using auto-versioned servers for tRPC-enabled mobile applications, but I suggest relaxing the immutability requirement by making it easy to update the server code of existing server versions. 
