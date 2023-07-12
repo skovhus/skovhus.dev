@@ -4,16 +4,15 @@ description: One of the main selling points of tRPC is "End-to-end typesafe APIs
 date: "2023-07-12T20:00:00.000Z"
 ---
 
-I'm a huge fan of removing the boundary between the frontend and backend environment, as seen in libraries like [tRPC](https://trpc.io/) and web application framework like [Remix](https://remix.run/) and [Next.js](https://vercel.com/solutions/nextjs).
+I'm a huge fan of removing the boundary between the frontend and backend environment, as seen in libraries like [tRPC](https://trpc.io/) and web application frameworks like [Remix](https://remix.run/) and [Next.js](https://vercel.com/solutions/nextjs).
 
 ![tRPC removing the boundaries between the frontend and backend environment.](/blog/trpc.png)
-
 
 One of the main selling points of tRPC is "End-to-end typesafe APIs made easy", but this doesn't hold if you are not mindful about keeping your client/server versions in sync. Stale web or mobile applications will eventually make calls to a newer version of the server, leading to potential compatibility issues. This is also known as [version skew](https://www.industrialempathy.com/posts/version-skew/).
 
 The magnitude of the issue can vary from detectable API failures to subtle UI problems or even data inconsistencies.
 
-In this blog post I'll share the solution we came up when addressing this issue for the tRPC-powered Backend-For-Frontend setup at [Pleo.io](https://www.pleo.io/).
+In this blog post, I'll share the solution we came up with when addressing this issue for the tRPC-powered Backend-For-Frontend setup at [Pleo.io](https://www.pleo.io/).
 
 ## Library Guidelines & Best Practices
 
@@ -24,7 +23,7 @@ Frameworks and tools tackle the compatibility challenge differently. For example
 
 There are several general strategies to resolve the client/server version compatibility issue:
 
-- **Enforce clients to be in sync** with the latest server. We cannot guarantee this, but we can nudge the user to reload their browser, update when the user navigates, and add a reload call to action in case of API failures for forms/actions in the application. For mobile applications using React Native we can use [CodePush](https://github.com/microsoft/react-native-code-push), although there will always be a bit of lag between clients upgrading.
+- **Enforce clients to be in sync** with the latest server. We cannot guarantee this, but we can nudge the user to reload their browser, update when the user navigates, and add a reload call to action in case of API failures for forms/actions in the application. For mobile applications using React Native we can use [CodePush](https://github.com/microsoft/react-native-code-push), although it does introduce some lag and doesn't ensure all clients to upgrade.
 - **Maintain backward compatibility for a grace period** until we expect the clients to be updated.
 - **Manually or automatically version** the API endpoints and gracefully keep old versions around until clients have migrated to the new endpoints. Manual versioning is standard practice but isn't suitable for tRPC, Next.js, or Remix, where the actual endpoints are abstracted away.
 
