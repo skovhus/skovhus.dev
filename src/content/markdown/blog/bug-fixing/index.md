@@ -72,5 +72,4 @@ This [guide by Atlassian](https://www.atlassian.com/incident-management/postmort
 
 Happy debugging!
 
-![On September 9, 1947, the world's first computer bug was recorded by Grace Hopper. It was a real-life moth that was causing issues with the computer’s hardware.
-](./bug.jpeg)
+![On September 9, 1947, the world's first computer bug was recorded by Grace Hopper. It was a real-life moth that was causing issues with the computer’s hardware.](/blog/bug.jpeg)
