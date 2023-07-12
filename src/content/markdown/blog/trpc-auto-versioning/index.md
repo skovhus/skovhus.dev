@@ -2,6 +2,7 @@
 title: "Addressing Client/Server Compatibility in tRPC"
 description: One of the main selling points of tRPC is "End-to-end typesafe APIs made easy", but this doesn't hold if you are not mindful about keeping your client/server versions in sync.
 date: "2023-07-12T20:00:00.000Z"
+devToLink: https://dev.to/kenneth_skovhus/addressing-clientserver-compatibility-in-trpc-9le
 ---
 
 I'm a huge fan of removing the boundary between the frontend and backend environment, as seen in libraries like [tRPC](https://trpc.io/) and web application frameworks like [Remix](https://remix.run/) and [Next.js](https://vercel.com/solutions/nextjs).
