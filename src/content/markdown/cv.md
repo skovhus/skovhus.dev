@@ -10,7 +10,11 @@ I love mentoring, sharing knowledge, and excel in working full-stack with web te
 
 ## Work experience
 
-### Staff Engineer | Pleo (2021-present)
+### Software Engineer | Linear (2021-present)
+
+[Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don’t think of Linear as just a better “tool”, but as a better “way” to build software.
+
+### Staff Engineer | Pleo (2021-2023)
 
 [Pleo](https://pleo.io) is the spending solution for forward-thinking teams everywhere. The smart company cards empower thousands of businesses across Europe.
 
