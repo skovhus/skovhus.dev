@@ -10,7 +10,6 @@ import Layout from '../../components/Layout'
 import SEO from '../../components/Seo'
 import { rhythm } from '../../libs/typography'
 import { markdownToHtml } from '../../libs/markdown'
-import { siteUrl } from '../../config'
 
 export const Title = styled.h1`
   margin-top: 3rem;
@@ -88,14 +87,10 @@ type Props = {
 }
 
 export default function BlogPostTemplate({
-  post: { slug, frontmatter, content, timeToRead },
+  post: { frontmatter, content, timeToRead },
   links: { previous, next },
 }: Props) {
   const { date, description, devToLink, featuredImage, title } = frontmatter
-
-  const twitterDiscussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteUrl}/blog/${slug}`
-  )}`
 
   return (
     <Layout>
@@ -107,10 +102,9 @@ export default function BlogPostTemplate({
           {date} • {timeToRead} minute read
         </Subtitle>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        Discuss this post <ExternalLink href={twitterDiscussUrl}>on Twitter</ExternalLink>
         {devToLink && (
           <>
-            {' or '}
+            Discuss this post{' '}
             <ExternalLink href={devToLink}>on DEV Community</ExternalLink>
           </>
         )}
