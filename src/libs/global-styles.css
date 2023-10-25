@@ -1,7 +1,7 @@
 :root {
   --background-code-block: #011627;
   --background-content: white;
-  --background-context-color: rgb(20, 21, 32);
+  --background-context-color: rgb(20, 22, 32);
   --background-context-image: var(--background-context-color)
     url('../../public/header-unsplash-ryan_hutton_.jpg') repeat;
   --background-hr: hsla(0, 0%, 0%, 0.2);
@@ -306,8 +306,9 @@ sub {
 sup {
   top: -0.5em;
 }
-img {
+article img {
   border-style: none;
+  border-radius: 8px;
 }
 svg:not(:root) {
   overflow: hidden;
