@@ -3,6 +3,7 @@ import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import { PageWidthContainer } from './PageContainer'
+import { rhythm } from '../libs/typography'
 
 type Props = {
   children: React.ReactNode
@@ -22,7 +23,7 @@ export default function Layout({ children, showHeaderIntro = false }: Props) {
           style={{
             flexGrow: 1,
             paddingTop: '1px', // There is probably a better way to break out of the box model
-            paddingBottom: '60px',
+            paddingBottom: rhythm(1),
           }}
         >
           <main>{children}</main>

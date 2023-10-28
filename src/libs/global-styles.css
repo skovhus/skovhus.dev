@@ -225,7 +225,7 @@ body {
   margin: 0;
   color: var(--color-text-body);
   font-family: 'Merriweather', 'Georgia', serif;
-  font-weight: 400;
+  font-weight: 300;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
