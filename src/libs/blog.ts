@@ -1,7 +1,7 @@
+import fs from 'node:fs'
+import { join } from 'node:path'
 import matter from 'gray-matter'
 import { parseISO, format } from 'date-fns'
-import fs from 'fs'
-import { join } from 'path'
 import readingTime from 'reading-time'
 
 const postsDirectory = join(process.cwd(), 'src', 'content', 'markdown', 'blog')

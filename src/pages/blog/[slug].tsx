@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { getPostBySlug, getAllPosts, Post } from '../../libs/blog'
-
-import ExternalLink from '../../components/ExternalLink'
-import Layout from '../../components/Layout'
+import { ExternalLink } from '../../components/ExternalLink'
+import { Layout } from '../../components/Layout'
 import SEO from '../../components/Seo'
+import { HugeHeading } from '../../components/HugeHeading'
+import { getPostBySlug, getAllPosts, Post } from '../../libs/blog'
 import { rhythm } from '../../libs/typography'
 import { markdownToHtml } from '../../libs/markdown'
 
@@ -65,7 +65,7 @@ export default function BlogPostTemplate({
   const { date, description, devToLink, featuredImage, title } = frontmatter
 
   return (
-    <Layout>
+    <Layout showBackButton>
       <SEO description={description} image={featuredImage} pageTitle={title} />
 
       <Article>
@@ -85,8 +85,9 @@ export default function BlogPostTemplate({
   )
 }
 
-const Title = styled.h1`
+const Title = styled(HugeHeading)`
   margin-top: 3rem;
+  font-size: 2.5rem;
 `
 
 const Subtitle = styled.p`
@@ -99,6 +100,7 @@ const Subtitle = styled.p`
 
 const Article = styled.article`
   margin-bottom: ${rhythm(2)};
+  margin-top: -0.3rem;
 `
 
 const LinkOutContainer = styled.div`

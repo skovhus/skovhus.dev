@@ -1,36 +1,27 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
-import Footer from './Footer'
-import Header from './Header'
+import { Footer } from './Footer'
+import { Header } from './Header'
 import { PageWidthContainer } from './PageContainer'
-import { rhythm } from '../libs/typography'
 
 type Props = {
   children: React.ReactNode
-  showHeaderIntro?: boolean
+  showBackButton?: boolean
 }
 
-export default function Layout({ children, showHeaderIntro = false }: Props) {
+export function Layout({ children, showBackButton = false }: Props) {
   return (
-    <>
-      <Header showIntro={showHeaderIntro} />
-      <div
-        style={{
-          background: 'var(--background-content)',
-        }}
-      >
-        <PageWidthContainer
-          style={{
-            flexGrow: 1,
-            paddingTop: '1px', // There is probably a better way to break out of the box model
-            paddingBottom: rhythm(1),
-          }}
-        >
-          <main>{children}</main>
-        </PageWidthContainer>
-      </div>
-
+    <Main>
+      <Header showBackButton={showBackButton} />
+      <PageWidthContainer>{children}</PageWidthContainer>
       <Footer />
-    </>
+    </Main>
   )
 }
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`

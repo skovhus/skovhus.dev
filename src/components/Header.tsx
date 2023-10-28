@@ -2,20 +2,65 @@ import React from 'react'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 
-import ProfileImage from './ProfileImage'
-import { Menu } from './Menu'
 import { PageWidthContainer } from './PageContainer'
+import { useRouter } from 'next/router'
+import ProfileImage from './ProfileImage'
 
-const StyledHeader = styled.header`
-  background: var(--background-context-image);
-  padding: 10px 0;
+export function Header({ showBackButton }: { showBackButton: boolean }) {
+  const router = useRouter()
+
+  const navigation = (
+    <Nav>
+      <NavLink href="/" isActive={router.pathname == '/'}>
+        index
+      </NavLink>
+      {['blog', 'talks', 'music'].map((link) => (
+        <NavLink href={`/${link}`} isActive={router.pathname == `/${link}`} key={link}>
+          {link}
+        </NavLink>
+      ))}
+    </Nav>
+  )
+
+  return (
+    <StyledHeader>
+      <PageWidthContainer>
+        <StyledNav>
+          {showBackButton ? <BackButton /> : navigation}
+          <div style={{ flexGrow: 1 }} />
+          <ProfileImage />
+        </StyledNav>
+      </PageWidthContainer>
+    </StyledHeader>
+  )
+}
+
+const BackButton = () => (
+  <Link
+    href={'/'}
+    style={{
+      boxShadow: 'none',
+      textDecoration: 'none',
+      color: 'inherit',
+      display: 'flex',
+      alignItems: 'center',
+    }}
+  >
+    <BackArrow />
+  </Link>
+)
+
+const NavLink = styled(Link)<{ isActive: boolean }>`
+  opacity: ${({ isActive }) => (isActive ? 1 : 0.7)};
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
-const Title = styled.h1`
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 0;
-  color: white;
+const StyledHeader = styled.header`
+  padding: 10px 0;
 `
 
 const StyledNav = styled.nav`
@@ -34,57 +79,8 @@ const BackArrow = styled.div`
   margin-left: 10px;
 `
 
-const HeaderLink = ({
-  children,
-  href,
-  style = {},
-}: {
-  children: React.ReactNode
-  href: string
-  style?: React.CSSProperties
-}) => (
-  <Link
-    href={href}
-    style={{
-      boxShadow: 'none',
-      textDecoration: 'none',
-      color: 'inherit',
-      ...style,
-    }}
-  >
-    {children}
-  </Link>
-)
-
-type Props = {
-  showIntro: boolean
-}
-
-export default function Header({ showIntro }: Props) {
-  const intro = (
-    <>
-      <ProfileImage />
-      <Title>Kenneth Skovhus 👋</Title>
-    </>
-  )
-
-  return (
-    <StyledHeader>
-      <PageWidthContainer>
-        <StyledNav>
-          <HeaderLink
-            href={'/'}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            {showIntro ? intro : <BackArrow />}
-          </HeaderLink>
-          <div style={{ flexGrow: 1 }} />
-          <Menu />
-        </StyledNav>
-      </PageWidthContainer>
-    </StyledHeader>
-  )
-}
+const Nav = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`

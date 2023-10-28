@@ -4,7 +4,6 @@ import 'typeface-merriweather'
 import React, { useEffect } from 'react'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import { ThemeProvider } from 'next-themes'
 
 import '../libs/global-styles.css'
 
@@ -29,7 +28,7 @@ function MyApp({ Component, pageProps }: any) {
   }, [router.events])
 
   return (
-    <ThemeProvider>
+    <>
       <Component {...pageProps} />
       <Script
         async
@@ -37,7 +36,7 @@ function MyApp({ Component, pageProps }: any) {
         src="//gc.zgo.at/count.js"
         strategy="afterInteractive"
       />
-    </ThemeProvider>
+    </>
   )
 }
 

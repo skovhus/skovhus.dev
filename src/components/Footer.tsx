@@ -1,49 +1,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import ExternalLink from './ExternalLink'
+import { rhythm } from '../libs/typography'
+import { ExternalLink } from './ExternalLink'
 
-const StyledFooter = styled.footer`
-  text-align: center;
-  color: white;
-  font-size: 10px;
-  padding: 30px;
-  background: var(--background-context-image) center center;
-
-  @media print {
-    display: none;
-  }
-}
-`
-
-const SvgIcon = styled.svg`
-  height: 30px;
-  fill: #eee;
-  padding-right: 15px;
-
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  transition-duration: 0.5s;
-  transition-property: fill transform;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-
-  &:hover {
-    fill: #fff;
-  }
-
-  &:hover,
-  :focus,
-  :active {
-    transform: translateY(-4px);
-  }
-`
-
-export default function Footer() {
+export function Footer() {
   return (
     <StyledFooter>
-      <div>
+      <FooterInner>
         {/* Icons from https://simpleicons.org/ */}
 
         <ExternalLink href="https://github.com/skovhus" noUnderline>
@@ -133,7 +97,47 @@ export default function Footer() {
             <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
           </SvgIcon>
         </ExternalLink>
-      </div>
+      </FooterInner>
     </StyledFooter>
   )
 }
+
+const StyledFooter = styled.footer`
+  margin-top: auto;
+
+  @media print {
+    display: none;
+  }
+`
+
+const FooterInner = styled.div`
+  margin-top: ${rhythm(2)};
+  padding: 30px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+`
+
+const SvgIcon = styled.svg`
+  height: 30px;
+  fill: #aaa;
+  padding-right: 15px;
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.5s;
+  transition-property: fill transform;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:hover {
+    fill: #fff;
+  }
+
+  &:hover,
+  :focus,
+  :active {
+    transform: translateY(-6px);
+  }
+`

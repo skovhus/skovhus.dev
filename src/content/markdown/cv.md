@@ -20,7 +20,7 @@ I love mentoring, sharing knowledge, and excel in working full-stack with web te
 
 My initial focus is pushing the Pleo frontend platform forward as part of the Engineering Productivity domain.
 
-### Head of Engineering | Tomorrow/electricityMap (2020-2021)
+### Head of Engineering | Electricity Maps (2020-2021)
 
 In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [electricityMap](https://electricitymap.org/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
 
@@ -57,7 +57,7 @@ From 2015 I had the pleasure to lead an awesome cross-functional delivery team. 
 
 Technologies: Python, JavaScript, React, Backbone.js, node.js, MySQL, AMQP, AWS, Docker, and a bit of Erlang and OCaml.
 
-### Software Engineer | Region Hovedstaden, Koncern IT (2009-2012)
+### Software Engineer | Region Hovedstaden (2009-2012)
 
 Part of the EU project PSIP (Patient Safety through Intelligent Procedures in medication) that facilitated the systematic production of epidemiological knowledge on Adverse Drug Events and worked on improving the entire medication cycle in a hospital environment.
 
@@ -98,9 +98,3 @@ Computer Science and Engineering. Average grade: A+.
 Software Technology. Average grade: A.
 
 **Bachelor project:** [Camera Control and Data Handling on DTUsat-2](http://etd.dtu.dk/thesis/247198/). Under the supervision of Hans Henrik Løvengreen, we further developed the onboard software on the DTU student satellite, DTUsat-2. The primary focus was on the camera control and data handling. The satellite is still active and in orbit. Grade: A+.
-
----
-
-## Interests & spare time
-
-My amazing daughter Sigrid, traveling, cooking, food, and music. Currently, I play bass, mix and produce with my friends in [Go for Gold](https://goforgold.dk) and [Freddy and the Phantoms](https://www.facebook.com/freddyphan). As my fellow Vesterbro hipsters, I also try to keep my sourdough alive... 🍞

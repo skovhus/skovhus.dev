@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import fs from 'fs'
 import { join } from 'path'
 
-import Layout from '../components/Layout'
+import { Layout } from '../components/Layout'
 import SEO from '../components/Seo'
 import { markdownToHtml } from '../libs/markdown'
 
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 
 export default function CvPage({ content }: { content: string }) {
   return (
-    <Layout showHeaderIntro>
+    <Layout showBackButton>
       <SEO pageTitle={'CV'} />
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </Layout>

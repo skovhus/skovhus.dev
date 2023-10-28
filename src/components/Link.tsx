@@ -2,7 +2,7 @@ import React from 'react'
 import NextLink from 'next/link'
 
 import { rhythm } from '../libs/typography'
-import ExternalLink from './ExternalLink'
+import { ExternalLink } from './ExternalLink'
 
 export const Link = ({
   description,
@@ -26,11 +26,10 @@ export const Link = ({
   )
 
   return (
-    <div>
+    <>
       <h3
         style={{
           marginBottom: rhythm(1 / 4),
-          lineHeight: 1.4,
         }}
       >
         {linkElement}
@@ -41,6 +40,6 @@ export const Link = ({
           __html: description,
         }}
       />
-    </div>
+    </>
   )
 }
