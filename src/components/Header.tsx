@@ -10,11 +10,15 @@ export function Header({ showBackButton }: { showBackButton: boolean }) {
 
   const navigation = (
     <Nav>
-      <NavLink href="/" isActive={router.pathname == '/'}>
+      <NavLink href="/" style={{ opacity: router.pathname == '/' ? 1 : 0.7 }}>
         index
       </NavLink>
       {['blog', 'talks', 'music'].map((link) => (
-        <NavLink href={`/${link}`} isActive={router.pathname == `/${link}`} key={link}>
+        <NavLink
+          href={`/${link}`}
+          style={{ opacity: router.pathname == `/${link}` ? 1 : 0.7 }}
+          key={link}
+        >
           {link}
         </NavLink>
       ))}
@@ -47,8 +51,7 @@ const BackButton = () => (
   </Link>
 )
 
-const NavLink = styled(Link)<{ isActive: boolean }>`
-  opacity: ${({ isActive }) => (isActive ? 1 : 0.7)};
+const NavLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
