@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-import { PageWidthContainer } from './PageContainer'
 import ProfileImage from './ProfileImage'
 
 export function Header({ showBackButton }: { showBackButton: boolean }) {
@@ -24,13 +23,11 @@ export function Header({ showBackButton }: { showBackButton: boolean }) {
 
   return (
     <StyledHeader>
-      <PageWidthContainer>
-        <StyledNav>
-          {showBackButton ? <BackButton /> : navigation}
-          <div style={{ flexGrow: 1 }} />
-          <ProfileImage />
-        </StyledNav>
-      </PageWidthContainer>
+      <StyledNav>
+        {showBackButton ? <BackButton /> : navigation}
+        <div style={{ flexGrow: 1 }} />
+        <ProfileImage />
+      </StyledNav>
     </StyledHeader>
   )
 }

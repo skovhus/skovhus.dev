@@ -3,7 +3,6 @@ import React from 'react'
 
 import { Footer } from './Footer'
 import { Header } from './Header'
-import { PageWidthContainer } from './PageContainer'
 
 type Props = {
   children: React.ReactNode
@@ -14,7 +13,7 @@ export function Layout({ children, showBackButton = false }: Props) {
   return (
     <Container>
       <Header showBackButton={showBackButton} />
-      <PageWidthContainer>{children}</PageWidthContainer>
+      <section>{children}</section>
       <Footer />
     </Container>
   )
