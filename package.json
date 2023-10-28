@@ -35,7 +35,6 @@
     "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^14.0.0",
     "@types/node": "^20.1.1",
     "@types/react": "^18.2.6",
     "@types/typography": "^0.16.4",

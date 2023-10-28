@@ -1,6 +1,5 @@
 import 'typeface-montserrat'
 import 'typeface-merriweather'
-
 import '../libs/global-styles.css'
 
 import { useRouter } from 'next/router'
