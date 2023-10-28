@@ -1,12 +1,13 @@
 import 'typeface-montserrat'
 import 'typeface-merriweather'
-
-import React, { useEffect } from 'react'
-import Script from 'next/script'
-import { useRouter } from 'next/router'
-import { ThemeProvider } from 'next-themes'
-
 import '../libs/global-styles.css'
+
+import styled from '@emotion/styled'
+import { useRouter } from 'next/router'
+import Script from 'next/script'
+import React, { useEffect } from 'react'
+
+import { rhythm } from '../libs/typography'
 
 declare global {
   interface Window {
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }: any) {
   }, [router.events])
 
   return (
-    <ThemeProvider>
+    <StyledMain>
       <Component {...pageProps} />
       <Script
         async
@@ -37,8 +38,19 @@ function MyApp({ Component, pageProps }: any) {
         src="//gc.zgo.at/count.js"
         strategy="afterInteractive"
       />
-    </ThemeProvider>
+    </StyledMain>
   )
 }
+
+const StyledMain = styled.main`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(24)};
+  padding: 0 ${rhythm(3 / 4)};
+
+  @media print {
+    max-width: 100%;
+  }
+`
 
 export default MyApp

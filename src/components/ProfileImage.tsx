@@ -1,13 +1,10 @@
-import React from 'react'
-import NextImage from 'next/legacy/image'
 import styled from '@emotion/styled'
+import NextImage from 'next/legacy/image'
+import React from 'react'
 
-import { rhythm } from '../libs/typography'
-
-export const PROFILE_IMAGE_WIDTH = 70
+export const PROFILE_IMAGE_WIDTH = 50
 
 const ImageContainer = styled.div`
-  margin-right: ${rhythm(1 / 2)};
   margin-bottom: 0;
   width: ${PROFILE_IMAGE_WIDTH}px;
   height: ${PROFILE_IMAGE_WIDTH}px;

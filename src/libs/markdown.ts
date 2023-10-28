@@ -1,9 +1,9 @@
-import remark from 'remark'
-import html from 'remark-html'
-import prism from 'remark-prism'
 import smartypants from '@silvenon/remark-smartypants'
 import figureCaption from 'gridsome-remark-figure-caption'
+import remark from 'remark'
 import remarkExternalLinks from 'remark-external-links'
+import html from 'remark-html'
+import prism from 'remark-prism'
 
 export async function markdownToHtml(markdownString: string) {
   const result = await remark()

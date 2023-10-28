@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ExternalLink = ({
+export const ExternalLink = ({
   children,
   noUnderline = false,
   href,
@@ -20,5 +20,3 @@ const ExternalLink = ({
     {children}
   </a>
 )
-
-export default ExternalLink

@@ -1,20 +1,6 @@
 :root {
-  --background-code-block: #011627;
-  --background-content: white;
-  --background-context-color: rgb(20, 22, 32);
-  --background-context-image: var(--background-context-color)
-    url('../../public/header-unsplash-ryan_hutton_.jpg') repeat;
-  --background-hr: hsla(0, 0%, 0%, 0.2);
-  --color-accent: hsl(240, 80%, 35%);
-  --color-inline-code-background: #f6f6f8;
-  --color-inline-code-text: #1a1a1a;
-  --color-shadow: rgba(0, 0, 0, 0.3);
-  --color-text-body: hsla(0, 0%, 0%, 0.9);
-}
-
-[data-theme='dark'] {
   --background-code-block: rgb(10, 25, 47);
-  --background-content: var(--background-context-color);
+  --background-context-color: rgb(20, 22, 32);
   --background-hr: hsla(0, 0%, 100%, 0.2);
   --color-accent: rgb(140, 160, 227);
   --color-inline-code-background: rgb(45, 45, 45);
@@ -37,6 +23,8 @@ body {
   background: var(--background-context-color);
 }
 
+/* gradient to rgb(17, 16, 16) */
+
 @media print {
   body,
   html {
@@ -44,8 +32,38 @@ body {
   }
 }
 
+main h1:first-child,
+main h2:first-child,
+main h3:first-child {
+  margin-top: 2rem;
+}
+
+a {
+  color: white;
+
+  text-decoration-color: var(--color-shadow);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+a:hover,
+a:active {
+  text-decoration-color: var(--color-accent);
+}
+figure a,
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
 /**
- * Based on Remy Bach, Sarah Drasner and overreacted.io
+ * Originally based on Remy Bach, Sarah Drasner and overreacted.io
  */
 code[class*='language-'],
 pre[class*='language-'] {
@@ -225,7 +243,7 @@ body {
   margin: 0;
   color: var(--color-text-body);
   font-family: 'Merriweather', 'Georgia', serif;
-  font-weight: 400;
+  font-weight: 300;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -437,7 +455,7 @@ h1 {
   font-family: Montserrat, sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h2 {
@@ -454,7 +472,7 @@ h2 {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.6rem;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 h3 {
   margin-left: 0;
@@ -470,7 +488,7 @@ h3 {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.4427rem;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 h4 {
   margin-left: 0;
@@ -486,7 +504,7 @@ h4 {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
-  line-height: 1.1;
+  line-height: 1.3;
   letter-spacing: 0.140625em;
   text-transform: uppercase;
 }
@@ -832,16 +850,27 @@ h6 {
   margin-top: 3.5rem;
 }
 a {
-  box-shadow: 0 1px 0 0 currentColor;
-  color: var(--color-accent);
-  text-decoration: none;
+  color: white;
+
+  text-decoration-color: var(--color-shadow);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
 }
 a:hover,
 a:active {
-  box-shadow: none;
+  text-decoration-color: var(--color-accent);
 }
-figure a {
-  box-shadow: none;
+figure a,
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  text-decoration: none;
+  color: var(--color-accent);
 }
 
 mark,

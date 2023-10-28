@@ -1,40 +1,13 @@
-import React from 'react'
-import Link from 'next/link'
 import styled from '@emotion/styled'
+import React from 'react'
 
-import { getPostBySlug, getAllPosts, Post } from '../../libs/blog'
-
-import BlogBio from '../../components/BlogBio'
-import ExternalLink from '../../components/ExternalLink'
-import Layout from '../../components/Layout'
+import { ExternalLink } from '../../components/ExternalLink'
+import { HugeHeading } from '../../components/HugeHeading'
+import { Layout } from '../../components/Layout'
 import SEO from '../../components/Seo'
-import { rhythm } from '../../libs/typography'
+import { getAllPosts, getPostBySlug, Post } from '../../libs/blog'
 import { markdownToHtml } from '../../libs/markdown'
-
-export const Title = styled.h1`
-  margin-top: 3rem;
-`
-
-const Subtitle = styled.p`
-  font-size: 0.83255rem;
-  line-height: 1.75rem;
-  display: block;
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(-1)};
-`
-
-const BlogNavigation = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-`
-
-const HorizontalLine = styled.hr`
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(1)};
-`
+import { rhythm } from '../../libs/typography'
 
 export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
   const posts = getAllPosts().map((post) => {
@@ -88,48 +61,49 @@ type Props = {
 
 export default function BlogPostTemplate({
   post: { frontmatter, content, timeToRead },
-  links: { previous, next },
 }: Props) {
   const { date, description, devToLink, featuredImage, title } = frontmatter
 
   return (
-    <Layout>
+    <Layout showBackButton>
       <SEO description={description} image={featuredImage} pageTitle={title} />
 
-      <article>
+      <Article>
         <Title>{title}</Title>
         <Subtitle>
           {date} • {timeToRead} minute read
         </Subtitle>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        {devToLink && (
-          <>
-            Discuss this post{' '}
-            <ExternalLink href={devToLink}>on DEV Community</ExternalLink>
-          </>
-        )}
-        .
-        <HorizontalLine />
-      </article>
+      </Article>
 
-      <BlogBio />
-
-      <BlogNavigation>
-        <li>
-          {previous && (
-            <Link href={previous.href} rel="prev">
-              ← {previous.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link href={next.href} rel="next">
-              {next.title} →
-            </Link>
-          )}
-        </li>
-      </BlogNavigation>
+      {devToLink && (
+        <LinkOutContainer>
+          Discuss this post on <ExternalLink href={devToLink}>dev.to</ExternalLink>.
+        </LinkOutContainer>
+      )}
     </Layout>
   )
 }
+
+const Title = styled(HugeHeading)`
+  margin-top: 3rem;
+  font-size: 2.5rem;
+`
+
+const Subtitle = styled.p`
+  font-size: 0.83255rem;
+  line-height: 1.75rem;
+  display: block;
+  margin-bottom: ${rhythm(1)};
+  margin-top: ${rhythm(-1)};
+`
+
+const Article = styled.article`
+  margin-bottom: ${rhythm(2)};
+  margin-top: -0.3rem;
+`
+
+const LinkOutContainer = styled.div`
+  margin-bottom: ${rhythm(1)};
+  opacity: 0.8;
+`

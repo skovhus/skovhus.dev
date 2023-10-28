@@ -1,7 +1,8 @@
+import fs from 'node:fs'
+import { join } from 'node:path'
+
+import { format, parseISO } from 'date-fns'
 import matter from 'gray-matter'
-import { parseISO, format } from 'date-fns'
-import fs from 'fs'
-import { join } from 'path'
 import readingTime from 'reading-time'
 
 const postsDirectory = join(process.cwd(), 'src', 'content', 'markdown', 'blog')
@@ -53,7 +54,7 @@ export function getAllPosts() {
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
     .sort((post1, post2) =>
-      post1.frontmatter.isoDate > post2.frontmatter.isoDate ? -1 : 1
+      post1.frontmatter.isoDate > post2.frontmatter.isoDate ? -1 : 1,
     )
 
   return posts

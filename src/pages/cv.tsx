@@ -1,11 +1,11 @@
 // NOTE: this could be as generic as the blogs if more markdown pages should be added
 
-import React from 'react'
-import matter from 'gray-matter'
 import fs from 'fs'
+import matter from 'gray-matter'
 import { join } from 'path'
+import React from 'react'
 
-import Layout from '../components/Layout'
+import { Layout } from '../components/Layout'
 import SEO from '../components/Seo'
 import { markdownToHtml } from '../libs/markdown'
 
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 
 export default function CvPage({ content }: { content: string }) {
   return (
-    <Layout showHeaderIntro>
+    <Layout showBackButton>
       <SEO pageTitle={'CV'} />
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </Layout>
