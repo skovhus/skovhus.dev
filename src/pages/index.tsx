@@ -1,9 +1,9 @@
 import { ExternalLink } from '../components/ExternalLink'
+import { HugeHeading } from '../components/HugeHeading'
 import { Layout } from '../components/Layout'
 import SEO from '../components/Seo'
 import { getAllPosts, Post } from '../libs/blog'
 import { generateRssFeed } from '../libs/rss'
-import { HugeHeading } from '../components/HugeHeading'
 
 export async function getStaticProps() {
   const posts = getAllPosts()

@@ -1,7 +1,7 @@
 import Discography from '../components/Discography'
+import { HugeHeading } from '../components/HugeHeading'
 import { Layout } from '../components/Layout'
 import SEO from '../components/Seo'
-import { HugeHeading } from '../components/HugeHeading'
 
 export default function Music() {
   return (

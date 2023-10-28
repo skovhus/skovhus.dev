@@ -1,8 +1,8 @@
 import React from 'react'
 
+import { HugeHeading } from '../components/HugeHeading'
 import { Layout } from '../components/Layout'
 import SEO from '../components/Seo'
-import { HugeHeading } from '../components/HugeHeading'
 
 export default function NotFoundPage() {
   return (

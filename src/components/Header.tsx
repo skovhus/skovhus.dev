@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
 import styled from '@emotion/styled'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React from 'react'
 
 import { PageWidthContainer } from './PageContainer'
-import { useRouter } from 'next/router'
 import ProfileImage from './ProfileImage'
 
 export function Header({ showBackButton }: { showBackButton: boolean }) {

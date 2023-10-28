@@ -1,7 +1,8 @@
 import fs from 'node:fs'
+
 import { Feed } from 'feed'
 
-import { siteUrl, siteMetadata } from '../config'
+import { siteMetadata, siteUrl } from '../config'
 import { Post } from './blog'
 
 export const generateRssFeed = async ({ posts }: { posts: Post[] }) => {

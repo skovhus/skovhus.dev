@@ -1,11 +1,11 @@
 import React from 'react'
 
+import { HugeHeading } from '../../components/HugeHeading'
 import { Layout } from '../../components/Layout'
+import { Link } from '../../components/Link'
 import SEO from '../../components/Seo'
 import { getAllPosts, Post } from '../../libs/blog'
 import { generateRssFeed } from '../../libs/rss'
-import { Link } from '../../components/Link'
-import { HugeHeading } from '../../components/HugeHeading'
 
 export async function getStaticProps() {
   const posts = getAllPosts()

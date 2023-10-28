@@ -1,13 +1,13 @@
-import React from 'react'
 import styled from '@emotion/styled'
+import React from 'react'
 
 import { ExternalLink } from '../../components/ExternalLink'
+import { HugeHeading } from '../../components/HugeHeading'
 import { Layout } from '../../components/Layout'
 import SEO from '../../components/Seo'
-import { HugeHeading } from '../../components/HugeHeading'
-import { getPostBySlug, getAllPosts, Post } from '../../libs/blog'
-import { rhythm } from '../../libs/typography'
+import { getAllPosts, getPostBySlug, Post } from '../../libs/blog'
 import { markdownToHtml } from '../../libs/markdown'
+import { rhythm } from '../../libs/typography'
 
 export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
   const posts = getAllPosts().map((post) => {

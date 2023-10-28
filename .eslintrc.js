@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier'],
   extends: ['next/core-web-vitals', 'prettier'],
   settings: {
     react: {
@@ -11,7 +11,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        trailingComma: 'es5',
+        trailingComma: 'all',
         singleQuote: true,
         printWidth: 90,
         semi: false,
@@ -41,6 +41,8 @@ module.exports = {
     ],
     'prefer-const': 'error',
     'prefer-template': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
 
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

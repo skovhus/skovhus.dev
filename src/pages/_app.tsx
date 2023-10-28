@@ -1,11 +1,10 @@
 import 'typeface-montserrat'
 import 'typeface-merriweather'
-
-import React, { useEffect } from 'react'
-import Script from 'next/script'
-import { useRouter } from 'next/router'
-
 import '../libs/global-styles.css'
+
+import { useRouter } from 'next/router'
+import Script from 'next/script'
+import React, { useEffect } from 'react'
 
 declare global {
   interface Window {
