@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from '@emotion/styled'
 
 import Discography from '../components/Discography'
@@ -7,9 +6,9 @@ import ExternalLink from '../components/ExternalLink'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { TALKS } from '../content/talks'
-import { rhythm } from '../libs/typography'
 import { getAllPosts, Post } from '../libs/blog'
 import { generateRssFeed } from '../libs/rss'
+import { Link } from '../components/Link'
 
 const Heading = styled.h1`
   font-size: 2rem;
@@ -23,47 +22,6 @@ const NegativeHeadingSpacingHack = styled.div`
 const HeadingSpacingHack = styled.div`
   margin-top: 3rem;
 `
-
-const LinkEntity = ({
-  description,
-  linkTo,
-  subTitle,
-  title,
-}: {
-  subTitle: string
-  description: string
-  linkTo: string
-  title: string
-}) => {
-  const linkElement = linkTo.startsWith('http') ? (
-    <ExternalLink href={linkTo} noUnderline>
-      {title}
-    </ExternalLink>
-  ) : (
-    <Link href={linkTo} style={{ boxShadow: `none` }}>
-      {title}
-    </Link>
-  )
-
-  return (
-    <div>
-      <h3
-        style={{
-          marginBottom: rhythm(1 / 4),
-          lineHeight: 1.4,
-        }}
-      >
-        {linkElement}
-      </h3>
-      <small>{subTitle}</small>
-      <p
-        dangerouslySetInnerHTML={{
-          __html: description,
-        }}
-      />
-    </div>
-  )
-}
 
 export async function getStaticProps() {
   const posts = getAllPosts()
@@ -115,7 +73,7 @@ export default function Index({ posts }: Props) {
           const { date, description, title } = frontmatter
 
           return (
-            <LinkEntity
+            <Link
               description={description}
               key={slug}
               linkTo={`/blog/${slug}`}
@@ -128,7 +86,7 @@ export default function Index({ posts }: Props) {
       <Heading id="talks">I enjoy giving talks</Heading>
       <NegativeHeadingSpacingHack />
       {TALKS.map((talk) => (
-        <LinkEntity {...talk} key={talk.title} />
+        <Link {...talk} key={talk.title} />
       ))}
 
       <Heading id="oss">I contribute to open source</Heading>
