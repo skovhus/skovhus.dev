@@ -1,5 +1,6 @@
 import 'typeface-montserrat'
 import 'typeface-merriweather'
+
 import '../libs/global-styles.css'
 
 import { useRouter } from 'next/router'
@@ -27,7 +28,7 @@ function MyApp({ Component, pageProps }: any) {
   }, [router.events])
 
   return (
-    <>
+    <main>
       <Component {...pageProps} />
       <Script
         async
@@ -35,7 +36,7 @@ function MyApp({ Component, pageProps }: any) {
         src="//gc.zgo.at/count.js"
         strategy="afterInteractive"
       />
-    </>
+    </main>
   )
 }
 

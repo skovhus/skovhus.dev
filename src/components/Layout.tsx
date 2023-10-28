@@ -12,15 +12,15 @@ type Props = {
 
 export function Layout({ children, showBackButton = false }: Props) {
   return (
-    <Main>
+    <Container>
       <Header showBackButton={showBackButton} />
       <PageWidthContainer>{children}</PageWidthContainer>
       <Footer />
-    </Main>
+    </Container>
   )
 }
 
-const Main = styled.main`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
