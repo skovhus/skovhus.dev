@@ -2,10 +2,10 @@ import 'typeface-montserrat'
 import 'typeface-merriweather'
 import '../libs/global-styles.css'
 
-import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import React, { useEffect } from 'react'
+import styled from 'styled-components'
 
 import { rhythm } from '../libs/typography'
 

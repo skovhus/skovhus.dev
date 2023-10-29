@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
 import Link from 'next/link'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import React from 'react'
+import styled from 'styled-components'
 
 import { ExternalLink } from '../../components/ExternalLink'
 import { HugeHeading } from '../../components/HugeHeading'

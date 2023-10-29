@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
 import NextImage from 'next/legacy/image'
 import React from 'react'
+import styled from 'styled-components'
 
 export const PROFILE_IMAGE_WIDTH = 50
 

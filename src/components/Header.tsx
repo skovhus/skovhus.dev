@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
+import styled from 'styled-components'
 
 import ProfileImage from './ProfileImage'
 
