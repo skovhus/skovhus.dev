@@ -75,3 +75,5 @@ public/rss.xml
 public/sitemap*
 
 tsconfig.tsbuildinfo
+
+.contentlayer

@@ -15,8 +15,4 @@ declare module '*.png' {
   export default content
 }
 
-declare module 'remark-prism'
-
-declare module '@silvenon/remark-smartypants'
-
-declare module 'gridsome-remark-figure-caption'
+declare module 'rehype-figure'

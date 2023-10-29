@@ -2,11 +2,11 @@ import { ExternalLink } from '../components/ExternalLink'
 import { HugeHeading } from '../components/HugeHeading'
 import { Layout } from '../components/Layout'
 import SEO from '../components/Seo'
-import { getAllPosts, Post } from '../libs/blog'
+import { BlogPost, getAllBlogPosts } from '../libs/blog'
 import { generateRssFeed } from '../libs/rss'
 
 export async function getStaticProps() {
-  const posts = getAllPosts()
+  const posts = getAllBlogPosts()
 
   generateRssFeed({ posts })
 
@@ -17,7 +17,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Index({ posts }: { posts: Post[] }) {
+export default function Index({ posts }: { posts: BlogPost[] }) {
   return (
     <Layout>
       <SEO />

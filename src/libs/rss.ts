@@ -1,11 +1,12 @@
 import fs from 'node:fs'
 
+import { parseISO } from 'date-fns'
 import { Feed } from 'feed'
 
 import { siteMetadata, siteUrl } from '../config'
-import { Post } from './blog'
+import { BlogPost } from './blog'
 
-export const generateRssFeed = async ({ posts }: { posts: Post[] }) => {
+export const generateRssFeed = async ({ posts }: { posts: BlogPost[] }) => {
   const date = new Date()
   const author = {
     name: 'Kenneth Skovhus',
@@ -28,16 +29,16 @@ export const generateRssFeed = async ({ posts }: { posts: Post[] }) => {
     author,
   })
 
-  posts.forEach((post: Post) => {
+  posts.forEach((post: BlogPost) => {
     const url = `${siteUrl}/blog/${post.slug}`
 
     feed.addItem({
-      title: post.frontmatter.title,
+      title: post.title,
       id: url,
       link: url,
-      description: post.frontmatter.description,
-      content: post.content,
-      date: new Date(post.frontmatter.isoDate),
+      description: post.description,
+      content: post.body.code,
+      date: parseISO(post.date),
     })
   })
 

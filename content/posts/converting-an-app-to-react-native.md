@@ -75,7 +75,9 @@ If we were to dream up a productive setup for developing UI components and scree
 - Work on components and screens in isolation without starting the entire application
 - Be able to describe and quickly switch between components and screens in different states
 - Support hot reloading when styles and markup changes
-- Have multiple simulators and cross-platform devices connected and see them all update when updating the code</li></ul><p >We are happy to see that [Storybook](https://storybook.js.org) delivers all of these. It is a major productivity booster when developing UIs.
+- Have multiple simulators and cross-platform devices connected and see them all update when updating the code
+
+We are happy to see that [Storybook](https://storybook.js.org) delivers all of these. It is a major productivity booster when developing UIs.
 
 #### Automated testing
 

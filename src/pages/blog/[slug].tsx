@@ -1,43 +1,31 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
+import { useMDXComponent } from 'next-contentlayer/hooks'
 import React from 'react'
 
 import { ExternalLink } from '../../components/ExternalLink'
 import { HugeHeading } from '../../components/HugeHeading'
 import { Layout } from '../../components/Layout'
 import SEO from '../../components/Seo'
-import { getAllPosts, getPostBySlug, Post } from '../../libs/blog'
-import { markdownToHtml } from '../../libs/markdown'
+import { BlogPost, getAllBlogPosts, getPostBySlug } from '../../libs/blog'
 import { rhythm } from '../../libs/typography'
 
-export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
-  const posts = getAllPosts().map((post) => {
-    return {
-      href: `/blog/${post.slug}`,
-      title: post.frontmatter.title,
-      slug: post.slug,
-    }
-  })
-  const postIndex = posts.findIndex((post) => post.slug == slug)
-
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string }
+}): Promise<{ props: { post: BlogPost } }> {
   const post = getPostBySlug(slug)
-  const content = await markdownToHtml(post.content)
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
-      links: {
-        previous: posts[postIndex + 1] || null,
-        next: posts[postIndex - 1] || null,
-      },
+      post,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts()
+  const posts = getAllBlogPosts()
 
   return {
     paths: posts.map((post) => {
@@ -51,18 +39,8 @@ export async function getStaticPaths() {
   }
 }
 
-type Props = {
-  post: Post
-  links: {
-    previous: null | { href: string; title: string }
-    next: null | { href: string; title: string }
-  }
-}
-
-export default function BlogPostTemplate({
-  post: { frontmatter, content, timeToRead },
-}: Props) {
-  const { date, description, devToLink, featuredImage, title } = frontmatter
+export default function BlogPostTemplate({ post }: { post: BlogPost }) {
+  const { formattedDate, description, devToLink, featuredImage, title, timeToRead } = post
 
   return (
     <Layout showBackButton>
@@ -71,9 +49,9 @@ export default function BlogPostTemplate({
       <Article>
         <Title>{title}</Title>
         <Subtitle>
-          {date} • {timeToRead} minute read
+          {formattedDate} • {timeToRead} minute read
         </Subtitle>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <Mdx code={post.body.code} />
       </Article>
 
       {devToLink && (
@@ -107,3 +85,38 @@ const LinkOutContainer = styled.div`
   margin-bottom: ${rhythm(1)};
   opacity: 0.8;
 `
+
+// Mdx
+
+const CustomLink = (props: any) => {
+  const { href } = props
+
+  if (href.startsWith('/')) {
+    return (
+      <Link href={href} {...props}>
+        {props.children}
+      </Link>
+    )
+  }
+
+  if (href.startsWith('#')) {
+    return <a {...props} />
+  }
+
+  return <a target="_blank" rel="noopener noreferrer" {...props} />
+}
+
+const components = {
+  //  Image: RoundedImage,
+  a: CustomLink,
+}
+
+function Mdx({ code }: { code: string }) {
+  const Component = useMDXComponent(code)
+
+  return (
+    <article className="prose">
+      <Component components={components} />
+    </article>
+  )
+}
