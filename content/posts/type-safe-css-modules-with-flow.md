@@ -16,7 +16,7 @@ _TL;DR I’ve made some [new tools](https://github.com/skovhus/css-modules-flow-
 
 It is quite easy to misspell a class name or forget to update consumers after removing a class in a .css file. As an example, the class `foo` might not be defined in `Button.css`:
 
-```javascript
+```javascript title="Button.js"
 /* @flow */
 import styles from "./Button.css";
 const Button = () => <button className={styles.foo} />;
@@ -37,18 +37,16 @@ To generate these .flow files I was thinking of two use cases. One using a simpl
 
 Let us install it:
 
-```
-npm install --save-dev css-modules-flow-types-cli
-
+```shell
+$ npm install --save-dev css-modules-flow-types-cli
 # or
-
-yarn install -D css-modules-flow-types-cli
+$ yarn install -D css-modules-flow-types-cli
 ```
 
 And then just run the CLI on your source directory:
 
-```
-css-modules-flow-types src
+```shell
+$ css-modules-flow-types src
 ```
 
 I recommend using the CLI on your CI system (like Travis or Circle) to ensure that all .flow files are up-to-date before running Flow. This will catch potential styling errors before deploying.
@@ -61,13 +59,13 @@ Another use case is quick feedback loop when developing and changing CSS Modules
 
 To get started:
 
-```
-npm install --save-dev css-modules-flow-types-loader
+```shell
+$ npm install --save-dev css-modules-flow-types-loader
 ```
 
 Then update your webpack config:
 
-```javascript
+```javascript title="webpack.config.js"
 {
   test: /\.css$/,  // or the file format you are using
   use: [

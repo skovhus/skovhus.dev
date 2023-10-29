@@ -1,5 +1,3 @@
-# Curriculum vitae
-
 My passion is building meaningful software together with talented people.
 
 I offer around 20 years of industry experience, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.

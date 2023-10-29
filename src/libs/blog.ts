@@ -1,61 +1,36 @@
-import fs from 'node:fs'
-import { join } from 'node:path'
-
-import { format, parseISO } from 'date-fns'
-import matter from 'gray-matter'
+import { allBlogPosts, BlogPost as ContentlayerBlogPost } from 'contentlayer/generated'
+import { compareDesc, format, parseISO } from 'date-fns'
 import readingTime from 'reading-time'
 
-const postsDirectory = join(process.cwd(), 'src', 'content', 'markdown', 'blog')
-
-export type Post = {
-  slug: string
-  frontmatter: {
-    date: string
-    draft?: boolean
-    isoDate: string
-    description: string
-    devToLink?: string
-    featuredImage?: string
-    title: string
-  }
-  excerpt: string | undefined
-  content: string
+export type BlogPost = ContentlayerBlogPost & {
+  formattedDate: string
   timeToRead: number
 }
 
-export function getPostBySlug(slug: string): Post {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}/index.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content, excerpt } = matter(fileContents, { excerpt: true })
-  const isoDate = data.date
-  const date = format(parseISO(isoDate), 'MMMM dd, yyyy')
-
-  // TODO: static validation
-  const frontmatter: any = { ...data, date, isoDate }
-
-  const { description, title } = frontmatter
-
-  if (!description || !title) {
-    throw new Error(`missing description or title on post ${slug}`)
+export function getPostBySlug(slug: string): BlogPost {
+  const post = getAllBlogPosts().find((p) => p.slug === slug)
+  if (!post) {
+    throw new Error(`No post found for slug: ${slug}`)
   }
 
-  return {
-    slug: realSlug,
-    frontmatter,
-    content,
-    excerpt,
-    timeToRead: Math.round(readingTime(content).minutes),
-  }
+  return post
 }
 
-export function getAllPosts() {
-  const slugs = fs.readdirSync(postsDirectory)
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug))
-    .sort((post1, post2) =>
-      post1.frontmatter.isoDate > post2.frontmatter.isoDate ? -1 : 1,
-    )
+export function getAllBlogPosts(): BlogPost[] {
+  const posts = allBlogPosts.sort((a, b) =>
+    // eslint-disable-next-line prettier/prettier
+    compareDesc(new Date(a.date), new Date(b.date))
+  )
 
-  return posts
+  return posts.map((post) => {
+    const formattedDate = format(parseISO(post.date), 'MMMM dd, yyyy')
+
+    const timeToRead = Math.round(readingTime(post.body.code).minutes)
+
+    return {
+      ...post,
+      formattedDate,
+      timeToRead,
+    }
+  })
 }
