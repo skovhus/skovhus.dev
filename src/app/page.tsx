@@ -1,26 +1,9 @@
-import { ExternalLink } from '../components/ExternalLink'
-import { HugeHeading } from '../components/HugeHeading'
-import { Layout } from '../components/Layout'
-import SEO from '../components/Seo'
-import { BlogPost, getAllBlogPosts } from '../libs/blog'
-import { generateRssFeed } from '../libs/rss'
+import { ExternalLink } from '@/src/components/ExternalLink'
+import { HugeHeading } from '@/src/components/HugeHeading'
 
-export async function getStaticProps() {
-  const posts = getAllBlogPosts()
-
-  generateRssFeed({ posts })
-
-  return {
-    props: {
-      posts,
-    },
-  }
-}
-
-export default function Index({ posts }: { posts: BlogPost[] }) {
+export default function Home() {
   return (
-    <Layout>
-      <SEO />
+    <>
       <HugeHeading>
         Hey, I&apos;m Kenneth. I&apos;m a software engineer, 2 x dad, and music nerd.
       </HugeHeading>
@@ -41,6 +24,6 @@ export default function Index({ posts }: { posts: BlogPost[] }) {
         </ExternalLink>
         .
       </p>
-    </Layout>
+    </>
   )
 }

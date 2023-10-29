@@ -1,22 +1,25 @@
+'use client'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import styled from 'styled-components'
 
 import ProfileImage from './ProfileImage'
 
-export function Header({ showBackButton }: { showBackButton: boolean }) {
-  const router = useRouter()
+export function Header() {
+  const pathname = usePathname()
+
+  const showBackButton = pathname?.includes('/blog/') || pathname === '/cv'
 
   const navigation = (
     <Nav>
-      <NavLink href="/" style={{ opacity: router.pathname == '/' ? 1 : 0.7 }}>
+      <NavLink href="/" style={{ opacity: pathname == '/' ? 1 : 0.7 }}>
         index
       </NavLink>
       {['blog', 'talks', 'music'].map((link) => (
         <NavLink
           href={`/${link}`}
-          style={{ opacity: router.pathname == `/${link}` ? 1 : 0.7 }}
+          style={{ opacity: pathname == `/${link}` ? 1 : 0.7 }}
           key={link}
         >
           {link}

@@ -1,3 +1,4 @@
+'use client'
 import NextImage from 'next/legacy/image'
 import React from 'react'
 import styled from 'styled-components'

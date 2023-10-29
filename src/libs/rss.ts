@@ -1,12 +1,9 @@
-import fs from 'node:fs'
-
-import { parseISO } from 'date-fns'
 import { Feed } from 'feed'
 
 import { siteMetadata, siteUrl } from '../config'
-import { BlogPost } from './blog'
+import { getAllBlogPosts } from './blog'
 
-export const generateRssFeed = async ({ posts }: { posts: BlogPost[] }) => {
+const generateRssFeed = async (): Promise<Feed> => {
   const date = new Date()
   const author = {
     name: 'Kenneth Skovhus',
@@ -29,7 +26,7 @@ export const generateRssFeed = async ({ posts }: { posts: BlogPost[] }) => {
     author,
   })
 
-  posts.forEach((post: BlogPost) => {
+  getAllBlogPosts().forEach((post) => {
     const url = `${siteUrl}/blog/${post.slug}`
 
     feed.addItem({
@@ -37,10 +34,18 @@ export const generateRssFeed = async ({ posts }: { posts: BlogPost[] }) => {
       id: url,
       link: url,
       description: post.description,
-      content: post.body.code,
-      date: parseISO(post.date),
+      date: new Date(post.date),
     })
   })
 
-  fs.writeFileSync('./public/rss.xml', feed.rss2())
+  return feed
+}
+
+export async function makeRssResponse(): Promise<Response> {
+  const feed = await generateRssFeed()
+  return new Response(feed.rss2(), {
+    headers: {
+      'Content-Type': 'application/atom+xml; charset=utf-8',
+    },
+  })
 }

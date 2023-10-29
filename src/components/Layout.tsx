@@ -1,18 +1,14 @@
+'use client'
 import React from 'react'
 import styled from 'styled-components'
 
 import { Footer } from './Footer'
 import { Header } from './Header'
 
-type Props = {
-  children: React.ReactNode
-  showBackButton?: boolean
-}
-
-export function Layout({ children, showBackButton = false }: Props) {
+export function LegacyLayout({ children }: { children: React.ReactNode }) {
   return (
     <Container>
-      <Header showBackButton={showBackButton} />
+      <Header />
       <section>{children}</section>
       <Footer />
     </Container>
