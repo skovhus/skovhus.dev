@@ -73,7 +73,7 @@ h4 a {
 /* Inline code */
 .prose :not(pre) > code {
   color: var(--color-inline-code-text);
-  padding: .125rem .25rem;
+  padding: 0.125rem 0.25rem;
   white-space: normal;
 }
 
@@ -84,14 +84,14 @@ h4 a {
   overflow-x: auto;
 }
 
-.prose :not(pre) > code, .prose pre {
+.prose :not(pre) > code,
+.prose pre {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(38, 38, 38);
   background-color: var(--color-inline-code-background) !important;
   border-radius: 0.5rem;
 }
-
 
 pre::-webkit-scrollbar {
   display: none;
@@ -155,7 +155,10 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
-  font: 100%/1.75 'Merriweather', 'Georgia', serif;
+  font:
+    100%/1.75 'Merriweather',
+    'Georgia',
+    serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
