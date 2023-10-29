@@ -14,8 +14,6 @@
     "verify": "contentlayer build && pnpm lint && pnpm typecheck"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
     "feed": "^4.2.2",
@@ -30,6 +28,7 @@
     "rehype-pretty-code": "^0.10.2",
     "rehype-slug": "^6.0.0",
     "shiki": "^0.14.5",
+    "styled-components": "^6.1.0",
     "typeface-merriweather": "^1.1.13",
     "typeface-montserrat": "^1.1.13"
   },
