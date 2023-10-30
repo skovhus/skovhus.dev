@@ -2,3 +2,4 @@
 
 - test rss
 - meta data
+- styled components erroring out

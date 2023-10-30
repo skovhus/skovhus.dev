@@ -18,20 +18,20 @@ export const metadata: Metadata = {
   title: { default: siteMetadata.title, template: `%s | ${siteMetadata.title}` },
   description: siteMetadata.description,
   robots: 'follow, index',
-  // openGraph: {
-  //   type: 'website',
-  //   locale: 'en_US',
-  //   url: siteMetadata.siteUrl,
-  //   images: [
-  //     {
-  //       url: `${siteMetadata.siteUrl}/skovhus.jpg`,
-  //       width: 1200,
-  //       height: 630,
-  //       alt: siteMetadata.title,
-  //     },
-  //   ],
-  // },
-  // }
+  metadataBase: new URL(siteMetadata.siteUrl),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteMetadata.siteUrl,
+    images: [
+      {
+        url: `${siteMetadata.siteUrl}/skovhus.jpg`,
+        width: 1200,
+        height: 630,
+        alt: siteMetadata.title,
+      },
+    ],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
