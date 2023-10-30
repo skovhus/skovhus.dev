@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -55,11 +55,23 @@ export default function Discography() {
           key={idx}
           style={{ textDecoration: 'none' }}
         >
-          <Image alt={title} src={image} layout="responsive" width={0} height={0} />
-          <InfoContainer>
-            <Title>{title}</Title>
-            <div>{subTitle}</div>
-          </InfoContainer>
+          <div>
+            <Image
+              alt={title}
+              src={image}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+            <InfoContainer>
+              <Title>{title}</Title>
+              <div>{subTitle}</div>
+            </InfoContainer>
+          </div>
         </Link>
       ))}
     </Container>
