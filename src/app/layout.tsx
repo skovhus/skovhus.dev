@@ -12,7 +12,6 @@ import { Header } from './components/Header'
 import { NavigationTracking } from './components/NavigationTracking'
 import styles from './layout.module.css'
 
-// FIXME: seo stuff
 export const metadata: Metadata = {
   title: { default: siteMetadata.title, template: `%s | ${siteMetadata.title}` },
   description: siteMetadata.description,
