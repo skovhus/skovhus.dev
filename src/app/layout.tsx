@@ -1,12 +1,15 @@
-import 'typeface-montserrat'
 import 'typeface-merriweather'
+import 'typeface-montserrat'
 import './globals.css'
 
 import type { Metadata } from 'next'
+import Script from 'next/script'
+import { Suspense } from 'react'
 
 import { siteMetadata } from '../config'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { NavigationTracking } from './components/NavigationTracking'
 import styles from './layout.module.css'
 import { StyledComponentsRegistry } from './libs/registry'
 
@@ -32,18 +35,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // useEffect(() => {
-  //   const handleRouteChange = (path: string) => {
-  //     window?.goatcounter?.count?.({
-  //       path,
-  //     })
-  //   }
-  //   router.events.on('routeChangeComplete', handleRouteChange)
-  //   return () => {
-  //     router.events.off('routeChangeComplete', handleRouteChange)
-  //   }
-  // }, [router.events])
-
   return (
     <html lang="en">
       <body>
@@ -54,7 +45,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </main>
         </StyledComponentsRegistry>
+        <Suspense fallback={null}>
+          <NavigationTracking />
+        </Suspense>
       </body>
+      <Script
+        async
+        data-goatcounter="https://skovhus-dev.goatcounter.com/count"
+        src="//gc.zgo.at/count.js"
+        strategy="afterInteractive"
+      />
     </html>
   )
 }
