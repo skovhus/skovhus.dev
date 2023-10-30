@@ -3,11 +3,10 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next/types'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
-import { siteMetadata } from '@/src/config'
-import { getPostBySlug } from '@/src/libs/blog'
-
-import { ExternalLink } from '../../../components/ExternalLink'
-import { HugeHeading } from '../../../components/HugeHeading'
+import { siteMetadata } from '../../../config'
+import { ExternalLink } from '../../components/ExternalLink'
+import { HugeHeading } from '../../components/HugeHeading'
+import { getPostBySlug } from '../../libs/blog'
 import styles from './page.module.css'
 
 export const dynamic = 'force-static'

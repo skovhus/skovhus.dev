@@ -1,9 +1,8 @@
 import { Metadata } from 'next'
 
-import { getAllBlogPosts } from '@/src/libs/blog'
-
-import { HugeHeading } from '../../components/HugeHeading'
-import { Link } from '../../components/Link'
+import { HugeHeading } from '../components/HugeHeading'
+import { Link } from '../components/Link'
+import { getAllBlogPosts } from '../libs/blog'
 
 export const metadata: Metadata = {
   title: 'Blog',

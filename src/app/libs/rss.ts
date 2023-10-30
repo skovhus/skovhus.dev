@@ -1,6 +1,6 @@
 import { Feed } from 'feed'
 
-import { siteMetadata, siteUrl } from '../config'
+import { siteMetadata, siteUrl } from '../../config'
 import { getAllBlogPosts } from './blog'
 
 const generateRssFeed = async (): Promise<Feed> => {

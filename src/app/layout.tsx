@@ -4,11 +4,11 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 
-import { Footer } from '../components/Footer'
-import { Header } from '../components/Header'
 import { siteMetadata } from '../config'
-import { StyledComponentsRegistry } from '../libs/registry'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
 import styles from './layout.module.css'
+import { StyledComponentsRegistry } from './libs/registry'
 
 // FIXME: seo stuff
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
-import { ExternalLink } from '@/src/components/ExternalLink'
-import { HugeHeading } from '@/src/components/HugeHeading'
+import { ExternalLink } from './components/ExternalLink'
+import { HugeHeading } from './components/HugeHeading'
 
 export default function Home() {
   return (
