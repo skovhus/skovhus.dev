@@ -20,8 +20,7 @@
 }
 
 .infoContainer {
-  padding: 12px;
-  padding-top: 0;
+  padding: 0 12px 12px 12px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

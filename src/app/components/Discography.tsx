@@ -65,6 +65,7 @@ export default function Discography() {
               style={{
                 width: '100%',
                 height: 'auto',
+                marginBottom: 0,
               }}
             />
             <div className={styles.infoContainer}>
