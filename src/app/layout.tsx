@@ -11,7 +11,6 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { NavigationTracking } from './components/NavigationTracking'
 import styles from './layout.module.css'
-import { StyledComponentsRegistry } from './libs/registry'
 
 // FIXME: seo stuff
 export const metadata: Metadata = {
@@ -38,13 +37,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>
-          <main className={styles.main}>
-            <Header />
-            <section>{children}</section>
-            <Footer />
-          </main>
-        </StyledComponentsRegistry>
+        <main className={styles.main}>
+          <Header />
+          <section>{children}</section>
+          <Footer />
+        </main>
         <Suspense fallback={null}>
           <NavigationTracking />
         </Suspense>

@@ -1,7 +1,7 @@
-'use client'
 import Image from 'next/image'
 import React from 'react'
-import styled from 'styled-components'
+
+import styles from './Discography.module.css'
 
 const DISCOGRAPHY_DATA = [
   {
@@ -46,14 +46,14 @@ const DISCOGRAPHY_DATA = [
 
 export default function Discography() {
   return (
-    <Container>
+    <div className={styles.container}>
       {DISCOGRAPHY_DATA.map(({ image, linkTo, subTitle, title }, idx) => (
-        <Link
+        <a
           href={linkTo}
           target="_blank"
           rel="nofollow noopener noreferrer"
           key={idx}
-          style={{ textDecoration: 'none' }}
+          className={styles.link}
         >
           <div>
             <Image
@@ -67,50 +67,13 @@ export default function Discography() {
                 height: 'auto',
               }}
             />
-            <InfoContainer>
-              <Title>{title}</Title>
+            <div className={styles.infoContainer}>
+              <div className={styles.title}>{title}</div>
               <div>{subTitle}</div>
-            </InfoContainer>
+            </div>
           </div>
-        </Link>
+        </a>
       ))}
-    </Container>
+    </div>
   )
 }
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: 12px;
-  align-items: stretch;
-`
-
-const Link = styled.a`
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-
-  transition: box-shadow 0.3s ease-in-out;
-
-  box-shadow: var(--color-shadow) 0px 1px 4px;
-
-  &:hover,
-  &:focus {
-    box-shadow: var(--color-shadow) 0px 1px 20px;
-  }
-`
-
-const InfoContainer = styled.div`
-  padding: 12px;
-  padding-top: 0;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 70%;
-`
-
-const Title = styled.div`
-  font-weight: bold;
-  margin: 12px 0;
-`
