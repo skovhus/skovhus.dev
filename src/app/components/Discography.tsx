@@ -3,8 +3,6 @@ import Image from 'next/legacy/image'
 import React from 'react'
 import styled from 'styled-components'
 
-import { rhythm } from '../libs/typography'
-
 const DISCOGRAPHY_DATA = [
   {
     linkTo: 'https://open.spotify.com/album/5m2T9VPMmzXIR3zXSkiVDz',
@@ -68,12 +66,10 @@ export default function Discography() {
   )
 }
 
-const SPACING = rhythm(2 / 4)
-
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: ${SPACING};
+  grid-gap: 12px;
   align-items: stretch;
 `
 
@@ -93,7 +89,8 @@ const Link = styled.a`
 `
 
 const InfoContainer = styled.div`
-  padding: 0 ${SPACING} ${SPACING} ${SPACING};
+  padding: 12px;
+  padding-top: 0;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -103,6 +100,5 @@ const InfoContainer = styled.div`
 
 const Title = styled.div`
   font-weight: bold;
-  margin-top: ${SPACING};
-  margin-bottom: ${SPACING};
+  margin: 12px 0;
 `

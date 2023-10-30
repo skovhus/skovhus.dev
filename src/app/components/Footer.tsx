@@ -2,7 +2,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { rhythm } from '../libs/typography'
 import { ExternalLink } from './ExternalLink'
 
 export function Footer() {
@@ -112,7 +111,7 @@ const StyledFooter = styled.footer`
 `
 
 const FooterInner = styled.div`
-  margin-top: ${rhythm(2)};
+  margin-top: 3.5rem;
   padding: 30px;
   color: white;
   font-size: 10px;
