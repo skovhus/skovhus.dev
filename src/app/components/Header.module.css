@@ -1,0 +1,24 @@
+.header {
+  padding: 10px 0;
+}
+
+.nav {
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.navLinkContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.navLink:hover {
+  opacity: 1;
+}
