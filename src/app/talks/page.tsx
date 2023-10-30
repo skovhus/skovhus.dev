@@ -1,3 +1,25 @@
+import { Metadata } from 'next'
+
+import { HugeHeading } from '../components/HugeHeading'
+import { Link } from '../components/Link'
+
+export const metadata: Metadata = {
+  title: 'Talks',
+}
+
+export default function Talks() {
+  return (
+    <>
+      <HugeHeading>
+        I enjoy giving talks. Here are some recordings and slides.
+      </HugeHeading>
+      {TALKS.map((talk) => (
+        <Link {...talk} key={talk.title} />
+      ))}
+    </>
+  )
+}
+
 type Talk = {
   description: string
   linkTo: string
@@ -7,7 +29,7 @@ type Talk = {
 
 // TODO: images
 // TODO: slides
-export const TALKS: Talk[] = [
+const TALKS: Talk[] = [
   {
     description:
       'Summing up 2+ years of learnings from my journey into the React Native jungle. How to get started? What to be aware of? Lessons learned and battles fought.',

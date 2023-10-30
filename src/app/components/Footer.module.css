@@ -1,0 +1,37 @@
+.footer {
+  margin-top: auto;
+
+  @media print {
+    display: none;
+  }
+}
+
+.footerInner {
+  margin-top: 3.5rem;
+  padding: 30px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.svgIcon {
+  height: 30px;
+  fill: #aaa;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.5s;
+  transition-property: fill transform;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.svgIcon:hover {
+  fill: #fff;
+}
+
+.svgIcon:hover,
+.svgIcon:focus,
+.svgIcon:active {
+  transform: translateY(-6px);
+}

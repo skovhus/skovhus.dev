@@ -1,8 +1,7 @@
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import React from 'react'
-import styled from 'styled-components'
 
-import { rhythm } from '../libs/typography'
+import styles from './Discography.module.css'
 
 const DISCOGRAPHY_DATA = [
   {
@@ -47,61 +46,34 @@ const DISCOGRAPHY_DATA = [
 
 export default function Discography() {
   return (
-    <Container>
+    <div className={styles.container}>
       {DISCOGRAPHY_DATA.map(({ image, linkTo, subTitle, title }, idx) => (
-        <Link
+        <a
           href={linkTo}
           target="_blank"
           rel="nofollow noopener noreferrer"
           key={idx}
-          style={{ textDecoration: 'none' }}
+          className={styles.link}
         >
-          <Image alt={title} src={image} layout="responsive" width={0} height={0} />
-          <InfoContainer>
-            <Title>{title}</Title>
-            <div>{subTitle}</div>
-          </InfoContainer>
-        </Link>
+          <div>
+            <Image
+              alt={title}
+              src={image}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+            <div className={styles.infoContainer}>
+              <div className={styles.title}>{title}</div>
+              <div>{subTitle}</div>
+            </div>
+          </div>
+        </a>
       ))}
-    </Container>
+    </div>
   )
 }
-
-const SPACING = rhythm(2 / 4)
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: ${SPACING};
-  align-items: stretch;
-`
-
-const Link = styled.a`
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-
-  transition: box-shadow 0.3s ease-in-out;
-
-  box-shadow: var(--color-shadow) 0px 1px 4px;
-
-  &:hover,
-  &:focus {
-    box-shadow: var(--color-shadow) 0px 1px 20px;
-  }
-`
-
-const InfoContainer = styled.div`
-  padding: 0 ${SPACING} ${SPACING} ${SPACING};
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 70%;
-`
-
-const Title = styled.div`
-  font-weight: bold;
-  margin-top: ${SPACING};
-  margin-bottom: ${SPACING};
-`

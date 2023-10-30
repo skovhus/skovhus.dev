@@ -1,7 +1,6 @@
 import NextLink from 'next/link'
 import React from 'react'
 
-import { rhythm } from '../libs/typography'
 import { ExternalLink } from './ExternalLink'
 
 export const Link = ({
@@ -29,7 +28,7 @@ export const Link = ({
     <>
       <h3
         style={{
-          marginBottom: rhythm(1 / 4),
+          marginBottom: '0.4375rem',
         }}
       >
         {linkElement}

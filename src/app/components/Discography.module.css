@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 12px;
+  align-items: stretch;
+}
+
+.link {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: var(--color-shadow) 0px 1px 4px;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  box-shadow: var(--color-shadow) 0px 1px 20px;
+}
+
+.infoContainer {
+  padding: 12px;
+  padding-top: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 70%;
+}
+
+.title {
+  font-weight: bold;
+  margin: 12px 0;
+}

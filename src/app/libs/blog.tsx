@@ -16,6 +16,9 @@ export function getPostBySlug(slug: string): BlogPost {
   return post
 }
 
+/**
+ * Returns all blog posts sorted by date.
+ */
 export function getAllBlogPosts(): BlogPost[] {
   const posts = allBlogPosts.sort((a, b) =>
     // eslint-disable-next-line prettier/prettier
