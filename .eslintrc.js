@@ -1,3 +1,4 @@
+const prettierConfig = require('./prettier.config')
 module.exports = {
   plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier'],
   extends: ['next/core-web-vitals', 'prettier'],
@@ -8,15 +9,7 @@ module.exports = {
   },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'all',
-        singleQuote: true,
-        printWidth: 90,
-        semi: false,
-      },
-    ],
+    'prettier/prettier': ['error', prettierConfig],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
