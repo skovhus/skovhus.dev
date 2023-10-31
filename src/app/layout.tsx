@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   description: siteMetadata.description,
   robots: 'follow, index',
   metadataBase: new URL(siteMetadata.siteUrl),
+  authors: { name: 'Kenneth Skovhus', url: siteMetadata.siteUrl },
+  alternates: {
+    canonical: siteMetadata.siteUrl,
+    types: {
+      'application/rss+xml': [{ url: 'feed', title: 'rss' }],
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
