@@ -47,6 +47,8 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       creator: '@kenneth_skovhus',
+      description,
+      title,
     },
   }
 }
