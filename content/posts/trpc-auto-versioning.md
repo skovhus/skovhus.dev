@@ -1,7 +1,7 @@
 ---
 title: "Addressing Client/Server Compatibility in tRPC"
 description: One of the main selling points of tRPC is "End-to-end typesafe APIs made easy", but this doesn't hold if you are not mindful about keeping your client/server versions in sync.
-date: "2023-07-12T20:00:00.000Z"
+publishedAt: "2023-07-12"
 devToLink: https://dev.to/kenneth_skovhus/addressing-clientserver-compatibility-in-trpc-9le
 ---
 

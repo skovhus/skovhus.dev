@@ -1,7 +1,7 @@
 ---
 title: Type safe CSS Modules with Flow
 description: CSS Modules + Flow = type safety and editor autocompletion. Introducing a few open source projects to help you with type safety and editor autocompletion.
-date: "2017-06-21T15:00:00.000Z"
+publishedAt: "2017-06-21"
 devToLink: https://dev.to/kenneth_skovhus/type-safe-css-modules-with-flow-3ojp
 featuredImage: "/blog/css-modules-flow.png"
 ---

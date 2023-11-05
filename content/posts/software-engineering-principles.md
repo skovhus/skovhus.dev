@@ -1,9 +1,8 @@
 ---
 title: "Software Engineering Principles"
 description: A list of the high-level principles and beliefs that I operate by when building software. Lots of links and references.
-date: "2020-01-13T20:00:00.000Z"
+publishedAt: "2020-01-13"
 devToLink: https://dev.to/kenneth_skovhus/software-engineering-principles-7da
-featuredImage: "/blog/unsplash-ryan_hutton_.jpg"
 ---
 
 After reading the [principles of the React team](https://react.christmas/2019/24) I got inspired to write this post on the *high-level principles and beliefs that I operate by*.

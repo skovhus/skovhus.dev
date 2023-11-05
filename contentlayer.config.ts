@@ -19,7 +19,7 @@ const BlogPost = defineDocumentType(() => ({
       description: 'A short description of the post',
       required: true,
     },
-    date: {
+    publishedAt: {
       type: 'date',
       description: 'The publish date of the post',
       required: true,

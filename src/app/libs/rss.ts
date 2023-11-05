@@ -34,7 +34,7 @@ const generateRssFeed = async (): Promise<Feed> => {
       id: url,
       link: url,
       description: post.description,
-      date: new Date(post.date),
+      date: new Date(post.publishedAt),
     })
   })
 

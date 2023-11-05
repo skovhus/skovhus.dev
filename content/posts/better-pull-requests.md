@@ -1,7 +1,7 @@
 ---
 title: Guidelines for Better Pull Requests
 description: 7 tips and tricks for better pull requests to improve the feedback you get on your work and elevate the overall quality of the code and product.
-date: "2020-08-12T10:00:00.000Z"
+publishedAt: "2020-08-12"
 devToLink: https://dev.to/kenneth_skovhus/guidelines-for-better-pull-requests-3bho
 ---
 

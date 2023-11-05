@@ -22,11 +22,11 @@ export function getPostBySlug(slug: string): BlogPost {
 export function getAllBlogPosts(): BlogPost[] {
   const posts = allBlogPosts.sort((a, b) =>
     // eslint-disable-next-line prettier/prettier
-    compareDesc(new Date(a.date), new Date(b.date))
+    compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
   )
 
   return posts.map((post) => {
-    const formattedDate = format(parseISO(post.date), 'MMMM dd, yyyy')
+    const formattedDate = format(parseISO(post.publishedAt), 'MMMM dd, yyyy')
 
     const timeToRead = Math.round(readingTime(post.body.code).minutes)
 

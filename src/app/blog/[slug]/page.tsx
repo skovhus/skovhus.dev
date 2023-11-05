@@ -21,7 +21,7 @@ export async function generateMetadata({
   }
   const { siteUrl } = siteMetadata
 
-  const { title, date: publishedTime, description, slug } = post
+  const { title, publishedAt, description, slug } = post
   const ogImage = `${siteUrl}/og?title=${title}`
 
   return {
@@ -31,7 +31,7 @@ export async function generateMetadata({
     openGraph: {
       description,
       locale: 'en_US',
-      publishedTime,
+      publishedTime: publishedAt,
       siteName: siteMetadata.title,
       title,
       type: 'article',

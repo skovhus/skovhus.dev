@@ -1,7 +1,7 @@
 ---
 title: Converting an app to React Native — How to get started
 description: Tips and tricks on tooling, navigation, and libraries when getting into React Native development. Especially relevant for native mobile developers approaching React Native.
-date: "2018-04-13T15:05:00.294Z"
+publishedAt: "2018-04-13"
 devToLink: https://dev.to/kenneth_skovhus/converting-an-app-to-react-native-how-to-get-started-g0f
 featuredImage: "/blog/react-native-vdom.png"
 ---
