@@ -25,12 +25,13 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    type: 'website',
     locale: 'en_US',
+    type: 'website',
     url: siteMetadata.siteUrl,
+    siteName: siteMetadata.title,
     images: [
       {
-        url: `${siteMetadata.siteUrl}/skovhus.jpg`,
+        url: `${siteMetadata.siteUrl}/og`,
         width: 1200,
         height: 630,
         alt: siteMetadata.title,
