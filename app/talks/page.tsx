@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
-import { HugeHeading } from '../components/HugeHeading'
-import { Link } from '../components/Link'
+import { HugeHeading } from '../../components/HugeHeading'
+import { Link } from '../../components/Link'
 
 export const metadata: Metadata = {
   title: 'Talks',
@@ -27,9 +27,14 @@ type Talk = {
   subTitle: string
 }
 
-// TODO: images
-// TODO: slides
 const TALKS: Talk[] = [
+  {
+    description: 'Learnings from migrating Pleo’s frontend from Webpack to Vite.',
+    linkTo:
+      'https://speakerdeck.com/skovhus/moving-pleos-frontend-into-the-third-age-of-javascript-from-webpack-to-vite',
+    title: 'Moving Pleo’s frontend into the Third Age of JavaScript',
+    subTitle: 'Copenhagen React Meetup (June 2023)',
+  },
   {
     description:
       'Summing up 2+ years of learnings from my journey into the React Native jungle. How to get started? What to be aware of? Lessons learned and battles fought.',

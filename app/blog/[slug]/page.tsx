@@ -3,11 +3,10 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next/types'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
-import { siteMetadata } from '../../../config'
-import { ExternalLink } from '../../components/ExternalLink'
-import { HugeHeading } from '../../components/HugeHeading'
-import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from '../../components/OgImage'
-import { getPostBySlug } from '../../libs/blog'
+import { ExternalLink } from '../../../components/ExternalLink'
+import { HugeHeading } from '../../../components/HugeHeading'
+import { getPostBySlug } from '../../../lib/blog'
+import { getBaseMetadata, siteMetadata } from '../../../lib/constants'
 import styles from './page.module.css'
 
 export const dynamic = 'force-static'
@@ -20,37 +19,16 @@ export async function generateMetadata({
     return
   }
   const { siteUrl } = siteMetadata
+  const { title, publishedAt: publishedTime, description, slug } = post
 
-  const { title, publishedAt, description, slug } = post
-  const ogImage = `${siteUrl}/og?title=${title}`
-
-  return {
-    title,
-    description,
-    authors: { name: 'Kenneth Skovhus', url: siteMetadata.siteUrl },
-    openGraph: {
-      description,
-      locale: 'en_US',
-      publishedTime: publishedAt,
-      siteName: siteMetadata.title,
+  return getBaseMetadata({
+    article: {
       title,
-      type: 'article',
+      publishedTime,
+      description,
       url: `${siteUrl}/blog/${slug}`,
-      images: [
-        {
-          url: ogImage,
-          width: OG_IMAGE_WIDTH,
-          height: OG_IMAGE_HEIGHT,
-        },
-      ],
     },
-    twitter: {
-      card: 'summary_large_image',
-      creator: '@kenneth_skovhus',
-      description,
-      title,
-    },
-  }
+  })
 }
 
 export default function BlogPostTemplate({ params }: SlugProps) {

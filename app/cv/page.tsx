@@ -2,7 +2,7 @@ import { curriculumVitae } from 'contentlayer/generated'
 import { Metadata } from 'next'
 import { getMDXComponent } from 'next-contentlayer/hooks'
 
-import { HugeHeading } from '../components/HugeHeading'
+import { HugeHeading } from '../../components/HugeHeading'
 
 export const metadata: Metadata = {
   title: 'CV',

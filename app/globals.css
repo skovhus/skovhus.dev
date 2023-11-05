@@ -24,8 +24,6 @@ body {
   background: var(--background-context-color);
 }
 
-/* gradient to rgb(17, 16, 16) */
-
 @media print {
   body,
   html {
@@ -109,14 +107,6 @@ pre::-webkit-scrollbar {
   text-align: center;
   font-size: 0.8rem;
 }
-
-/* overflowing code block */
-/*
-[data-rehype-pretty-code-fragment] {
-    margin-right: -1.3125rem;
-    margin-left: -1.3125rem;
-}
-*/
 
 [data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
   display: inline-block;

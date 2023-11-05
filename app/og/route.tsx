@@ -7,7 +7,7 @@ import {
   OG_IMAGE_WIDTH,
   OgImage,
   OgImageDefault,
-} from '../components/OgImage'
+} from '../../components/OgImage'
 
 export const runtime = 'edge'
 
@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
       {
         name: 'Montserrat',
         data: await fetch(
-          new URL('../../../public/fonts/Montserrat-Bold.ttf', import.meta.url),
+          new URL('../../public/fonts/Montserrat-Bold.ttf', import.meta.url),
         ).then((res) => res.arrayBuffer()),
         weight: 700,
         style: 'normal',
@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
       {
         name: 'Montserrat',
         data: await fetch(
-          new URL('../../../public/fonts/Montserrat-Regular.ttf', import.meta.url),
+          new URL('../../public/fonts/Montserrat-Regular.ttf', import.meta.url),
         ).then((res) => res.arrayBuffer()),
         weight: 400,
         style: 'normal',

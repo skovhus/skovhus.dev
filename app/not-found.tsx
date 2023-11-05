@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
 import React from 'react'
 
-import { HugeHeading } from './components/HugeHeading'
+import { HugeHeading } from '../components/HugeHeading'
 
 export const metadata: Metadata = {
-  title: 'Not Found',
+  title: '404',
+  robots: { index: false, follow: true },
 }
 
 export default function NotFoundPage() {
