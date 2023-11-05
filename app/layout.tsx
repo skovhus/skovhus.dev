@@ -2,7 +2,6 @@ import 'typeface-merriweather'
 import 'typeface-montserrat'
 import './globals.css'
 
-import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Suspense } from 'react'
 

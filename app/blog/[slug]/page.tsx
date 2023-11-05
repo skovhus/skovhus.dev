@@ -22,11 +22,12 @@ export async function generateMetadata({
   const { title, publishedAt: publishedTime, description, slug } = post
 
   return getBaseMetadata({
-    title,
-    publishedTime,
-    description,
-    url: `${siteUrl}/blog/${slug}`,
-    ogType: 'article',
+    article: {
+      title,
+      publishedTime,
+      description,
+      url: `${siteUrl}/blog/${slug}`,
+    },
   })
 }
 
