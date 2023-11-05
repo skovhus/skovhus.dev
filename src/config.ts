@@ -5,6 +5,6 @@ export const shortSiteDescription =
 
 export const siteMetadata = {
   siteUrl,
-  description: `${shortSiteDescription}. Portfolio, blog, talks, discography.`,
+  description: `${shortSiteDescription} Portfolio, blog, talks, discography.`,
   title: 'Kenneth Skovhus',
 } as const
