@@ -1,7 +1,7 @@
 import { Feed } from 'feed'
 
-import { siteMetadata, siteUrl } from '../../config'
 import { getAllBlogPosts } from './blog'
+import { siteMetadata, siteUrl } from './constants'
 
 const generateRssFeed = async (): Promise<Feed> => {
   const date = new Date()

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
-import { HugeHeading } from '../components/HugeHeading'
-import { Link } from '../components/Link'
+import { HugeHeading } from '../../components/HugeHeading'
+import { Link } from '../../components/Link'
 
 export const metadata: Metadata = {
   title: 'Talks',

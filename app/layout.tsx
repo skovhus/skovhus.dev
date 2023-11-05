@@ -6,10 +6,10 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
-import { siteMetadata } from '../config'
-import { Footer } from './components/Footer'
-import { Header } from './components/Header'
-import { NavigationTracking } from './components/NavigationTracking'
+import { Footer } from '../components/Footer'
+import { Header } from '../components/Header'
+import { NavigationTracking } from '../components/NavigationTracking'
+import { siteMetadata } from '../lib/constants'
 import styles from './layout.module.css'
 
 export const metadata: Metadata = {
@@ -41,8 +41,10 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: siteMetadata.title,
+    card: 'summary_large_image',
+    creator: '@kenneth_skovhus',
     description: siteMetadata.description,
+    title: siteMetadata.title,
   },
 }
 

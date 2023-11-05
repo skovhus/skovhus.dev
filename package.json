@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "contentlayer build && next build",
     "start": "next start",
-    "lint": "next lint --fix && prettier src/**/*.css --write",
+    "lint": "next lint --fix && prettier **/*.css --write",
     "typecheck": "tsc --noEmit",
     "verify": "contentlayer build && pnpm lint && pnpm typecheck"
   },

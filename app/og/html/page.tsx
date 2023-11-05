@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import React from 'react'
 
-import { HugeHeading } from '../../components/HugeHeading'
-import { OgImagePlayground } from '../../components/OgImagePlayground'
+import { HugeHeading } from '../../../components/HugeHeading'
+import { OgImagePlayground } from '../../../components/OgImagePlayground'
 
 export const metadata: Metadata = {
   title: 'OpenGraph Playground',
