@@ -6,6 +6,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import { siteMetadata } from '../../../config'
 import { ExternalLink } from '../../components/ExternalLink'
 import { HugeHeading } from '../../components/HugeHeading'
+import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from '../../components/OgImage'
 import { getPostBySlug } from '../../libs/blog'
 import styles from './page.module.css'
 
@@ -20,32 +21,32 @@ export async function generateMetadata({
   }
   const { siteUrl } = siteMetadata
 
-  const { title, date: publishedTime, description, featuredImage, slug } = post
-  const ogImage = featuredImage
-    ? `${siteUrl}${featuredImage}` // FIXME: do we want this?
-    : `${siteUrl}/skovhus.jpg` // og?title=${title}
+  const { title, date: publishedTime, description, slug } = post
+  const ogImage = `${siteUrl}/og?title=${title}`
 
   return {
     title,
     description,
+    authors: { name: 'Kenneth Skovhus', url: siteMetadata.siteUrl },
     openGraph: {
-      title,
       description,
-      type: 'article',
+      locale: 'en_US',
       publishedTime,
+      siteName: siteMetadata.title,
+      title,
+      type: 'article',
       url: `${siteUrl}/blog/${slug}`,
       images: [
         {
           url: ogImage,
+          width: OG_IMAGE_WIDTH,
+          height: OG_IMAGE_HEIGHT,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       creator: '@kenneth_skovhus',
-      title,
-      description,
-      images: [ogImage],
     },
   }
 }

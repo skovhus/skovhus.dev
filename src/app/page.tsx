@@ -14,7 +14,7 @@ export default function Home() {
 
       <p>
         This is my portfolio where I gather random bits and pieces – my attempt to fight
-        digital sharecropping. Feel free to connect on{' '}
+        digital sharecropping and distilling knowledge. Feel free to connect on{' '}
         <ExternalLink href="https://twitter.com/kenneth_skovhus" noUnderline>
           Twitter
         </ExternalLink>{' '}
