@@ -1,5 +1,5 @@
 ---
-title: "Beyond Bug-Squashing: Start Improving Your System"
+title: "Beyond Bug-Squashing"
 description: My mental model for fixing bugs boils down to a 4 step process with a strong focus on improving safety nets.
 date: "2021-04-30T10:00:00.000Z"
 devToLink: https://dev.to/kenneth_skovhus/my-mental-model-for-fixing-software-bugs-367p
