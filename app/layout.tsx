@@ -14,23 +14,24 @@ const merriweather = Merriweather({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   weight: ['300'],
+  display: 'swap',
+  fallback: ['Georgia', 'serif'],
 })
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['300'],
   variable: '--font-montserrat',
+  display: 'swap',
 })
 
 export const metadata = getBaseMetadata()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${merriweather.className} ${montserrat.variable}`}>
       <body>
-        <main
-          className={`${styles.main} ${merriweather.className} ${montserrat.variable}`}
-        >
+        <main className={styles.main}>
           <Header />
           <section>{children}</section>
           <Footer />
