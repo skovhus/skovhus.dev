@@ -3,15 +3,19 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
+import { getSlideAnimationProps } from '../lib/slideAnimation'
 import styles from './Header.module.css'
 import ProfileImage from './ProfileImage'
 
 export function Header() {
   const pathname = usePathname()
-
+  const slideAnimation = getSlideAnimationProps({ stage: 0 })
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
+      <nav
+        className={`${styles.nav} ${slideAnimation.className}`}
+        style={slideAnimation.style}
+      >
         <div className={styles.navLinkContainer}>
           <Link
             href="/"

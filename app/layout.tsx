@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { NavigationTracking } from '../components/NavigationTracking'
 import { getBaseMetadata } from '../lib/constants'
+import { getSlideAnimationProps } from '../lib/slideAnimation'
 import styles from './layout.module.css'
 
 const merriweather = Merriweather({
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <main className={styles.main}>
           <Header />
-          <section>{children}</section>
+          <section {...getSlideAnimationProps({ stage: 1 })}>{children}</section>
           <Footer />
         </main>
         <Suspense fallback={null}>

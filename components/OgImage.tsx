@@ -6,7 +6,7 @@ import { shortSiteDescription } from '../lib/constants'
 export const OG_IMAGE_WIDTH = 1200
 export const OG_IMAGE_HEIGHT = 630
 
-const FONT_FAMILY = 'Montserrat'
+const FONT_FAMILY = 'Montserrat' // Og Playground requires 'var(--font-montserrat)'
 const BOLD_FONT_WEIGHT = 700
 const REGULAR_FONT_WEIGHT = 400
 
