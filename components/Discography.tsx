@@ -59,9 +59,8 @@ export default function Discography() {
             <Image
               alt={title}
               src={image}
-              width={0}
-              height={0}
-              sizes="100vw"
+              width={202}
+              height={202}
               style={{
                 width: '100%',
                 height: 'auto',
