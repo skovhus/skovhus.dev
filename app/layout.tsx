@@ -8,7 +8,7 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { NavigationTracking } from '../components/NavigationTracking'
 import { getBaseMetadata } from '../lib/constants'
-import { getSlideAnimationProps } from '../lib/slideAnimation'
+import { getSlideAnimationProps } from '../lib/slide-animation'
 import styles from './layout.module.css'
 
 const merriweather = Merriweather({
