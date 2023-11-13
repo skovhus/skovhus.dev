@@ -156,7 +156,6 @@ html {
 body {
   margin: 0;
   color: var(--color-text-body);
-  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   word-wrap: break-word;
   font-kerning: normal;
@@ -367,7 +366,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-montserrat);
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 2rem;
@@ -383,7 +382,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.6rem;
@@ -399,7 +397,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.4427rem;
@@ -415,7 +412,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -433,7 +429,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 0.83255rem;
@@ -449,7 +444,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.75rem;
   color: inherit;
-  font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 0.75966rem;
