@@ -25,9 +25,7 @@
     "rehype-figure": "^1.0.1",
     "rehype-pretty-code": "^0.10.2",
     "rehype-slug": "^6.0.0",
-    "shiki": "^0.14.5",
-    "typeface-merriweather": "^1.1.13",
-    "typeface-montserrat": "^1.1.13"
+    "shiki": "^0.14.5"
   },
   "devDependencies": {
     "@types/node": "^20.1.1",

@@ -1,7 +1,6 @@
-import 'typeface-merriweather'
-import 'typeface-montserrat'
 import './globals.css'
 
+import { Merriweather, Montserrat } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
@@ -11,13 +10,27 @@ import { NavigationTracking } from '../components/NavigationTracking'
 import { getBaseMetadata } from '../lib/constants'
 import styles from './layout.module.css'
 
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  weight: ['300'],
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300'],
+  variable: '--font-montserrat',
+})
+
 export const metadata = getBaseMetadata()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <main className={styles.main}>
+        <main
+          className={`${styles.main} ${merriweather.className} ${montserrat.variable}`}
+        >
           <Header />
           <section>{children}</section>
           <Footer />

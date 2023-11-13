@@ -44,12 +44,6 @@ dependencies:
   shiki:
     specifier: ^0.14.5
     version: 0.14.5
-  typeface-merriweather:
-    specifier: ^1.1.13
-    version: 1.1.13
-  typeface-montserrat:
-    specifier: ^1.1.13
-    version: 1.1.13
 
 devDependencies:
   '@types/node':
@@ -4725,14 +4719,6 @@ packages:
       for-each: 0.3.3
       is-typed-array: 1.1.12
     dev: true
-
-  /typeface-merriweather@1.1.13:
-    resolution: {integrity: sha512-ho6xe/y/uHIKVXsFtK+dJfRCD5KZqJCMYTCcXfuCwQHQbeQ83a7hVkxfRMTEIjZOSXw5SevOjnwJuZ5QgWEHiw==}
-    dev: false
-
-  /typeface-montserrat@1.1.13:
-    resolution: {integrity: sha512-Pklkyj0e+K+6I/t0M6JBDBphpfJkF1k+3qd8qDnp9aVtCC7oGBQWTAcL6+5eArfGe7h73uPwyal73hEkf9YCUA==}
-    dev: false
 
   /typescript@5.0.4:
     resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
