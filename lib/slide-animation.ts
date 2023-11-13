@@ -1,4 +1,4 @@
-import styles from './slideAnimation.module.css'
+import styles from './slide-animation.module.css'
 
 export function getSlideAnimationProps({ stage = 0 }: { stage?: number }) {
   return {

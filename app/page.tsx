@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { ExternalLink } from '../components/ExternalLink'
 import { HugeHeading } from '../components/HugeHeading'
 
@@ -14,7 +16,10 @@ export default function Home() {
 
       <p>
         This is my portfolio where I gather random bits and pieces – my attempt to fight
-        digital sharecropping and distilling knowledge. Feel free to connect on{' '}
+        digital sharecropping and distilling knowledge.
+      </p>
+      <p>
+        Follow via <Link href="/feed">RSS</Link> or connect on{' '}
         <ExternalLink href="https://twitter.com/kenneth_skovhus" noUnderline>
           Twitter
         </ExternalLink>{' '}
