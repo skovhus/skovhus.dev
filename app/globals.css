@@ -145,10 +145,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
-  font:
-    100%/1.75 'Merriweather',
-    'Georgia',
-    serif;
+  line-height: 1.75;
   box-sizing: border-box;
   overflow-y: scroll;
 }
