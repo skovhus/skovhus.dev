@@ -1,5 +1,6 @@
 ---
 title: Joining Linear
+ogImageTitle: Reflection on my first 4 months at Linear
 description: Reflection on my first 4 months at Linear.
 publishedAt: "2023-12-01"
 featuredImage: "/blog/triage-responsibility.webp"

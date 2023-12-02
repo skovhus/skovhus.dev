@@ -14,6 +14,11 @@ const BlogPost = defineDocumentType(() => ({
       description: 'The title of the post',
       required: true,
     },
+    ogImageTitle: {
+      type: 'string',
+      description: 'The open graph image title of the post',
+      required: false,
+    },
     description: {
       type: 'string',
       description: 'A short description of the post',
@@ -31,7 +36,7 @@ const BlogPost = defineDocumentType(() => ({
     },
     featuredImage: {
       type: 'string',
-      description: 'A path to the featured image',
+      description: 'A path to the featured image. Current not used for anything...',
       required: false,
     },
   },

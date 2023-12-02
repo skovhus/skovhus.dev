@@ -1,4 +1,5 @@
 import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from 'components/OgImage'
+import { BlogPost } from 'contentlayer/generated'
 import { Metadata } from 'next'
 
 export const siteUrl = `https://www.skovhus.dev`
@@ -14,34 +15,31 @@ export const siteMetadata = {
 
 export function getBaseMetadata(
   props: {
-    article?: {
-      title: string
-      description: string
-      publishedTime: string
+    article?: BlogPost & {
       url: string
     }
     title?: string
     robots?: Metadata['robots']
-  } = {},
+  } = {}
 ): Metadata {
   const { article } = props
-  const ogImageParam = article ? `?title=${article.title}` : ''
-  const description = props.article?.description ?? siteMetadata.description
-  const title = props.title ?? props.article?.title ?? siteMetadata.title
+  const ogImageParam = article ? `?title=${article.ogImageTitle ?? article.title}` : ''
+  const description = article?.description ?? siteMetadata.description
+  const title = props.title ?? article?.title ?? siteMetadata.title
 
   return {
     title: props.title ??
-      props.article?.title ?? {
+      article?.title ?? {
         default: siteMetadata.title,
         template: `%s | ${siteMetadata.title}`,
       },
-    description: props.article?.description ?? siteMetadata.description,
+    description,
     robots: props.robots ?? { follow: true, index: true },
     metadataBase: new URL(siteMetadata.siteUrl),
     authors: { name: 'Kenneth Skovhus', url: siteMetadata.siteUrl },
     openGraph: {
       locale: 'en_US',
-      publishedTime: article?.publishedTime,
+      publishedTime: article?.publishedAt,
       type: article ? 'article' : 'website',
       url: article ? article.url : siteMetadata.siteUrl,
       siteName: siteMetadata.title,
@@ -52,7 +50,7 @@ export function getBaseMetadata(
           url: `${siteMetadata.siteUrl}/og${ogImageParam}`,
           width: OG_IMAGE_WIDTH,
           height: OG_IMAGE_HEIGHT,
-          alt: props.article?.title ?? siteMetadata.title,
+          alt: article?.title ?? siteMetadata.title,
         },
       ],
     },

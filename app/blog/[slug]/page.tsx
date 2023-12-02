@@ -19,14 +19,11 @@ export async function generateMetadata({
     return
   }
   const { siteUrl } = siteMetadata
-  const { title, publishedAt: publishedTime, description, slug } = post
 
   return getBaseMetadata({
     article: {
-      title,
-      publishedTime,
-      description,
-      url: `${siteUrl}/blog/${slug}`,
+      ...post,
+      url: `${siteUrl}/blog/${post.slug}`,
     },
   })
 }
