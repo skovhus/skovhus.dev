@@ -11,7 +11,7 @@ Today I hit my four-month mark at [Linear](https://linear.app). A moment to paus
 
 ### Where it all started
 
-Let’s rewind to the beginning. Childhood memories of bulky monitors. The hum of dial-up modems filled the room, orchestrating a symphony to push us into an online world. A magical world of connectivity, community, knowledge, and a canvas that allowed us to build yet another Red Hot Chili Peppers fan page on GeoCitities. I wanted to build experiences using software.
+Let’s rewind to the beginning. Childhood memories of bulky monitors. The hum of dial-up modems filled the room, orchestrating a symphony to push us into an online world. A magical world of connectivity, community, knowledge, and a canvas that allowed us to build yet another Red Hot Chili Peppers fan page on GeoCities. I wanted to build experiences using software.
 
 I later found my happy place working with really talented and passionate people in smaller settings and start-ups. I worked in various roles from backend, frontend, mobile, and leadership in companies like Issuu, Leo Innovation Labs, Electricity Maps and Pleo.
 
