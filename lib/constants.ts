@@ -20,7 +20,7 @@ export function getBaseMetadata(
     }
     title?: string
     robots?: Metadata['robots']
-  } = {}
+  } = {},
 ): Metadata {
   const { article } = props
   const ogImageParam = article ? `?title=${article.ogImageTitle ?? article.title}` : ''
