@@ -11,7 +11,7 @@ export default function Music() {
   return (
     <>
       <HugeHeading style={{ marginBottom: '3.5rem' }}>
-        Music has always been a big part of my life. Here are some recording I made.
+        Music has always been a big part of my life. Here are some recordings I made.
       </HugeHeading>
       <Discography />
     </>
