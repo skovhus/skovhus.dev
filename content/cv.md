@@ -22,18 +22,13 @@ I was part of founding Web Core, a team dedicated to push the Pleo frontend plat
 
 ### Head of Engineering | Electricity Maps (2020-2021)
 
-In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [Electricity Maps](https://electricitymap.org/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
+As head of Engineering for [Electricity Maps](https://electricitymaps.com/) I worked on finding scalable digital solutions to climate change. After experimenting with B2C carbon accounting app ([North](https://www.tmrow.com/blog/sunsetting-north/)) and a B2B carbon accounting SaaS ([Bloom](https://www.tmrow.com/blog/closing-down-the-bloom-chapter/)), we decided to focus our efforts on [Electricity Maps](https://electricitymaps.com/). Read [more about our journey](https://www.tmrow.com/blog/lessons-learned-climate-tech/).
 
-My mission:
+[Electricity Maps](https://electricitymaps.com/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
 
-- Work directly with the founder and product manager to develop new features across our product portfolio
-- Steward a high-quality codebase and promote best practices in development within the company
-- Contribute in every aspect of the product development process, from thinking through UX and UI to hearing from customers and solving their problems
-- Inspire others, and to challenge product features, to make sure we build a product that is used and has the impact we want
-- To be a trusted advisor on all things technical, and build a world-class software engineering team
-- Do anything else you think is necessary to effectively decarbonize our society
+Key responsibilities included working closely with leadership on product strategy, building a world-class engineering team, establishing technical best practices, and driving the development of features across our product portfolio.
 
-Technologies: Python, Dataflow, Google Cloud Services, PostgreSQL, JavaScript, TypeScript, React, GraphQL, node.js, hasura.io
+Technologies: Python, Dataflow, Google Cloud Services, PostgreSQL, TypeScript, React, GraphQL, node.js, hasura.io
 
 ### Lead full-stack engineer | LEO Innovation Lab (2017-2020)
 
