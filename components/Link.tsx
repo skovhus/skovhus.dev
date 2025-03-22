@@ -15,9 +15,7 @@ export const Link = ({
   title: string
 }) => {
   const linkElement = linkTo.startsWith('http') ? (
-    <ExternalLink href={linkTo} noUnderline>
-      {title}
-    </ExternalLink>
+    <ExternalLink href={linkTo}>{title}</ExternalLink>
   ) : (
     <NextLink href={linkTo} style={{ boxShadow: `none` }}>
       {title}

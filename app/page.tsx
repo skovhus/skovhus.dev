@@ -10,7 +10,7 @@ export default function Home() {
         Hey, I&apos;m Kenneth. I&apos;m a software engineer, 2x dad, and music nerd.
       </HugeHeading>
       <p style={{ marginTop: '2rem' }}>
-        Based in Copenhagen, Denmark. Currently crafting code at{' '}
+        Based in Copenhagen, Denmark. Currently building{' '}
         <ExternalLink href="https://linear.app/">Linear</ExternalLink>.
       </p>
 
@@ -20,13 +20,8 @@ export default function Home() {
       </p>
       <p>
         Follow via <Link href="/feed">RSS</Link> or connect on{' '}
-        <ExternalLink href="https://twitter.com/kenneth_skovhus" noUnderline>
-          Twitter
-        </ExternalLink>{' '}
-        or{' '}
-        <ExternalLink href="https://www.linkedin.com/in/skovhus" noUnderline>
-          LinkedIn
-        </ExternalLink>
+        <ExternalLink href="https://www.linkedin.com/in/skovhus">LinkedIn</ExternalLink>{' '}
+        or <ExternalLink href="https://twitter.com/kenneth_skovhus">Twitter</ExternalLink>
         .
       </p>
     </>

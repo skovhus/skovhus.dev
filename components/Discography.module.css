@@ -9,14 +9,14 @@
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: var(--color-shadow) 0px 1px 4px;
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  box-shadow: var(--color-shadow) 0px 0px 3px;
   text-decoration: none;
 }
 
 .link:hover,
 .link:focus {
-  box-shadow: var(--color-shadow) 0px 1px 20px;
+  box-shadow: var(--color-shadow) 0px 0px 20px;
 }
 
 .infoContainer {

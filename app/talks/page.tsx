@@ -10,9 +10,7 @@ export const metadata: Metadata = {
 export default function Talks() {
   return (
     <>
-      <HugeHeading>
-        I enjoy giving talks. Here are some recordings and slides.
-      </HugeHeading>
+      <HugeHeading>Talking about software.</HugeHeading>
       {TALKS.map((talk) => (
         <Link {...talk} key={talk.title} />
       ))}

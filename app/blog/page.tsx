@@ -13,9 +13,7 @@ export default function BlogIndex() {
 
   return (
     <>
-      <HugeHeading>
-        I occasionally write things down to share and distill learnings.
-      </HugeHeading>
+      <HugeHeading>I occasionally write things down.</HugeHeading>
       {posts.map((post) => (
         <Link
           description={post.description}

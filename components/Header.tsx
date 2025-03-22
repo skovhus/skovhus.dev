@@ -27,8 +27,10 @@ export function Header() {
           {['blog', 'talks', 'music'].map((link) => (
             <Link
               href={`/${link}`}
-              className={styles.navLink}
-              style={{ opacity: pathname == `/${link}` ? 1 : 0.7 }}
+              className={[
+                styles.navLink,
+                pathname == `/${link}` ? styles.navLinkActive : '',
+              ].join(' ')}
               key={link}
             >
               {link}
