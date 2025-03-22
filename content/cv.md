@@ -12,7 +12,7 @@ Read more about my [engineering principles](/blog/software-engineering-principle
 
 ### Software Engineer | Linear (2023-present)
 
-[Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don’t think of Linear as just a better “tool”, but as a better “way” to build software.
+[Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don't think of Linear as just a better "tool", but as a better "way" to build software.
 
 ### Staff Engineer | Pleo (2021-2023)
 
@@ -22,7 +22,7 @@ I was part of founding Web Core, a team dedicated to push the Pleo frontend plat
 
 ### Head of Engineering | Electricity Maps (2020-2021)
 
-In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [electricityMap](https://electricitymap.org/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
+In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [Electricity Maps](https://electricitymap.org/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
 
 My mission:
 
@@ -59,17 +59,14 @@ Technologies: Python, JavaScript, React, Backbone.js, node.js, MySQL, AMQP, AWS,
 
 ### Software Engineer | Region Hovedstaden (2009-2012)
 
-Part of the EU project PSIP (Patient Safety through Intelligent Procedures in medication) that facilitated the systematic production of epidemiological knowledge on Adverse Drug Events and worked on improving the entire medication cycle in a hospital environment.
+Worked on the EU project PSIP (Patient Safety through Intelligent Procedures in medication) focusing on data processing, data mining, and development of clinical decision support systems to improve medication safety in hospitals.
 
-My focus was data processing, data mining, and development and verification of clinical decision support systems.
+Contributions:
+- Collaborated with Aalborg, AUTH and Umit university, French hospitals, and commercial partners such as IBM, Medasys, and Oracle.
+- Participant and speaker at conferences in France, Italy, and Greece.
+- Published a peer-reviewed article "[From Adverse Drug Event Detection to Prevention A Novel Clinical Decision Support Framework for Medication Safety](https://www.researchgate.net/publication/267931932_From_Adverse_Drug_Event_Detection_to_Prevention_A_Novel_Clinical_Decision_Support_Framework_for_Medication_Safety)" in Methods of Information in Medicine.
 
-I was co-author on several EU reports and presentations about PSIP with collaboration with Aalborg, AUTH and Umit university, French hospitals, and commercial partners such as IBM, Medasys, and Oracle. Participant and speaker at conferences in France, Italy, and Greece.
-
-Published an article in a peer-reviewed scientific journal: Koutkias et al. [From Adverse Drug Event Detection to Prevention A Novel Clinical Decision Support Framework for Medication Safety](https://www.researchgate.net/publication/267931932_From_Adverse_Drug_Event_Detection_to_Prevention_A_Novel_Clinical_Decision_Support_Framework_for_Medication_Safety). Methods of Information in Medicine, 2014.
-
-After the EU project, I continued as a consultant at Sektion for Klinisk Information & Data, developing tools for streamlining business processes and automating data-intensive tasks when configuring health care systems.
-
-Technologies: Java, Ruby, Python, Oracle Data Integrator, PostgreSQL, PL / SQL, XML, XSLT.
+Technologies: Java, Ruby, Python, PostgreSQL, and fun with XSLT.
 
 ### Freelancing | Skovhus Webdesign (2004-2008)
 
