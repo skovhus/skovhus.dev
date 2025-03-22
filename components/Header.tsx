@@ -7,9 +7,17 @@ import { getSlideAnimationProps } from '../lib/slide-animation'
 import styles from './Header.module.css'
 import ProfileImage from './ProfileImage'
 
+const pages: { link: string; label?: string }[] = [
+  { link: 'blog', label: 'writing' },
+  { link: 'talks' },
+  { link: 'music' },
+  { link: 'about' },
+]
+
 export function Header() {
   const pathname = usePathname()
   const slideAnimation = getSlideAnimationProps({ stage: 0 })
+
   return (
     <header className={styles.header}>
       <nav
@@ -24,7 +32,7 @@ export function Header() {
           >
             index
           </Link>
-          {['blog', 'talks', 'music', 'about'].map((link) => (
+          {pages.map(({ link, label }) => (
             <Link
               href={`/${link}`}
               className={[
@@ -33,7 +41,7 @@ export function Header() {
               ].join(' ')}
               key={link}
             >
-              {link}
+              {label || link}
             </Link>
           ))}
         </div>
