@@ -7,11 +7,12 @@ import { getSlideAnimationProps } from '../lib/slide-animation'
 import styles from './Header.module.css'
 import ProfileImage from './ProfileImage'
 
-const pages: { link: string; label?: string }[] = [
-  { link: 'blog', label: 'writing' },
-  { link: 'talks' },
-  { link: 'music' },
-  { link: 'about' },
+const pages: { path: string; label: string }[] = [
+  { path: '/', label: 'index' },
+  { path: '/blog', label: 'writing' },
+  { path: '/talks', label: 'talks' },
+  { path: '/music', label: 'discography' },
+  { path: '/about', label: 'about' },
 ]
 
 export function Header() {
@@ -25,23 +26,16 @@ export function Header() {
         style={slideAnimation.style}
       >
         <div className={styles.navLinkContainer}>
-          <Link
-            href="/"
-            className={styles.navLink}
-            style={{ opacity: pathname == '/' ? 1 : 0.7 }}
-          >
-            index
-          </Link>
-          {pages.map(({ link, label }) => (
+          {pages.map(({ path, label }) => (
             <Link
-              href={`/${link}`}
+              href={path}
               className={[
                 styles.navLink,
-                pathname == `/${link}` ? styles.navLinkActive : '',
+                pathname == path ? styles.navLinkActive : '',
               ].join(' ')}
-              key={link}
+              key={path}
             >
-              {label || link}
+              {label}
             </Link>
           ))}
         </div>

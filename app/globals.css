@@ -34,7 +34,7 @@ body {
 main h1:first-child,
 main h2:first-child,
 main h3:first-child {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 a {
@@ -750,7 +750,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
 hr:has(+ h1),
 hr:has(+ h2),
@@ -758,7 +758,7 @@ hr:has(+ h3),
 hr:has(+ h4),
 hr:has(+ h5),
 hr:has(+ h6) {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
 
 mark,

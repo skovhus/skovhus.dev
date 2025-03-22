@@ -1,8 +1,10 @@
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: 12px;
+  grid-gap: 16px;
   align-items: stretch;
+  margin-bottom: 2rem;
+  margin-top: 0.6rem;
 }
 
 .link {
