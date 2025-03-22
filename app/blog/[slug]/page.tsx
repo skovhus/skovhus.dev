@@ -39,9 +39,7 @@ export default function BlogPostTemplate({ params }: SlugProps) {
   return (
     <section>
       <article className={styles.article}>
-        <HugeHeading style={{ marginTop: '3rem', fontSize: '2.5rem' }}>
-          {title}
-        </HugeHeading>
+        <HugeHeading style={{ fontSize: '2.5rem' }}>{title}</HugeHeading>
         <p className={styles.subtitle}>
           {formattedDate} • {timeToRead} minute read
         </p>

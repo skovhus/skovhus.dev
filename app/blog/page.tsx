@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 
-import { HugeHeading } from '../../components/HugeHeading'
 import { Link } from '../../components/Link'
 import { getAllBlogPosts } from '../../lib/blog'
 
@@ -13,7 +12,6 @@ export default function BlogIndex() {
 
   return (
     <>
-      <HugeHeading>I occasionally write things down.</HugeHeading>
       {posts.map((post) => (
         <Link
           description={post.description}
