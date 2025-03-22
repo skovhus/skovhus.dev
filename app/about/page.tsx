@@ -5,14 +5,14 @@ import { getMDXComponent } from 'next-contentlayer/hooks'
 import { HugeHeading } from '../../components/HugeHeading'
 
 export const metadata: Metadata = {
-  title: 'CV',
+  title: 'About',
 }
 
-export default function CVPage() {
+export default function AboutPage() {
   const Component = getMDXComponent(curriculumVitae.body.code)
   return (
     <>
-      <HugeHeading>Curriculum vitae</HugeHeading>
+      <HugeHeading>Kenneth Skovhus</HugeHeading>
       <Component />
     </>
   )

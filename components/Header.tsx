@@ -24,7 +24,7 @@ export function Header() {
           >
             index
           </Link>
-          {['blog', 'talks', 'music'].map((link) => (
+          {['blog', 'talks', 'music', 'about'].map((link) => (
             <Link
               href={`/${link}`}
               className={[

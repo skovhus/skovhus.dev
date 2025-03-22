@@ -1,14 +1,16 @@
-My passion is building meaningful software together with talented people.
+My passion is crafting quality software together with talented people.
 
-I offer around 20 years of industry experience, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.
+With two decades of industry experience and an M.Sc. in Computer Science and Engineering, I combine technical excellence, strong leadership abilities, and a deep empathy for end-users to effectively build impactful products.
 
-I love mentoring, sharing knowledge, and excel in working full-stack with web technologies. I am very fond of TypeScript, Python, GraphQL, React, codemods, testing, and automation. Read more about my [engineering principles](/blog/software-engineering-principles/).
+I thrive in full-stack development using web technologies like TypeScript, node.js, React, and GraphQL.
+
+Read more about my [engineering principles](/blog/software-engineering-principles/).
 
 ---
 
-## Work experience
+# Work experience
 
-### Software Engineer | Linear (2021-present)
+### Software Engineer | Linear (2023-present)
 
 [Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don’t think of Linear as just a better “tool”, but as a better “way” to build software.
 
@@ -16,7 +18,7 @@ I love mentoring, sharing knowledge, and excel in working full-stack with web te
 
 [Pleo](https://pleo.io) is the spending solution for forward-thinking teams everywhere. The smart company cards empower thousands of businesses across Europe.
 
-My initial focus is pushing the Pleo frontend platform forward as part of the Engineering Productivity domain.
+I was part of founding Web Core, a team dedicated to push the Pleo frontend platform forward as part of the Engineering Productivity domain. We radically improved the overall developer experience, mono-repo tooling, CI/CD pipelines, codebase quality, and client-server communication through various cross team initiatives.
 
 ### Head of Engineering | Electricity Maps (2020-2021)
 
@@ -71,13 +73,13 @@ Technologies: Java, Ruby, Python, Oracle Data Integrator, PostgreSQL, PL / SQL, 
 
 ### Freelancing | Skovhus Webdesign (2004-2008)
 
-Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, etc.
+Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, and had a lot of fun with Flash.
 
 Technologies: PHP, .net, Flash, ActionScript, HTML, CSS, SQL.
 
 ---
 
-## Education
+# Education
 
 ### M.Sc., Technical University of Denmark (2010-2012)
 
@@ -95,4 +97,4 @@ Computer Science and Engineering. Average grade: A+.
 
 Software Technology. Average grade: A.
 
-**Bachelor project:** [Camera Control and Data Handling on DTUsat-2](http://etd.dtu.dk/thesis/247198/). Under the supervision of Hans Henrik Løvengreen, we further developed the onboard software on the DTU student satellite, DTUsat-2. The primary focus was on the camera control and data handling. The satellite is still active and in orbit. Grade: A+.
+**Bachelor project:** [Camera Control and Data Handling on DTUsat-2](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=6a312bd6cf7e1d4fc10782df6b2eb27c64d44313). Under the supervision of Hans Henrik Løvengreen, we further developed the onboard software on the DTU student satellite, DTUsat-2. The primary focus was on the camera control and data handling. The satellite is still active and in orbit. Grade: A+.
