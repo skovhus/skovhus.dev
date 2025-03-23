@@ -1,4 +1,5 @@
 .container {
+  --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1.0);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   grid-gap: 16px;
@@ -11,9 +12,19 @@
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  transition: box-shadow 0.4s var(--transition-timing);
   box-shadow: var(--color-shadow) 0px 0px 3px;
   text-decoration: none;
+}
+
+.link img {
+  filter: grayscale(30%);
+  transition: filter 0.4s var(--transition-timing);
+}
+
+.link:hover img,
+.link:focus img {
+  filter: grayscale(0%);
 }
 
 .link:hover,
