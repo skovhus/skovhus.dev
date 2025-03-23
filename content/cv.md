@@ -63,7 +63,7 @@ Contributions:
 
 Technologies: Java, Ruby, Python, PostgreSQL, and fun with XSLT.
 
-### Freelancing | Skovhus Webdesign (2004-2008)
+### Freelancing (2000-2008)
 
 Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, and had a lot of fun with Flash.
 
