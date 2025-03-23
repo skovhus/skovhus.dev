@@ -13,7 +13,9 @@ export default function OgTest() {
   return (
     <>
       <HugeHeading>OpenGraph image playground</HugeHeading>
-      <OgImagePlayground />
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <OgImagePlayground />
+      </React.Suspense>
     </>
   )
 }
