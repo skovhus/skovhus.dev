@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 import Discography from '../../components/Discography'
-import { HugeHeading } from '../../components/HugeHeading'
+import { EmptyTopSpace } from '../../components/HugeHeading'
 
 export const metadata: Metadata = {
   title: 'Music',
@@ -10,9 +10,7 @@ export const metadata: Metadata = {
 export default function Music() {
   return (
     <>
-      <HugeHeading style={{ marginBottom: '3.5rem' }}>
-        Music has always been a big part of my life. Here are some recordings I made.
-      </HugeHeading>
+      <EmptyTopSpace />
       <Discography />
     </>
   )

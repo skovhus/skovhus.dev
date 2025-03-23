@@ -34,7 +34,7 @@ body {
 main h1:first-child,
 main h2:first-child,
 main h3:first-child {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 a {
@@ -51,6 +51,10 @@ a {
 a:hover,
 a:active {
   text-decoration-color: var(--color-accent);
+}
+a:focus-visible {
+  outline: var(--color-accent) solid 2px;
+  border-radius: 1px;
 }
 figure a,
 h1 a,
@@ -193,10 +197,6 @@ progress {
 template {
   display: none;
 }
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
 a:active,
 a:hover {
   outline-width: 0;
@@ -248,11 +248,6 @@ samp {
   font-family: var(--font-mono);
   font-variant-ligatures: none;
   font-size: 1em;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
 }
 button,
 input,
@@ -367,7 +362,7 @@ h1 {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 h2 {
   margin-left: 0;
@@ -605,6 +600,8 @@ iframe {
   margin-bottom: 1.75rem;
 }
 hr {
+  box-sizing: content-box;
+  overflow: visible;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -753,30 +750,15 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
-a {
-  color: white;
-
-  text-decoration-color: var(--color-shadow);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.15s;
-}
-a:hover,
-a:active {
-  text-decoration-color: var(--color-accent);
-}
-figure a,
-h1 a,
-h2 a,
-h3 a,
-h4 a {
-  text-decoration: none;
-  color: var(--color-accent);
+hr:has(+ h1),
+hr:has(+ h2),
+hr:has(+ h3),
+hr:has(+ h4),
+hr:has(+ h5),
+hr:has(+ h6) {
+  margin-top: 3rem;
 }
 
 mark,

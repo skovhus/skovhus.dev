@@ -1,37 +1,34 @@
-My passion is building meaningful software together with talented people.
+My passion is crafting quality software together with talented people.
 
-I offer around 20 years of industry experience, M.Sc. in computer science and engineering, dedication, professionalism, and great empathy for co-workers and end users.
+With two decades of industry experience and an M.Sc. in Computer Science and Engineering, I combine technical excellence, strong leadership abilities, and a deep empathy for end-users to effectively build impactful products.
 
-I love mentoring, sharing knowledge, and excel in working full-stack with web technologies. I am very fond of TypeScript, Python, GraphQL, React, codemods, testing, and automation. Read more about my [engineering principles](/blog/software-engineering-principles/).
+I thrive in full-stack development using web technologies like TypeScript, node.js, React, and GraphQL.
+
+Read more about my [engineering principles](/blog/software-engineering-principles/).
 
 ---
 
-## Work experience
+# Work experience
 
-### Software Engineer | Linear (2021-present)
+### Software Engineer | Linear (2023-present)
 
-[Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don’t think of Linear as just a better “tool”, but as a better “way” to build software.
+[Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don't think of Linear as just a better "tool", but as a better "way" to build software.
 
 ### Staff Engineer | Pleo (2021-2023)
 
 [Pleo](https://pleo.io) is the spending solution for forward-thinking teams everywhere. The smart company cards empower thousands of businesses across Europe.
 
-My initial focus is pushing the Pleo frontend platform forward as part of the Engineering Productivity domain.
+I was part of founding Web Core, a team dedicated to push the Pleo frontend platform forward as part of the Engineering Productivity domain. We radically improved the overall developer experience, mono-repo tooling, CI/CD pipelines, codebase quality, and client-server communication through various cross team initiatives.
 
 ### Head of Engineering | Electricity Maps (2020-2021)
 
-In the next decade, the transition to a low-carbon electricity system will require every organisation and government to understand and reduce their real electricity footprint. [electricityMap](https://electricitymap.org/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
+As head of Engineering for [Electricity Maps](https://electricitymaps.com/) I worked on finding scalable digital solutions to climate change. After experimenting with B2C carbon accounting app ([North](https://www.tmrow.com/blog/sunsetting-north/)) and a B2B carbon accounting SaaS ([Bloom](https://www.tmrow.com/blog/closing-down-the-bloom-chapter/)), we decided to focus our efforts on [Electricity Maps](https://electricitymaps.com/). Read [more about our journey](https://www.tmrow.com/blog/lessons-learned-climate-tech/).
 
-My mission:
+[Electricity Maps](https://electricitymaps.com/) organises the world's electricity data to drive the transition towards a truly decarbonised electricity system.
 
-- Work directly with the founder and product manager to develop new features across our product portfolio
-- Steward a high-quality codebase and promote best practices in development within the company
-- Contribute in every aspect of the product development process, from thinking through UX and UI to hearing from customers and solving their problems
-- Inspire others, and to challenge product features, to make sure we build a product that is used and has the impact we want
-- To be a trusted advisor on all things technical, and build a world-class software engineering team
-- Do anything else you think is necessary to effectively decarbonize our society
+Key responsibilities included working closely with leadership on product strategy, building a world-class engineering team, establishing technical best practices, and driving the development of features across our product portfolio.
 
-Technologies: Python, Dataflow, Google Cloud Services, PostgreSQL, JavaScript, TypeScript, React, GraphQL, node.js, hasura.io
+Technologies: Python, Dataflow, Google Cloud Services, PostgreSQL, TypeScript, React, GraphQL, node.js, hasura.io
 
 ### Lead full-stack engineer | LEO Innovation Lab (2017-2020)
 
@@ -57,27 +54,24 @@ Technologies: Python, JavaScript, React, Backbone.js, node.js, MySQL, AMQP, AWS,
 
 ### Software Engineer | Region Hovedstaden (2009-2012)
 
-Part of the EU project PSIP (Patient Safety through Intelligent Procedures in medication) that facilitated the systematic production of epidemiological knowledge on Adverse Drug Events and worked on improving the entire medication cycle in a hospital environment.
+Worked on the EU project PSIP (Patient Safety through Intelligent Procedures in medication) focusing on data processing, data mining, and development of clinical decision support systems to improve medication safety in hospitals.
 
-My focus was data processing, data mining, and development and verification of clinical decision support systems.
+Contributions:
+- Collaborated with Aalborg, AUTH and Umit university, French hospitals, and commercial partners such as IBM, Medasys, and Oracle.
+- Participant and speaker at conferences in France, Italy, and Greece.
+- Published a peer-reviewed article "[From Adverse Drug Event Detection to Prevention A Novel Clinical Decision Support Framework for Medication Safety](https://www.researchgate.net/publication/267931932_From_Adverse_Drug_Event_Detection_to_Prevention_A_Novel_Clinical_Decision_Support_Framework_for_Medication_Safety)" in Methods of Information in Medicine.
 
-I was co-author on several EU reports and presentations about PSIP with collaboration with Aalborg, AUTH and Umit university, French hospitals, and commercial partners such as IBM, Medasys, and Oracle. Participant and speaker at conferences in France, Italy, and Greece.
+Technologies: Java, Ruby, Python, PostgreSQL, and fun with XSLT.
 
-Published an article in a peer-reviewed scientific journal: Koutkias et al. [From Adverse Drug Event Detection to Prevention A Novel Clinical Decision Support Framework for Medication Safety](https://www.researchgate.net/publication/267931932_From_Adverse_Drug_Event_Detection_to_Prevention_A_Novel_Clinical_Decision_Support_Framework_for_Medication_Safety). Methods of Information in Medicine, 2014.
+### Freelancing (2000-2008)
 
-After the EU project, I continued as a consultant at Sektion for Klinisk Information & Data, developing tools for streamlining business processes and automating data-intensive tasks when configuring health care systems.
-
-Technologies: Java, Ruby, Python, Oracle Data Integrator, PostgreSQL, PL / SQL, XML, XSLT.
-
-### Freelancing | Skovhus Webdesign (2004-2008)
-
-Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, etc.
+Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, and had a lot of fun with Flash.
 
 Technologies: PHP, .net, Flash, ActionScript, HTML, CSS, SQL.
 
 ---
 
-## Education
+# Education
 
 ### M.Sc., Technical University of Denmark (2010-2012)
 
@@ -95,4 +89,4 @@ Computer Science and Engineering. Average grade: A+.
 
 Software Technology. Average grade: A.
 
-**Bachelor project:** [Camera Control and Data Handling on DTUsat-2](http://etd.dtu.dk/thesis/247198/). Under the supervision of Hans Henrik Løvengreen, we further developed the onboard software on the DTU student satellite, DTUsat-2. The primary focus was on the camera control and data handling. The satellite is still active and in orbit. Grade: A+.
+**Bachelor project:** [Camera Control and Data Handling on DTUsat-2](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=6a312bd6cf7e1d4fc10782df6b2eb27c64d44313). Under the supervision of Hans Henrik Løvengreen, we further developed the onboard software on the DTU student satellite, DTUsat-2. The primary focus was on the camera control and data handling. The satellite is still active and in orbit. Grade: A+.

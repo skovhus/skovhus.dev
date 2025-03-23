@@ -1,22 +1,35 @@
 .container {
+  --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1.0);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-gap: 12px;
+  grid-gap: 16px;
   align-items: stretch;
+  margin-bottom: 2rem;
+  margin-top: 0.6rem;
 }
 
 .link {
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: var(--color-shadow) 0px 1px 4px;
+  transition: box-shadow 0.4s var(--transition-timing);
+  box-shadow: var(--color-shadow) 0px 0px 3px;
   text-decoration: none;
+}
+
+.link img {
+  filter: grayscale(30%);
+  transition: filter 0.4s var(--transition-timing);
+}
+
+.link:hover img,
+.link:focus img {
+  filter: grayscale(0%);
 }
 
 .link:hover,
 .link:focus {
-  box-shadow: var(--color-shadow) 0px 1px 20px;
+  box-shadow: var(--color-shadow) 0px 0px 20px;
 }
 
 .infoContainer {

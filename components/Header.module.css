@@ -16,7 +16,12 @@
 }
 
 .navLink {
+  opacity: 0.5;
   text-decoration: none;
+}
+
+.navLinkActive {
+  opacity: 1;
 }
 
 .navLink:hover {

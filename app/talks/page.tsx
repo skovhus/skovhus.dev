@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 
-import { HugeHeading } from '../../components/HugeHeading'
 import { Link } from '../../components/Link'
 
 export const metadata: Metadata = {
@@ -10,9 +9,6 @@ export const metadata: Metadata = {
 export default function Talks() {
   return (
     <>
-      <HugeHeading>
-        I enjoy giving talks. Here are some recordings and slides.
-      </HugeHeading>
       {TALKS.map((talk) => (
         <Link {...talk} key={talk.title} />
       ))}
