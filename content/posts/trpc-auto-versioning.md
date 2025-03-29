@@ -50,7 +50,7 @@ Even though this approach is viable, it introduces some friction for the develop
 
 To avoid any friction for the developer, we opted for making our tRPC server code immutable and auto-versioned. It requires some custom infrastructure setup, but it allows for a great developer experience and a seamless end-user experience – especially for web applications.
 
-![Traffic pattern of an auto-versioned immutable tRPC service. The coloring shows new deployments slowly taking over traffic. Notice the long tail caused by stale web clients.](./blog/bff-traffic.png)
+![Traffic pattern of an auto-versioned immutable tRPC service. The coloring shows new deployments slowly taking over traffic. Notice the long tail caused by stale web clients.](/blog/bff-traffic.png)
 
 This can be implemented using serverless services like Cloudflare Workers or AWS Lambda. The solution shares similarities with Next.js' [new skew protection feature](https://vercel.com/blog/version-skew-protection), but we recommend keeping the version active for longer than 24 hours to ensure compatibility with running applications.
 

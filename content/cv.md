@@ -10,17 +10,17 @@ Read more about my [engineering principles](/blog/software-engineering-principle
 
 # Work experience
 
-### Software Engineer | Linear (2023-present)
+## Product Engineer | Linear (2023-present)
 
 [Linear](https://linear.app) is a better way to build software. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don't think of Linear as just a better "tool", but as a better "way" to build software.
 
-### Staff Engineer | Pleo (2021-2023)
+## Staff Engineer | Pleo (2021-2023)
 
 [Pleo](https://pleo.io) is the spending solution for forward-thinking teams everywhere. The smart company cards empower thousands of businesses across Europe.
 
 I was part of founding Web Core, a team dedicated to push the Pleo frontend platform forward as part of the Engineering Productivity domain. We radically improved the overall developer experience, mono-repo tooling, CI/CD pipelines, codebase quality, and client-server communication through various cross team initiatives.
 
-### Head of Engineering | Electricity Maps (2020-2021)
+## Head of Engineering | Electricity Maps (2020-2021)
 
 As head of Engineering for [Electricity Maps](https://electricitymaps.com/) I worked on finding scalable digital solutions to climate change. After experimenting with B2C carbon accounting app ([North](https://www.tmrow.com/blog/sunsetting-north/)) and a B2B carbon accounting SaaS ([Bloom](https://www.tmrow.com/blog/closing-down-the-bloom-chapter/)), we decided to focus our efforts on [Electricity Maps](https://electricitymaps.com/). Read [more about our journey](https://www.tmrow.com/blog/lessons-learned-climate-tech/).
 
@@ -30,7 +30,7 @@ Key responsibilities included working closely with leadership on product strateg
 
 Technologies: Python, Dataflow, Google Cloud Services, PostgreSQL, TypeScript, React, GraphQL, node.js, hasura.io
 
-### Lead full-stack engineer | LEO Innovation Lab (2017-2020)
+## Lead full-stack engineer | LEO Innovation Lab (2017-2020)
 
 As an independent innovation unit, established by LEO Pharma, [LEO Innovation Lab](https://leoinnovationlab.com/) develops apps, digital platforms, and other initiatives to support people with chronic skin conditions.
 
@@ -42,7 +42,7 @@ As an independent innovation unit, established by LEO Pharma, [LEO Innovation La
 
 Technologies: React, React Native, JavaScript, TypeScript, GraphQL, node.js, and a bit of Kotlin, Swift, Scala.
 
-### Senior full-stack developer | issuu.com (2012-2016)
+## Senior full-stack developer | issuu.com (2012-2016)
 
 [issuu.com](https://issuu.com) is a digital publishing platform. It is an archive, library and newsstand all gathered in one reading experience with 50+ million publications and 100 million monthly unique visitors.
 
@@ -52,7 +52,7 @@ From 2015 I had the pleasure to lead an awesome cross-functional delivery team. 
 
 Technologies: Python, JavaScript, React, Backbone.js, node.js, MySQL, AMQP, AWS, Docker, and a bit of Erlang and OCaml.
 
-### Software Engineer | Region Hovedstaden (2009-2012)
+## Software Engineer | Region Hovedstaden (2009-2012)
 
 Worked on the EU project PSIP (Patient Safety through Intelligent Procedures in medication) focusing on data processing, data mining, and development of clinical decision support systems to improve medication safety in hospitals.
 
@@ -63,7 +63,7 @@ Contributions:
 
 Technologies: Java, Ruby, Python, PostgreSQL, and fun with XSLT.
 
-### Freelancing (2000-2008)
+## Freelancing (2000-2008)
 
 Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, and had a lot of fun with Flash.
 
@@ -73,7 +73,7 @@ Technologies: PHP, .net, Flash, ActionScript, HTML, CSS, SQL.
 
 # Education
 
-### M.Sc., Technical University of Denmark (2010-2012)
+## M.Sc., Technical University of Denmark (2010-2012)
 
 Computer Science and Engineering. Average grade: A+.
 
@@ -85,7 +85,7 @@ Computer Science and Engineering. Average grade: A+.
 - Artificial intelligence and multi-agent systems
 - Requirements Engineering.
 
-### B.Sc., Technical University of Denmark (2006-2009)
+## B.Sc., Technical University of Denmark (2006-2009)
 
 Software Technology. Average grade: A.
 

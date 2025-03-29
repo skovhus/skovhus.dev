@@ -9,7 +9,7 @@ featuredImage: "/blog/triage-responsibility.webp"
 Today I hit my four-month mark at [Linear](https://linear.app). A moment to pause, look back, and reflect on the journey so far and why I joined Linear on our mission to bring back the magic of software.
 
 
-### Where it all started
+## Where it all started
 
 Let’s rewind to the beginning. Childhood memories of bulky monitors. The hum of dial-up modems filled the room, orchestrating a symphony to push us into an online world. A magical world of connectivity, community, knowledge, and a canvas that allowed us to build yet another Red Hot Chili Peppers fan page on GeoCities. I wanted to build experiences using software.
 
@@ -22,7 +22,7 @@ So, three years ago (fall 2020), when I first tried Linear, I was instantly capt
 I spontaneously wrote a job application after reading the [Linear README](https://linear.app/readme) in December 2021, but due to other opportunities I ended up not sending it. A year later it was Linear who reached out to me. I was thrilled.
 
 
-### The work trial
+## The work trial
 
 My interview process with Linear ended up in a one-week paid work trial (June 2023). While a paid work trial represents a significant commitment from both parties, it proved to be extremely valuable to see the company from the inside (culture, people, codebase) and to feel I could contribute.
 
@@ -33,7 +33,7 @@ By the third day of my work trial, I had shipped a new database entity, GraphQL 
 Another enabler is the extensive use of feature flagging, coupled with excellent tooling. This approach allows for extensive experiments and allowed the Linear team to use the *triage responsibility* feature I developed after my trial ended.
 
 
-### The first months
+## The first months
 
 I joined Linear in August this year, and started fixing smaller bugs to familiarize myself with the codebase and product, dived into customer feedback. After a few weeks, I restarted the triage responsibility project and we quickly rolled the feature out to a smaller set of beta customers.
 
@@ -50,7 +50,7 @@ Some observations from my first time:
 - A small effective team can do wonders.
 
 
-### Wrapping up
+## Wrapping up
 
 I have a sense that Linear could be the place where I’ll do some of the best work of my career. That feels pretty good!
 

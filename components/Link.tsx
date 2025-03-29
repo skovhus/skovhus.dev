@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { ExternalLink } from './ExternalLink'
+import styles from './Link.module.css'
 
 export const Link = ({
   description,
@@ -17,21 +18,21 @@ export const Link = ({
   const linkElement = linkTo.startsWith('http') ? (
     <ExternalLink href={linkTo}>{title}</ExternalLink>
   ) : (
-    <NextLink href={linkTo} style={{ boxShadow: `none` }}>
+    <NextLink href={linkTo} className={styles.link}>
       {title}
     </NextLink>
   )
 
   return (
     <>
-      <h3
+      <h2
         style={{
-          marginBottom: '0.4375rem',
+          marginBottom: 0,
         }}
       >
         {linkElement}
-      </h3>
-      <small>{subTitle}</small>
+      </h2>
+      <small style={{ opacity: 0.8 }}>{subTitle}</small>
       <p
         dangerouslySetInnerHTML={{
           __html: description,
