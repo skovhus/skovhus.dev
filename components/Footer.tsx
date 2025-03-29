@@ -2,10 +2,16 @@ import React from 'react'
 
 import { ExternalLink } from './ExternalLink'
 import styles from './Footer.module.css'
+import { getSlideAnimationProps } from 'lib/slide-animation'
 
 export function Footer() {
+  const slideAnimation = getSlideAnimationProps({ stage: 2 })
+
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={`${styles.footer} ${slideAnimation.className}`}
+      style={slideAnimation.style}
+    >
       <div className={styles.footerInner}>
         {/* Icons from https://simpleicons.org/ */}
 
