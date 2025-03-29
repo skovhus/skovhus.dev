@@ -1,0 +1,9 @@
+.link {
+  color: var(--color-accent);
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.link:hover {
+  filter: brightness(1.3);
+}

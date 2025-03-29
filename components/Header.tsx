@@ -11,7 +11,7 @@ const pages: { path: string; label: string }[] = [
   { path: '/', label: 'index' },
   { path: '/blog', label: 'writing' },
   { path: '/talks', label: 'talks' },
-  { path: '/music', label: 'discography' },
+  { path: '/music', label: 'music' },
   { path: '/about', label: 'about' },
 ]
 
@@ -31,7 +31,9 @@ export function Header() {
               href={path}
               className={[
                 styles.navLink,
-                pathname == path ? styles.navLinkActive : '',
+                pathname === path || (path.length > 1 && pathname.startsWith(path))
+                  ? styles.navLinkActive
+                  : '',
               ].join(' ')}
               key={path}
             >
