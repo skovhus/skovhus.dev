@@ -29,7 +29,7 @@ const TALKS: Talk[] = [
     linkTo:
       'https://speakerdeck.com/skovhus/moving-pleos-frontend-into-the-third-age-of-javascript-from-webpack-to-vite',
     title: 'Moving Pleo’s frontend into the Third Age of JavaScript',
-    subTitle: 'Copenhagen React Meetup (June 2023)',
+    subTitle: 'Copenhagen React Meetup (June 2022)',
   },
   {
     description:
