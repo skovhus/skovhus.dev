@@ -118,4 +118,4 @@ Do you, or your team have a set of principles? I would love to hear about them.
 
 ---
 
-*Thanks to [Maciek Pekala](https://twitter.com/penzington) for reviewing this post.*
+*Thanks to [Maciek Pekala](https://x.com/penzington) for reviewing this post.*

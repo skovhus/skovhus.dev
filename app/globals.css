@@ -1,8 +1,8 @@
 :root {
   --background-code-block: rgb(10, 25, 47);
-  --background-context-color: rgb(20, 22, 32);
-  --background-hr: hsla(0, 0%, 100%, 0.2);
-  --color-accent: rgb(140, 160, 227);
+  --background-context-color: rgb(18, 20, 28);
+  --background-hr: hsla(0, 0%, 100%, 0.33);
+  --color-accent: rgb(180, 190, 240);
   --color-inline-code-background: rgb(23, 23, 23);
   --color-inline-code-text: #e6e6e6;
   --color-shadow: rgba(140, 160, 227, 0.6);
@@ -574,7 +574,7 @@ hr {
   margin-bottom: calc(1.75rem - 1px);
   background: var(--background-hr);
   border: none;
-  height: 1px;
+  height: 0.5px;
 }
 address {
   margin-left: 0;

@@ -69,10 +69,10 @@ Notice that there are cases where you want to keep your PropTypes (possible alon
 - PropTypes in library code can help consumers and document an interface
 - If you have no automated tests validating your flow definitions of any external resources (like an API), PropTypes can be really helpful. For this I would recommend using [babel-plugin-flow-react-proptypes](https://github.com/brigand/babel-plugin-flow-react-proptypes) to add PropTypes at build time
 - PropTypes are still great for learning material on React (no need to burden new people with Flow/TypeScript)
-- PropTypes can be more flexible than what the Flow type-checker currently supports (e.g. [validating a number is in a particular range](https://twitter.com/Daniel15/status/851232924225556480))
+- PropTypes can be more flexible than what the Flow type-checker currently supports (e.g. [validating a number is in a particular range](https://x.com/Daniel15/status/851232924225556480))
 
 ---
 
-_Thanks to [Maciek Pekala](https://twitter.com/penzington) and [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post._
+_Thanks to [Maciek Pekala](https://x.com/penzington) and [Mads Hartmann](https://x.com/mads_hartmann) for reviewing this post._
 
 _This blog post was originally posted on [medium/netscape](https://medium.com/netscape/react-proptypes-to-flow-codemod-9757f5ec5381)._

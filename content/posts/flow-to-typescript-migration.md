@@ -117,4 +117,4 @@ So long Flow! 👋 And thanks for all the checking + healthy competition in the 
 
 ---
 
-_Thanks to [Mads Hartmann](https://twitter.com/mads_hartmann) for reviewing this post._
+_Thanks to [Mads Hartmann](https://x.com/mads_hartmann) for reviewing this post._

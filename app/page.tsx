@@ -21,8 +21,7 @@ export default function Home() {
       <p>
         Follow via <Link href="/feed">RSS</Link> or connect on{' '}
         <ExternalLink href="https://www.linkedin.com/in/skovhus">LinkedIn</ExternalLink>{' '}
-        or <ExternalLink href="https://twitter.com/kenneth_skovhus">Twitter</ExternalLink>
-        .
+        or <ExternalLink href="https://x.com/kenneth_skovhus">Twitter/X</ExternalLink>.
       </p>
     </>
   )

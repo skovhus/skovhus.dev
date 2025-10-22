@@ -22,7 +22,7 @@ This is what sets React Native apart from other cross-platform solutions. Render
 
 Navigation has always been a bit of a problem on React Native, but the vast amount of packages that are available show that this area is under development. Ideally, Facebook would create or, at least, recommend one solution. But for now, that’s not the case, and we all have to choose a third party library and stick with it. For us, the main contenders were [react-navigation](https://github.com/react-navigation/react-navigation) and [wix/react-native-navigation](https://github.com/wix/react-native-navigation). The first is very flexible and runs everything purely in JavaScript, while the second one is based on native navigation on both platforms. We decided to go with react-native-navigation because we felt like native components would make the app feel more familiar to our users.
 
-_EDIT FROM JANUARY 2019: the native feel of react-native-navigation didn’t make up for the amount of Android bugs, tight coupling with screen components, and non-declarative API. We [migrated to react-navigation](https://twitter.com/kenneth_skovhus/status/1076186546322243584)._
+_EDIT FROM JANUARY 2019: the native feel of react-native-navigation didn’t make up for the amount of Android bugs, tight coupling with screen components, and non-declarative API. We [migrated to react-navigation](https://x.com/kenneth_skovhus/status/1076186546322243584)._
 
 ## Getting used to JavaScript
 

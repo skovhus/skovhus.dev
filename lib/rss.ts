@@ -8,7 +8,7 @@ const generateRssFeed = async (): Promise<Feed> => {
   const author = {
     name: 'Kenneth Skovhus',
     email: 'kenneth.skovhus@gmail.com',
-    link: 'https://twitter.com/kenneth_skovhus',
+    link: 'https://x.com/kenneth_skovhus',
   }
 
   const feed = new Feed({
