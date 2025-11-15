@@ -13,7 +13,7 @@ export default function Stream() {
 
   return (
     <>
-      <p style={{ marginBottom: '2rem', opacity: 0.8 }}>
+      <p style={{ marginTop: '1.3rem', marginBottom: '2.5rem' }}>
         A stream of bits and pieces on building software.
       </p>
       {items.map((item) => (
