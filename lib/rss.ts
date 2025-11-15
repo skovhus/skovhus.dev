@@ -1,8 +1,7 @@
 import { Feed } from 'feed'
 
-import { getAllBlogPosts } from './blog'
 import { siteMetadata, siteUrl } from './constants'
-import { TALKS } from './talks'
+import { getAllFeedItems } from './feed'
 
 const generateRssFeed = async (): Promise<Feed> => {
   const date = new Date()
@@ -27,27 +26,18 @@ const generateRssFeed = async (): Promise<Feed> => {
     author,
   })
 
-  // Add blog posts
-  getAllBlogPosts().forEach((post) => {
-    const url = `${siteUrl}/blog/${post.slug}`
+  // Add all feed items (blogs + talks)
+  getAllFeedItems().forEach((item) => {
+    const typeLabel = item.type === 'blog' ? 'Blog' : 'Talk'
+    const description =
+      item.type === 'talk' ? `${item.subTitle}\n\n${item.description}` : item.description
 
     feed.addItem({
-      title: `[Blog] ${post.title}`,
-      id: url,
-      link: url,
-      description: post.description,
-      date: new Date(post.publishedAt),
-    })
-  })
-
-  // Add talks
-  TALKS.forEach((talk) => {
-    feed.addItem({
-      title: `[Talk] ${talk.title}`,
-      id: talk.linkTo,
-      link: talk.linkTo,
-      description: `${talk.subTitle}\n\n${talk.description}`,
-      date: new Date(talk.date),
+      title: `[${typeLabel}] ${item.title}`,
+      id: item.linkTo,
+      link: item.linkTo,
+      description,
+      date: item.date,
     })
   })
 

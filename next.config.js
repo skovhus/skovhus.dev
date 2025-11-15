@@ -4,7 +4,11 @@ const { withContentlayer } = require('next-contentlayer')
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  redirects: async () => [{ source: '/cv', destination: '/about', permanent: true }],
+  redirects: async () => [
+    { source: '/cv', destination: '/about', permanent: true },
+    { source: '/blog', destination: '/stream', permanent: true },
+    { source: '/talks', destination: '/stream', permanent: true },
+  ],
 }
 
 module.exports = withContentlayer(nextConfig)

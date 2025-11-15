@@ -2,9 +2,9 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { ExternalLink } from './ExternalLink'
-import styles from './Link.module.css'
+import styles from './FeedItem.module.css'
 
-export const Link = ({
+export const FeedItem = ({
   description,
   linkTo,
   subTitle,
@@ -15,8 +15,12 @@ export const Link = ({
   linkTo: string
   title: string
 }) => {
-  const linkElement = linkTo.startsWith('http') ? (
-    <ExternalLink href={linkTo}>{title}</ExternalLink>
+  const isExternal = linkTo.startsWith('http')
+
+  const linkElement = isExternal ? (
+    <ExternalLink href={linkTo} showIcon>
+      {title}
+    </ExternalLink>
   ) : (
     <NextLink href={linkTo} className={styles.link}>
       {title}
@@ -24,20 +28,14 @@ export const Link = ({
   )
 
   return (
-    <>
-      <h2
-        style={{
-          marginBottom: 0,
-        }}
-      >
-        {linkElement}
-      </h2>
-      <small style={{ opacity: 0.8 }}>{subTitle}</small>
+    <div className={styles.feedItem}>
+      <h2 className={styles.title}>{linkElement}</h2>
+      <small className={styles.subtitle}>{subTitle}</small>
       <p
         dangerouslySetInnerHTML={{
           __html: description,
         }}
       />
-    </>
+    </div>
   )
 }
