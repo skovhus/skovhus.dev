@@ -1,4 +1,4 @@
-I fell in love with computers and web technologies in the 90s; I’ve since replaced Macromedia with TypeScript — but the goal hasn’t changed: crafting meaningful software people love.
+I fell in love with computers and web technologies in the 90s; I’ve since replaced ActionScript with TypeScript — but the goal hasn’t changed: crafting meaningful software people love.
 
 With two decades of industry experience and an M.Sc. in Computer Science and Engineering, I build products end‑to‑end.
 
