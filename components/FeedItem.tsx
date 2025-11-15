@@ -3,8 +3,8 @@ import React from 'react'
 
 import { FeedItem as FeedItemProps } from '../lib/feed'
 import { ExternalLink } from './ExternalLink'
-import { FeedItemTag } from './FeedItemTag'
 import styles from './FeedItem.module.css'
+import { FeedItemTag } from './FeedItemTag'
 
 export const FeedItem = ({
   type,
