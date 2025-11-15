@@ -17,13 +17,7 @@ export default function Stream() {
         A stream of bits and pieces on building software.
       </p>
       {items.map((item) => (
-        <FeedItem
-          description={item.description}
-          key={item.linkTo}
-          linkTo={item.linkTo}
-          subTitle={item.subTitle}
-          title={item.title}
-        />
+        <FeedItem {...item} key={item.linkTo} />
       ))}
     </>
   )

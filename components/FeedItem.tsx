@@ -1,20 +1,18 @@
 import NextLink from 'next/link'
 import React from 'react'
 
+import { FeedItem as FeedItemProps } from '../lib/feed'
 import { ExternalLink } from './ExternalLink'
+import { FeedItemTag } from './FeedItemTag'
 import styles from './FeedItem.module.css'
 
 export const FeedItem = ({
+  type,
   description,
   linkTo,
   subTitle,
   title,
-}: {
-  subTitle: string
-  description: string
-  linkTo: string
-  title: string
-}) => {
+}: Omit<FeedItemProps, 'date'>) => {
   const isExternal = linkTo.startsWith('http')
 
   const linkElement = isExternal ? (
@@ -30,7 +28,10 @@ export const FeedItem = ({
   return (
     <div className={styles.feedItem}>
       <h2 className={styles.title}>{linkElement}</h2>
-      <small className={styles.subtitle}>{subTitle}</small>
+      <small className={styles.subtitle}>
+        <FeedItemTag>{type}</FeedItemTag>
+        {subTitle}
+      </small>
       <p
         dangerouslySetInnerHTML={{
           __html: description,

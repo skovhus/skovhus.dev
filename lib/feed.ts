@@ -3,7 +3,7 @@ import { compareDesc } from 'date-fns'
 import { BlogPost, getAllBlogPosts } from './blog'
 import { Talk, TALKS } from './talks'
 
-export type FeedItemType = 'blog' | 'talk'
+export type FeedItemType = 'blog' | 'talk' | 'slides'
 
 export type FeedItem = {
   type: FeedItemType
@@ -30,18 +30,16 @@ export function getAllFeedItems(): FeedItem[] {
     timeToRead: post.timeToRead,
   }))
 
-  const talks: FeedItem[] = TALKS.map((talk: Talk) => {
-    const isSpeakerDeck = talk.linkTo.includes('speakerdeck.com')
-    const mediaType = isSpeakerDeck ? 'slides' : 'video'
-    return {
-      type: 'talk' as const,
-      title: talk.title,
-      description: talk.description,
-      linkTo: talk.linkTo,
-      subTitle: `${talk.subTitle} • ${mediaType}`,
-      date: new Date(talk.date),
-    }
-  })
+  const talks: FeedItem[] = TALKS.map((talk: Talk) => ({
+    type: talk.linkTo.includes('speakerdeck.com')
+      ? ('slides' as const)
+      : ('talk' as const),
+    title: talk.title,
+    description: talk.description,
+    linkTo: talk.linkTo,
+    subTitle: talk.subTitle,
+    date: new Date(talk.date),
+  }))
 
   const allItems = [...blogPosts, ...talks]
 
