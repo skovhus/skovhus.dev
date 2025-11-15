@@ -21,7 +21,6 @@ export function getPostBySlug(slug: string): BlogPost {
  */
 export function getAllBlogPosts(): BlogPost[] {
   const posts = allBlogPosts.sort((a, b) =>
-    // eslint-disable-next-line prettier/prettier
     compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
   )
 

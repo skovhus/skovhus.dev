@@ -17,7 +17,7 @@ In this blog post, I'll share the solution we came up with when addressing this 
 
 ## Library Guidelines & Best Practices
 
-Frameworks and tools tackle the compatibility challenge differently. For example, GraphQL recommends [making all changes backward compatible](https://graphql.org/learn/best-practices/#versioning). Next.js only recently introduced a beta of a new [skew protection feature](https://vercel.com/blog/version-skew-protection), but also [automatically update to the latest version](https://nextjs.org/docs/deployment#automatic-updates) in the background when routing, but API routes (used for actions/forms) are not automatically versioned. Remix does not handle automatic upgrades – any action on the page will break if the client is outdated and the loader is incompatible. For tRPC, it is suggested by the community to keep the client and server in sync.
+Frameworks and tools tackle the compatibility challenge differently. For example, GraphQL recommends [making all changes backward compatible](https://graphql.org/learn/best-practices/#versioning). Next.js only recently introduced a beta of a new [skew protection feature](https://vercel.com/blog/version-skew-protection), but also [automatically update to the latest version](https://nextjs.org/docs/deployment#automatic-updates) in the background when routing, but API routes (used for actions/forms) are not automatically versioned. Remix does not handle automatic upgrades — any action on the page will break if the client is outdated and the loader is incompatible. For tRPC, it is suggested by the community to keep the client and server in sync.
 
 
 ## General Strategies
@@ -48,7 +48,7 @@ Even though this approach is viable, it introduces some friction for the develop
 
 ## Solution: Auto-Versioning
 
-To avoid any friction for the developer, we opted for making our tRPC server code immutable and auto-versioned. It requires some custom infrastructure setup, but it allows for a great developer experience and a seamless end-user experience – especially for web applications.
+To avoid any friction for the developer, we opted for making our tRPC server code immutable and auto-versioned. It requires some custom infrastructure setup, but it allows for a great developer experience and a seamless end-user experience — especially for web applications.
 
 ![Traffic pattern of an auto-versioned immutable tRPC service. The coloring shows new deployments slowly taking over traffic. Notice the long tail caused by stale web clients.](/blog/bff-traffic.png)
 

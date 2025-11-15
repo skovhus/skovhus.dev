@@ -15,7 +15,7 @@ export default function Home() {
       </p>
 
       <p>
-        This is my portfolio where I gather random bits – my attempt to fight digital
+        This is my portfolio where I gather random bits — my attempt to fight digital
         sharecropping and distill learnings.
       </p>
       <p>

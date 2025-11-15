@@ -20,7 +20,7 @@ const DISCOGRAPHY_DATA = [
   {
     linkTo: 'https://open.spotify.com/album/7dRSHYf2qgKGXyUaa2uTI1',
     title:
-      'Go for Gold: Kunst – How to Be Something for Others, While Being Completely Self​-​Absorbed (2014)',
+      'Go for Gold: Kunst — How to Be Something for Others, While Being Completely Self​-​Absorbed (2014)',
     subTitle: 'Bass, engineering',
     image: '/discography/go-for-gold-kunst.jpeg',
   },
