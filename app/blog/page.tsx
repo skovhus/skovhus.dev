@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Link } from '../../components/Link'
+import { FeedItem } from '../../components/FeedItem'
 import { getAllBlogPosts } from '../../lib/blog'
 
 export const metadata: Metadata = {
@@ -13,7 +13,8 @@ export default function BlogIndex() {
   return (
     <>
       {posts.map((post) => (
-        <Link
+        <FeedItem
+          type="blog"
           description={post.description}
           key={post.url}
           linkTo={post.url}

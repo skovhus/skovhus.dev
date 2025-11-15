@@ -9,8 +9,7 @@ import ProfileImage from './ProfileImage'
 
 const pages: { path: string; label: string }[] = [
   { path: '/', label: 'index' },
-  { path: '/blog', label: 'writing' },
-  { path: '/talks', label: 'talks' },
+  { path: '/stream', label: 'stream' },
   { path: '/music', label: 'music' },
   { path: '/about', label: 'about' },
 ]
