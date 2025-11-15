@@ -30,13 +30,14 @@ const generateRssFeed = async (): Promise<Feed> => {
   getAllFeedItems().forEach((item) => {
     const description =
       item.type === 'blog' ? item.description : `${item.subTitle}. ${item.description}`
-    const type = item.type.charAt(0).toUpperCase() + item.type.slice(1)
+
     feed.addItem({
-      title: `[${type}] ${item.title}`,
+      title: item.title,
       id: item.linkTo,
       link: item.linkTo,
       description,
       date: item.date,
+      category: [{ name: item.type }],
     })
   })
 
