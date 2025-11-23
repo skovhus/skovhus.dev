@@ -17,7 +17,7 @@ export default function Stream() {
         {metadata.description}
       </p>
       {items.map((item) => (
-        <FeedItem {...item} key={item.linkTo} />
+        <FeedItem {...item} key={item.linkTo || item.title} />
       ))}
     </>
   )

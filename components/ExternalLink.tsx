@@ -7,7 +7,7 @@ export const ExternalLink = ({
   showIcon = false,
   href,
 }: {
-  children: JSX.Element | string
+  children: React.ReactNode
   href: string
   showIcon?: boolean
 }) => (
