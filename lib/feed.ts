@@ -1,9 +1,9 @@
 import { compareDesc } from 'date-fns'
 
+import { Ship, SHIPS } from '../content/ships'
+import { Talk, TALKS } from '../content/talks'
 import { BlogPost, formatBlogMetadata, getAllBlogPosts } from './blog'
 import { formatDate } from './date-utils'
-import { Ship, SHIPS } from './ships'
-import { Talk, TALKS } from './talks'
 
 export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ships'
 
