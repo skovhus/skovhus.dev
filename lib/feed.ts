@@ -3,6 +3,7 @@ import { format, parseISO } from 'date-fns'
 
 import { Ship, SHIPS } from '#/content/ships'
 import { Talk, TALKS } from '#/content/talks'
+
 import { BlogPost, getAllBlogPosts } from './blog'
 
 export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ship'

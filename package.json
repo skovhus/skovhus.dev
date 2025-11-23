@@ -6,29 +6,30 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "contentlayer build && next build",
+    "build": "contentlayer2 build && next build",
     "start": "next start",
     "lint": "oxlint --type-aware && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
     "lint:fix": "oxlint --type-aware --fix && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
     "typecheck": "tsc --noEmit",
-    "verify": "contentlayer build && pnpm lint && pnpm typecheck"
+    "verify": "contentlayer2 build && pnpm lint && pnpm typecheck"
   },
   "dependencies": {
-    "contentlayer": "^0.3.4",
+    "contentlayer2": "^0.5.8",
     "date-fns": "^4.1.0",
     "feed": "^4.2.2",
     "next": "^14.0.0",
-    "next-contentlayer": "^0.3.4",
+    "next-contentlayer2": "^0.5.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reading-time": "^1.5.0",
-    "rehype-autolink-headings": "^7.0.0",
+    "rehype-autolink-headings": "^7.1.0",
     "rehype-figure": "^1.0.1",
-    "rehype-pretty-code": "^0.10.2",
+    "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",
-    "shiki": "^0.14.5"
+    "shiki": "^3.15.0"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/node": "^22.13.0",
     "@types/react": "^18.2.6",
     "@types/typography": "^0.16.4",

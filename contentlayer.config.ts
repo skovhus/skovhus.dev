@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeFigure from 'rehype-figure'
 import rehypePrettyCode from 'rehype-pretty-code'
@@ -63,6 +63,7 @@ const CurriculumVitae = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'content',
   documentTypes: [BlogPost, CurriculumVitae],
+  disableImportAliasWarning: true,
   mdx: {
     rehypePlugins: [
       rehypeSlug,
@@ -72,17 +73,9 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: 'material-theme-palenight',
-          onVisitLine(node: any) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: 'text', value: ' ' }]
-            }
-          },
-          onVisitHighlightedLine(node: any) {
-            node.properties.className.push('line--highlighted')
-          },
-          onVisitHighlightedWord(node: any) {
+          // grid: true is now default, so onVisitLine is no longer needed
+          // onVisitHighlightedLine has been removed in newer versions
+          onVisitHighlightedChars(node: any) {
             node.properties.className = ['word--highlighted']
           },
         },

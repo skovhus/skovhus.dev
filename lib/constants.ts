@@ -1,6 +1,7 @@
-import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from '#/components/OgImage'
-import { BlogPost } from 'contentlayer/generated'
 import { Metadata } from 'next'
+
+import { BlogPost } from '#/.contentlayer/generated'
+import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from '#/components/OgImage'
 
 export const siteUrl = `https://www.skovhus.dev`
 

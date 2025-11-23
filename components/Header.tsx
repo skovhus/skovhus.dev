@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 
 import { getSlideAnimationProps } from '#/lib/slide-animation'
+
 import styles from './Header.module.css'
 import ProfileImage from './ProfileImage'
 

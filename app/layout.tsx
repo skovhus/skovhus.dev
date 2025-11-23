@@ -1,5 +1,3 @@
-import './globals.css'
-
 import { Montserrat, Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
@@ -9,6 +7,8 @@ import { Header } from '#/components/Header'
 import { NavigationTracking } from '#/components/NavigationTracking'
 import { getBaseMetadata } from '#/lib/constants'
 import { getSlideAnimationProps } from '#/lib/slide-animation'
+
+import './globals.css'
 import styles from './layout.module.css'
 
 const jakarta = Plus_Jakarta_Sans({

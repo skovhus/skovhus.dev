@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { getSlideAnimationProps } from '#/lib/slide-animation'
+
 import { ExternalLink } from './ExternalLink'
 import styles from './Footer.module.css'
 

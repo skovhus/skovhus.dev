@@ -1,6 +1,7 @@
-import { allBlogPosts, BlogPost as ContentlayerBlogPost } from 'contentlayer/generated'
 import { compareDesc, format, parseISO } from 'date-fns'
 import readingTime from 'reading-time'
+
+import { allBlogPosts, BlogPost as ContentlayerBlogPost } from '#/.contentlayer/generated'
 
 export type BlogPost = ContentlayerBlogPost & {
   timeToRead: number

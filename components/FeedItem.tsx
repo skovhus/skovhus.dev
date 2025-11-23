@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { FeedItem as FeedItemProps } from '#/lib/feed'
+
 import { ExternalIcon } from './ExternalIcon'
 import styles from './FeedItem.module.css'
 import { FeedItemTag } from './FeedItemTag'

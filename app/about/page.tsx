@@ -1,7 +1,7 @@
-import { curriculumVitae } from 'contentlayer/generated'
 import { Metadata } from 'next'
-import { getMDXComponent } from 'next-contentlayer/hooks'
+import { getMDXComponent } from 'next-contentlayer2/hooks'
 
+import { curriculumVitae } from '#/.contentlayer/generated'
 import { HugeHeading } from '#/components/HugeHeading'
 
 export const metadata: Metadata = {
