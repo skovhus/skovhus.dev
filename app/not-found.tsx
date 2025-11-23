@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import React from 'react'
 
-import { HugeHeading } from '../components/HugeHeading'
+import { HugeHeading } from '#/components/HugeHeading'
 
 export const metadata: Metadata = {
   title: '404',

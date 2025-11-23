@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
-import { FeedItem } from '../../components/FeedItem'
-import { getAllFeedItems } from '../../lib/feed'
+import { FeedItem } from '#/components/FeedItem'
+import { getAllFeedItems } from '#/lib/feed'
 
 export const metadata: Metadata = {
   title: 'Stream',

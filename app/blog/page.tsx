@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
-import { FeedItem } from '../../components/FeedItem'
-import { formatBlogMetadata, getAllBlogPosts } from '../../lib/blog'
+import { FeedItem } from '#/components/FeedItem'
+import { formatBlogMetadata, getAllBlogPosts } from '#/lib/blog'
 
 export const metadata: Metadata = {
   title: 'Blog',

@@ -2,7 +2,7 @@
 import { useSearchParams } from 'next/navigation'
 import React from 'react'
 
-import { getAllBlogPosts } from '../lib/blog'
+import { getAllBlogPosts } from '#/lib/blog'
 import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH, OgImage, OgImageDefault } from './OgImage'
 
 export function OgImagePlayground() {

@@ -7,7 +7,7 @@ import {
   OG_IMAGE_WIDTH,
   OgImage,
   OgImageDefault,
-} from '../../components/OgImage'
+} from '#/components/OgImage'
 
 export const runtime = 'edge'
 
