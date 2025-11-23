@@ -14,6 +14,7 @@ export const FeedItem = ({
   title,
 }: Omit<FeedItemProps, 'date'>) => {
   const isExternal = linkTo?.startsWith('http')
+  const shouldOpenInNewTab = isExternal && !linkTo?.startsWith('https://linear')
 
   const content = (
     <>
@@ -42,8 +43,10 @@ export const FeedItem = ({
       <a
         href={linkTo}
         className={styles.feedItem}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(shouldOpenInNewTab && {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        })}
       >
         {content}
       </a>
