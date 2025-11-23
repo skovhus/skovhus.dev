@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { FeedItem as FeedItemProps } from '../lib/feed'
+import { ExternalLink } from './ExternalLink'
 import styles from './FeedItem.module.css'
 import { FeedItemTag } from './FeedItemTag'
 
@@ -16,7 +17,15 @@ export const FeedItem = ({
 
   const content = (
     <>
-      <h2 className={styles.title}>{title}</h2>
+      <h2 className={styles.title}>
+        {isExternal ? (
+          <ExternalLink href={linkTo} showIcon={true}>
+            {title}
+          </ExternalLink>
+        ) : (
+          title
+        )}
+      </h2>
       <small className={styles.subtitle}>
         <FeedItemTag>{type}</FeedItemTag>
         {subTitle}
@@ -30,16 +39,7 @@ export const FeedItem = ({
   )
 
   if (isExternal) {
-    return (
-      <a
-        href={linkTo}
-        className={styles.feedItem}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {content}
-      </a>
-    )
+    return <div className={styles.feedItem}>{content}</div>
   }
 
   return (
