@@ -13,12 +13,12 @@ export const FeedItem = ({
   subTitle,
   title,
 }: Omit<FeedItemProps, 'date'>) => {
-  const isExternal = linkTo.startsWith('http')
+  const isExternal = linkTo?.startsWith('http')
 
   const content = (
     <>
       <h2 className={styles.title}>
-        {isExternal ? (
+        {isExternal && linkTo ? (
           <ExternalLink href={linkTo} showIcon={true}>
             {title}
           </ExternalLink>
@@ -37,6 +37,10 @@ export const FeedItem = ({
       />
     </>
   )
+
+  if (!linkTo) {
+    return <div className={styles.feedItemStatic}>{content}</div>
+  }
 
   if (isExternal) {
     return <div className={styles.feedItem}>{content}</div>

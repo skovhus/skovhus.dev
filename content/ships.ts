@@ -1,6 +1,6 @@
 export type Ship = {
   description: string
-  linkTo: string
+  linkTo?: string
   title: string
   subTitle: string
   date: string
@@ -9,9 +9,9 @@ export type Ship = {
 export const SHIPS: Ship[] = [
   {
     description:
-      '⌘ ⌥ C. Added the ability to copy issues as markdown, optimized for sharing context with LLMs.',
+      '⌘ ⌥ C. Added the ability to copy entities as markdown, optimized for sharing context with LLMs.',
     linkTo: 'https://linear.app/changelog/page/3#copy-issues-as-markdown-for-llms',
-    title: 'Copy issues as markdown for LLMs',
+    title: 'Copy entities as markdown for LLMs',
     subTitle: 'Linear Changelog',
     date: '2025-02-13',
   },
@@ -34,7 +34,7 @@ export const SHIPS: Ship[] = [
   },
   {
     description:
-      'Shipped flexible project timeframes — plan with months, quarters, or years instead of exact dates.',
+      'Shipped flexible project timeframes. A purpose-built tool for developing software needs to support planning project timelines at your current level of certainty, such as next month, quarter, or year.',
     linkTo: 'https://linear.app/changelog/2024-01-17-project-timeframes',
     title: 'Project timeframes',
     subTitle: 'Linear Changelog',

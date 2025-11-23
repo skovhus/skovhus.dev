@@ -5,13 +5,13 @@ import { Talk, TALKS } from '../content/talks'
 import { BlogPost, formatBlogMetadata, getAllBlogPosts } from './blog'
 import { formatDate } from './date-utils'
 
-export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ships'
+export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ship'
 
 export type FeedItem = {
   type: FeedItemType
   title: string
   description: string
-  linkTo: string
+  linkTo?: string
   subTitle: string
   date: Date
   // Blog-specific fields
@@ -44,7 +44,7 @@ export function getAllFeedItems(): FeedItem[] {
   }))
 
   const ships: FeedItem[] = SHIPS.map((ship: Ship) => ({
-    type: 'ships' as const,
+    type: 'ship' as const,
     title: ship.title,
     description: ship.description,
     linkTo: ship.linkTo,

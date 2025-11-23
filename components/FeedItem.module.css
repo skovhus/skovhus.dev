@@ -7,6 +7,14 @@
   cursor: pointer;
 }
 
+.feedItemStatic {
+  display: block;
+  margin-bottom: 3rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
 .feedItem::before {
   content: '';
   position: absolute;
