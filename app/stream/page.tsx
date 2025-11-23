@@ -5,7 +5,7 @@ import { getAllFeedItems } from '../../lib/feed'
 
 export const metadata: Metadata = {
   title: 'Stream',
-  description: 'A stream of bits and pieces on building software.',
+  description: 'A stream of bits and pieces from building software.',
 }
 
 export default function Stream() {
