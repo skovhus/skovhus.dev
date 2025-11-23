@@ -7,6 +7,12 @@ export type Ship = {
 }
 
 export const SHIPS: Ship[] = [
+  {
+    title: 'Speeding up the Linear client',
+    description:
+      'Concluded a very long behind the scenes project to optimize how Linear client application performs, especially for large workspaces. Re-designing how the client boots, and essentially pre-loads data to make interactions as fast as possible.',
+    date: '2025-06-01',
+  },
   // {
   //   title: 'Copy entities as markdown for LLMs',
   //   description:
@@ -17,11 +23,17 @@ export const SHIPS: Ship[] = [
   // },
   {
     title: 'Pull request preview links',
-    description: 'Added pull request preview links as a first class citizen in Linear.',
+    description: 'Added pull request preview links as a first-class citizen in Linear.',
     linkTo:
       'https://linear.app/changelog/2024-10-10-document-subscriptions#pull-request-preview-links',
     subTitle: 'Linear Changelog',
     date: '2024-10-10',
+  },
+  {
+    title: 'Linear to Linear importer',
+    description:
+      'Shipped a new Linear to Linear importer, allowing users to migrate their data from one workspace to another with cross-regional support.',
+    date: '2024-08-10',
   },
   {
     title: 'Triage responsibility integrations',

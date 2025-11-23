@@ -34,7 +34,7 @@ export function getAllFeedItems(): FeedItem[] {
       ? ('slides' as const)
       : ('talk' as const),
     title: talk.title,
-    description: talk.description,
+    description: talk.description.trim(),
     linkTo: talk.linkTo,
     subTitle: formatItemSubtitle(talk.date, talk.subTitle),
     date: new Date(talk.date),
@@ -43,7 +43,7 @@ export function getAllFeedItems(): FeedItem[] {
   const ships: FeedItem[] = SHIPS.map((ship: Ship) => ({
     type: 'ship' as const,
     title: ship.title,
-    description: ship.description,
+    description: ship.description.trim(),
     linkTo: ship.linkTo,
     subTitle: formatItemSubtitle(ship.date, ship.subTitle),
     date: new Date(ship.date),
