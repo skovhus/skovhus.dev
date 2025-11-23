@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 import { FeedItem } from '../../components/FeedItem'
-import { getAllBlogPosts } from '../../lib/blog'
+import { formatBlogMetadata, getAllBlogPosts } from '../../lib/blog'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -18,7 +18,7 @@ export default function BlogIndex() {
           description={post.description}
           key={post.url}
           linkTo={post.url}
-          subTitle={`${post.formattedDate} • ${post.timeToRead} minute read`}
+          subTitle={formatBlogMetadata(post.formattedDate, post.timeToRead)}
           title={post.title}
         />
       ))}

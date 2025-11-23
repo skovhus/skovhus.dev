@@ -36,3 +36,10 @@ export function getAllBlogPosts(): BlogPost[] {
     }
   })
 }
+
+/**
+ * Formats blog post metadata subtitle.
+ */
+export function formatBlogMetadata(formattedDate: string, timeToRead: number): string {
+  return `${formattedDate}\u00A0\u00A0·\u00A0\u00A0${timeToRead} minute read`
+}

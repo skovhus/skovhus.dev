@@ -1,6 +1,6 @@
 import { compareDesc } from 'date-fns'
 
-import { BlogPost, getAllBlogPosts } from './blog'
+import { BlogPost, formatBlogMetadata, getAllBlogPosts } from './blog'
 import { Talk, TALKS } from './talks'
 
 export type FeedItemType = 'blog' | 'talk' | 'slides'
@@ -25,7 +25,7 @@ export function getAllFeedItems(): FeedItem[] {
     title: post.title,
     description: post.description,
     linkTo: post.url,
-    subTitle: `${post.formattedDate} • ${post.timeToRead} minute read`,
+    subTitle: formatBlogMetadata(post.formattedDate, post.timeToRead),
     date: new Date(post.publishedAt),
     timeToRead: post.timeToRead,
   }))
