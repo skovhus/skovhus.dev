@@ -1,9 +1,9 @@
 import { compareDesc } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 
 import { Ship, SHIPS } from '../content/ships'
 import { Talk, TALKS } from '../content/talks'
-import { BlogPost, formatBlogMetadata, getAllBlogPosts } from './blog'
-import { formatDate } from './date-utils'
+import { BlogPost, getAllBlogPosts } from './blog'
 
 export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ship'
 
@@ -14,8 +14,6 @@ export type FeedItem = {
   linkTo?: string
   subTitle: string
   date: Date
-  // Blog-specific fields
-  timeToRead?: number
 }
 
 /**
@@ -27,9 +25,8 @@ export function getAllFeedItems(): FeedItem[] {
     title: post.title,
     description: post.description,
     linkTo: post.url,
-    subTitle: formatBlogMetadata(post),
+    subTitle: formatItemSubtitle(post.publishedAt, `${post.timeToRead} minute read`),
     date: new Date(post.publishedAt),
-    timeToRead: post.timeToRead,
   }))
 
   const talks: FeedItem[] = TALKS.map((talk: Talk) => ({
@@ -39,7 +36,7 @@ export function getAllFeedItems(): FeedItem[] {
     title: talk.title,
     description: talk.description,
     linkTo: talk.linkTo,
-    subTitle: formatExternalItemSubtitle(talk.date, talk.subTitle),
+    subTitle: formatItemSubtitle(talk.date, talk.subTitle),
     date: new Date(talk.date),
   }))
 
@@ -48,7 +45,7 @@ export function getAllFeedItems(): FeedItem[] {
     title: ship.title,
     description: ship.description,
     linkTo: ship.linkTo,
-    subTitle: formatExternalItemSubtitle(ship.date, ship.subTitle),
+    subTitle: formatItemSubtitle(ship.date, ship.subTitle),
     date: new Date(ship.date),
   }))
 
@@ -58,6 +55,7 @@ export function getAllFeedItems(): FeedItem[] {
   return allItems.sort((a, b) => compareDesc(a.date, b.date))
 }
 
-function formatExternalItemSubtitle(dateString: string, subtitle: string): string {
-  return `${formatDate(dateString)}\u00A0\u00A0·\u00A0\u00A0${subtitle}`
+function formatItemSubtitle(dateString: string, subtitle?: string): string {
+  const date = format(parseISO(dateString), 'MMMM yyyy')
+  return subtitle ? `${date}\u00A0\u00A0·\u00A0\u00A0${subtitle}` : date
 }
