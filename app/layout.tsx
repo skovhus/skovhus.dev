@@ -1,6 +1,6 @@
 import './globals.css'
 
-import { Merriweather, Montserrat } from 'next/font/google'
+import { Montserrat, Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
@@ -11,12 +11,12 @@ import { getBaseMetadata } from '../lib/constants'
 import { getSlideAnimationProps } from '../lib/slide-animation'
 import styles from './layout.module.css'
 
-const merriweather = Merriweather({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
+  weight: ['300', '500'],
   style: ['normal', 'italic'],
-  weight: ['300'],
+  fallback: ['system-ui', 'sans-serif'],
   display: 'swap',
-  fallback: ['Georgia', 'serif'],
 })
 
 const montserrat = Montserrat({
@@ -30,7 +30,7 @@ export const metadata = getBaseMetadata()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${merriweather.className} ${montserrat.variable}`}>
+    <html lang="en" className={`${jakarta.className} ${montserrat.variable}`}>
       <body>
         <main className={styles.main}>
           <Header />

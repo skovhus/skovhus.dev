@@ -5,7 +5,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { ExternalLink } from '../../../components/ExternalLink'
 import { HugeHeading } from '../../../components/HugeHeading'
-import { getPostBySlug } from '../../../lib/blog'
+import { formatBlogMetadata, getPostBySlug } from '../../../lib/blog'
 import { getBaseMetadata, siteMetadata } from '../../../lib/constants'
 import styles from './page.module.css'
 
@@ -40,9 +40,7 @@ export default function BlogPostTemplate({ params }: SlugProps) {
     <section>
       <article className={styles.article}>
         <HugeHeading style={{ fontSize: '2.5rem' }}>{title}</HugeHeading>
-        <p className={styles.subtitle}>
-          {formattedDate} • {timeToRead} minute read
-        </p>
+        <p className={styles.subtitle}>{formatBlogMetadata(formattedDate, timeToRead)}</p>
         <Mdx code={post.body.code} />
       </article>
 
