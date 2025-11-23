@@ -1,6 +1,6 @@
-import { getBaseMetadata } from 'lib/constants'
 import React from 'react'
 
+import { getBaseMetadata } from '../../../lib/constants'
 import { HugeHeading } from '../../../components/HugeHeading'
 import { OgImagePlayground } from '../../../components/OgImagePlayground'
 

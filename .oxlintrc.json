@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "typescript/no-unused-vars": "error",
+    "react/jsx-key": "error",
+    "react/no-children-prop": "error"
+  }
+}
+

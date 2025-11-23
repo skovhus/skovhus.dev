@@ -1,4 +1,4 @@
-import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from 'components/OgImage'
+import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from '../components/OgImage'
 import { BlogPost } from 'contentlayer/generated'
 import { Metadata } from 'next'
 
