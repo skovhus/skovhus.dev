@@ -31,6 +31,10 @@ const generateRssFeed = async (): Promise<Feed> => {
     const description =
       item.type === 'blog' ? item.description : `${item.subTitle}. ${item.description}`
 
+    if (!item.linkTo) {
+      return
+    }
+
     feed.addItem({
       title: item.title,
       id: item.linkTo,
