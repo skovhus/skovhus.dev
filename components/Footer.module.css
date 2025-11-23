@@ -21,12 +21,13 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   transition-duration: 0.5s;
-  transition-property: fill transform;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-property: fill, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svgIcon:hover {
   fill: #fff;
+  transition-duration: 0.3s;
 }
 
 .svgIcon:hover,
