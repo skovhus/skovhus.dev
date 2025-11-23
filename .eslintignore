@@ -1,6 +1,0 @@
-.cache
-build
-public
-**/node_modules
-!.eslintrc.js
-src/__generated__

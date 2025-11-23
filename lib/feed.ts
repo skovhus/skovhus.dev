@@ -1,8 +1,8 @@
 import { compareDesc } from 'date-fns'
 import { format, parseISO } from 'date-fns'
 
-import { Ship, SHIPS } from '../content/ships'
-import { Talk, TALKS } from '../content/talks'
+import { Ship, SHIPS } from '#/content/ships'
+import { Talk, TALKS } from '#/content/talks'
 import { BlogPost, getAllBlogPosts } from './blog'
 
 export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ship'
@@ -52,7 +52,7 @@ export function getAllFeedItems(): FeedItem[] {
   const allItems = [...blogPosts, ...talks, ...ships]
 
   // Sort by date, most recent first
-  return allItems.sort((a, b) => compareDesc(a.date, b.date))
+  return allItems.toSorted((a, b) => compareDesc(a.date, b.date))
 }
 
 function formatItemSubtitle(dateString: string, subtitle?: string): string {

@@ -8,7 +8,8 @@
     "dev": "next dev",
     "build": "contentlayer build && next build",
     "start": "next start",
-    "lint": "next lint --fix && prettier **/*.css --write",
+    "lint": "oxlint --type-aware && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
+    "lint:fix": "oxlint --type-aware --fix && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
     "typecheck": "tsc --noEmit",
     "verify": "contentlayer build && pnpm lint && pnpm typecheck"
   },
@@ -31,13 +32,9 @@
     "@types/node": "^22.13.0",
     "@types/react": "^18.2.6",
     "@types/typography": "^0.16.4",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
-    "eslint-config-next": "^14",
-    "eslint-config-prettier": "^9",
-    "eslint-plugin-prettier": "^5",
-    "eslint-plugin-simple-import-sort": "^10",
-    "prettier": "^3",
-    "typescript": "^5"
+    "oxlint": "^1.29.0",
+    "oxlint-tsgolint": "^0.8.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
   }
 }
