@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { FeedItem as FeedItemProps } from '../lib/feed'
+import { ExternalIcon } from './ExternalIcon'
 import styles from './FeedItem.module.css'
 import { FeedItemTag } from './FeedItemTag'
 
@@ -12,11 +13,15 @@ export const FeedItem = ({
   subTitle,
   title,
 }: Omit<FeedItemProps, 'date'>) => {
-  const isExternal = linkTo.startsWith('http')
+  const isExternal = linkTo?.startsWith('http')
+  const shouldOpenInNewTab = isExternal && !linkTo?.startsWith('https://linear')
 
   const content = (
     <>
-      <h2 className={styles.title}>{title}</h2>
+      <h2 className={styles.title}>
+        {title}
+        {isExternal && <ExternalIcon />}
+      </h2>
       <small className={styles.subtitle}>
         <FeedItemTag>{type}</FeedItemTag>
         {subTitle}
@@ -29,13 +34,19 @@ export const FeedItem = ({
     </>
   )
 
+  if (!linkTo) {
+    return <div className={styles.feedItemStatic}>{content}</div>
+  }
+
   if (isExternal) {
     return (
       <a
         href={linkTo}
         className={styles.feedItem}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(shouldOpenInNewTab && {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        })}
       >
         {content}
       </a>

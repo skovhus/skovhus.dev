@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <HugeHeading>
-        Hey, I&apos;m Kenneth. I&apos;m a software engineer, 2x dad, and music nerd.
+        Hey, I’m Kenneth. I’m a software engineer, 2x dad, and music nerd.
       </HugeHeading>
       <p style={{ marginTop: '2rem' }}>
         Based in Copenhagen, Denmark. Currently building{' '}

@@ -8,8 +8,10 @@ export type Talk = {
 
 export const TALKS: Talk[] = [
   {
-    description:
-      'Give people great tools — an issue tracker that feels effortless, a developer setup that brings an immediate connection to what they’re creating — and they’ll do their best work.',
+    description: `
+      Give people great tools — an issue tracker that feels effortless, a developer setup that brings an immediate connection to what they’re creating — and they’ll do their best work.
+      Learnings from optimizing developer experience at Linear.
+    `,
     linkTo: 'https://www.youtube.com/watch?v=_m_DgkO9Dgw',
     title: 'Building in fast feedback loops',
     subTitle: 'ViteConf 2025',
@@ -40,8 +42,10 @@ export const TALKS: Talk[] = [
     date: '2017-09-01',
   },
   {
-    description:
-      'A brief motivation for the importance of static type safety in larger codebases. Comparison of different static type-checkers options for front-end code: TypeScript, Flow, Reason, Elm. Trade-offs and recommendations.',
+    description: `
+      A brief motivation for the importance of static type safety in larger codebases.
+      Comparison of different static type-checkers options for front-end code: TypeScript, Flow, Reason, Elm. Trade-offs and recommendations.
+    `,
     linkTo: 'https://speakerdeck.com/skovhus/type-safety-plus-front-end-code-equals',
     title: 'type safety + front-end code =',
     subTitle: 'Copenhagen.js Meetup at issuu.com (June 2017)',

@@ -5,7 +5,7 @@ import { getAllFeedItems } from '../../lib/feed'
 
 export const metadata: Metadata = {
   title: 'Stream',
-  description: 'A stream of bits and pieces on building software.',
+  description: 'A running log of things I’ve built and learned along the way.',
 }
 
 export default function Stream() {
@@ -14,7 +14,7 @@ export default function Stream() {
   return (
     <>
       <p style={{ marginTop: '1.3rem', marginBottom: '2.5rem' }}>
-        A stream of bits and pieces on building software.
+        {metadata.description}
       </p>
       {items.map((item) => (
         <FeedItem {...item} key={item.linkTo} />

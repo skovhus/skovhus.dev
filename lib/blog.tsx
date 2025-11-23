@@ -3,7 +3,6 @@ import { compareDesc, format, parseISO } from 'date-fns'
 import readingTime from 'reading-time'
 
 export type BlogPost = ContentlayerBlogPost & {
-  formattedDate: string
   timeToRead: number
 }
 
@@ -25,21 +24,19 @@ export function getAllBlogPosts(): BlogPost[] {
   )
 
   return posts.map((post) => {
-    const formattedDate = format(parseISO(post.publishedAt), 'MMMM dd, yyyy')
-
     const timeToRead = Math.round(readingTime(post.body.code).minutes)
 
     return {
       ...post,
-      formattedDate,
       timeToRead,
     }
   })
 }
 
-/**
- * Formats blog post metadata subtitle.
- */
-export function formatBlogMetadata(formattedDate: string, timeToRead: number): string {
-  return `${formattedDate}\u00A0\u00A0·\u00A0\u00A0${timeToRead} minute read`
+function formatDate(dateString: string): string {
+  return format(parseISO(dateString), 'MMMM dd, yyyy')
+}
+
+export function formatBlogMetadata(post: BlogPost): string {
+  return `${formatDate(post.publishedAt)}\u00A0\u00A0·\u00A0\u00A0${post.timeToRead} minute read`
 }
