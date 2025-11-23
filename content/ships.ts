@@ -9,7 +9,14 @@ export type Ship = {
 export const SHIPS: Ship[] = [
   {
     description:
-      'Preview links from PRs are now accessible directly from Linear issues.',
+      '⌘ ⌥ C. Added the ability to copy issues as markdown, optimized for sharing context with LLMs.',
+    linkTo: 'https://linear.app/changelog/page/3#copy-issues-as-markdown-for-llms',
+    title: 'Copy issues as markdown for LLMs',
+    subTitle: 'Linear Changelog',
+    date: '2025-02-13',
+  },
+  {
+    description: 'Added pull request preview links as a first class citizen in Linear.',
     linkTo:
       'https://linear.app/changelog/2024-10-10-document-subscriptions#pull-request-preview-links',
     title: 'Pull request preview links',
@@ -18,7 +25,16 @@ export const SHIPS: Ship[] = [
   },
   {
     description:
-      'Use broad date ranges as project start and target dates instead of specific ones. Plan project timelines at your current level of certainty, such as next month, quarter, or year, when they more accurately reflect product timelines.',
+      'Extended triage responsibility with OpsGenie and Incident.io integrations, plus API support for custom rotation schedules.',
+    linkTo:
+      'https://linear.app/changelog/page/5#triage-responsibility-integrations-and-api',
+    title: 'Triage responsibility integrations',
+    subTitle: 'Linear Changelog',
+    date: '2024-03-19',
+  },
+  {
+    description:
+      'Shipped flexible project timeframes — plan with months, quarters, or years instead of exact dates.',
     linkTo: 'https://linear.app/changelog/2024-01-17-project-timeframes',
     title: 'Project timeframes',
     subTitle: 'Linear Changelog',
@@ -26,11 +42,10 @@ export const SHIPS: Ship[] = [
   },
   {
     description:
-      'Define how incoming issues and requests are handled in Triage. When an issue is added to Triage, you can either notify or assign the issue to specific workspace members. Connect a PagerDuty schedule to automatically rotate who is responsible for triage.',
+      'Shipped triage responsibility to help teams manage incoming issues. You can notify or assign issues to specific people, and integrate with PagerDuty schedules for automatic rotation.',
     linkTo: 'https://linear.app/changelog/2023-10-12-triage-responsibility',
     title: 'Triage responsibility',
     subTitle: 'Linear Changelog',
     date: '2023-10-12',
   },
 ]
-
