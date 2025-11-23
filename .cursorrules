@@ -1,0 +1,5 @@
+# Code Style
+
+- Keep documentation minimal
+- Export functions at the top of files, private/helper functions at the bottom
+- Use curly quotes (’) not straight quotes (')
