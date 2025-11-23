@@ -18,7 +18,7 @@ export default function BlogIndex() {
           description={post.description}
           key={post.url}
           linkTo={post.url}
-          subTitle={formatBlogMetadata(post.formattedDate, post.timeToRead)}
+          subTitle={formatBlogMetadata(post)}
           title={post.title}
         />
       ))}

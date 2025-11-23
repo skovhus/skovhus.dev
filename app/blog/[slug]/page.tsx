@@ -34,13 +34,13 @@ export default function BlogPostTemplate({ params }: SlugProps) {
     return notFound()
   }
 
-  const { devToLink, title, timeToRead, formattedDate } = post
+  const { devToLink, title } = post
 
   return (
     <section>
       <article className={styles.article}>
         <HugeHeading style={{ fontSize: '2.5rem' }}>{title}</HugeHeading>
-        <p className={styles.subtitle}>{formatBlogMetadata(formattedDate, timeToRead)}</p>
+        <p className={styles.subtitle}>{formatBlogMetadata(post)}</p>
         <Mdx code={post.body.code} />
       </article>
 

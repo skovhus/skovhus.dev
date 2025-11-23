@@ -1,9 +1,11 @@
 import { compareDesc } from 'date-fns'
 
 import { BlogPost, formatBlogMetadata, getAllBlogPosts } from './blog'
+import { formatDate } from './date-utils'
+import { Ship, SHIPS } from './ships'
 import { Talk, TALKS } from './talks'
 
-export type FeedItemType = 'blog' | 'talk' | 'slides'
+export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ships'
 
 export type FeedItem = {
   type: FeedItemType
@@ -17,7 +19,7 @@ export type FeedItem = {
 }
 
 /**
- * Returns all feed items (blogs + talks) sorted by date.
+ * Returns all feed items (blogs + talks + ships) sorted by date.
  */
 export function getAllFeedItems(): FeedItem[] {
   const blogPosts: FeedItem[] = getAllBlogPosts().map((post: BlogPost) => ({
@@ -25,7 +27,7 @@ export function getAllFeedItems(): FeedItem[] {
     title: post.title,
     description: post.description,
     linkTo: post.url,
-    subTitle: formatBlogMetadata(post.formattedDate, post.timeToRead),
+    subTitle: formatBlogMetadata(post),
     date: new Date(post.publishedAt),
     timeToRead: post.timeToRead,
   }))
@@ -37,12 +39,25 @@ export function getAllFeedItems(): FeedItem[] {
     title: talk.title,
     description: talk.description,
     linkTo: talk.linkTo,
-    subTitle: talk.subTitle,
+    subTitle: formatExternalItemSubtitle(talk.date, talk.subTitle),
     date: new Date(talk.date),
   }))
 
-  const allItems = [...blogPosts, ...talks]
+  const ships: FeedItem[] = SHIPS.map((ship: Ship) => ({
+    type: 'ships' as const,
+    title: ship.title,
+    description: ship.description,
+    linkTo: ship.linkTo,
+    subTitle: formatExternalItemSubtitle(ship.date, ship.subTitle),
+    date: new Date(ship.date),
+  }))
+
+  const allItems = [...blogPosts, ...talks, ...ships]
 
   // Sort by date, most recent first
   return allItems.sort((a, b) => compareDesc(a.date, b.date))
+}
+
+function formatExternalItemSubtitle(dateString: string, subtitle: string): string {
+  return `${formatDate(dateString)}\u00A0\u00A0·\u00A0\u00A0${subtitle}`
 }
