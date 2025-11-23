@@ -9,6 +9,7 @@
     "build": "contentlayer build && next build",
     "start": "next start",
     "lint": "oxlint --type-aware && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
+    "lint:fix": "oxlint --type-aware --fix && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
     "typecheck": "tsc --noEmit",
     "verify": "contentlayer build && pnpm lint && pnpm typecheck"
   },

@@ -3,6 +3,12 @@
     "typescript/no-unused-vars": "error",
     "react/jsx-key": "error",
     "react/no-children-prop": "error"
-  }
+  },
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "error"
+  },
+  "$schema": "./node_modules/oxlint/configuration_schema.json"
 }
 

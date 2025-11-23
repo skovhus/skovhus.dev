@@ -52,7 +52,7 @@ export function getAllFeedItems(): FeedItem[] {
   const allItems = [...blogPosts, ...talks, ...ships]
 
   // Sort by date, most recent first
-  return allItems.sort((a, b) => compareDesc(a.date, b.date))
+  return allItems.toSorted((a, b) => compareDesc(a.date, b.date))
 }
 
 function formatItemSubtitle(dateString: string, subtitle?: string): string {

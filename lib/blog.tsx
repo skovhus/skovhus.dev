@@ -19,7 +19,7 @@ export function getPostBySlug(slug: string): BlogPost {
  * Returns all blog posts sorted by date.
  */
 export function getAllBlogPosts(): BlogPost[] {
-  const posts = allBlogPosts.sort((a, b) =>
+  const posts = allBlogPosts.toSorted((a, b) =>
     compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
   )
 
