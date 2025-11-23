@@ -15,7 +15,7 @@ export default function Home() {
       </p>
 
       <p>
-        This is my digital notebook — a collection of writings, talks, and things I've
+        This is my digital notebook — a collection of writings, talks, and things I’ve
         built. Think of it as my drawer of interesting bits, fighting digital
         sharecropping one post at a time.
       </p>

@@ -18,6 +18,17 @@ export function Header() {
   const pathname = usePathname()
   const slideAnimation = getSlideAnimationProps({ stage: 0 })
 
+  const isActive = (path: string) => {
+    if (pathname === path || (path.length > 1 && pathname.startsWith(path))) {
+      return true
+    }
+    // Highlight "stream" when viewing blog posts
+    if (path === '/stream' && pathname.startsWith('/blog')) {
+      return true
+    }
+    return false
+  }
+
   return (
     <header className={styles.header}>
       <nav
@@ -30,9 +41,7 @@ export function Header() {
               href={path}
               className={[
                 styles.navLink,
-                pathname === path || (path.length > 1 && pathname.startsWith(path))
-                  ? styles.navLinkActive
-                  : '',
+                isActive(path) ? styles.navLinkActive : '',
               ].join(' ')}
               key={path}
             >
