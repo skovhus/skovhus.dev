@@ -15,8 +15,9 @@ export default function Home() {
       </p>
 
       <p>
-        This is my portfolio where I gather random bits — my attempt to fight digital
-        sharecropping and distill learnings.
+        This is my digital notebook — a collection of writings, talks, and things I've
+        built. Think of it as my drawer of interesting bits, fighting digital
+        sharecropping one post at a time.
       </p>
       <p>
         Follow via <Link href="/feed">RSS</Link> or connect on{' '}

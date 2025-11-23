@@ -2,7 +2,6 @@ import NextLink from 'next/link'
 import React from 'react'
 
 import { FeedItem as FeedItemProps } from '../lib/feed'
-import { ExternalLink } from './ExternalLink'
 import styles from './FeedItem.module.css'
 import { FeedItemTag } from './FeedItemTag'
 
@@ -15,19 +14,9 @@ export const FeedItem = ({
 }: Omit<FeedItemProps, 'date'>) => {
   const isExternal = linkTo.startsWith('http')
 
-  const linkElement = isExternal ? (
-    <ExternalLink href={linkTo} showIcon>
-      {title}
-    </ExternalLink>
-  ) : (
-    <NextLink href={linkTo} className={styles.link}>
-      {title}
-    </NextLink>
-  )
-
-  return (
-    <div className={styles.feedItem}>
-      <h2 className={styles.title}>{linkElement}</h2>
+  const content = (
+    <>
+      <h2 className={styles.title}>{title}</h2>
       <small className={styles.subtitle}>
         <FeedItemTag>{type}</FeedItemTag>
         {subTitle}
@@ -37,6 +26,25 @@ export const FeedItem = ({
           __html: description,
         }}
       />
-    </div>
+    </>
+  )
+
+  if (isExternal) {
+    return (
+      <a
+        href={linkTo}
+        className={styles.feedItem}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <NextLink href={linkTo} className={styles.feedItem}>
+      {content}
+    </NextLink>
   )
 }
