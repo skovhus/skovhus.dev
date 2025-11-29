@@ -1,12 +1,33 @@
 .header {
-  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+  border-bottom: 0.5px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: var(--background-context-color);
+  z-index: -1;
+}
+
+.headerScrolled {
+  border-bottom-color: var(--background-hr);
 }
 
 .nav {
   color: white;
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 56px;
 }
 
 .navLinkContainer {
@@ -16,8 +37,10 @@
 }
 
 .navLink {
+  font-size: 16px;
   opacity: 0.5;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .navLinkActive {
@@ -26,4 +49,12 @@
 
 .navLink:hover {
   opacity: 1;
+}
+
+.siteName {
+  letter-spacing: 0.02em;
+}
+
+.siteName:hover {
+  opacity: 1 !important;
 }

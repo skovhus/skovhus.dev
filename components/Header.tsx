@@ -1,12 +1,11 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { getSlideAnimationProps } from '#/lib/slide-animation'
 
 import styles from './Header.module.css'
-import ProfileImage from './ProfileImage'
 
 const pages: { path: string; label: string }[] = [
   { path: '/', label: 'index' },
@@ -18,20 +17,36 @@ const pages: { path: string; label: string }[] = [
 export function Header() {
   const pathname = usePathname()
   const slideAnimation = getSlideAnimationProps({ stage: 0 })
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    setScrollY(window.scrollY)
+  }, [pathname])
 
   const isActive = (path: string) => {
     if (pathname === path || (path.length > 1 && pathname.startsWith(path))) {
       return true
     }
-    // Highlight "stream" when viewing blog posts
     if (path === '/stream' && pathname.startsWith('/blog')) {
       return true
     }
     return false
   }
 
+  const isScrolled = scrollY > 10
+  const nameOpacity = Math.max(0.5, 1 - scrollY / 160)
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
       <nav
         className={`${styles.nav} ${slideAnimation.className}`}
         style={slideAnimation.style}
@@ -51,7 +66,13 @@ export function Header() {
           ))}
         </div>
         <div style={{ flexGrow: 1 }} />
-        <ProfileImage />
+        <Link
+          href="/"
+          className={`${styles.navLink} ${styles.siteName}`}
+          style={{ opacity: nameOpacity }}
+        >
+          Kenneth Skovhus
+        </Link>
       </nav>
     </header>
   )
