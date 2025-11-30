@@ -14,7 +14,8 @@ export const dynamic = 'force-static'
 export async function generateMetadata({
   params,
 }: SlugProps): Promise<Metadata | undefined> {
-  const post = getPostBySlug(params.slug)
+  const { slug } = await params
+  const post = getPostBySlug(slug)
   if (!post) {
     return
   }
@@ -28,8 +29,9 @@ export async function generateMetadata({
   })
 }
 
-export default function BlogPostTemplate({ params }: SlugProps) {
-  const post = getPostBySlug(params.slug)
+export default async function BlogPostTemplate({ params }: SlugProps) {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
   if (!post) {
     return notFound()
   }
@@ -54,7 +56,7 @@ export default function BlogPostTemplate({ params }: SlugProps) {
 }
 
 type SlugProps = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 // Mdx
