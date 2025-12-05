@@ -28,6 +28,7 @@ export const FeedItem = ({
         {subTitle}
       </small>
       <p
+        className={styles.description}
         dangerouslySetInnerHTML={{
           __html: description,
         }}
