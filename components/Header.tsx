@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
+import { triggerNavigationAnimation } from '#/lib/navigation-animation'
 import { getSlideAnimationProps } from '#/lib/slide-animation'
 
 import styles from './Header.module.css'
@@ -60,6 +61,7 @@ export function Header() {
                 isActive(path) ? styles.navLinkActive : '',
               ].join(' ')}
               key={path}
+              onClick={triggerNavigationAnimation}
             >
               {label}
             </Link>

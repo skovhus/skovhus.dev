@@ -9,7 +9,7 @@ import { BlogPost, getAllBlogPosts } from './blog'
 export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ship'
 
 export type FeedItem = {
-  type: FeedItemType | null
+  type: FeedItemType
   title: string
   description: string
   linkTo?: string
@@ -56,7 +56,7 @@ export function getAllFeedItems(): FeedItem[] {
   return allItems.toSorted((a, b) => compareDesc(a.date, b.date))
 }
 
-function formatItemSubtitle(dateString: string, subtitle?: string): string {
+export function formatItemSubtitle(dateString: string, subtitle?: string): string {
   const date = format(parseISO(dateString), 'MMMM yyyy')
   return subtitle ? `${date}\u00A0\u00A0·\u00A0\u00A0${subtitle}` : date
 }

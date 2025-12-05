@@ -13,7 +13,7 @@ export const FeedItem = ({
   linkTo,
   subTitle,
   title,
-}: Omit<FeedItemProps, 'date'> & { type?: FeedItemProps['type'] }) => {
+}: Omit<FeedItemProps, 'date' | 'type'> & { type?: FeedItemProps['type'] }) => {
   const isExternal = linkTo?.startsWith('http')
   const shouldOpenInNewTab = isExternal && !linkTo?.startsWith('https://linear')
 

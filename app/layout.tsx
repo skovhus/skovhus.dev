@@ -2,11 +2,11 @@ import { Montserrat, Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
+import { AnimatedContent } from '#/components/AnimatedContent'
 import { Footer } from '#/components/Footer'
 import { Header } from '#/components/Header'
 import { NavigationTracking } from '#/components/NavigationTracking'
 import { getBaseMetadata } from '#/lib/constants'
-import { getSlideAnimationProps } from '#/lib/slide-animation'
 
 import './globals.css'
 import styles from './layout.module.css'
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <main className={styles.main}>
           <Header />
-          <section {...getSlideAnimationProps({ stage: 1 })}>{children}</section>
+          <AnimatedContent>{children}</AnimatedContent>
           <Footer />
         </main>
         <Suspense fallback={null}>

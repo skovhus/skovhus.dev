@@ -3,6 +3,7 @@ import { getMDXComponent } from 'next-contentlayer2/hooks'
 
 import { curriculumVitae } from '#/.contentlayer/generated'
 import { HugeHeading } from '#/components/HugeHeading'
+import { MdxLink } from '#/components/MdxLink'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -13,7 +14,7 @@ export default function AboutPage() {
   return (
     <>
       <HugeHeading>Kenneth Skovhus</HugeHeading>
-      <Component />
+      <Component components={{ a: MdxLink }} />
     </>
   )
 }
