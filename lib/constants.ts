@@ -32,7 +32,7 @@ export function getBaseMetadata(
     title: props.title ??
       article?.title ?? {
         default: siteMetadata.title,
-        template: `%s | ${siteMetadata.title}`,
+        template: `${siteMetadata.title} | %s`,
       },
     description,
     robots: props.robots ?? { follow: true, index: true },

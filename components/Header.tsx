@@ -9,7 +9,10 @@ import styles from './Header.module.css'
 
 const pages: { path: string; label: string }[] = [
   { path: '/', label: 'index' },
-  { path: '/stream', label: 'stream' },
+  // { path: '/stream', label: 'stream' },
+  { path: '/blog', label: 'writing' },
+  { path: '/talks', label: 'talks' },
+  { path: '/ships', label: 'ships' },
   { path: '/music', label: 'music' },
   { path: '/about', label: 'about' },
 ]
@@ -34,9 +37,6 @@ export function Header() {
 
   const isActive = (path: string) => {
     if (pathname === path || (path.length > 1 && pathname.startsWith(path))) {
-      return true
-    }
-    if (path === '/stream' && pathname.startsWith('/blog')) {
       return true
     }
     return false

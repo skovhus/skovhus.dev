@@ -13,7 +13,7 @@ export const FeedItem = ({
   linkTo,
   subTitle,
   title,
-}: Omit<FeedItemProps, 'date'>) => {
+}: Omit<FeedItemProps, 'date'> & { type?: FeedItemProps['type'] }) => {
   const isExternal = linkTo?.startsWith('http')
   const shouldOpenInNewTab = isExternal && !linkTo?.startsWith('https://linear')
 
@@ -24,7 +24,7 @@ export const FeedItem = ({
         {isExternal && <ExternalIcon />}
       </h2>
       <small className={styles.subtitle}>
-        <FeedItemTag>{type}</FeedItemTag>
+        {type && <FeedItemTag>{type}</FeedItemTag>}
         {subTitle}
       </small>
       <p

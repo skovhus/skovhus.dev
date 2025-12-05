@@ -9,7 +9,7 @@ import { BlogPost, getAllBlogPosts } from './blog'
 export type FeedItemType = 'blog' | 'talk' | 'slides' | 'ship'
 
 export type FeedItem = {
-  type: FeedItemType
+  type: FeedItemType | null
   title: string
   description: string
   linkTo?: string

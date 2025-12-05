@@ -13,14 +13,6 @@ export const SHIPS: Ship[] = [
       'Concluded a very long behind the scenes project to optimize how Linear client application performs, especially for large workspaces. Re-designing how the client boots, and essentially pre-loads data to make interactions as fast as possible.',
     date: '2025-06-01',
   },
-  // {
-  //   title: 'Copy entities as markdown for LLMs',
-  //   description:
-  //     '⌘ ⌥ C. Added the ability to copy entities as markdown, optimized for sharing context with LLMs.',
-  //   linkTo: 'https://linear.app/changelog/page/3#copy-issues-as-markdown-for-llms',
-  //   subTitle: 'Linear Changelog',
-  //   date: '2025-02-13',
-  // },
   {
     title: 'Pull request preview links',
     description: 'Added pull request preview links as a first-class citizen in Linear.',

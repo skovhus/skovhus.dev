@@ -14,7 +14,7 @@ export default function BlogIndex() {
     <>
       {posts.map((post) => (
         <FeedItem
-          type="blog"
+          type={null}
           description={post.description}
           key={post.url}
           linkTo={post.url}

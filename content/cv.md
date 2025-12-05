@@ -10,7 +10,7 @@ With two decades of industry experience and an M.Sc. in Computer Science and Eng
 
 [Linear](https://linear.app) is a purpose-built tool for planning and building products. What started as a simple issue tracker, has since evolved into a powerful project and issue tracking system that streamlines workflows across the entire product development process. We don't think of Linear as just a better "tool", but as a better "way" to build software.
 
-Read more about [why I joined](/blog/joining-linear/).
+Read more about [why I joined](/blog/joining-linear).
 
 ## Staff Engineer | Pleo (2021-2023)
 
