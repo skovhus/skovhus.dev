@@ -1,6 +1,7 @@
 {
   "rules": {
     "typescript/no-unused-vars": "error",
+    "typescript/prefer-type-only-import": "error",
     "react/jsx-key": "error",
     "react/no-children-prop": "error"
   },
