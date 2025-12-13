@@ -58,3 +58,21 @@
 .siteName:hover {
   opacity: 1 !important;
 }
+
+.showOnMobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .header {
+    position: relative;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  .showOnMobile {
+    display: inline;
+  }
+}

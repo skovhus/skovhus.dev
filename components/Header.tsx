@@ -1,14 +1,14 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { triggerNavigationAnimation } from '#/lib/navigation-animation'
 import { getSlideAnimationProps } from '#/lib/slide-animation'
 
 import styles from './Header.module.css'
 
-const pages: { path: string; label: string }[] = [
+const pages = [
   { path: '/', label: 'index' },
   // { path: '/stream', label: 'stream' },
   { path: '/blog', label: 'writing' },
@@ -58,8 +58,11 @@ export function Header() {
               href={path}
               className={[
                 styles.navLink,
-                isActive(path) ? styles.navLinkActive : '',
-              ].join(' ')}
+                isActive(path) && styles.navLinkActive,
+                path === '/' && styles.hideOnMobile,
+              ]
+                .filter(Boolean)
+                .join(' ')}
               key={path}
               onClick={triggerNavigationAnimation}
             >
@@ -73,7 +76,8 @@ export function Header() {
           className={`${styles.navLink} ${styles.siteName}`}
           style={{ opacity: nameOpacity }}
         >
-          Kenneth Skovhus
+          <span className={styles.hideOnMobile}>Kenneth Skovhus</span>
+          <span className={styles.showOnMobile}>Skovhus</span>
         </Link>
       </nav>
     </header>
