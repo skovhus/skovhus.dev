@@ -8,6 +8,17 @@ export type Talk = {
 
 export const TALKS: Talk[] = [
   {
+    description: `As a parent, I want the time away from my kids to matter. I want to spend it building things I'm proud of.
+
+I've found that space at Linear, where quality and focus come from trust, ownership, and room to think.
+
+We made a short film about how we work when the team visited Copenhagen.`,
+    linkTo: 'https://www.youtube.com/watch?v=WLlAqA0_vLs',
+    title: 'In Software You Are Building Sandcastles',
+    subTitle: 'Linear short film (2025)',
+    date: '2025-10-29',
+  },
+  {
     description: `
       Give people great tools — an issue tracker that feels effortless, a developer setup that brings an immediate connection to what they’re creating — and they’ll do their best work.
       Learnings from optimizing developer experience at Linear.

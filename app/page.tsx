@@ -1,7 +1,11 @@
 import Link from 'next/link'
 
 import { ExternalLink } from '#/components/ExternalLink'
+import { FeaturedVideo } from '#/components/FeaturedVideo'
 import { HugeHeading } from '#/components/HugeHeading'
+import { TALKS } from '#/content/talks'
+
+import styles from './page.module.css'
 
 export default function Home() {
   return (
@@ -24,6 +28,15 @@ export default function Home() {
         <ExternalLink href="https://www.linkedin.com/in/skovhus">LinkedIn</ExternalLink>{' '}
         or <ExternalLink href="https://x.com/kenneth_skovhus">Twitter/X</ExternalLink>.
       </p>
+
+      <span
+        className={styles.label}
+        style={{ marginTop: '5rem', marginBottom: '0.5rem' }}
+      >
+        RECENT STUFF
+      </span>
+      {TALKS[0] && <FeaturedVideo talk={TALKS[0]} />}
+      {TALKS[1] && <FeaturedVideo talk={TALKS[1]} />}
     </>
   )
 }
