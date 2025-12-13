@@ -8,8 +8,8 @@
     "dev": "next dev",
     "build": "contentlayer2 build && next build",
     "start": "next start",
-    "lint": "oxlint --type-aware && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
-    "lint:fix": "oxlint --type-aware --fix && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css} --write",
+    "lint": "oxlint --type-aware && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css,*.json,*.md} --write",
+    "lint:fix": "oxlint --type-aware --fix && PRETTIER_EXPERIMENTAL_CLI=1 prettier **/{*.ts,*.tsx,*.css,*.json,*.md} --write",
     "typecheck": "tsc --noEmit",
     "verify": "contentlayer2 build && pnpm lint && pnpm typecheck"
   },
