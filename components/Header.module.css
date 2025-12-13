@@ -63,6 +63,7 @@
   display: none;
 }
 
+/* Mobile breakpoint: 500px - keep in sync with globals.css */
 @media (max-width: 500px) {
   .header {
     position: relative;

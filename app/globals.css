@@ -15,7 +15,7 @@ html {
   font-size: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 501px) {
   html {
     font-size: 20px;
   }
@@ -700,7 +700,7 @@ ul,
 ol {
   margin-left: 0;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
   ul,
   ol {
     margin-left: 1.75rem;
