@@ -10,12 +10,10 @@ import styles from './Header.module.css'
 
 const pages = [
   { path: '/', label: 'index' },
-  // { path: '/stream', label: 'stream' },
   { path: '/blog', label: 'writing' },
   { path: '/talks', label: 'talks' },
   { path: '/ships', label: 'ships' },
   { path: '/music', label: 'music' },
-  { path: '/about', label: 'about' },
 ]
 
 export function Header() {
