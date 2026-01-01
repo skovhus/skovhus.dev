@@ -66,8 +66,6 @@
 @media (max-width: 500px) {
   .entry {
     --entry-font-size: 0.7rem;
-
-    grid-template-columns: auto auto 1fr;
     gap: 0.5rem;
   }
 }
