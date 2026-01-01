@@ -46,7 +46,7 @@
   font-size: var(--entry-font-size);
   font-weight: 400;
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.25rem;
   transition: color 0.15s ease;
 }
