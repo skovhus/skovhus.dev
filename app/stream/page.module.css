@@ -10,6 +10,8 @@
 }
 
 .entry {
+  --entry-font-size: 0.8rem;
+
   display: grid;
   grid-template-columns: 5.5rem 3.5rem 1fr;
   gap: 1rem;
@@ -34,19 +36,23 @@
 }
 
 .date {
-  font-size: 0.8rem;
+  font-size: var(--entry-font-size);
   color: rgba(255, 255, 255, 0.5);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .title {
+  font-size: var(--entry-font-size);
   font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   transition: color 0.15s ease;
 }
 
 .tag {
-  font-size: 0.65rem;
+  font-size: var(--entry-font-size);
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -55,17 +61,13 @@
 
 .externalIcon {
   opacity: 0.4;
-  margin-left: 0.25rem;
 }
 
 @media (max-width: 500px) {
   .entry {
+    --entry-font-size: 0.7rem;
+
     grid-template-columns: auto auto 1fr;
     gap: 0.5rem;
   }
-
-  .date {
-    font-size: 0.7rem;
-  }
 }
-
