@@ -26,8 +26,6 @@ export default function Stream() {
 
           const content = (
             <>
-              <span className={styles.date}>{format(item.date, 'MMM yyyy')}</span>
-              <span className={styles.tag}>{item.type}</span>
               <span className={styles.title}>
                 {item.title}
                 {isExternal && (
@@ -36,6 +34,8 @@ export default function Stream() {
                   </span>
                 )}
               </span>
+              <span className={styles.tag}>{item.type}</span>
+              <span className={styles.date}>{format(item.date, 'MMM yyyy')}</span>
             </>
           )
 

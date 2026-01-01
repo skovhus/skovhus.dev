@@ -13,7 +13,7 @@
   --entry-font-size: 0.8rem;
 
   display: grid;
-  grid-template-columns: 5.5rem 3.5rem 1fr;
+  grid-template-columns: 1fr 3.5rem 5.5rem;
   gap: 1rem;
   padding: 0.6rem 0;
   border-bottom: 1px solid var(--background-hr);
