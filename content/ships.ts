@@ -8,9 +8,17 @@ export type Ship = {
 
 export const SHIPS: Ship[] = [
   {
+    title: 'Time in status',
+    description:
+      'Extended the system to track the cumulative time spent in each workflow status. Surfaced the data across lists, boards, Insights, and Dashboards to help teams spot blocked work and identify bottlenecks. Backfilled all historical issues with accurate time tracking data.',
+    linkTo: 'https://linear.app/changelog/2026-01-29-time-in-status',
+    subTitle: 'Linear Changelog',
+    date: '2026-01-29',
+  },
+  {
     title: 'Speeding up the Linear client',
     description:
-      'Concluded a very long behind the scenes project to optimize how Linear client application performs, especially for large workspaces. Re-designing how the client boots, and essentially pre-loads data to make interactions as fast as possible.',
+      'Wrapped up a long-running project to optimize how the Linear client application performs, especially for large workspaces. We re-designed how the client boots and pre-loads data to make interactions as fast as possible.',
     date: '2025-06-01',
   },
   {
@@ -24,7 +32,7 @@ export const SHIPS: Ship[] = [
   {
     title: 'Linear to Linear importer',
     description:
-      'Shipped a new Linear to Linear importer, allowing users to migrate their data from one workspace to another with cross-regional support.',
+      'Built a Linear to Linear importer, allowing users to migrate their data from one workspace to another with cross-regional support.',
     date: '2024-08-10',
   },
   {
