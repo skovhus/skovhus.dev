@@ -1,7 +1,88 @@
-.label {
-  display: block;
-  font-size: 0.85rem; /* Match subtitle */
-  color: var(--color-accent);
+.heroImage {
+  margin-top: 2.5rem;
+  line-height: 0;
+}
+
+.heroImage img {
+  box-shadow: 0 0 0 1px rgba(200, 210, 255, 0.25);
+}
+
+.heroHeading {
+  margin-top: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.heroHeading a {
+  color: inherit;
+  text-decoration-color: var(--color-shadow);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.heroHeading a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 4.5rem;
   margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   opacity: 0.85;
+}
+
+.sectionLink {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.sectionLink:hover {
+  opacity: 1;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.75rem;
+}
+
+.post {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--background-hr);
+  text-decoration: none;
+  color: inherit;
+}
+
+.post:first-child {
+  border-top: 1px solid var(--background-hr);
+}
+
+.postTitle {
+  transition: color 0.15s ease;
+}
+
+.post:hover .postTitle {
+  color: var(--color-accent);
+}
+
+.postDate {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }

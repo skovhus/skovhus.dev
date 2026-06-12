@@ -14,6 +14,7 @@ const pages = [
   { path: '/talks', label: 'talks' },
   { path: '/ships', label: 'ships' },
   { path: '/music', label: 'music' },
+  { path: '/about', label: 'about' },
 ]
 
 export function Header() {

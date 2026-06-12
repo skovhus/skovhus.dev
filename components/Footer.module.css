@@ -7,7 +7,7 @@
 }
 
 .footerInner {
-  padding: 30px;
+  padding: 30px 30px 16px;
   font-size: 10px;
   display: flex;
   align-items: center;
@@ -34,4 +34,21 @@
 .svgIcon:focus,
 .svgIcon:active {
   transform: translateY(-6px);
+}
+
+.signOff {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+  padding-bottom: 1.75rem;
+}
+
+.signOff a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration-color: transparent;
+}
+
+.signOff a:hover {
+  color: white;
+  text-decoration-color: var(--color-accent);
 }
