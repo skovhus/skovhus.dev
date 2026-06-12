@@ -1,14 +1,5 @@
-.heroImage {
-  margin-top: 2.5rem;
-  line-height: 0;
-}
-
-.heroImage img {
-  box-shadow: 0 0 0 1px rgba(200, 210, 255, 0.25);
-}
-
 .heroHeading {
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
   margin-bottom: 1.75rem;
 }
 
@@ -49,6 +40,16 @@
 
 .sectionLink:hover {
   opacity: 1;
+}
+
+.sectionMeta {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-variant-numeric: tabular-nums;
+}
+
+.nowList li::marker {
+  color: var(--color-shadow);
 }
 
 .postList {

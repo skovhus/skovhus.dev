@@ -3,20 +3,18 @@ import Link from 'next/link'
 
 import { ExternalLink } from '#/components/ExternalLink'
 import { FeaturedVideo } from '#/components/FeaturedVideo'
-import ProfileImage from '#/components/ProfileImage'
 import { TALKS } from '#/content/talks'
 import { getAllBlogPosts } from '#/lib/blog'
 
 import styles from './page.module.css'
+
+const NOW_UPDATED = 'June 2026'
 
 export default function Home() {
   const recentPosts = getAllBlogPosts().slice(0, 3)
 
   return (
     <>
-      <div className={styles.heroImage}>
-        <ProfileImage size={72} />
-      </div>
       <h1 className={styles.heroHeading}>
         Hey, I’m Kenneth. I’m a software engineer, 2x dad, and{' '}
         <Link href="/music">music nerd</Link>.
@@ -37,6 +35,21 @@ export default function Home() {
         <ExternalLink href="https://www.linkedin.com/in/skovhus">LinkedIn</ExternalLink>{' '}
         or <ExternalLink href="https://x.com/kenneth_skovhus">Twitter/X</ExternalLink>.
       </p>
+
+      <div className={styles.sectionHeader}>
+        <span className={styles.label}>Now</span>
+        <span className={styles.sectionMeta}>{NOW_UPDATED}</span>
+      </div>
+      <ul className={styles.nowList}>
+        <li>
+          Speeding up feedback loops and developer experience at{' '}
+          <ExternalLink href="https://linear.app/">Linear</ExternalLink>.
+        </li>
+        <li>
+          Making <Link href="/music">music</Link> whenever the kids allow it.
+        </li>
+        <li>Soaking up the Copenhagen summer with the family.</li>
+      </ul>
 
       <div className={styles.sectionHeader}>
         <span className={styles.label}>Recent writing</span>
