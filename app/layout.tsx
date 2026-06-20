@@ -2,7 +2,6 @@ import { Montserrat, Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
-import { AnimatedContent } from '#/components/AnimatedContent'
 import { Footer } from '#/components/Footer'
 import { Header } from '#/components/Header'
 import { NavigationTracking } from '#/components/NavigationTracking'
@@ -34,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <main className={styles.main}>
           <Header />
-          <AnimatedContent>{children}</AnimatedContent>
+          {children}
           <Footer />
         </main>
         <Suspense fallback={null}>
