@@ -27,36 +27,126 @@
   color: white;
   display: flex;
   align-items: center;
+  gap: 12px;
   height: 60px;
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+}
+
+/* Terminal prompt: skovhus@dev:~$ */
+
+.prompt {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.prompt:hover {
+  opacity: 1;
+}
+
+.promptUser {
+  color: var(--color-terminal);
+}
+
+.promptHost {
+  color: var(--color-terminal);
+}
+
+.promptPunct {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.promptPath {
+  color: var(--color-accent);
+}
+
+.promptSign {
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 0.1em;
 }
 
 .navLinkContainer {
   display: flex;
-  gap: 10px;
+  gap: 6px;
   align-items: center;
 }
 
 .navLink {
-  font-size: 16px;
+  font-size: 15px;
   opacity: 0.5;
   text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.navLinkActive {
-  opacity: 0.9;
+  padding: 2px 6px;
+  border-radius: 2px;
+  transition:
+    opacity 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .navLink:hover {
   opacity: 1;
 }
 
+/* Active link rendered as a selected DOS-style menu cell */
+.navLinkActive {
+  opacity: 1;
+  color: var(--background-context-color);
+  background-color: var(--color-terminal);
+}
+
+.navLinkActive:hover {
+  color: var(--background-context-color);
+}
+
+/* Blinking block cursor at the end of the command line */
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 2px;
+  background-color: var(--color-terminal);
+  transform: translateY(0.12em);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+
 .siteName {
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: var(--color-terminal-dim);
+  opacity: 0.7;
+  padding: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .siteName:hover {
   opacity: 1 !important;
+  color: var(--color-terminal);
 }
 
 .showOnMobile {
@@ -69,11 +159,24 @@
     position: relative;
   }
 
+  .nav {
+    gap: 8px;
+  }
+
+  .prompt {
+    font-size: 14px;
+  }
+
   .hideOnMobile {
     display: none;
   }
 
   .showOnMobile {
     display: inline;
+  }
+
+  /* The prompt already links home, so the trailing name is redundant here */
+  .siteName {
+    display: none;
   }
 }

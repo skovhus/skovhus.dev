@@ -49,6 +49,17 @@ export function Header() {
         className={`${styles.nav} ${slideAnimation.className}`}
         style={slideAnimation.style}
       >
+        <Link href="/" className={styles.prompt} aria-label="skovhus.dev home">
+          <span className={styles.hideOnMobile}>
+            <span className={styles.promptUser}>skovhus</span>
+            <span className={styles.promptPunct}>@</span>
+            <span className={styles.promptHost}>dev</span>
+            <span className={styles.promptPunct}>:</span>
+          </span>
+          <span className={styles.promptPath}>~</span>
+          <span className={styles.promptSign}>$</span>
+        </Link>
+
         <div className={styles.navLinkContainer}>
           {pages.map(({ path, label }) => (
             <Link
@@ -67,8 +78,11 @@ export function Header() {
               {label}
             </Link>
           ))}
+          <span className={styles.cursor} aria-hidden="true" />
         </div>
+
         <div style={{ flexGrow: 1 }} />
+
         <Link
           href="/"
           className={`${styles.navLink} ${styles.siteName}`}
@@ -76,8 +90,8 @@ export function Header() {
           scroll={false}
           style={{ opacity: nameOpacity }}
         >
-          <span className={styles.hideOnMobile}>kenneth skovhus</span>
-          <span className={styles.showOnMobile}>skovhus</span>
+          <span className={styles.hideOnMobile}>// kenneth skovhus</span>
+          <span className={styles.showOnMobile}>// skovhus</span>
         </Link>
       </nav>
     </header>
