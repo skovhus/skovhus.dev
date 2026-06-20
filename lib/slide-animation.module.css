@@ -12,6 +12,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .SlideAnimation {
-    animation: slide-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 1;
+    animation: slide-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both 1;
   }
 }
