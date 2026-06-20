@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 
 import { FeedItem } from '#/components/FeedItem'
-import { FeedList } from '#/components/FeedList'
 import { TALKS } from '#/content/talks'
 
 export const metadata: Metadata = {
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Talks() {
   return (
-    <FeedList>
+    <>
       {TALKS.map((talk) => (
         <FeedItem
           type={
@@ -25,7 +24,7 @@ export default function Talks() {
           title={talk.title}
         />
       ))}
-    </FeedList>
+    </>
   )
 }
 
