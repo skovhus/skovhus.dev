@@ -3,8 +3,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { type MouseEvent, useEffect, useState } from 'react'
 
-import { getSlideAnimationProps } from '#/lib/slide-animation'
-
 import styles from './Header.module.css'
 
 const pages = [
@@ -17,7 +15,6 @@ const pages = [
 
 export function Header() {
   const pathname = usePathname()
-  const slideAnimation = getSlideAnimationProps({ stage: 0 })
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
@@ -45,10 +42,7 @@ export function Header() {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
-      <nav
-        className={`${styles.nav} ${slideAnimation.className}`}
-        style={slideAnimation.style}
-      >
+      <nav className={styles.nav}>
         <Link
           href="/"
           className={styles.prompt}
