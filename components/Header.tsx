@@ -73,7 +73,7 @@ export function Header() {
               className={[
                 styles.navLink,
                 isActive(path) && styles.navLinkActive,
-                path === '/' && styles.hideOnMobile,
+                (path === '/' || path === '/music') && styles.hideOnMobile,
               ]
                 .filter(Boolean)
                 .join(' ')}

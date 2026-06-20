@@ -131,11 +131,20 @@
   }
 
   .nav {
-    gap: 8px;
+    gap: 6px;
   }
 
   .prompt {
     font-size: 14px;
+  }
+
+  .navLinkContainer {
+    gap: 3px;
+  }
+
+  .navLink {
+    font-size: 14px;
+    padding: 2px 4px;
   }
 
   .hideOnMobile {
@@ -144,10 +153,5 @@
 
   .showOnMobile {
     display: inline;
-  }
-
-  /* The prompt already links home, so the trailing name is redundant here */
-  .siteName {
-    display: none;
   }
 }
