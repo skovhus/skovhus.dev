@@ -33,7 +33,7 @@
   font-variant-ligatures: none;
 }
 
-/* Terminal prompt: skovhus@dev:~$ */
+/* Terminal prompt: skovhus$ */
 
 .prompt {
   display: inline-flex;
@@ -55,21 +55,8 @@
   color: var(--color-terminal);
 }
 
-.promptHost {
-  color: var(--color-terminal);
-}
-
-.promptPunct {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.promptPath {
-  color: var(--color-accent);
-}
-
 .promptSign {
   color: rgba(255, 255, 255, 0.9);
-  margin-left: 0.1em;
 }
 
 .navLinkContainer {
@@ -105,25 +92,6 @@
   color: var(--background-context-color);
 }
 
-.siteName {
-  font-size: 13px;
-  letter-spacing: 0.01em;
-  color: var(--color-terminal-dim);
-  opacity: 0.7;
-  padding: 0;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.siteName:hover {
-  opacity: 1 !important;
-  color: var(--color-terminal);
-}
-
-.showOnMobile {
-  display: none;
-}
-
 /* Mobile breakpoint: 500px - keep in sync with globals.css */
 @media (max-width: 500px) {
   .header {
@@ -149,9 +117,5 @@
 
   .hideOnMobile {
     display: none;
-  }
-
-  .showOnMobile {
-    display: inline;
   }
 }

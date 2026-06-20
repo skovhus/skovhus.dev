@@ -38,7 +38,6 @@ export function Header() {
   }
 
   const isScrolled = scrollY > 10
-  const nameOpacity = Math.max(0.5, 1 - scrollY / 160)
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
@@ -50,13 +49,7 @@ export function Header() {
           onClick={handleHeaderNavigation}
           scroll={false}
         >
-          <span className={styles.hideOnMobile}>
-            <span className={styles.promptUser}>skovhus</span>
-            <span className={styles.promptPunct}>@</span>
-            <span className={styles.promptHost}>dev</span>
-            <span className={styles.promptPunct}>:</span>
-          </span>
-          <span className={styles.promptPath}>~</span>
+          <span className={styles.promptUser}>skovhus</span>
           <span className={styles.promptSign}>$</span>
         </Link>
 
@@ -67,7 +60,7 @@ export function Header() {
               className={[
                 styles.navLink,
                 isActive(path) && styles.navLinkActive,
-                (path === '/' || path === '/music') && styles.hideOnMobile,
+                path === '/' && styles.hideOnMobile,
               ]
                 .filter(Boolean)
                 .join(' ')}
@@ -79,19 +72,6 @@ export function Header() {
             </Link>
           ))}
         </div>
-
-        <div style={{ flexGrow: 1 }} />
-
-        <Link
-          href="/"
-          className={`${styles.navLink} ${styles.siteName}`}
-          onClick={handleHeaderNavigation}
-          scroll={false}
-          style={{ opacity: nameOpacity }}
-        >
-          <span className={styles.hideOnMobile}>// kenneth skovhus</span>
-          <span className={styles.showOnMobile}>// skovhus</span>
-        </Link>
       </nav>
     </header>
   )
