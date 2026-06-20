@@ -49,7 +49,13 @@ export function Header() {
         className={`${styles.nav} ${slideAnimation.className}`}
         style={slideAnimation.style}
       >
-        <Link href="/" className={styles.prompt} aria-label="skovhus.dev home">
+        <Link
+          href="/"
+          className={styles.prompt}
+          aria-label="skovhus.dev home"
+          onClick={handleHeaderNavigation}
+          scroll={false}
+        >
           <span className={styles.hideOnMobile}>
             <span className={styles.promptUser}>skovhus</span>
             <span className={styles.promptPunct}>@</span>
