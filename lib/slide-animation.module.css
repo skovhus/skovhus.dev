@@ -1,17 +1,17 @@
 @keyframes slide-enter {
   0% {
-    transform: translateY(5px);
+    transform: translateY(8px);
     opacity: 0;
   }
 
   to {
     transform: translateY(0);
-    opacity: 100;
+    opacity: 1;
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .SlideAnimation {
-    animation: slide-enter 1s both 1;
+    animation: slide-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 1;
   }
 }
