@@ -76,6 +76,11 @@ export function Footer() {
           </SvgIcon>
         </ExternalLink>
       </div>
+
+      <div className={styles.signature}>
+        <span className={styles.prompt}>$</span> Kenneth Skovhus &copy;{' '}
+        {new Date().getFullYear()}
+      </div>
     </footer>
   )
 }
