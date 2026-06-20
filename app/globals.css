@@ -8,10 +8,9 @@
   --color-shadow: rgba(140, 160, 227, 0.6);
   --color-text-body: rgba(255, 255, 255, 0.88);
 
-  /* Retro terminal accents */
-  --color-terminal: #7ee787;
-  --color-terminal-dim: rgba(126, 231, 135, 0.55);
-  --color-terminal-amber: #ffcf6b;
+  /* Retro terminal accents (reuse the existing palette) */
+  --color-terminal: var(--color-accent);
+  --color-terminal-dim: rgba(255, 255, 255, 0.5);
 
   --font-mono:
     var(--font-mono-display), 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo,

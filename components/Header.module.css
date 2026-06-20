@@ -105,35 +105,6 @@
   color: var(--background-context-color);
 }
 
-/* Blinking block cursor at the end of the command line */
-.cursor {
-  display: inline-block;
-  width: 0.55em;
-  height: 1.05em;
-  margin-left: 2px;
-  background-color: var(--color-terminal);
-  transform: translateY(0.12em);
-  animation: blink 1.1s steps(1) infinite;
-}
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  50.01%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cursor {
-    animation: none;
-    opacity: 0.8;
-  }
-}
-
 .siteName {
   font-size: 13px;
   letter-spacing: 0.01em;

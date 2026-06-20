@@ -78,7 +78,6 @@ export function Header() {
               {label}
             </Link>
           ))}
-          <span className={styles.cursor} aria-hidden="true" />
         </div>
 
         <div style={{ flexGrow: 1 }} />
