@@ -1,6 +1,6 @@
 @keyframes slide-enter {
   0% {
-    transform: translateY(8px);
+    transform: translateY(5px);
     opacity: 0;
   }
 
