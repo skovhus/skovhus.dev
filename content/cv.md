@@ -48,13 +48,11 @@ Technologies: Python, JavaScript, React, Backbone.js (!), node.js, MySQL, AMQP, 
 
 ## Software Engineer | Region H (2009-2012)
 
-Worked on the EU project PSIP (Patient Safety through Intelligent Procedures in medication) focusing on data processing, data mining, and development of clinical decision support systems to improve medication safety in hospitals.
-
-Published a peer-reviewed article "[From Adverse Drug Event Detection to Prevention A Novel Clinical Decision Support Framework for Medication Safety](https://www.researchgate.net/publication/267931932_From_Adverse_Drug_Event_Detection_to_Prevention_A_Novel_Clinical_Decision_Support_Framework_for_Medication_Safety)" in Methods of Information in Medicine.
+Worked on the EU project PSIP, building clinical decision support systems to improve medication safety in hospitals. Co-authored a [peer-reviewed article](https://www.researchgate.net/publication/267931932_From_Adverse_Drug_Event_Detection_to_Prevention_A_Novel_Clinical_Decision_Support_Framework_for_Medication_Safety) in Methods of Information in Medicine.
 
 ## Freelancing (2000-2008)
 
-Web development and graphical design. I developed websites, e-commerce sites, desktop applications and designed posters, webdesign, logos, and had a lot of fun with Flash.
+Web development and graphical design — websites, e-commerce, desktop apps, and a lot of fun with Flash.
 
 ---
 
@@ -64,10 +62,8 @@ Web development and graphical design. I developed websites, e-commerce sites, de
 
 Computer Science and Engineering. Average grade: A+.
 
-**Master Thesis:** [Algorithms for String Comparison on GPUs](https://issuu.com/skovhus/docs/string_comparison_on_gpus). Under the supervision of Inge Li Gørtz and Philip Bille (DTU Informatics), we considered parallelization of string comparison algorithms (including sequence alignment, edit distance, and longest common subsequence). We presented a novel approach for solving these problems using graphics processing units (GPUs) and showed a 40X speedup compared to a state-of-the-art sequential CPU solution. Grade: A+.
+**Master Thesis:** [Algorithms for String Comparison on GPUs](https://issuu.com/skovhus/docs/string_comparison_on_gpus) — parallelizing string comparison algorithms on GPUs for a 40X speedup over a state-of-the-art sequential CPU solution. Grade: A+.
 
 ## B.Sc., Technical University of Denmark (2006-2009)
 
 Software Technology. Average grade: A.
-
-**Final project:** [Camera Control and Data Handling on DTUsat-2](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=6a312bd6cf7e1d4fc10782df6b2eb27c64d44313). Under the supervision of Hans Henrik Løvengreen, we further developed the onboard software on the DTU student satellite, DTUsat-2. The primary focus was on the camera control and data handling. The satellite is still active and in orbit. Grade: A+.
