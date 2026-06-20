@@ -78,8 +78,7 @@ export function Footer() {
       </div>
 
       <div className={styles.signature}>
-        <span className={styles.prompt}>$</span> Kenneth Skovhus &copy;{' '}
-        {new Date().getFullYear()}
+        <span className={styles.prompt}>$</span> by Kenneth Skovhus
       </div>
     </footer>
   )
