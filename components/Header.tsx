@@ -1,9 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { type MouseEvent, useEffect, useState } from 'react'
 
-import { triggerNavigationAnimation } from '#/lib/navigation-animation'
 import { getSlideAnimationProps } from '#/lib/slide-animation'
 
 import styles from './Header.module.css'
@@ -62,7 +61,8 @@ export function Header() {
                 .filter(Boolean)
                 .join(' ')}
               key={path}
-              onClick={triggerNavigationAnimation}
+              onClick={handleHeaderNavigation}
+              scroll={false}
             >
               {label}
             </Link>
@@ -72,6 +72,8 @@ export function Header() {
         <Link
           href="/"
           className={`${styles.navLink} ${styles.siteName}`}
+          onClick={handleHeaderNavigation}
+          scroll={false}
           style={{ opacity: nameOpacity }}
         >
           <span className={styles.hideOnMobile}>kenneth skovhus</span>
@@ -80,4 +82,16 @@ export function Header() {
       </nav>
     </header>
   )
+}
+
+function handleHeaderNavigation(event: MouseEvent<HTMLAnchorElement>) {
+  if (event.defaultPrevented || event.button !== 0) {
+    return
+  }
+
+  if (event.metaKey || event.altKey || event.ctrlKey || event.shiftKey) {
+    return
+  }
+
+  window.scrollTo(0, 0)
 }
