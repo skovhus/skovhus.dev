@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { ExternalLink } from '#/components/ExternalLink'
 import { FeaturedVideo } from '#/components/FeaturedVideo'
 import { HugeHeading } from '#/components/HugeHeading'
@@ -23,12 +21,6 @@ export default function Home() {
         built. Think of it as my drawer of interesting bits, fighting digital
         sharecropping one post at a time.
       </p>
-      <p>
-        Follow via <Link href="/feed">RSS</Link> or connect on{' '}
-        <ExternalLink href="https://www.linkedin.com/in/skovhus">LinkedIn</ExternalLink>{' '}
-        or <ExternalLink href="https://x.com/kenneth_skovhus">Twitter/X</ExternalLink>.
-      </p>
-
       <span
         className={styles.label}
         style={{ marginTop: '5rem', marginBottom: '0.5rem' }}
