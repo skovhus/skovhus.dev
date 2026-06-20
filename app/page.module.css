@@ -1,7 +1,15 @@
 .label {
   display: block;
-  font-size: 0.85rem; /* Match subtitle */
-  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--color-terminal);
   margin-bottom: 1rem;
   opacity: 0.85;
+}
+
+.label::before {
+  content: '$ ';
+  color: var(--color-terminal-dim);
 }

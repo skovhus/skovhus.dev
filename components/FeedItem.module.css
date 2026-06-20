@@ -43,7 +43,12 @@
 }
 
 .subtitle {
-  opacity: 0.85;
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  color: var(--color-terminal-dim);
+  opacity: 0.95;
 }
 
 .description {

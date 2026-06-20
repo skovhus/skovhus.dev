@@ -1,5 +1,9 @@
 .subtitle {
-  font-size: 0.83255rem;
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: var(--color-terminal-dim);
   line-height: 1.75rem;
   display: block;
   margin-bottom: 1.75rem;
