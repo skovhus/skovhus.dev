@@ -7,7 +7,16 @@
   --color-inline-code-text: #e6e6e6;
   --color-shadow: rgba(140, 160, 227, 0.6);
   --color-text-body: rgba(255, 255, 255, 0.88);
-  --font-mono: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+
+  /* Retro terminal accents */
+  --color-terminal: #7ee787;
+  --color-terminal-dim: rgba(126, 231, 135, 0.55);
+  --color-terminal-amber: #ffcf6b;
+
+  --font-mono:
+    var(--font-mono-display), 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo,
+    Consolas, Monaco, 'Courier New', monospace;
+  --font-display: var(--font-mono);
 }
 
 html {
@@ -363,10 +372,11 @@ h4,
 h5,
 h6 {
   margin-top: 3rem;
-  font-family: var(--font-montserrat);
+  font-family: var(--font-display);
   color: inherit;
   text-rendering: optimizeLegibility;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 hr:has(+ h1),
 hr:has(+ h2),
@@ -379,7 +389,7 @@ hr:has(+ h6) {
 
 h1 {
   margin-bottom: 1.75rem;
-  font-family: var(--font-montserrat);
+  font-family: var(--font-display);
   font-size: 2rem;
   line-height: 1.2;
 }

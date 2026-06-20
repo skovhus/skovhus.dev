@@ -1,4 +1,4 @@
-import { Montserrat, Plus_Jakarta_Sans } from 'next/font/google'
+import { IBM_Plex_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
@@ -19,10 +19,11 @@ const jakarta = Plus_Jakarta_Sans({
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  weight: ['300'],
-  variable: '--font-montserrat',
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-mono-display',
   display: 'swap',
 })
 
@@ -30,7 +31,7 @@ export const metadata = getBaseMetadata()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${jakarta.className} ${montserrat.variable}`}>
+    <html lang="en" className={`${jakarta.className} ${plexMono.variable}`}>
       <body>
         <main className={styles.main}>
           <Header />
