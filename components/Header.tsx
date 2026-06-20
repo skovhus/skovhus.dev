@@ -74,7 +74,7 @@ export function Header() {
           className={`${styles.navLink} ${styles.siteName}`}
           style={{ opacity: nameOpacity }}
         >
-          <span className={styles.hideOnMobile}>Kenneth skovhus</span>
+          <span className={styles.hideOnMobile}>kenneth skovhus</span>
           <span className={styles.showOnMobile}>skovhus</span>
         </Link>
       </nav>
