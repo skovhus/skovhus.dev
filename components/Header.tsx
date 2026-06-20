@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 
 import { getSlideAnimationProps } from '#/lib/slide-animation'
 
@@ -42,6 +42,17 @@ export function Header() {
 
   const isScrolled = scrollY > 10
   const nameOpacity = Math.max(0.5, 1 - scrollY / 160)
+  const handleHeaderNavigation = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (event.defaultPrevented || event.button !== 0) {
+      return
+    }
+
+    if (event.metaKey || event.altKey || event.ctrlKey || event.shiftKey) {
+      return
+    }
+
+    window.scrollTo(0, 0)
+  }
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
@@ -61,6 +72,8 @@ export function Header() {
                 .filter(Boolean)
                 .join(' ')}
               key={path}
+              onClick={handleHeaderNavigation}
+              scroll={false}
             >
               {label}
             </Link>
@@ -70,6 +83,8 @@ export function Header() {
         <Link
           href="/"
           className={`${styles.navLink} ${styles.siteName}`}
+          onClick={handleHeaderNavigation}
+          scroll={false}
           style={{ opacity: nameOpacity }}
         >
           <span className={styles.hideOnMobile}>Kenneth Skovhus</span>
