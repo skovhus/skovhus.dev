@@ -4,8 +4,10 @@ import { Suspense } from 'react'
 
 import { Footer } from '#/components/Footer'
 import { Header } from '#/components/Header'
+import { NavigationFocusReset } from '#/components/NavigationFocusReset'
 import { NavigationTracking } from '#/components/NavigationTracking'
 import { getBaseMetadata } from '#/lib/constants'
+import { getSlideAnimationProps } from '#/lib/slide-animation'
 
 import './globals.css'
 import styles from './layout.module.css'
@@ -33,9 +35,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <main className={styles.main}>
           <Header />
-          {children}
+          <section {...getSlideAnimationProps({ stage: 1 })}>{children}</section>
           <Footer />
         </main>
+        <NavigationFocusReset />
         <Suspense fallback={null}>
           <NavigationTracking />
         </Suspense>
