@@ -173,7 +173,7 @@ html {
 body {
   margin: 0;
   color: var(--color-text-body);
-  font-weight: 400;
+  font-weight: 300;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -611,16 +611,16 @@ address {
   margin-bottom: 1.75rem;
 }
 b {
-  font-weight: 600;
+  font-weight: 500;
 }
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 dt {
-  font-weight: 600;
+  font-weight: 500;
 }
 th {
-  font-weight: 600;
+  font-weight: 500;
 }
 li {
   margin-bottom: calc(1.75rem / 2);

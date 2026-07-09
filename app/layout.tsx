@@ -1,4 +1,4 @@
-import { Newsreader, VT323 } from 'next/font/google'
+import { Plus_Jakarta_Sans, VT323 } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
@@ -11,11 +11,11 @@ import { getSlideAnimationProps } from '#/lib/slide-animation'
 import './globals.css'
 import styles from './layout.module.css'
 
-// Serif body text designed for on-screen news reading
-const newsreader = Newsreader({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
+  weight: ['300', '500'],
   style: ['normal', 'italic'],
-  fallback: ['Georgia', 'Times New Roman', 'serif'],
+  fallback: ['system-ui', 'sans-serif'],
   display: 'swap',
 })
 
@@ -32,7 +32,7 @@ export const metadata = getBaseMetadata()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${newsreader.className} ${vt323.variable}`}>
+    <html lang="en" className={`${jakarta.className} ${vt323.variable}`}>
       <body>
         <main className={styles.main}>
           <Header />
