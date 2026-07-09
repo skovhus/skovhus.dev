@@ -2,7 +2,14 @@ export function HugeHeading(props: {
   children: React.ReactNode
   style?: React.CSSProperties
 }) {
-  return <h1 style={{ marginTop: '1.3rem', ...props.style }}>{props.children}</h1>
+  return (
+    <h1 style={{ marginTop: '1.3rem', ...props.style }}>
+      {props.children}
+      <span className="blinking-cursor" aria-hidden="true">
+        ▌
+      </span>
+    </h1>
+  )
 }
 
 export function EmptyTopSpace() {

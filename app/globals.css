@@ -7,7 +7,15 @@
   --color-inline-code-text: #e6e6e6;
   --color-shadow: rgba(140, 160, 227, 0.6);
   --color-text-body: rgba(255, 255, 255, 0.88);
+  /* Nods to 90s point-and-click adventures: SCUMM verb green and dialog purple */
+  --color-verb: rgb(140, 220, 150);
+  --color-dialog: rgb(180, 120, 200);
   --font-mono: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+}
+
+::selection {
+  background: var(--color-dialog);
+  color: rgb(255, 255, 255);
 }
 
 html {
@@ -60,8 +68,8 @@ a:active {
   text-decoration-color: var(--color-accent);
 }
 a:focus-visible {
-  outline: var(--color-accent) solid 2px;
-  border-radius: 1px;
+  outline: 2px dotted var(--color-accent);
+  border-radius: 0;
 }
 figure a,
 h1 a,
@@ -93,13 +101,14 @@ h4 a {
   overflow-x: auto;
 }
 
+/* Square corners, like a DOS-era dialog box */
 .prose :not(pre) > code,
 .prose pre {
   border-style: solid;
   border-width: 1px;
-  border-color: rgb(38, 38, 38);
+  border-color: rgb(48, 52, 64);
   background-color: var(--color-inline-code-background) !important;
-  border-radius: 0.5rem;
+  border-radius: 0;
 }
 
 pre::-webkit-scrollbar {
@@ -128,8 +137,8 @@ pre::-webkit-scrollbar {
 }
 
 [data-rehype-pretty-code-title] {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-width: 1px;
   border-style: solid;
   border-color: rgb(51, 51, 51);
@@ -363,10 +372,11 @@ h4,
 h5,
 h6 {
   margin-top: 3rem;
-  font-family: var(--font-montserrat);
+  font-family: var(--font-pixel);
   color: inherit;
   text-rendering: optimizeLegibility;
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 hr:has(+ h1),
 hr:has(+ h2),
@@ -377,37 +387,39 @@ hr:has(+ h6) {
   margin-top: 3rem;
 }
 
+/* The pixel font renders smaller than the previous heading font at the same
+   size, so sizes are bumped to compensate */
 h1 {
   margin-bottom: 1.75rem;
-  font-family: var(--font-montserrat);
-  font-size: 2rem;
+  font-family: var(--font-pixel);
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 h2 {
   margin-bottom: 1.75rem;
-  font-size: 1.7rem;
+  font-size: 2.1rem;
   line-height: 1.3;
 }
 h3 {
   margin-bottom: 1.75rem;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
   line-height: 1.3;
 }
 h4 {
   margin-bottom: 1.75rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.3;
-  letter-spacing: 0.140625em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 h5 {
   margin-bottom: 1.75rem;
-  font-size: 0.83255rem;
+  font-size: 1.05rem;
   line-height: 1.1;
 }
 h6 {
   margin-bottom: 1.75rem;
-  font-size: 0.75966rem;
+  font-size: 0.95rem;
   line-height: 1.1;
   font-style: italic;
 }
@@ -579,9 +591,14 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.75rem - 1px);
-  background: var(--background-hr);
+  /* Dithered, like a pixel-art separator */
+  background: repeating-linear-gradient(
+    to right,
+    var(--background-hr) 0 5px,
+    transparent 5px 10px
+  );
   border: none;
-  height: 0.5px;
+  height: 1px;
 }
 address {
   margin-left: 0;
@@ -718,4 +735,33 @@ ins {
   color: white;
   padding: 0.10938rem 0.21875rem;
   text-decoration: none;
+}
+
+/* Blinking text cursor, like an old command line waiting for input */
+.blinking-cursor {
+  display: inline-block;
+  margin-left: 0.15em;
+  color: var(--color-accent);
+  animation: blinking-cursor 1.1s step-end infinite;
+  user-select: none;
+
+  @media print {
+    display: none;
+  }
+}
+
+@keyframes blinking-cursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blinking-cursor {
+    animation: none;
+  }
 }

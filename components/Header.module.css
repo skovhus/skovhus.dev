@@ -37,18 +37,25 @@
 }
 
 .navLink {
-  font-size: 16px;
+  font-family: var(--font-pixel);
+  font-size: 20px;
+  letter-spacing: 0.02em;
   opacity: 0.5;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
+/* Highlight like a hovered verb in a point-and-click interface */
 .navLinkActive {
   opacity: 0.9;
+  color: var(--color-verb);
 }
 
 .navLink:hover {
   opacity: 1;
+  color: var(--color-verb);
 }
 
 .siteName {
@@ -57,6 +64,7 @@
 
 .siteName:hover {
   opacity: 1 !important;
+  color: white;
 }
 
 .showOnMobile {
