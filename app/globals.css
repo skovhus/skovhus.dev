@@ -7,8 +7,7 @@
   --color-inline-code-text: #e6e6e6;
   --color-shadow: rgba(140, 160, 227, 0.6);
   --color-text-body: rgba(255, 255, 255, 0.88);
-  /* Nods to 90s point-and-click adventures: SCUMM verb green and dialog purple */
-  --color-verb: rgb(140, 220, 150);
+  /* A nod to 90s point-and-click adventures: dialog purple */
   --color-dialog: rgb(180, 120, 200);
   --font-mono: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
 }

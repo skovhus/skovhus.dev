@@ -49,13 +49,13 @@
 
 /* Highlight like a hovered verb in a point-and-click interface */
 .navLinkActive {
-  opacity: 0.9;
-  color: var(--color-verb);
+  opacity: 1;
+  color: var(--color-accent);
 }
 
 .navLink:hover {
   opacity: 1;
-  color: var(--color-verb);
+  color: var(--color-accent);
 }
 
 .siteName {
