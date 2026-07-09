@@ -736,3 +736,32 @@ ins {
   padding: 0.10938rem 0.21875rem;
   text-decoration: none;
 }
+
+/* Blinking text cursor, like an old command line waiting for input */
+.blinking-cursor {
+  display: inline-block;
+  margin-left: 0.15em;
+  color: var(--color-accent);
+  animation: blinking-cursor 1.1s step-end infinite;
+  user-select: none;
+
+  @media print {
+    display: none;
+  }
+}
+
+@keyframes blinking-cursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blinking-cursor {
+    animation: none;
+  }
+}

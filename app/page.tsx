@@ -1,6 +1,7 @@
 import { ExternalLink } from '#/components/ExternalLink'
 import { FeaturedVideo } from '#/components/FeaturedVideo'
 import { HugeHeading } from '#/components/HugeHeading'
+import { TypewriterPhrase } from '#/components/TypewriterPhrase'
 import { TALKS } from '#/content/talks'
 
 import styles from './page.module.css'
@@ -8,8 +9,19 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <>
-      <HugeHeading>
-        Hey, I’m Kenneth. I’m a software engineer, 2x dad, and music nerd.
+      <HugeHeading aria-label="Hey, I’m Kenneth. I’m a software engineer, 2x dad, and music nerd.">
+        <span aria-hidden="true">
+          Hey, I’m Kenneth. I’m a software engineer, 2x dad, and{' '}
+          <TypewriterPhrase
+            phrases={[
+              'music nerd.',
+              'sourdough feeder.',
+              'pizza baker.',
+              'kombucha feeder.',
+              'vinyl digger.',
+            ]}
+          />
+        </span>
       </HugeHeading>
       <p style={{ marginTop: '2rem' }}>
         Based in Copenhagen, Denmark. Currently building{' '}
