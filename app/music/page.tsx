@@ -1,16 +1,18 @@
 import { Metadata } from 'next'
 
 import Discography from '#/components/Discography'
-import { EmptyTopSpace } from '#/components/HugeHeading'
+
+import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'Music',
+  description: 'Records I’ve played bass on, engineered, mixed, or produced.',
 }
 
 export default function Music() {
   return (
     <>
-      <EmptyTopSpace />
+      <p className={styles.intro}>{metadata.description}</p>
       <Discography />
     </>
   )
