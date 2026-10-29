@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Fragment } from 'react'
 
 import styles from './Discography.module.css'
 
@@ -67,64 +68,72 @@ export default function Discography() {
   const span = `${Math.min(...years)} – ${Math.max(...years)}`
 
   return (
-    <section className={styles.table} aria-label="Discography">
-      <header className={styles.tableHeader}>
+    <section className={styles.discography} aria-label="Discography">
+      <header className={styles.header}>
         <span>discography</span>
+        <span className={styles.rule} aria-hidden="true" />
         <span>
           <span className={styles.hideOnNarrow}>{RELEASES.length} releases · </span>
           {span}
         </span>
       </header>
 
-      {RELEASES.map((release, index) => (
-        <a
-          key={release.linkTo}
-          href={release.linkTo}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          className={styles.row}
-        >
-          <div className={styles.artwork}>
-            <Image
-              alt={`Cover art for ${release.title} by ${release.artist}`}
-              src={release.image}
-              width={350}
-              height={350}
-              sizes="(max-width: 600px) 100vw, 320px"
-            />
-          </div>
-
-          <div className={styles.details}>
-            <div className={styles.rowHeader}>
-              <span>{formatIndex(index)}</span>
-              <span className={styles.rule} aria-hidden="true" />
-              <span>{release.year}</span>
+      <div className={styles.releases}>
+        {RELEASES.map((release, index) => (
+          <a
+            key={release.linkTo}
+            href={release.linkTo}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className={styles.release}
+          >
+            <div className={styles.artwork}>
+              <Image
+                alt={`Cover art for ${release.title} by ${release.artist}`}
+                src={release.image}
+                width={350}
+                height={350}
+                sizes="(max-width: 720px) 100vw, 320px"
+              />
             </div>
 
-            <div className={styles.heading}>
-              <h2 className={styles.title}>{release.title}</h2>
-              <div className={styles.artist}>{release.artist}</div>
-            </div>
+            <div className={styles.details}>
+              <div className={styles.rowHeader}>
+                <span>{formatIndex(index)}</span>
+                <span className={styles.rule} aria-hidden="true" />
+                <span>{release.year}</span>
+              </div>
 
-            <dl className={styles.meta}>
-              <dt>credits</dt>
-              <dd className={styles.tags}>
-                {release.credits.map((credit) => (
-                  <span key={credit} className={styles.tag}>
-                    {credit}
-                  </span>
-                ))}
-              </dd>
-              <dt>listen</dt>
-              <dd className={styles.listen}>{new URL(release.linkTo).hostname} ↗</dd>
-            </dl>
-          </div>
-        </a>
-      ))}
+              <div className={styles.heading}>
+                <h2 className={styles.title}>{release.title}</h2>
+                <div className={styles.artist}>{release.artist}</div>
+              </div>
+
+              <dl className={styles.meta}>
+                <dt>credits</dt>
+                <dd className={styles.credits}>
+                  {release.credits.map((credit, i) => (
+                    <Fragment key={credit}>
+                      {i > 0 && ', '}
+                      <span>{credit}</span>
+                    </Fragment>
+                  ))}
+                </dd>
+                <dt>listen</dt>
+                <dd className={styles.listen}>{formatHost(release.linkTo)} ↗</dd>
+              </dl>
+            </div>
+          </a>
+        ))}
+      </div>
     </section>
   )
 }
 
 function formatIndex(index: number) {
   return String(index + 1).padStart(2, '0')
+}
+
+function formatHost(url: string) {
+  return new URL(url).hostname.replace(/^open\./, '')
 }
